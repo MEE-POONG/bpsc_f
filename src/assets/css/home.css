@@ -1,0 +1,285 @@
+.home > .home-image {
+    padding-right: 0;
+    padding-left: 0;
+    /* background-color: red; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    padding-top: 33%;
+}
+.home-image .card {
+    background-color: #27b4a1a8;
+    width: 33%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    align-items: center;
+}
+.home-image .card-body {
+    padding: 10%;
+}
+.home-image .card-text {
+    margin: 10% 0;
+}
+.home-image .card .btn-success {
+    background-color: #56b889;
+    border-color: rgba(0, 252, 218, 0.678);
+}
+.home-image .card .btn-success:hover {
+    background-color: rgb(0, 167, 145);
+    border-color: rgba(0, 252, 218, 0.678);
+}
+.home-image .card .btn-success.focus {
+    background-color: rgb(0, 167, 145);
+    border-color: rgba(0, 252, 218, 0.678);
+}
+.home-image .card .btn-success:not(:disabled):not(.disabled).active,
+.home-image .card .btn-success:not(:disabled):not(.disabled):active,
+.home-image .card .show > .btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(0, 167, 145);
+    border-color: rgba(0, 252, 218, 0.678);
+}
+.home > .home-file-about {
+    padding-right: 0;
+    padding-left: 0;
+    background-color: red;
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+}
+.home-file-about img.file-about {
+    object-fit: cover;
+    top: 0;
+    width: 33.33%;
+    height: 100%;
+    position: absolute;
+}
+.home-file-about .my-file {
+    background-color: #00ff15a8;
+    width: 66.67%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    padding: 0;
+    right: 0;
+    align-items: center;
+}
+.my-file {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    padding: 0;
+}
+.sharing .card {
+    border: unset;
+    border-radius: unset;
+}
+.sheet-one .row {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+.sheet-one .title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: unset;
+    border: unset;
+    border-radius: unset;
+}
+.sheet-one .card.title {
+    background-color: unset;
+    border-bottom: unset;
+    position: absolute;
+}
+.sheet-one,
+.sheet-two,
+.sheet-three {
+    height: 33.33%;
+    background-color: white;
+}
+.sheet-one .media {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.sheet-one .media .card-title {
+    font-size: 10rem;
+    line-height: 0.8;
+}
+/* .sheet-one .card.title .card-header .card-title{
+    position: absolute;
+    font-size: 8rem;
+    top: 5%;
+    left: 5%;
+    line-height: 0.6;
+    z-index: 1;
+} */
+.media-body {
+    font-size: 40px;
+}
+.end .list-group-item {
+    font-size: 15px;
+    padding: 0.5rem 0.5rem;
+}
+.sheet-one .subtitle {
+    font-size: 24px;
+    z-index: 1;
+}
+.sheet-one .list-group-horizontal {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.sheet-one .start.list-group-item {
+    width: 50%;
+    padding: 0rem;
+    position: relative;
+}
+.sheet-one .end.list-group-item {
+    width: 50%;
+    padding: 0.75rem 1.25rem;
+}
+.sheet-two .sharing {
+    background-color: unset;
+}
+.sheet-two .container-fluid {
+    height: 100%;
+}
+.sheet-two .card-title {
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+.sheet-two .card-subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+.sheet-two .text-50 {
+    width: 50%;
+    font-size: 1.5rem;
+}
+.sheet-two .card-body {
+    border: unset;
+}
+.sheet-three .row,
+.sheet-three .col,
+.sheet-three .card {
+    padding: 0;
+    height: 100%;
+}
+.sheet-three .card-body.image {
+    height: 50%;
+    padding: 0;
+}
+.sheet-three .card-body {
+    height: 50%;
+    padding: 0.5rem;
+}
+.sheet-three .row {
+    height: 100%;
+}
+.sheet-three .col {
+    height: 100%;
+}
+.sheet-three .col-lg-3.col-md-6.col-1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.sheet-three p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.sheet-three img {
+    height: 100%;
+    width: 100%;
+}
+.sheet-three .card {
+    transition: 0.5s;
+    cursor: pointer;
+}
+.sheet-three .card-title {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+}
+.sheet-three .card-title i {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+    color: #ffa710;
+}
+.sheet-three .card-title i:hover {
+    transform: scale(1.25) rotate(100deg);
+    color: #18d4ca;
+}
+.sheet-three .card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sheet-three .card::before,
+.card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform 0.3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: "";
+    pointer-events: none;
+}
+.sheet-three .card::before {
+    transform-origin: left top;
+}
+.sheet-three .card::after {
+    transform-origin: right bottom;
+}
+.sheet-three .card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
+    transform: scale3d(1, 1, 1);
+}
+.my-file .green {
+    background-color: #26beb4;
+}
+.tab-script {
+    position: absolute;
+    bottom: 100%;
+}
+.green .tab-script {
+    left: 10rem;
+}
+.abstain.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+.abstain .card {
+    background-color: #26beb4;
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+
+}
+.abstain .card-body {
+    padding-left: 33%;
+}
+.abstain .card-title {
+    font-size: 66px;
+}
+.abstain .card-text {
+    font-size: 20px;
+}
