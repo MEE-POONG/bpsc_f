@@ -2,6 +2,9 @@ import React,{Component} from "react";
 import SlideTitle from './SlideTitle';
 import MyFlieAbout from './MyFlieAbout';
 import Abstain from "./Abstain";
+import Learning from "./Learning";
+import TeamMember from "./TeamMember";
+import EventBox from "./EventBox";
 
 class Home extends Component {
   render() {
@@ -10,6 +13,9 @@ class Home extends Component {
       <SlideTitle/>
       <MyFlieAbout/>
       <Abstain/>
+      <Learning/>
+      <TeamMember/>
+      <EventBox/>
     </div>
   );
 }
