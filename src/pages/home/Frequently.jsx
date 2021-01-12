@@ -9,42 +9,11 @@ class Frequently extends Component {
             <Container fluid className="m-0 p-0">
               <ListGroup horizontal>
                 <ListGroup.Item
-
-
-
-
-
-
-                                                                                                                        className="start"
-
-
-
-
-
-
-                                                                                                                        style={{
-                    
-                    
-                    
-                    
-                    
-                    
-                    backgroundImage: "url('/image/frequently-doctor.svg')"
+                  className="start"
+                  style={{
+                    backgroundImage: "url('/image/frequently-doctor.svg')",
                   }}
-                
-                
-                
-                
-                
-                
-                >
-                  {/* <Image
-                    src="/image/frequently-doctor.svg"
-                    // width="614.39"
-                    // height="426"
-                    style={{ objectFit: 'cover'}}
-                  /> */}
-                </ListGroup.Item>
+                ></ListGroup.Item>
                 <ListGroup.Item className="end">
                   <Card>
                     <Card.Body>
