@@ -4,19 +4,16 @@ import { Container, Card, Row, Col, Media } from "react-bootstrap";
 class Abstain extends Component {
   render() {
     return (
-      <div className="learning">
+      <div className="learning text-uppercase">
         <Container fluid>
           <Row className="m-0 my-5">
             <Col lg="3" md="6" mb="4" xs="1">
               <Card>
                 <Card.Body className="image">
-                  <img
-                    src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
-                    alt=""
-                    class="card-img-top"
-                  />
+                  <img src="image/image12.png" alt="" class="card-img-top" />
                 </Card.Body>
                 <Card.Body>
+<<<<<<< HEAD
                   <Card.Title>
                     <Media>
                       <Card className="date absolute">
@@ -32,6 +29,13 @@ class Abstain extends Component {
                       </Media.Body>
                     </Media>
                   </Card.Title>
+=======
+                  <Card.Text>
+                    <b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b>
+                  </Card.Text>
+>>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -56,13 +60,10 @@ class Abstain extends Component {
             <Col lg="3" md="6" mb="4" xs="1">
             <Card>
                 <Card.Body className="image">
-                  <img
-                    src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
-                    alt=""
-                    class="card-img-top"
-                  />
+                  <img src="image/image11.png" alt="" class="card-img-top" />
                 </Card.Body>
                 <Card.Body>
+<<<<<<< HEAD
                   <Card.Title>
                     <Media>
                       <Card className="date absolute">
@@ -78,6 +79,13 @@ class Abstain extends Component {
                       </Media.Body>
                     </Media>
                   </Card.Title>
+=======
+                  <Card.Text>
+                    <b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b>
+                  </Card.Text>
+>>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -91,6 +99,10 @@ class Abstain extends Component {
                           &#xf061;
                         </i>
                       </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                       <span>
                         <i class="fa fa-heart-o"></i> 112
                       </span>
@@ -102,13 +114,10 @@ class Abstain extends Component {
             <Col lg="3" md="6" mb="4" xs="1">
             <Card>
                 <Card.Body className="image">
-                  <img
-                    src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
-                    alt=""
-                    class="card-img-top"
-                  />
+                  <img src="image/image10.png" alt="" class="card-img-top" />
                 </Card.Body>
                 <Card.Body>
+<<<<<<< HEAD
                   <Card.Title>
                     <Media>
                       <Card className="date absolute">
@@ -124,6 +133,13 @@ class Abstain extends Component {
                       </Media.Body>
                     </Media>
                   </Card.Title>
+=======
+                  <Card.Text>
+                    <b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b>
+                  </Card.Text>
+>>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -137,6 +153,10 @@ class Abstain extends Component {
                           &#xf061;
                         </i>
                       </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                       <span>
                         <i class="fa fa-heart-o"></i> 112
                       </span>
@@ -148,13 +168,10 @@ class Abstain extends Component {
             <Col lg="3" md="6" mb="4" xs="1">
             <Card>
                 <Card.Body className="image">
-                  <img
-                    src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
-                    alt=""
-                    class="card-img-top"
-                  />
+                  <img src="image/image12.png" alt="" class="card-img-top" />
                 </Card.Body>
                 <Card.Body>
+<<<<<<< HEAD
                   <Card.Title>
                     <Media>
                       <Card className="date absolute">
@@ -170,6 +187,13 @@ class Abstain extends Component {
                       </Media.Body>
                     </Media>
                   </Card.Title>
+=======
+                  <Card.Text>
+                    <b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b>
+                  </Card.Text>
+>>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -183,6 +207,10 @@ class Abstain extends Component {
                           &#xf061;
                         </i>
                       </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                       <span>
                         <i class="fa fa-heart-o"></i> 112
                       </span>

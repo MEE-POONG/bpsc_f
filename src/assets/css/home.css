@@ -101,9 +101,12 @@
     position: absolute;
 }
 .sheet-one,
-.sheet-two,
+.sheet-two{
+    height: 30%;
+    background-color: white;
+}
 .sheet-three {
-    height: 33.33%;
+    height: 40%;
     background-color: white;
 }
 .sheet-one .media {
@@ -202,7 +205,7 @@
     height: 100%;
 }
 .sheet-three .card-body.image {
-    height: 50%;
+    height: 30%;
     padding: 0;
 }
 .sheet-three .card-body {

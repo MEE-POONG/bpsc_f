@@ -6,7 +6,7 @@ import SheetThree from './sheet/SheetThree'
 class MyFlieAbout extends Component {
   render() {
     return (
-      <Container fluid className="home-file-about">
+      <Container fluid className="home-file-about text-uppercase">
         <Image className="file-about" src="/image/fileabout.svg" />
         <Container fluid className="my-file while">
           <div className="tab-script">
