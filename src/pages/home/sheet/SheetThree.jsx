@@ -26,13 +26,13 @@ class SheetTwo extends Component {
                                     <span className="mr-1">
                                         <Image roundedCircle src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top" />
                                     </span>
-                                    <span>user</span>
+                                    <span class="pl-1">user</span>
                                 </div>
                                 <div>
                                     <span className="mr-1">
-                                        7998
+                                        <i class="fa fa-eye"></i> 7998
                                     </span>
-                                    <span>30</span>
+                                    <span><i class="fa fa-comments-o"></i> 30 </span>
                                 </div>
                             </Card.Body>
                         </Card>
@@ -56,13 +56,13 @@ class SheetTwo extends Component {
                                     <span className="mr-1">
                                         <Image roundedCircle src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top" />
                                     </span>
-                                    <span>user</span>
+                                    <span class="pl-1">user</span>
                                 </div>
                                 <div>
                                     <span className="mr-1">
-                                        7998
+                                        <i class="fa fa-eye"></i> 7998
                                     </span>
-                                    <span>30</span>
+                                    <span><i class="fa fa-comments-o"></i> 30 </span>
                                 </div>
                             </Card.Body>
                         </Card>
@@ -86,13 +86,13 @@ class SheetTwo extends Component {
                                     <span className="mr-1">
                                         <Image roundedCircle src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top" />
                                     </span>
-                                    <span>user</span>
+                                    <span class="pl-1">user</span>
                                 </div>
                                 <div>
                                     <span className="mr-1">
-                                        7998
+                                        <i class="fa fa-eye"></i> 7998
                                     </span>
-                                    <span>30</span>
+                                    <span><i class="fa fa-comments-o"></i> 30 </span>
                                 </div>
                             </Card.Body>
                         </Card>
@@ -116,13 +116,13 @@ class SheetTwo extends Component {
                                     <span className="mr-1">
                                         <Image roundedCircle src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top" />
                                     </span>
-                                    <span>user</span>
+                                    <span class="pl-1">user</span>
                                 </div>
                                 <div>
                                     <span className="mr-1">
-                                        7998
+                                        <i class="fa fa-eye"></i> 7998
                                     </span>
-                                    <span>30</span>
+                                    <span><i class="fa fa-comments-o"></i> 30 </span>
                                 </div>
                             </Card.Body>
                         </Card>
