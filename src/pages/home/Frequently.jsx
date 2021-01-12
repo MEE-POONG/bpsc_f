@@ -22,7 +22,7 @@ class Frequently extends Component {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore ...
                       </Card.Subtitle>
-                      <Button>hOW DO WE TREAT OUR MEDICINES?</Button>
+                      <Button >hOW DO WE TREAT OUR MEDICINES?</Button>
                       <Card.Subtitle>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore ...

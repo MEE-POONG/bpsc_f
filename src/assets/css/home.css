@@ -631,6 +631,7 @@
     font-size: 12px;
     color: #56b889;
 }
-.frequently .card button {
+.frequently button {
     margin: 2rem 0;
+    background-color: #6fcf97;
 }
