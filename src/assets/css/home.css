@@ -388,6 +388,7 @@
 .team .card {
     text-align: center;
     border: unset;
+    box-shadow: none;
 }
 
 .profile-card-2 {
