@@ -6,12 +6,16 @@ class TheHeader extends Component {
   render() {
     return (
       <>
-        <Navbar variant="light" className="container-xl">
+        <Navbar
+          variant="light"
+          className="container-xl"
+          style={{ boxShadow: "none" }}
+        >
           {/* <Navbar bg="light" variant="light"> */}
           <Navbar.Brand href="#home">
             <Image
               alt=""
-              src='image/BPSC.SVG'
+              src="image/BPSC.SVG"
               width="100"
               height="100"
               className="d-inline-block align-top"
@@ -23,11 +27,13 @@ class TheHeader extends Component {
             <Nav.Link href="#sharing">SHARING</Nav.Link>
             <Nav.Link href="#sharing">E-LEARNING</Nav.Link>
             <Nav.Link href="#doctors">DOCTORS</Nav.Link>
-            <Button variant="success" className="nav-link">Login</Button>
+            <Button variant="success" className="nav-link">
+              Login
+            </Button>
           </Nav>
         </Navbar>
       </>
-    )
+    );
   }
 }
 export default TheHeader;
