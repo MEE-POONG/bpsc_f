@@ -409,6 +409,18 @@
     border: unset;
     box-shadow: none;
 }
+.team .card-title{
+    font-size: 3rem;
+    line-height: 2rem;
+}
+.team .card-subtitle{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.team .card-text{
+    font-size: 1rem;
+    line-height: 2rem;
+}
 
 .profile-card-2 {
     max-width: 300px;
