@@ -542,6 +542,10 @@
     background: #06978d;
     color: white;
 }
+.event .bg-1 .card-text {
+    background: #06978d;
+    color: white;
+}
 .event .bg-2 {
     background: rgba(38, 190, 180, 0.75);
     color: #757575;
