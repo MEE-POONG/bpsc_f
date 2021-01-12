@@ -407,6 +407,7 @@
 .team .card {
     text-align: center;
     border: unset;
+    box-shadow: none;
 }
 
 .profile-card-2 {
@@ -558,6 +559,10 @@
     font-size: 0.5rem;
 }
 .event .bg-1 {
+    background: #06978d;
+    color: white;
+}
+.event .bg-1 .card-text {
     background: #06978d;
     color: white;
 }

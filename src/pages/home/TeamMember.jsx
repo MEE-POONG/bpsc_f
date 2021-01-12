@@ -32,7 +32,7 @@ class TeamMember extends Component {
                 <div class="profile-name">DR. yong pal</div>
                 <div class="profile-username">cardiothoracic surgeon</div>
                 <div class="profile-tel">TEL +666 666 6666</div>
-                <div class="profile-icons">
+                {/* <div class="profile-icons">
                   <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
@@ -42,7 +42,7 @@ class TeamMember extends Component {
                   <a href="#">
                     <i class="fa fa-linkedin"></i>
                   </a>
-                </div>
+                </div> */}
               </div>
             </Col>
             <Col>
@@ -51,7 +51,7 @@ class TeamMember extends Component {
                 <div class="profile-name">DR. yong pal</div>
                 <div class="profile-username">cardiothoracic surgeon</div>
                 <div class="profile-tel">TEL +666 666 6666</div>
-                <div class="profile-icons">
+                {/* <div class="profile-icons">
                   <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
@@ -61,7 +61,7 @@ class TeamMember extends Component {
                   <a href="#">
                     <i class="fa fa-linkedin"></i>
                   </a>
-                </div>
+                </div> */}
               </div>
             </Col>
             <Col>
@@ -70,7 +70,7 @@ class TeamMember extends Component {
                 <div class="profile-name">DR. yong pal</div>
                 <div class="profile-username">cardiothoracic surgeon</div>
                 <div class="profile-tel">TEL +666 666 6666</div>
-                <div class="profile-icons">
+                {/* <div class="profile-icons">
                   <a href="#">
                     <i class="fa fa-facebook"></i>
                   </a>
@@ -80,7 +80,7 @@ class TeamMember extends Component {
                   <a href="#">
                     <i class="fa fa-linkedin"></i>
                   </a>
-                </div>
+                </div> */}
               </div>
             </Col>
             {/* <Col>
