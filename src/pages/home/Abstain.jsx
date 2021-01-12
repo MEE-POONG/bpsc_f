@@ -6,19 +6,18 @@ class Abstain extends Component {
   render() {
     return (
       <div className="abstain">
-        <Container fluid >
-          <Card classname="">
-            <Card.Body>
-              <Card.Title>E - Learning</Card.Title>
-              <Card.Text>
-                Short describtion about E-learning
-                .......
-            </Card.Text>
+        <Container fluid>
+          <Card >
+            <Card.Body >
+              <Card.Title style={{color: "#000"}}>E - LEARNING</Card.Title>
+              <Card.Text style={{color: "#000"}}>
+                SHORT DESCRIPTION ABOUT <br />
+                E-LEARNING .......
+              </Card.Text>
             </Card.Body>
           </Card>
         </Container>
       </div>
-
     );
   }
 };
