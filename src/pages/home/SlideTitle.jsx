@@ -13,7 +13,7 @@ class SlideTitle extends Component {
         <Card>
           <Card.Body>
             <Card.Title as="h1">ระบบสาธารณะสุขที่เราวาดฝัน</Card.Title>
-            <Card.Text>
+            <Card.Text style={{ color: "#000" }}>
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </Card.Text>
