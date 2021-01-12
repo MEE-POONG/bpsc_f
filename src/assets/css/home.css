@@ -48,7 +48,7 @@
     padding-left: 0;
     position: relative;
     width: 100%;
-    padding-top: 60%;
+    padding-top: 75%;
 }
 .home-file-about img.file-about {
     object-fit: cover;
@@ -206,7 +206,6 @@
     padding: 0;
 }
 .sheet-three .card-body {
-    height: 50%;
     padding: 0.5rem;
 }
 .sheet-three .row {
@@ -237,7 +236,7 @@
     cursor: pointer;
 }
 .sheet-three .card-subtitle{
-    font-size: 10px;
+    font-size: 12px;
     transition: 1s;
     cursor: pointer;
     /* color: #ffa710; */
@@ -250,6 +249,7 @@
     transform: scale(1.05);
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
+
 
 .sheet-three .card::before,
 .card::after {
@@ -276,6 +276,18 @@
 .card:focus::after {
     transform: scale3d(1, 1, 1);
 }
+.sheet-three span img{
+    width: 40px;
+    height: 40px;
+}
+.sheet-three span{
+    font-size: 12px;
+}
+.sheet-three .card-footer{
+    font-size: 12px;
+    background-color: unset;
+    border: unset;
+}
 .my-file .green {
     background-color: #26beb4;
 }
@@ -289,12 +301,19 @@
     border-radius: 15px 15px 0 0;
     border: 0px;
     background: #ffffff;
+    margin: 0;
+    box-shadow: unset;
+}
+.tab-script button:focus{
+    border: unset;
+    box-shadow: unset;
 }
 .green .tab-script {
     left: 10rem;
 }
 .while .tab-script button {
     background: #ffffff;
+    color: black !important;
     left: 10rem;
 }
 .green .tab-script button {
