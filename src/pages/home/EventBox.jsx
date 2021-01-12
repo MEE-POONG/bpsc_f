@@ -1,40 +1,76 @@
 import React, { Component } from "react";
-import { Container, Card } from 'react-bootstrap';
-
-
+import { Container, Row, Col, Card } from 'react-bootstrap';
 class EventBox extends Component {
   render() {
     return (
       <div className="event">
         <Container>
-              <Card classname="flip-card-front">
-
-              </Card>
-              <Card class="flip-card-back">
-                <Card.Title>E - Learning</Card.Title>
-                <Card.Text>
-                  Short describtion about E-learning
-                  .......
-                </Card.Text>
-              </Card>
-
-          <div class="flip-card">
-            <div class="flip-card-inner">
-
-              <div class="flip-card-front">
-                <img src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg" alt="Avatar" />
-              </div>
-
-              <div class="flip-card-back">
-                <h1>John Doe</h1>
-                <p>Architect ฐ Engineer</p>
-                <p>We love that guy</p>
-              </div>
-
-            </div>
+          <div className="text-left">
+            <Card.Title >Up coming events</Card.Title >
           </div>
+          <Row className="m-0 my-5 card-day">
+            <Col lg="3" md="6" mb="4" xs="1" >
+              <Card className="bg-1">
+                <Card.Body>
+                  <Card.Title>
+                    08
+                    </Card.Title>
+                  <Card.Subtitle>
+                    JUNE
+                    </Card.Subtitle>
+                  <Card.Text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ...
+                    </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg="3" md="6" mb="4" xs="1">
+            <Card  className="bg-2">
+                <Card.Body>
+                  <Card.Title>
+                    8
+                    </Card.Title>
+                  <Card.Subtitle>
+                    JUNE
+                    </Card.Subtitle>
+                  <Card.Text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ...
+                    </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg="3" md="6" mb="4" xs="1">
+            <Card  className="bg-3">
+                <Card.Body>
+                  <Card.Title>
+                    8
+                    </Card.Title>
+                  <Card.Subtitle>
+                    JUNE
+                    </Card.Subtitle>
+                  <Card.Text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ...
+                    </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg="3" md="6" mb="4" xs="1" >
+            <Card className="bg-4">
+                <Card.Body>
+                  <Card.Title>
+                    8
+                    </Card.Title>
+                  <Card.Subtitle>
+                    JUNE
+                    </Card.Subtitle>
+                  <Card.Text>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ...
+                    </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
-
       </div>
 
     );

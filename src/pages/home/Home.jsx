@@ -5,6 +5,7 @@ import Abstain from "./Abstain";
 import Learning from "./Learning";
 import TeamMember from "./TeamMember";
 import EventBox from "./EventBox";
+import Frequently from "./Frequently";
 
 class Home extends Component {
   render() {
@@ -16,6 +17,7 @@ class Home extends Component {
       <Learning/>
       <TeamMember/>
       <EventBox/>
+      <Frequently/>
     </div>
   );
 }

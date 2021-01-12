@@ -99,7 +99,7 @@ class TeamMember extends Component {
               </div>
             </Col>
           </Row>
-          <div className="text-center">
+          <div className="text-center my-5">
             <Button variant="success">MODE ABOUT US BPSC</Button>
           </div>
         </Container >
