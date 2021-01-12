@@ -13,7 +13,6 @@ class Abstain extends Component {
                   <img src="image/image12.png" alt="" class="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-<<<<<<< HEAD
                   <Card.Title>
                     <Media>
                       <Card className="date absolute">
@@ -25,17 +24,12 @@ class Abstain extends Component {
                         <Card.Subtitle></Card.Subtitle>
                       </Card>
                       <Media.Body>
-                        <p>Media Heading</p>
+                        <p><b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b></p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
-=======
-                  <Card.Text>
-                    <b style={{ color: "#000" }}>
-                      what you need to know about BPSC?
-                    </b>
-                  </Card.Text>
->>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -63,7 +57,6 @@ class Abstain extends Component {
                   <img src="image/image11.png" alt="" class="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-<<<<<<< HEAD
                   <Card.Title>
                     <Media>
                       <Card className="date absolute">
@@ -75,17 +68,12 @@ class Abstain extends Component {
                         <Card.Subtitle></Card.Subtitle>
                       </Card>
                       <Media.Body>
-                        <p>Media Heading</p>
+                        <p><b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b></p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
-=======
-                  <Card.Text>
-                    <b style={{ color: "#000" }}>
-                      what you need to know about BPSC?
-                    </b>
-                  </Card.Text>
->>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -99,10 +87,6 @@ class Abstain extends Component {
                           &#xf061;
                         </i>
                       </span>
-<<<<<<< HEAD
-=======
-
->>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                       <span>
                         <i class="fa fa-heart-o"></i> 112
                       </span>
@@ -117,7 +101,6 @@ class Abstain extends Component {
                   <img src="image/image10.png" alt="" class="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-<<<<<<< HEAD
                   <Card.Title>
                     <Media>
                       <Card className="date absolute">
@@ -129,17 +112,12 @@ class Abstain extends Component {
                         <Card.Subtitle></Card.Subtitle>
                       </Card>
                       <Media.Body>
-                        <p>Media Heading</p>
+                        <p><b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b></p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
-=======
-                  <Card.Text>
-                    <b style={{ color: "#000" }}>
-                      what you need to know about BPSC?
-                    </b>
-                  </Card.Text>
->>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -153,10 +131,6 @@ class Abstain extends Component {
                           &#xf061;
                         </i>
                       </span>
-<<<<<<< HEAD
-=======
-
->>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                       <span>
                         <i class="fa fa-heart-o"></i> 112
                       </span>
@@ -171,7 +145,6 @@ class Abstain extends Component {
                   <img src="image/image12.png" alt="" class="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-<<<<<<< HEAD
                   <Card.Title>
                     <Media>
                       <Card className="date absolute">
@@ -183,17 +156,12 @@ class Abstain extends Component {
                         <Card.Subtitle></Card.Subtitle>
                       </Card>
                       <Media.Body>
-                        <p>Media Heading</p>
+                        <p><b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b></p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
-=======
-                  <Card.Text>
-                    <b style={{ color: "#000" }}>
-                      what you need to know about BPSC?
-                    </b>
-                  </Card.Text>
->>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -207,10 +175,6 @@ class Abstain extends Component {
                           &#xf061;
                         </i>
                       </span>
-<<<<<<< HEAD
-=======
-
->>>>>>> d72ca1e75088383663f9e67ac337f05d0a62dfae
                       <span>
                         <i class="fa fa-heart-o"></i> 112
                       </span>
