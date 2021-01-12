@@ -403,6 +403,23 @@
     border-top: unset;
     color: #26beb4;
 }
+.learning .card .date{
+    padding: 0.75rem;
+    margin:0 1rem 0 0.5rem ;
+    width: 3.5rem;
+    text-align: center;
+    visibility: hidden;
+    color: #000000;
+    background-color: #26beb4;
+}
+.learning .card .absolute{
+    position: absolute;
+    top:-2rem;
+    visibility: inherit;
+}
+.learning .media-body{
+    font-size: 1.5rem;
+}
 /*  team members */
 .team .card {
     text-align: center;

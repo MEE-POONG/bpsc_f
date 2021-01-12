@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Card, Row, Col } from "react-bootstrap";
+import { Container, Card, Row, Col, Media } from "react-bootstrap";
 
 class Abstain extends Component {
   render() {
@@ -17,7 +17,21 @@ class Abstain extends Component {
                   />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Text>Sunset</Card.Text>
+                  <Card.Title>
+                    <Media>
+                      <Card className="date absolute">
+                        <Card.Title>15</Card.Title>
+                        <Card.Subtitle>15</Card.Subtitle>
+                      </Card>
+                      <Card className="date">
+                        <Card.Title></Card.Title>
+                        <Card.Subtitle></Card.Subtitle>
+                      </Card>
+                      <Media.Body>
+                        <p>Media Heading</p>
+                      </Media.Body>
+                    </Media>
+                  </Card.Title>
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -25,7 +39,7 @@ class Abstain extends Component {
                 <Card.Footer>
                   <Card.Text className="mr-auto">
                     <span class="d-flex justify-content-between">
-                      <span style={{color: "#26BEB4"}}>
+                      <span style={{ color: "#26BEB4" }}>
                         READ MORE
                         <i style={{ fontSize: "14px" }} class="fa pl-2">
                           &#xf061;
@@ -40,7 +54,7 @@ class Abstain extends Component {
               </Card>
             </Col>
             <Col lg="3" md="6" mb="4" xs="1">
-              <Card>
+            <Card>
                 <Card.Body className="image">
                   <img
                     src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
@@ -49,7 +63,21 @@ class Abstain extends Component {
                   />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Text>Sunset</Card.Text>
+                  <Card.Title>
+                    <Media>
+                      <Card className="date absolute">
+                        <Card.Title>15</Card.Title>
+                        <Card.Subtitle>15</Card.Subtitle>
+                      </Card>
+                      <Card className="date">
+                        <Card.Title></Card.Title>
+                        <Card.Subtitle></Card.Subtitle>
+                      </Card>
+                      <Media.Body>
+                        <p>Media Heading</p>
+                      </Media.Body>
+                    </Media>
+                  </Card.Title>
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -57,13 +85,12 @@ class Abstain extends Component {
                 <Card.Footer>
                   <Card.Text className="mr-auto">
                     <span class="d-flex justify-content-between">
-                      <span style={{color: "#26BEB4"}}>
+                      <span style={{ color: "#26BEB4" }}>
                         READ MORE
                         <i style={{ fontSize: "14px" }} class="fa pl-2">
                           &#xf061;
                         </i>
                       </span>
-                      
                       <span>
                         <i class="fa fa-heart-o"></i> 112
                       </span>
@@ -73,7 +100,7 @@ class Abstain extends Component {
               </Card>
             </Col>
             <Col lg="3" md="6" mb="4" xs="1">
-              <Card>
+            <Card>
                 <Card.Body className="image">
                   <img
                     src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
@@ -82,7 +109,21 @@ class Abstain extends Component {
                   />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Text>Sunset</Card.Text>
+                  <Card.Title>
+                    <Media>
+                      <Card className="date absolute">
+                        <Card.Title>15</Card.Title>
+                        <Card.Subtitle>15</Card.Subtitle>
+                      </Card>
+                      <Card className="date">
+                        <Card.Title></Card.Title>
+                        <Card.Subtitle></Card.Subtitle>
+                      </Card>
+                      <Media.Body>
+                        <p>Media Heading</p>
+                      </Media.Body>
+                    </Media>
+                  </Card.Title>
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -90,13 +131,12 @@ class Abstain extends Component {
                 <Card.Footer>
                   <Card.Text className="mr-auto">
                     <span class="d-flex justify-content-between">
-                      <span style={{color: "#26BEB4"}}>
+                      <span style={{ color: "#26BEB4" }}>
                         READ MORE
                         <i style={{ fontSize: "14px" }} class="fa pl-2">
                           &#xf061;
                         </i>
                       </span>
-                      
                       <span>
                         <i class="fa fa-heart-o"></i> 112
                       </span>
@@ -106,7 +146,7 @@ class Abstain extends Component {
               </Card>
             </Col>
             <Col lg="3" md="6" mb="4" xs="1">
-              <Card>
+            <Card>
                 <Card.Body className="image">
                   <img
                     src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
@@ -115,7 +155,21 @@ class Abstain extends Component {
                   />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Text>Sunset</Card.Text>
+                  <Card.Title>
+                    <Media>
+                      <Card className="date absolute">
+                        <Card.Title>15</Card.Title>
+                        <Card.Subtitle>oct</Card.Subtitle>
+                      </Card>
+                      <Card className="date">
+                        <Card.Title></Card.Title>
+                        <Card.Subtitle></Card.Subtitle>
+                      </Card>
+                      <Media.Body>
+                        <p>Media Heading</p>
+                      </Media.Body>
+                    </Media>
+                  </Card.Title>
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   </Card.Text>
@@ -123,13 +177,12 @@ class Abstain extends Component {
                 <Card.Footer>
                   <Card.Text className="mr-auto">
                     <span class="d-flex justify-content-between">
-                      <span style={{color: "#26BEB4"}}>
+                      <span style={{ color: "#26BEB4" }}>
                         READ MORE
                         <i style={{ fontSize: "14px" }} class="fa pl-2">
                           &#xf061;
                         </i>
                       </span>
-                      
                       <span>
                         <i class="fa fa-heart-o"></i> 112
                       </span>
