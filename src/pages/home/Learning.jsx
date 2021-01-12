@@ -17,16 +17,18 @@ class Abstain extends Component {
                     <Media>
                       <Card className="date absolute">
                         <Card.Title>15</Card.Title>
-                        <Card.Subtitle>15</Card.Subtitle>
+                        <Card.Subtitle>OCT</Card.Subtitle>
                       </Card>
                       <Card className="date">
                         <Card.Title></Card.Title>
                         <Card.Subtitle></Card.Subtitle>
                       </Card>
                       <Media.Body>
-                        <p><b style={{ color: "#000" }}>
-                      what you need to know about BPSC?
-                    </b></p>
+                        <p>
+                          <b style={{ color: "#000" }}>
+                            what you need to know about BPSC?
+                          </b>
+                        </p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
@@ -52,7 +54,7 @@ class Abstain extends Component {
               </Card>
             </Col>
             <Col lg="3" md="6" mb="4" xs="1">
-            <Card>
+              <Card>
                 <Card.Body className="image">
                   <img src="image/image11.png" alt="" class="card-img-top" />
                 </Card.Body>
@@ -61,16 +63,18 @@ class Abstain extends Component {
                     <Media>
                       <Card className="date absolute">
                         <Card.Title>15</Card.Title>
-                        <Card.Subtitle>15</Card.Subtitle>
+                        <Card.Subtitle>OCT</Card.Subtitle>
                       </Card>
                       <Card className="date">
                         <Card.Title></Card.Title>
                         <Card.Subtitle></Card.Subtitle>
                       </Card>
                       <Media.Body>
-                        <p><b style={{ color: "#000" }}>
-                      what you need to know about BPSC?
-                    </b></p>
+                        <p>
+                          <b style={{ color: "#000" }}>
+                            what you need to know about BPSC?
+                          </b>
+                        </p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
@@ -96,7 +100,7 @@ class Abstain extends Component {
               </Card>
             </Col>
             <Col lg="3" md="6" mb="4" xs="1">
-            <Card>
+              <Card>
                 <Card.Body className="image">
                   <img src="image/image10.png" alt="" class="card-img-top" />
                 </Card.Body>
@@ -105,16 +109,18 @@ class Abstain extends Component {
                     <Media>
                       <Card className="date absolute">
                         <Card.Title>15</Card.Title>
-                        <Card.Subtitle>15</Card.Subtitle>
+                        <Card.Subtitle>OCT</Card.Subtitle>
                       </Card>
                       <Card className="date">
                         <Card.Title></Card.Title>
                         <Card.Subtitle></Card.Subtitle>
                       </Card>
                       <Media.Body>
-                        <p><b style={{ color: "#000" }}>
-                      what you need to know about BPSC?
-                    </b></p>
+                        <p>
+                          <b style={{ color: "#000" }}>
+                            what you need to know about BPSC?
+                          </b>
+                        </p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
@@ -140,7 +146,7 @@ class Abstain extends Component {
               </Card>
             </Col>
             <Col lg="3" md="6" mb="4" xs="1">
-            <Card>
+              <Card>
                 <Card.Body className="image">
                   <img src="image/image12.png" alt="" class="card-img-top" />
                 </Card.Body>
@@ -156,9 +162,11 @@ class Abstain extends Component {
                         <Card.Subtitle></Card.Subtitle>
                       </Card>
                       <Media.Body>
-                        <p><b style={{ color: "#000" }}>
-                      what you need to know about BPSC?
-                    </b></p>
+                        <p>
+                          <b style={{ color: "#000" }}>
+                            what you need to know about BPSC?
+                          </b>
+                        </p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
