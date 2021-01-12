@@ -5,7 +5,7 @@ import { Container, ListGroup, Button, Image, Card } from 'react-bootstrap';
 class Frequently extends Component {
     render() {
         return (
-          <div className="frequently">
+          <div className="frequently text-uppercase">
             <Container fluid className="m-0 p-0">
               <ListGroup horizontal>
                 <ListGroup.Item

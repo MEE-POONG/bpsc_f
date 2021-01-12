@@ -5,12 +5,12 @@ import { Container, Card } from 'react-bootstrap';
 class Abstain extends Component {
   render() {
     return (
-      <div className="abstain">
+      <div className="abstain text-uppercase">
         <Container fluid>
-          <Card >
-            <Card.Body >
-              <Card.Title style={{color: "#000"}}>E - LEARNING</Card.Title>
-              <Card.Text style={{color: "#000"}}>
+          <Card>
+            <Card.Body>
+              <Card.Title style={{ color: "#000" }}>E - LEARNING</Card.Title>
+              <Card.Text style={{ color: "#000" }}>
                 SHORT DESCRIPTION ABOUT <br />
                 E-LEARNING .......
               </Card.Text>
