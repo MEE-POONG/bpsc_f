@@ -42,12 +42,6 @@ class Frequently extends Component {
                                     <Card.Text>
                                     bEARS DENTAL CLINIC FRIENDLY STUFF?
                                     </Card.Text>
-                                    <Card.Text>
-                                    bEARS DENTAL CLINIC FRIENDLY STUFF?
-                                    </Card.Text>
-                                    <Card.Text>
-                                    bEARS DENTAL CLINIC FRIENDLY STUFF?
-                                    </Card.Text>
                                 </Card.Body>
                             </Card>
                         </ListGroup.Item>

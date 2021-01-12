@@ -46,7 +46,6 @@
 .home > .home-file-about {
     padding-right: 0;
     padding-left: 0;
-    background-color: red;
     position: relative;
     width: 100%;
     padding-top: 60%;
@@ -59,7 +58,6 @@
     position: absolute;
 }
 .home-file-about .my-file {
-    background-color: #00ff15a8;
     width: 66.67%;
     height: 100%;
     position: absolute;
@@ -67,6 +65,7 @@
     padding: 0;
     right: 0;
     align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .my-file {
     position: relative;
@@ -74,6 +73,7 @@
     width: 100%;
     padding: 0;
 }
+/* sharing */
 .sharing .card {
     border: unset;
     border-radius: unset;
@@ -139,21 +139,25 @@
 }
 .sheet-one .end.list-group-item {
     width: 50%;
-    padding: 0.75rem 1.25rem;
+    padding: 0.5rem;
 }
 .sheet-two .sharing {
     background-color: unset;
+    border: unset;
+    height: 100%;
 }
 .sheet-two .container-fluid {
     height: 100%;
+    background-size: cover;
 }
 .sheet-two .card-title {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
     line-height: 1;
+    border: unset;
 }
 .sheet-two .card-subtitle {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
     line-height: 1;
@@ -164,6 +168,31 @@
 }
 .sheet-two .card-body {
     border: unset;
+}
+.sheet-two button,
+.sheet-two button:active,
+.sheet-two button:hover,.sheet-two button .green {
+    background-color: #6fcf97;
+    border-color: #6fcf97;
+    color: #ffffff;
+}
+.sheet-two .btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: #6fcf97;
+    border-color: #6fcf97;
+    color: #ffffff;
+}
+.sheet-two .btn.focus,.sheet-two .btn:focus {
+    outline: 0;
+    box-shadow: unset;
+}
+.sheet-two .btn-green{
+    position: absolute;
+    width: 100%;
+    bottom: 0.5rem;
+    width: max-content;
+
 }
 .sheet-three .row,
 .sheet-three .col,
@@ -207,11 +236,11 @@
     transition: 1s;
     cursor: pointer;
 }
-.sheet-three .card-title i {
-    font-size: 15px;
+.sheet-three .card-subtitle{
+    font-size: 10px;
     transition: 1s;
     cursor: pointer;
-    color: #ffa710;
+    /* color: #ffa710; */
 }
 .sheet-three .card-title i:hover {
     transform: scale(1.25) rotate(100deg);
@@ -253,10 +282,27 @@
 .tab-script {
     position: absolute;
     bottom: 100%;
+    left: 0rem;
+    z-index: 999;
+}
+.tab-script button {
+    border-radius: 15px 15px 0 0;
+    border: 0px;
+    background: #ffffff;
 }
 .green .tab-script {
     left: 10rem;
 }
+.while .tab-script button {
+    background: #ffffff;
+    left: 10rem;
+}
+.green .tab-script button {
+    background: #56b889;
+    color: white;
+    left: 10rem;
+}
+/* abstain */
 .abstain .container-fluid {
     margin: 0;
     padding: 0;
@@ -276,6 +322,7 @@
 .abstain .card-text {
     font-size: 20px;
 }
+/* learning */
 .learning .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -337,6 +384,7 @@
     border-top: unset;
     color: #26beb4;
 }
+/*  team members */
 .team .card {
     text-align: center;
     border: unset;
@@ -405,6 +453,7 @@
 .profile-card-2:hover .profile-icons {
     right: 40px;
 }
+/* event */
 .event {
     background: rgba(38, 190, 180, 0.25);
 }
@@ -426,7 +475,7 @@
     font-size: 0.5rem;
 }
 .event .bg-1 {
-    background: #06978D;
+    background: #06978d;
     color: white;
 }
 .event .bg-2 {
@@ -441,12 +490,27 @@
     background: rgba(38, 190, 180, 0.3);
     color: #757575;
 }
-.frequently .start.list-group-item{
+/* frequently */
+.frequently .start.list-group-item {
     width: 60%;
 }
-.frequently .end.list-group-item{
+.frequently .end.list-group-item {
     width: 40%;
 }
-.frequently .list-group-item{
+.frequently .list-group-item {
     padding: 0;
+}
+.frequently .card-title {
+    font-size: 24px;
+}
+.frequently .card-subtitle {
+    font-size: 12px;
+    color: #757575;
+}
+.frequently .card-text {
+    font-size: 12px;
+    color: #56b889;
+}
+.frequently .card button {
+    margin: 2rem 0;
 }
