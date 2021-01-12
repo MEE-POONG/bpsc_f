@@ -14,7 +14,9 @@ class Abstain extends Component {
                 </Card.Body>
                 <Card.Body>
                   <Card.Text>
-                    <b style={{color: '#000'}}>what you need to know about BPSC?</b>
+                    <b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b>
                   </Card.Text>
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -44,7 +46,9 @@ class Abstain extends Component {
                 </Card.Body>
                 <Card.Body>
                   <Card.Text>
-                    <b style={{color: '#000'}}>what you need to know about BPSC?</b>
+                    <b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b>
                   </Card.Text>
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -75,7 +79,9 @@ class Abstain extends Component {
                 </Card.Body>
                 <Card.Body>
                   <Card.Text>
-                    <b style={{color: '#000'}}>what you need to know about BPSC?</b>
+                    <b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b>
                   </Card.Text>
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -102,11 +108,13 @@ class Abstain extends Component {
             <Col lg="3" md="6" mb="4" xs="1">
               <Card>
                 <Card.Body className="image">
-                  <img src="image/image6.png" alt="" class="card-img-top" />
+                  <img src="image/image12.png" alt="" class="card-img-top" />
                 </Card.Body>
                 <Card.Body>
                   <Card.Text>
-                    <b style={{color: '#000'}}>what you need to know about BPSC?</b>
+                    <b style={{ color: "#000" }}>
+                      what you need to know about BPSC?
+                    </b>
                   </Card.Text>
                   <Card.Text>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
