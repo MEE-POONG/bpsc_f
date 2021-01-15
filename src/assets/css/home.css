@@ -1,7 +1,6 @@
 .home > .home-image {
     padding-right: 0;
     padding-left: 0;
-    /* background-color: red; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -9,20 +8,22 @@
     width: 100%;
     padding-top: 33%;
 }
-.home-image .card {
-    background-color: #27b4a1a8;
-    width: 33%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    align-items: center;
+.home .title-video {
+    width: 100%;
 }
-.home-image .card-body {
-    padding: 10%;
+.home-image .card {
+    box-shadow: unset;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    padding: 0 2%;
+}
+.home-image .slide-img {
+    width: 40%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .home-image .card-text {
-    margin: 10% 0;
+    font-size: 20px;
 }
 .home-image .card .btn-success {
     background-color: #56b889;
@@ -78,9 +79,49 @@
     border: unset;
     border-radius: unset;
 }
+.sheet-one {
+    position: relative;
+}
+.sheet-one .trapezoid {
+    width: 10em;
+    text-align: center;
+    height: 0;
+    position: relative;
+    border-right: 20px solid white;
+    border-bottom: 40px solid #8be0b7;
+    border-top: 0;
+    border-left: 20px solid white;
+    box-sizing: content-box;
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+}
+.sheet-one .trapezoid.back {
+    left: 15%;
+    border-bottom: 40px solid #56b889;
+}
+.sheet-one .trapezoid span {
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    left: 0;
+}
+.sheet-one .file-green {
+    padding: 5% 0;
+    width: 100%;
+    background: radial-gradient(98.18% 853.99% at 0% 100%, #8be0b7 0%, #32c7bd 100%);
+}
+.sheet-one .file-green.back {
+    padding: 5% 0;
+    background: radial-gradient(98.18% 853.99% at 0% 100%, #8be0b7 0%, #56b889 100%);
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
 .sheet-one .row {
     position: relative;
-    background-color: white;
     width: 100%;
     height: 100%;
 }
@@ -100,8 +141,15 @@
     border-bottom: unset;
     position: absolute;
 }
+.sheet-one.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #56b889;
+}
 .sheet-one,
-.sheet-two{
+.sheet-two {
     height: 30%;
     background-color: white;
 }
@@ -109,17 +157,13 @@
     height: 40%;
     background-color: white;
 }
-.sheet-one .media {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+.sheet-one .card-title {
+    font-size: 4rem;
+    line-height: 1;
 }
-.sheet-one .media .card-title {
-    font-size: 10rem;
-    line-height: 0.75;
-}
-.media-body {
-    font-size: 3.25rem;
-    line-height: 1.2;
+.sheet-one .card img {
+    height: 75px;
+    object-fit: contain;
 }
 .end .list-group-item {
     font-size: 15px;
@@ -149,6 +193,20 @@
     border: unset;
     height: 100%;
 }
+.sheet-two .scroll-num{
+    background-color: rgba(38, 190, 180, 0.12);
+}
+.sheet-two .scroll-num .sharing.card {
+    border: unset;
+    box-shadow: unset;
+}
+.sheet-two .scroll-num .sharing .card-title {
+    font-size: 3rem;
+    color: #26BEB4;
+}
+.sheet-two .scroll-num .sharing .card-subtitle {
+    font-size: 0.75rem;
+}
 .sheet-two .container-fluid {
     height: 100%;
     background-size: cover;
@@ -174,7 +232,8 @@
 }
 .sheet-two button,
 .sheet-two button:active,
-.sheet-two button:hover,.sheet-two button .green {
+.sheet-two button:hover,
+.sheet-two button .green {
     background-color: #6fcf97;
     border-color: #6fcf97;
     color: #ffffff;
@@ -186,16 +245,16 @@
     border-color: #6fcf97;
     color: #ffffff;
 }
-.sheet-two .btn.focus,.sheet-two .btn:focus {
+.sheet-two .btn.focus,
+.sheet-two .btn:focus {
     outline: 0;
     box-shadow: unset;
 }
-.sheet-two .btn-green{
+.sheet-two .btn-green {
     position: absolute;
     width: 100%;
     bottom: 0.5rem;
     width: max-content;
-
 }
 .sheet-three .row,
 .sheet-three .col,
@@ -238,7 +297,7 @@
     transition: 1s;
     cursor: pointer;
 }
-.sheet-three .card-subtitle{
+.sheet-three .card-subtitle {
     font-size: 12px;
     transition: 1s;
     cursor: pointer;
@@ -252,7 +311,6 @@
     transform: scale(1.05);
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
-
 
 .sheet-three .card::before,
 .card::after {
@@ -279,14 +337,14 @@
 .card:focus::after {
     transform: scale3d(1, 1, 1);
 }
-.sheet-three span img{
+.sheet-three span img {
     width: 40px;
     height: 40px;
 }
-.sheet-three span{
+.sheet-three span {
     font-size: 12px;
 }
-.sheet-three .card-footer{
+.sheet-three .card-footer {
     font-size: 12px;
     background-color: unset;
     border: unset;
@@ -307,7 +365,7 @@
     margin: 0;
     box-shadow: unset;
 }
-.tab-script button:focus{
+.tab-script button:focus {
     border: unset;
     box-shadow: unset;
 }
@@ -406,21 +464,21 @@
     border-top: unset;
     color: #26beb4;
 }
-.learning .card .date{
+.learning .card .date {
     padding: 0.75rem;
-    margin:0 1rem 0 0.5rem ;
+    margin: 0 1rem 0 0.5rem;
     width: 3.5rem;
     text-align: center;
     visibility: hidden;
     color: #000000;
     background-color: #26beb4;
 }
-.learning .card .absolute{
+.learning .card .absolute {
     position: absolute;
-    top:-2rem;
+    top: -2rem;
     visibility: inherit;
 }
-.learning .media-body{
+.learning .media-body {
     font-size: 1rem;
 }
 /*  team members */
@@ -429,15 +487,15 @@
     border: unset;
     box-shadow: none;
 }
-.team .card-title{
+.team .card-title {
     font-size: 3rem;
     line-height: 2rem;
 }
-.team .card-subtitle{
+.team .card-subtitle {
     font-size: 1.5rem;
     line-height: 2rem;
 }
-.team .card-text{
+.team .card-text {
     font-size: 1rem;
     line-height: 2rem;
 }
@@ -471,12 +529,7 @@
     transition: all linear 0.25s;
 
     color: white;
-    text-shadow:
-        3px 3px 0 #000,
-      -1px -1px 0 #000,  
-       1px -1px 0 #000,
-       -1px 1px 0 #000,
-        1px 1px 0 #000;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .profile-card-2 .profile-icons {
@@ -496,12 +549,7 @@
     transition: all linear 0.25s;
 
     color: white;
-    text-shadow:
-    1px 1px 0 #000,
-  -1px -1px 0 #000,  
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-    1px 1px 0 #000;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .profile-card-2 .profile-tel {
     position: absolute;
@@ -512,12 +560,7 @@
     transition: all linear 0.25s;
 
     color: white;
-    text-shadow:
-        1px 1px 0 #000,
-      -1px -1px 0 #000,  
-       1px -1px 0 #000,
-       -1px 1px 0 #000,
-        1px 1px 0 #000;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .profile-card-2 .profile-icons .fa {
@@ -526,8 +569,7 @@
 
 .profile-card-2:hover img {
     filter: grayscale(100%);
-        /* -webkit-filter: grayscale(100%) brightness(50%) sepia(89%) hue-rotate(130deg) saturate(1000%) contrast(0.8) */
-
+    /* -webkit-filter: grayscale(100%) brightness(50%) sepia(89%) hue-rotate(130deg) saturate(1000%) contrast(0.8) */
 }
 
 .profile-card-2:hover .profile-name {
@@ -536,34 +578,19 @@
     -webkit-text-stroke: 1px black; */
     bottom: 80px;
     color: white;
-    text-shadow:
-        3px 3px 0 #000,
-      -1px -1px 0 #000,  
-       1px -1px 0 #000,
-       -1px 1px 0 #000,
-        1px 1px 0 #000;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .profile-card-2:hover .profile-username {
     bottom: 60px;
-    
+
     color: white;
-    text-shadow:
-    1px 1px 0 #000,
-  -1px -1px 0 #000,  
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-    1px 1px 0 #000;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .profile-card-2:hover .profile-tel {
     bottom: 45px;
     color: white;
-    text-shadow:
-        1px 1px 0 #000,
-      -1px -1px 0 #000,  
-       1px -1px 0 #000,
-       -1px 1px 0 #000,
-        1px 1px 0 #000;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .profile-card-2:hover .profile-icons {

@@ -15,10 +15,10 @@ class TheHeader extends Component {
           <Navbar.Brand href="#home">
             <Image
               alt=""
-              src="image/BPSC.SVG"
+              src="image/header/Logo.png"
               width="100"
-              height="100"
-              className="d-inline-block align-top"
+              className="d-inline-block align-tops"
+              style={{objectFit: 'contain'}}
             />
           </Navbar.Brand>
           <Nav className="ml-auto">

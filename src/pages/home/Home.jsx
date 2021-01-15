@@ -1,6 +1,8 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import SlideTitle from './SlideTitle';
-import MyFlieAbout from './MyFlieAbout';
+import SheetOne from "./SheetOne";
+import SheetTwo from "./SheetTwo";
+import SheetThree from "./SheetThree";
 import Abstain from "./Abstain";
 import Learning from "./Learning";
 import TeamMember from "./TeamMember";
@@ -9,18 +11,20 @@ import Frequently from "./Frequently";
 
 class Home extends Component {
   render() {
-  return (
-    <div className="home">
-      <SlideTitle/>
-      <MyFlieAbout/>
-      <Abstain/>
-      <Learning/>
-      <TeamMember/>
-      <EventBox/>
-      <Frequently/>
-    </div>
-  );
-}
+    return (
+      <div className="home">
+        <SlideTitle />
+        <SheetOne />
+        <SheetTwo />
+        <SheetThree />
+        <Abstain />
+        <Learning />
+        <TeamMember />
+        <EventBox />
+        <Frequently />
+      </div>
+    );
+  }
 };
 
 export default Home;
