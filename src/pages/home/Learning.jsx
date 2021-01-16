@@ -27,7 +27,7 @@ class Abstain extends Component {
             }}
           >
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -75,7 +75,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image11.png" alt="" class="card-img-top" />
@@ -123,7 +123,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image10.png" alt="" class="card-img-top" />
@@ -171,7 +171,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -219,7 +219,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -267,7 +267,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image11.png" alt="" class="card-img-top" />
@@ -315,7 +315,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image10.png" alt="" class="card-img-top" />
@@ -363,7 +363,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -411,7 +411,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -459,7 +459,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image11.png" alt="" class="card-img-top" />
@@ -507,7 +507,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image10.png" alt="" class="card-img-top" />
@@ -555,7 +555,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -603,7 +603,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -651,7 +651,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image11.png" alt="" class="card-img-top" />
@@ -699,7 +699,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image10.png" alt="" class="card-img-top" />
@@ -747,7 +747,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -795,7 +795,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -843,7 +843,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image11.png" alt="" class="card-img-top" />
@@ -891,7 +891,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image10.png" alt="" class="card-img-top" />
@@ -939,7 +939,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -987,7 +987,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />
@@ -1035,7 +1035,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image11.png" alt="" class="card-img-top" />
@@ -1083,7 +1083,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image10.png" alt="" class="card-img-top" />
@@ -1131,7 +1131,7 @@ class Abstain extends Component {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="mobile-padding">
+              <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
                     <img src="image/image12.png" alt="" class="card-img-top" />

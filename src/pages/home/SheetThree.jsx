@@ -26,7 +26,7 @@ class SheetTwo extends Component {
           }}
         >
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -65,7 +65,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -106,7 +106,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -147,7 +147,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -188,7 +188,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -229,7 +229,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -270,7 +270,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -311,7 +311,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -352,7 +352,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -393,7 +393,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -434,7 +434,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -475,7 +475,7 @@ class SheetTwo extends Component {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="mobile-padding">
+            <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
                   <Card.Img
@@ -518,7 +518,7 @@ class SheetTwo extends Component {
         </Swiper>
 
         {/* <Row className="m-0">
-          <div lg="6" md="6" sm="12" xs="12" className="mobile-padding">
+          <div lg="6" md="6" sm="12" xs="12" className="mobile-padding py-5">
             <Card className="box-card-shadow">
               <Card.Body className="image">
                 <Card.Img src="image/image7.png" alt="" class="card-img-top" />
@@ -551,7 +551,7 @@ class SheetTwo extends Component {
               </Card.Body>
             </Card>
           </div>
-          <div lg="6" md="6" sm="12" xs="12" className="mobile-padding">
+          <div lg="6" md="6" sm="12" xs="12" className="mobile-padding py-5">
             <Card className="box-card-shadow">
               <Card.Body className="image">
                 <Card.Img src="image/image8.png" alt="" class="card-img-top" />
