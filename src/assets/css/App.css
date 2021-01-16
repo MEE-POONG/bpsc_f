@@ -45,6 +45,10 @@ body {
   color: #61dafb;
 }
 
+.subtitle-text {
+  color: #757575;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -56,3 +60,5 @@ body {
 @import url("navbar.css");
 @import url("home.css");
 @import url("home.mobile.css");
+@import url("about.title.css");
+@import url("about.subtitle.css");

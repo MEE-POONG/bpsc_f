@@ -1,7 +1,6 @@
 import React from "react";
 
-import TheHeader from "./containers/TheHeader";
-import Home from "./pages/home/Home";
+import TheHeader from "./controllers/TheHeader";
 import "./assets/css/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -11,6 +10,9 @@ import {
   Route
 } from "react-router-dom";
 import FourZeroFour from "./pages/404";
+
+import Home from "./pages/home/Home";
+import About from "./pages/about";
 
 export default function App() {
   // const loading = (
@@ -43,6 +45,7 @@ export default function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="*" element={<FourZeroFour />} />
           </Routes>
         </div>
