@@ -28,10 +28,18 @@ const AboutTalkWithUS = () => {
             </div>
             <div className="pt-5">
               <textarea
-                class="form-control about-talk-with-us-input"
+                className="form-control about-talk-with-us-input"
                 placeholder="MASSAGE"
                 rows="10"
               ></textarea>
+            </div>
+            <div className="pt-5 about-talk-with-us-btn-right">
+              <button type="button" className="btn btn-danger about-talk-with-us-btn-danger ">
+                Danger
+              </button>
+              <button type="button" className="btn btn-success about-talk-with-us-btn-success">
+                Success
+              </button>
             </div>
           </div>
         </Container>
