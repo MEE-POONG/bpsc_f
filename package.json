@@ -1,5 +1,5 @@
 {
-  "name": "bpsc_f",
+  "name": "bpsc",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,14 +7,18 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "bootstrap": "^4.5.3",
-    "node-sass": "^5.0.0",
+    "node-sass": "^4.0.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
     "react-multi-carousel": "^2.6.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "sass": "^1.32.2",
+    "sass": "^1.32.4",
+    "sass-loader": "^10.1.1",
+    "scss": "^0.2.4",
+    "scss-loader": "^0.0.1",
+    "swiper": "^6.4.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

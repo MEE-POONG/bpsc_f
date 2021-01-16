@@ -1,664 +1,745 @@
 .home > .home-image {
-    padding-right: 0;
-    padding-left: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    padding-top: 33%;
+  padding-right: 0;
+  padding-left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  padding-top: 33%;
 }
 .home .title-video {
-    width: 100%;
+  width: 100%;
+  height: 520px;
 }
 .home-image .card {
-    box-shadow: unset;
-    width: 60%;
-    height: 100%;
-    align-items: center;
-    padding: 0 2%;
+  box-shadow: unset;
+  height: 100%;
+  align-items: center;
+  padding: 0 2%;
 }
 .home-image .slide-img {
-    width: 40%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  width: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .home-image .card-text {
-    font-size: 20px;
+  font-size: 20px;
 }
 .home-image .card .btn-success {
-    background-color: #56b889;
-    border-color: rgba(0, 252, 218, 0.678);
+  background-color: #56b889;
+  border-color: rgba(0, 252, 218, 0.678);
 }
 .home-image .card .btn-success:hover {
-    background-color: rgb(0, 167, 145);
-    border-color: rgba(0, 252, 218, 0.678);
+  background-color: rgb(0, 167, 145);
+  border-color: rgba(0, 252, 218, 0.678);
 }
 .home-image .card .btn-success.focus {
-    background-color: rgb(0, 167, 145);
-    border-color: rgba(0, 252, 218, 0.678);
+  background-color: rgb(0, 167, 145);
+  border-color: rgba(0, 252, 218, 0.678);
 }
 .home-image .card .btn-success:not(:disabled):not(.disabled).active,
 .home-image .card .btn-success:not(:disabled):not(.disabled):active,
 .home-image .card .show > .btn-success.dropdown-toggle {
-    color: #fff;
-    background-color: rgb(0, 167, 145);
-    border-color: rgba(0, 252, 218, 0.678);
+  color: #fff;
+  background-color: rgb(0, 167, 145);
+  border-color: rgba(0, 252, 218, 0.678);
 }
 .home > .home-file-about {
-    padding-right: 0;
-    padding-left: 0;
-    position: relative;
-    width: 100%;
-    padding-top: 75%;
+  padding-right: 0;
+  padding-left: 0;
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
 }
 .home-file-about img.file-about {
-    object-fit: cover;
-    top: 0;
-    width: 33.33%;
-    height: 100%;
-    position: absolute;
+  object-fit: cover;
+  top: 0;
+  width: 33.33%;
+  height: 100%;
+  position: absolute;
 }
 .home-file-about .my-file {
-    width: 66.67%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    padding: 0;
-    right: 0;
-    align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 66.67%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  padding: 0;
+  right: 0;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .my-file {
-    position: relative;
-    background-color: white;
-    width: 100%;
-    padding: 0;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  padding: 0;
 }
 /* sharing */
 .sharing .card {
-    border: unset;
-    border-radius: unset;
+  border: unset;
+  border-radius: unset;
 }
 .sheet-one {
-    position: relative;
+  position: relative;
 }
 .sheet-one .trapezoid {
-    width: 10em;
-    text-align: center;
-    height: 0;
-    position: relative;
-    border-right: 20px solid white;
-    border-bottom: 40px solid #8be0b7;
-    border-top: 0;
-    border-left: 20px solid white;
-    box-sizing: content-box;
-    position: absolute;
-    bottom: 100%;
-    left: 10px;
+  width: 10em;
+  text-align: center;
+  height: 0;
+  position: relative;
+  border-right: 20px solid white;
+  border-bottom: 40px solid #8be0b7;
+  border-top: 0;
+  border-left: 20px solid white;
+  box-sizing: content-box;
+  /* position: absolute; */
+  bottom: 100%;
+  left: 10px;
 }
 .sheet-one .trapezoid.back {
-    left: 15%;
-    border-bottom: 40px solid #56b889;
+  border-bottom: 40px solid #56b889;
 }
 .sheet-one .trapezoid span {
-    position: absolute;
-    top: 10px;
-    text-align: center;
-    width: 100%;
-    color: #fff;
-    left: 0;
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  left: 0;
 }
-.sheet-one .file-green {
-    padding: 5% 0;
-    width: 100%;
-    background: radial-gradient(98.18% 853.99% at 0% 100%, #8be0b7 0%, #32c7bd 100%);
-}
+/* .sheet-one .file-green {
+  padding: 5% 0;
+  width: 100%;
+  background: radial-gradient(
+    98.18% 853.99% at 0% 100%,
+    #8be0b7 0%,
+    #32c7bd 100%
+  );
+} */
 .sheet-one .file-green.back {
-    padding: 5% 0;
-    background: radial-gradient(98.18% 853.99% at 0% 100%, #8be0b7 0%, #56b889 100%);
-    position: absolute;
-    width: 100%;
-    top: 0;
+  padding: 5% 0;
+  background: radial-gradient(
+    98.18% 853.99% at 0% 100%,
+    #8be0b7 0%,
+    #32c7bd 100%
+  );
+  width: 100%;
+  top: 0;
 }
 .sheet-one .row {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .sheet-one .title {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: unset;
-    border: unset;
-    border-radius: unset;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: unset;
+  border: unset;
+  border-radius: unset;
 }
 .sheet-one .card.title {
-    background-color: unset;
-    border-bottom: unset;
-    position: absolute;
+  background-color: unset;
+  border-bottom: unset;
+  position: absolute;
 }
 .sheet-one.back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background-color: #56b889;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #56b889;
 }
 .sheet-one,
 .sheet-two {
-    height: 30%;
-    background-color: white;
+  height: 30%;
+  background-color: white;
 }
 .sheet-three {
-    height: 40%;
-    background-color: white;
+  height: 40%;
+  background-color: white;
+}
+.home .card-title {
+  font-size: 4.2rem !important;
+}
+.home .card .card-text {
+  font-size: 2.2rem !important;
 }
 .sheet-one .card-title {
-    font-size: 4rem;
-    line-height: 1;
+  font-size: 2.2rem !important;
+  line-height: 1;
 }
 .sheet-one .card img {
-    height: 75px;
-    object-fit: contain;
+  height: 5rem;
+  object-fit: contain;
 }
 .end .list-group-item {
-    font-size: 15px;
-    padding: 0.5rem 0.5rem;
+  font-size: 15px;
+  padding: 0.5rem 0.5rem;
 }
 .sheet-one .subtitle {
-    font-size: 24px;
-    z-index: 1;
+  font-size: 1.5rem;
+  z-index: 1;
 }
 .sheet-one .list-group-horizontal {
-    width: 100%;
-    height: 100%;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .sheet-one .start.list-group-item {
-    width: 50%;
-    padding: 0rem;
-    position: relative;
+  width: 50%;
+  padding: 0rem;
+  position: relative;
 }
 .sheet-one .end.list-group-item {
-    width: 50%;
-    padding: 0.5rem;
+  width: 50%;
+  padding: 0.5rem;
 }
 .sheet-two .sharing {
-    background-color: unset;
-    border: unset;
-    height: 100%;
+  background-color: unset;
+  border: unset;
+  height: 100%;
+  box-shadow: none;
 }
-.sheet-two .scroll-num{
-    background-color: rgba(38, 190, 180, 0.12);
+.sheet-two .scroll-num {
+  background-color: rgba(38, 190, 180, 0.12);
 }
 .sheet-two .scroll-num .sharing.card {
-    border: unset;
-    box-shadow: unset;
+  border: unset;
+  box-shadow: unset;
 }
 .sheet-two .scroll-num .sharing .card-title {
-    font-size: 3rem;
-    color: #26BEB4;
+  font-size: 3rem;
+  color: #26beb4;
 }
 .sheet-two .scroll-num .sharing .card-subtitle {
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 .sheet-two .container-fluid {
-    height: 100%;
-    background-size: cover;
+  height: 100%;
+  background-size: cover;
 }
 .sheet-two .card-title {
-    font-size: 4rem;
-    font-weight: bold;
-    line-height: 1;
-    border: unset;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+  border: unset;
 }
 .sheet-two .card-subtitle {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    line-height: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
 }
 .sheet-two .text-50 {
-    width: 50%;
-    font-size: 1.5rem;
+  width: 50%;
+  font-size: 1.5rem;
 }
 .sheet-two .card-body {
-    border: unset;
+  border: unset;
 }
 .sheet-two button,
 .sheet-two button:active,
 .sheet-two button:hover,
 .sheet-two button .green {
-    background-color: #6fcf97;
-    border-color: #6fcf97;
-    color: #ffffff;
+  background-color: #6fcf97;
+  border-color: #6fcf97;
+  color: #ffffff;
 }
 .sheet-two .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
-    background-color: #6fcf97;
-    border-color: #6fcf97;
-    color: #ffffff;
+  background-color: #6fcf97;
+  border-color: #6fcf97;
+  color: #ffffff;
 }
 .sheet-two .btn.focus,
 .sheet-two .btn:focus {
-    outline: 0;
-    box-shadow: unset;
+  outline: 0;
+  box-shadow: unset;
 }
 .sheet-two .btn-green {
-    position: absolute;
-    width: 100%;
-    bottom: 0.5rem;
-    width: max-content;
+  /* position: absolute; */
+  width: 100%;
+  bottom: 0.5rem;
+  width: max-content;
 }
 .sheet-three .row,
 .sheet-three .col,
 .sheet-three .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 0;
-    height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0;
+  height: 100%;
 }
 .sheet-three .card-body.image {
-    height: 30%;
-    padding: 0;
+  height: 30%;
+  padding: 0;
 }
 .sheet-three .card-body {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 .sheet-three .row {
-    height: 100%;
+  height: 100%;
 }
 .sheet-three .col {
-    height: 100%;
+  height: 100%;
 }
 .sheet-three .col-lg-3.col-md-6.col-1 {
-    padding-top: 15px;
-    padding-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .sheet-three p {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 .sheet-three img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 .sheet-three .card {
-    transition: 0.5s;
-    cursor: pointer;
+  transition: 0.5s;
+  cursor: pointer;
 }
 .sheet-three .card-title {
-    font-size: 15px;
-    transition: 1s;
-    cursor: pointer;
+  font-size: 0.6rem !important;
+  transition: 1s;
+  cursor: pointer;
 }
 .sheet-three .card-subtitle {
-    font-size: 12px;
-    transition: 1s;
-    cursor: pointer;
-    /* color: #ffa710; */
+  font-size: 0.9rem;
+  transition: 1s;
+  cursor: pointer;
+  /* color: #ffa710; */
 }
 .sheet-three .card-title i:hover {
-    transform: scale(1.25) rotate(100deg);
-    color: #18d4ca;
+  transform: scale(1.25) rotate(100deg);
+  color: #18d4ca;
 }
 .sheet-three .card:hover {
-    transform: scale(1.05);
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .sheet-three .card::before,
 .card::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: scale3d(0, 0, 1);
-    transition: transform 0.3s ease-out 0s;
-    background: rgba(255, 255, 255, 0.1);
-    content: "";
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform 0.3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: "";
+  pointer-events: none;
 }
 .sheet-three .card::before {
-    transform-origin: left top;
+  transform-origin: left top;
 }
 .sheet-three .card::after {
-    transform-origin: right bottom;
+  transform-origin: right bottom;
 }
 .sheet-three .card:hover::before,
 .card:hover::after,
 .card:focus::before,
 .card:focus::after {
-    transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
 }
 .sheet-three span img {
-    width: 40px;
-    height: 40px;
+  width: 30px;
+  height: 30px;
 }
 .sheet-three span {
-    font-size: 12px;
+  font-size: 12px;
 }
 .sheet-three .card-footer {
-    font-size: 12px;
-    background-color: unset;
-    border: unset;
+  font-size: 12px;
+  background-color: unset;
+  border: unset;
 }
 .my-file .green {
-    background-color: #26beb4;
+  background-color: #26beb4;
 }
 .tab-script {
-    position: absolute;
-    bottom: 100%;
-    left: 0rem;
-    z-index: 999;
+  position: absolute;
+  bottom: 100%;
+  left: 0rem;
+  z-index: 999;
 }
 .tab-script button {
-    border-radius: 15px 15px 0 0;
-    border: 0px;
-    background: #ffffff;
-    margin: 0;
-    box-shadow: unset;
+  border-radius: 15px 15px 0 0;
+  border: 0px;
+  background: #ffffff;
+  margin: 0;
+  box-shadow: unset;
 }
 .tab-script button:focus {
-    border: unset;
-    box-shadow: unset;
+  border: unset;
+  box-shadow: unset;
 }
 .green .tab-script {
-    left: 10rem;
+  left: 10rem;
 }
 .while .tab-script button {
-    background: #ffffff;
-    color: black !important;
-    left: 10rem;
+  background: #ffffff;
+  color: black !important;
+  left: 10rem;
 }
 .green .tab-script button {
-    background: #56b889;
-    color: white;
-    left: 10rem;
+  background: #56b889;
+  color: white;
+  left: 10rem;
 }
 /* abstain */
 .abstain .container-fluid {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+.abstain .bg-abstain {
+  background: radial-gradient(
+    101.48% 313.73% at 100% 100%,
+    #8be0b7 0%,
+    #46d1c8 100%
+  );
 }
 .abstain .card {
-    background-color: #26beb4;
-    position: relative;
-    width: 100%;
-    padding: 1rem;
+  position: relative;
+  width: 100%;
+  padding: 1rem;
 }
-.abstain .card-body {
-    padding-left: 33%;
+.abstain .btn-success {
+  background-color: #6fcf97;
+  border-color: #6fcf97;
 }
+/* .abstain .card-body {
+  padding-left: 33%;
+} */
 .abstain .card-title {
-    font-size: 66px;
+  font-size: 66px;
 }
 .abstain .card-text {
-    font-size: 20px;
+  font-size: 20px;
+  color: #000 !important;
+}
+.abstain .card .card-text {
+  font-size: 20px !important;
+  color: #000 !important;
+}
+.learning .card .card-text {
+  font-size: 20px !important;
+  color: #747373 !important;
 }
 /* learning */
 .learning .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .learning .card .card-body.image {
-    padding: 0rem;
+  padding: 0rem;
 }
 .learning .card {
-    transition: 0.5s;
-    cursor: pointer;
+  transition: 0.5s;
+  cursor: pointer;
 }
 .learning .card-title {
-    font-size: 15px;
-    transition: 1s;
-    cursor: pointer;
+  font-size: 15px !important;
+  transition: 1s;
+  cursor: pointer;
 }
 .learning .card-title i {
-    font-size: 15px;
-    transition: 1s;
-    cursor: pointer;
-    color: #ffa710;
+  font-size: 15px !important;
+  transition: 1s;
+  cursor: pointer;
+  color: #ffa710;
 }
 .learning .card-title i:hover {
-    transform: scale(1.25) rotate(100deg);
-    color: #18d4ca;
+  transform: scale(1.25) rotate(100deg);
+  color: #18d4ca;
 }
 .learning .card:hover {
-    transform: scale(1.05);
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .learning .card::before,
 .card::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: scale3d(0, 0, 1);
-    transition: transform 0.3s ease-out 0s;
-    background: rgba(255, 255, 255, 0.1);
-    content: "";
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform 0.3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: "";
+  pointer-events: none;
 }
 .learning .card::before {
-    transform-origin: left top;
+  transform-origin: left top;
 }
 .learning .card::after {
-    transform-origin: right bottom;
+  transform-origin: right bottom;
 }
 .learning .card:hover::before,
 .card:hover::after,
 .card:focus::before,
 .card:focus::after {
-    transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
 }
 .learning .card-footer {
-    padding: 0.25rem 0.5rem;
-    background-color: unset;
-    border-top: unset;
-    color: #26beb4;
+  padding: 0.25rem 0.5rem;
+  background-color: unset;
+  border-top: unset;
+  color: #26beb4;
 }
 .learning .card .date {
-    padding: 0.75rem;
-    margin: 0 1rem 0 0.5rem;
-    width: 3.5rem;
-    text-align: center;
-    visibility: hidden;
-    color: #000000;
-    background-color: #26beb4;
+  padding: 0.75rem;
+  margin: 0 1rem 0 0.5rem;
+  width: 3.5rem;
+  text-align: center;
+  visibility: hidden;
+  color: #000000;
+  background-color: #26beb4;
 }
 .learning .card .absolute {
-    position: absolute;
-    top: -2rem;
-    visibility: inherit;
+  position: absolute;
+  top: -2rem;
+  visibility: inherit;
 }
 .learning .media-body {
-    font-size: 1rem;
+  font-size: 2rem;
 }
 /*  team members */
 .team .card {
-    text-align: center;
-    border: unset;
-    box-shadow: none;
+  text-align: center;
+  border: unset;
+  box-shadow: none;
 }
 .team .card-title {
-    font-size: 3rem;
-    line-height: 2rem;
+  font-size: 3rem;
+  line-height: 5rem;
 }
 .team .card-subtitle {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .team .card-text {
-    font-size: 1rem;
-    line-height: 2rem;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 .profile-card-2 {
-    max-width: 300px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-position: center;
-    overflow: hidden;
-    position: relative;
-    margin: 10px auto;
-    cursor: pointer;
-    border-radius: 10px;
+  max-width: fit-content;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .profile-card-2 img {
-    transition: all linear 0.25s;
-    height: 500px;
-    width: 350px;
+  transition: all linear 0.25s;
+  height:300px;
+  width: 300px;
 }
 
 .profile-card-2 .profile-name {
-    position: absolute;
-    left: 30px;
-    bottom: 70px;
-    font-size: 30px;
-    color: #fff;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    transition: all linear 0.25s;
+  position: absolute;
+  left: 30px;
+  bottom: 70px;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  transition: all linear 0.25s;
 
-    color: white;
-    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .profile-card-2 .profile-icons {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    color: #fff;
-    transition: all linear 0.25s;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: #fff;
+  transition: all linear 0.25s;
 }
 
 .profile-card-2 .profile-username {
-    position: absolute;
-    bottom: 50px;
-    left: 30px;
-    color: #fff;
-    font-size: 13px;
-    transition: all linear 0.25s;
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+  color: #fff;
+  font-size: 13px;
+  transition: all linear 0.25s;
 
-    color: white;
-    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .profile-card-2 .profile-tel {
-    position: absolute;
-    bottom: 35px;
-    left: 30px;
-    color: #fff;
-    font-size: 13px;
-    transition: all linear 0.25s;
+  position: absolute;
+  bottom: 35px;
+  left: 30px;
+  color: #fff;
+  font-size: 13px;
+  transition: all linear 0.25s;
 
-    color: white;
-    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .profile-card-2 .profile-icons .fa {
-    margin: 5px;
+  margin: 5px;
 }
 
 .profile-card-2:hover img {
-    filter: grayscale(100%);
-    /* -webkit-filter: grayscale(100%) brightness(50%) sepia(89%) hue-rotate(130deg) saturate(1000%) contrast(0.8) */
+  filter: grayscale(100%);
+  /* -webkit-filter: grayscale(100%) brightness(50%) sepia(89%) hue-rotate(130deg) saturate(1000%) contrast(0.8) */
 }
 
 .profile-card-2:hover .profile-name {
-    /* text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     color: black;
     -webkit-text-stroke: 1px black; */
-    bottom: 80px;
-    color: white;
-    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  bottom: 80px;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .profile-card-2:hover .profile-username {
-    bottom: 60px;
+  bottom: 60px;
 
-    color: white;
-    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .profile-card-2:hover .profile-tel {
-    bottom: 45px;
-    color: white;
-    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  bottom: 45px;
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .profile-card-2:hover .profile-icons {
-    right: 40px;
+  right: 40px;
 }
 /* event */
 .event {
-    background: rgba(38, 190, 180, 0.25);
+  background: rgba(38, 190, 180, 0.25);
 }
 .event .container {
-    padding: 3.5rem;
+  padding: 3.5rem;
 }
 .event .card-title {
-    font-size: 2.25rem;
+  font-size: 2.25rem;
 }
 .event .card-day .card-title {
-    font-size: 3rem;
-    margin-bottom: 0rem;
+  font-size: 3rem;
+  margin-bottom: 0rem;
 }
 .event .card-day .card-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 .event .card-day .card-text {
-    font-size: 0.5rem;
+  font-size: 0.5rem;
 }
 .event .bg-1 {
-    background: #06978d;
-    color: white;
+  background: #06978d;
+  color: white !important;
 }
 .event .bg-1 .card-text {
-    background: #06978d;
-    color: white;
+  background: #06978d;
+  color: white !important;
 }
 .event .bg-2 {
-    background: rgba(38, 190, 180, 0.75);
-    color: #757575;
+  background: rgba(38, 190, 180, 0.75);
+  color: #757575;
 }
 .event .bg-3 {
-    background: rgba(38, 190, 180, 0.5);
-    color: #757575;
+  background: rgba(38, 190, 180, 0.5);
+  color: #757575;
 }
 .event .bg-4 {
-    background: rgba(38, 190, 180, 0.3);
-    color: #757575;
+  background: rgba(38, 190, 180, 0.3);
+  color: #757575;
 }
 /* frequently */
 .frequently .start.list-group-item {
-    width: 60%;
+  width: 60%;
 }
 .frequently .end.list-group-item {
-    width: 40%;
+  width: 40%;
 }
 .frequently .list-group-item {
-    padding: 0;
+  padding: 0;
 }
 .frequently .card-title {
-    font-size: 24px;
+  font-size: 24px;
 }
 .frequently .card-subtitle {
-    font-size: 12px;
-    color: #757575;
+  font-size: 12px;
+  color: #757575;
 }
 .frequently .card-text {
-    font-size: 12px;
-    color: #56b889;
+  font-size: 12px;
+  color: #56b889;
 }
 .frequently button {
-    margin: 2rem 0;
-    background-color: #6fcf97;
+  margin: 2rem 0;
+  background-color: #6fcf97;
+}
+
+.hide-short-desc {
+  display: block !important ;
+}
+
+.card .card-text {
+  font-size: 1.3rem !important;
+  color: #747373 !important;
+}
+
+.sharing .card .card-text {
+  font-size: 0.5rem !important;
+  color: #747373 !important;
+}
+.box-card-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+.sharing .card {
+  box-shadow: none;
+}
+.card .card-body p {
+  margin-bottom: 2rem;
+}
+.card-box-shadow {
+  box-shadow: none;
+}
+
+.sheet-three .row,
+.sheet-three .col,
+.sheet-three .card {
+  box-shadow: none;
+}
+
+.sharing .card .card-body p {
+  margin-bottom: 0rem;
+}
+
+.team-title {
+  font-size: xx-large !important;
+}
+.team-subtitle {
+  font-size: xx-large !important;
 }

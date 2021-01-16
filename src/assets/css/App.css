@@ -5,9 +5,14 @@
   font-family: "Mitr", sans-serif;
 }
 
-body {
-  color: #000;
+html {
+  font-size: 62.5%; /* เพื่อให้ 1rem มีค่าประมาณ 10px */
 }
+
+body {
+  font-size: 1.4em; /* มีค่าประมาณ 14px */
+}
+
 
 .App {
   text-align: center;
@@ -49,3 +54,4 @@ body {
 }
 @import url("navbar.css");
 @import url("home.css");
+@import url("home.mobile.css");

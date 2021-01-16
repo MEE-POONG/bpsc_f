@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, ListGroup, Button, Image, Card } from 'react-bootstrap';
+import { Container, ListGroup, Button, Card } from 'react-bootstrap';
 
 
 class Frequently extends Component {
@@ -9,7 +9,7 @@ class Frequently extends Component {
             <Container fluid className="m-0 p-0">
               <ListGroup horizontal>
                 <ListGroup.Item
-                  className="start"
+                  className="start hide-short-desc"
                   style={{
                     backgroundImage: "url('/image/frequently-doctor.svg')",
                   }}

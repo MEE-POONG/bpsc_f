@@ -1,19 +1,32 @@
 import React, { Component } from "react";
-import { Container, Card, Row, Col, Button } from "react-bootstrap";
+import { Container, Card, Button } from "react-bootstrap";
+
+
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/swiper.scss";
+
+
 
 class TeamMember extends Component {
   render() {
     return (
       <div className="team">
-        <Container fluid>
+        <Container fluid className="py-5">
           <Card classname="text-center ">
             <Card.Body class="text-uppercase">
-              <Card.Subtitle class="text-uppercase">
+              <Card.Subtitle class="text-uppercase team-title">
                 our team members
               </Card.Subtitle>
-              <Card.Title>we have quality complete expert</Card.Title>
-              <Card.Title>reviews in our program</Card.Title>
-              <Card.Text>
+              <Card.Title className="team-subtitle">
+                we have quality complete expert
+              </Card.Title>
+              <Card.Title className="team-subtitle">
+                reviews in our program
+              </Card.Title>
+              <Card.Text className="team-subtitle">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore ...
               </Card.Text>
@@ -21,41 +34,96 @@ class TeamMember extends Component {
           </Card>
         </Container>
         <Container fluid>
-          <Row>
-            <Col>
+        <Swiper
+            spaceBetween={50}
+            breakpoints={{
+              // when window width is >= 640px
+              640: {
+                width: 640,
+                slidesPerView: 2,
+              },
+              // when window width is >= 768px
+              768: {
+                width: 768,
+                slidesPerView: 2,
+              },
+            }}
+          >
+          
+            <SwiperSlide>
               <div class="profile-card-2">
                 <img
                   class="img img-responsive"
-                  src="https://f.ptcdn.info/774/023/000/1411538189-775-o.jpg"
+                  src="/image/image24.png"
+                  alt=""
                 />
                 <div class="profile-name">DR.YONG PAL</div>
                 <div class="profile-username">CARDIOTHORACIC SURGEON</div>
                 <div class="profile-tel">TEL +666 666 6666</div>
               </div>
-            </Col>
-            <Col>
+            </SwiperSlide>
+            <SwiperSlide>
               <div class="profile-card-2">
                 <img
                   class="img img-responsive"
-                  src="https://www.mkh.go.th/th/wp-content/uploads/2018/10/medical-mkh-1151.jpg"
+                  src="/image/image23.png"
+                  alt=""
                 />
                 <div class="profile-name">DR.YONG PAL</div>
                 <div class="profile-username">CARDIOTHORACIC SURGEON</div>
                 <div class="profile-tel">TEL +666 666 6666</div>
               </div>
-            </Col>
-            <Col>
+            </SwiperSlide>
+            <SwiperSlide>
               <div class="profile-card-2">
                 <img
                   class="img img-responsive"
-                  src="https://image.makewebeasy.net/makeweb/0/6RaBbTmY7/Content/%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%9B%E0%B9%8B%E0%B8%A7%E0%B8%A2.jpg"
+                  src="/image/image26.png"
+                  alt=""
                 />
                 <div class="profile-name">DR.YONG PAL</div>
                 <div class="profile-username">CARDIOTHORACIC SURGEON</div>
                 <div class="profile-tel">TEL +666 666 6666</div>
               </div>
-            </Col>
-          </Row>
+            </SwiperSlide>
+          
+            <SwiperSlide>
+              <div class="profile-card-2">
+                <img
+                  class="img img-responsive"
+                  src="/image/image24.png"
+                  alt=""
+                />
+                <div class="profile-name">DR.YONG PAL</div>
+                <div class="profile-username">CARDIOTHORACIC SURGEON</div>
+                <div class="profile-tel">TEL +666 666 6666</div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="profile-card-2">
+                <img
+                  class="img img-responsive"
+                  src="/image/image23.png"
+                  alt=""
+                />
+                <div class="profile-name">DR.YONG PAL</div>
+                <div class="profile-username">CARDIOTHORACIC SURGEON</div>
+                <div class="profile-tel">TEL +666 666 6666</div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="profile-card-2">
+                <img
+                  class="img img-responsive"
+                  src="/image/image26.png"
+                  alt=""
+                />
+                <div class="profile-name">DR.YONG PAL</div>
+                <div class="profile-username">CARDIOTHORACIC SURGEON</div>
+                <div class="profile-tel">TEL +666 666 6666</div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
           <div className="text-center my-5">
             <Button variant="success">MODE ABOUT US BPSC</Button>
           </div>
