@@ -25,11 +25,11 @@ class TheHeader extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto text-center">
-              <Nav.Link href="/">HOME</Nav.Link>
+              <Nav.Link href="/#home">HOME</Nav.Link>
               <Nav.Link href="/about">ABOUT US</Nav.Link>
-              <Nav.Link href="/sharing">SHARING</Nav.Link>
-              <Nav.Link href="/sharing">E-LEARNING</Nav.Link>
-              <Nav.Link href="/doctors">DOCTORS</Nav.Link>
+              <Nav.Link href="#sharing">SHARING</Nav.Link>
+              <Nav.Link href="#sharing">E-LEARNING</Nav.Link>
+              <Nav.Link href="#doctors">DOCTORS</Nav.Link>
               <Button variant="success" className="nav-link">
                 Login
               </Button>
