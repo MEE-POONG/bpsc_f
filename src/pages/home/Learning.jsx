@@ -52,8 +52,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -100,8 +106,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -148,8 +160,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -196,8 +214,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -244,8 +268,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -292,8 +322,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -340,8 +376,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -388,8 +430,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -436,8 +484,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -484,8 +538,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -532,8 +592,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -580,8 +646,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -628,8 +700,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -676,8 +754,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -724,8 +808,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -772,8 +862,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -820,8 +916,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -868,8 +970,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -916,8 +1024,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -964,8 +1078,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -1012,8 +1132,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -1060,8 +1186,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -1108,8 +1240,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -1156,8 +1294,14 @@ class Abstain extends Component {
                         </Media.Body>
                       </Media>
                     </Card.Title>
-                    <Card.Text>
-                      Lorem ipsum dolor sit amet consectetur
+                    <Card.Text className="subtitle-text">
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>

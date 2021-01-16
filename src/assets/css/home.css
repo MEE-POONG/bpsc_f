@@ -10,18 +10,18 @@
 }
 
 .home .title-video {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
 }
 
 .home .title-video iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .home-image .card {
@@ -747,7 +747,7 @@
 }
 
 .sharing .card .card-body p {
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
 }
 
 .team-title {
@@ -757,7 +757,14 @@
   font-size: xx-large !important;
 }
 .team button {
-    margin: 2rem 0;
-    background-color: #6fcf97;
-    border-color: #6fcf97;
+  margin: 2rem 0;
+  background-color: #6fcf97;
+  border-color: #6fcf97;
+}
+
+.home .subtitle-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }

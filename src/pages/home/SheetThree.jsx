@@ -40,7 +40,14 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>Lorem ipsum dolor sit amet, consectetur</Card.Text>
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
+                  </Card.Text>
                   <div className="user">
                     <span className="mr-1">
                       <Image
@@ -79,8 +86,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -120,8 +132,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -161,8 +178,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -202,8 +224,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -243,8 +270,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -284,8 +316,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -325,8 +362,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -366,8 +408,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -407,8 +454,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -448,8 +500,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -489,8 +546,13 @@ class SheetTwo extends Component {
                     HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                   </Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur
+                  <Card.Text className="subtitle-text">
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
