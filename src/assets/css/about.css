@@ -1,0 +1,11 @@
+@import url("about.title.css");
+@import url("about.subtitle.css");
+@import url("about.team.css");
+@import url("about.contact-us.css");
+@import url("about.talk-with-us.css");
+
+@media only screen and (max-width: 800px) {
+  .contact-mobile {
+    font-size: 1.5rem;
+  }
+}

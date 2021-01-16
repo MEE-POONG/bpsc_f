@@ -60,5 +60,4 @@ body {
 @import url("navbar.css");
 @import url("home.css");
 @import url("home.mobile.css");
-@import url("about.title.css");
-@import url("about.subtitle.css");
+@import url("about.css");
