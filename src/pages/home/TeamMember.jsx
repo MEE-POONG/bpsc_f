@@ -125,7 +125,7 @@ class TeamMember extends Component {
             </SwiperSlide>
           </Swiper>
           <div className="text-center my-5">
-            <Button variant="success">MODE ABOUT US BPSC</Button>
+            <Button>MODE ABOUT US BPSC</Button>
           </div>
         </Container>
       </div>

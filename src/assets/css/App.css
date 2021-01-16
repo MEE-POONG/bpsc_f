@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Mitr&display=swap");
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Kodchasan:ital@1&family=Niramit&family=Sarabun&display=swap");
 * {
-  font-family: "Mitr", sans-serif;
+  font-family: "Niramit", "Bai Jamjuree", "Mitr", sans-serif;
 }
 
 html {
@@ -12,7 +14,6 @@ html {
 body {
   font-size: 1.4em; /* มีค่าประมาณ 14px */
 }
-
 
 .App {
   text-align: center;

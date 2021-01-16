@@ -13,7 +13,7 @@ class TheHeader extends Component {
           expand="lg"
         >
           {/* <Navbar bg="light" variant="light"> */}
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <Image
               alt=""
               src="image/header/Logo.png"
@@ -25,7 +25,7 @@ class TheHeader extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto text-center">
-              <Nav.Link href="#home">HOME</Nav.Link>
+              <Nav.Link href="/#home">HOME</Nav.Link>
               <Nav.Link href="#about">ABOUT US</Nav.Link>
               <Nav.Link href="#sharing">SHARING</Nav.Link>
               <Nav.Link href="#sharing">E-LEARNING</Nav.Link>

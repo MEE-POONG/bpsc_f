@@ -4,14 +4,15 @@ class SlideTitle extends Component {
   render() {
     return (
       <div style={{ lineHeight: "0" }}>
-        <iframe
-          title="This is a unique title"
-          className="title-video"
-          src="https://www.youtube.com/embed/U1WaiKNFfiM"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        <div className="title-video">
+          <iframe
+            title="This is a unique title"
+            src="https://www.youtube-nocookie.com/embed/o4RnBsEmzFE"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
         <Container className="home-image text-uppercase py-5">
           <div className="row">
             <div className="col-md-6 px-0">

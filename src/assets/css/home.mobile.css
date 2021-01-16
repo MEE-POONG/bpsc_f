@@ -1,8 +1,4 @@
-@media only screen and (max-width: 600px) {
-  .home .title-video {
-    height: 320px;
-  }
-}
+
 @media only screen and (max-width: 600px) {
   .home .card-title {
     font-size: 2.2rem !important;
