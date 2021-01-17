@@ -11,7 +11,7 @@ const SharingDetail = () => {
           </Card.Subtitle>
         </Col>
       </Row>
-      <Row>
+      <Row className="py-5">
         <Col lg="3" md="4" sm="6" className="mb-5">
           <Card className="box-card-shadow">
             <Card.Body className="image">

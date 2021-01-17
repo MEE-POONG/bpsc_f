@@ -49,6 +49,10 @@ body {
   color: #757575;
 }
 
+.border-radius-25 {
+   border-radius: 15px !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
