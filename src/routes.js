@@ -11,10 +11,10 @@ const FourZeroFour = React.lazy(() => import("./pages/404"));
 const routes = [
   { path: "/", exact: true, name: "HOME", component: Home },
   { path: "/home", exact: true, name: "HOME", component: Home },
-  { path: "/about", name: "ABOUT US", component: About },
-  { path: "/sharing", name: "SHARING", component: Sharing },
-  { path: "/profile", name: "PROFILE", component: Profile },
-  { path: "/e-leaning", name: "LEANING", component: Leaning },
+  { path: "/about", exact: false,name: "ABOUT US", component: About },
+  { path: "/sharing", exact: false,name: "SHARING", component: Sharing },
+  { path: "/profile", exact: false,name: "PROFILE", component: Profile },
+  { path: "/e-leaning", exact: false,name: "LEANING", component: Leaning },
   { path: "*", name: "404", component: FourZeroFour }
 ];
 

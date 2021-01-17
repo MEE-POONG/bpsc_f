@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, Row, Col, Image, Pagination, Media } from "react-bootstrap";
+import { Container, Card, Row, Col, Pagination, Media } from "react-bootstrap";
 const LeaningDetail = () => {
   return (
     <Container className="detail learning">
@@ -13,7 +13,7 @@ const LeaningDetail = () => {
           <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
             <Card>
               <Card.Body className="image">
-                <img src="image/image12.png" alt="" class="card-img-top" />
+                <img src="image/image12.png" alt="" className="card-img-top" />
               </Card.Body>
               <Card.Body>
                 <Card.Title>
@@ -46,15 +46,15 @@ const LeaningDetail = () => {
               </Card.Body>
               <Card.Footer>
                 <Card.Text className="mr-auto">
-                  <span class="d-flex justify-content-between">
+                  <span className="ex justify-content-between">
                     <span style={{ color: "#26BEB4" }}>
                       READ MORE
-                      <i style={{ fontSize: "14px" }} class="fa pl-2">
+                      <i style={{ fontSize: "14px" }} className="l-2">
                         &#xf061;
                       </i>
                     </span>
                     <span>
-                      <i class="fa fa-heart-o"></i> 112
+                      <i className="a-heart-o"></i> 112
                     </span>
                   </span>
                 </Card.Text>
@@ -65,7 +65,7 @@ const LeaningDetail = () => {
           <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
             <Card>
               <Card.Body className="image">
-                <img src="image/image12.png" alt="" class="card-img-top" />
+                <img src="image/image12.png" alt="" className="-img-top" />
               </Card.Body>
               <Card.Body>
                 <Card.Title>
@@ -98,15 +98,15 @@ const LeaningDetail = () => {
               </Card.Body>
               <Card.Footer>
                 <Card.Text className="mr-auto">
-                  <span class="d-flex justify-content-between">
+                  <span className="ex justify-content-between">
                     <span style={{ color: "#26BEB4" }}>
                       READ MORE
-                      <i style={{ fontSize: "14px" }} class="fa pl-2">
+                      <i style={{ fontSize: "14px" }} className="l-2">
                         &#xf061;
                       </i>
                     </span>
                     <span>
-                      <i class="fa fa-heart-o"></i> 112
+                      <i className="a-heart-o"></i> 112
                     </span>
                   </span>
                 </Card.Text>
@@ -117,7 +117,7 @@ const LeaningDetail = () => {
           <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
             <Card>
               <Card.Body className="image">
-                <img src="image/image12.png" alt="" class="card-img-top" />
+                <img src="image/image12.png" alt="" className="-img-top" />
               </Card.Body>
               <Card.Body>
                 <Card.Title>
@@ -150,15 +150,15 @@ const LeaningDetail = () => {
               </Card.Body>
               <Card.Footer>
                 <Card.Text className="mr-auto">
-                  <span class="d-flex justify-content-between">
+                  <span className="ex justify-content-between">
                     <span style={{ color: "#26BEB4" }}>
                       READ MORE
-                      <i style={{ fontSize: "14px" }} class="fa pl-2">
+                      <i style={{ fontSize: "14px" }} className="l-2">
                         &#xf061;
                       </i>
                     </span>
                     <span>
-                      <i class="fa fa-heart-o"></i> 112
+                      <i className="a-heart-o"></i> 112
                     </span>
                   </span>
                 </Card.Text>
@@ -169,7 +169,7 @@ const LeaningDetail = () => {
           <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
             <Card>
               <Card.Body className="image">
-                <img src="image/image12.png" alt="" class="card-img-top" />
+                <img src="image/image12.png" alt="" className="-img-top" />
               </Card.Body>
               <Card.Body>
                 <Card.Title>
@@ -202,15 +202,15 @@ const LeaningDetail = () => {
               </Card.Body>
               <Card.Footer>
                 <Card.Text className="mr-auto">
-                  <span class="d-flex justify-content-between">
+                  <span className="ex justify-content-between">
                     <span style={{ color: "#26BEB4" }}>
                       READ MORE
-                      <i style={{ fontSize: "14px" }} class="fa pl-2">
+                      <i style={{ fontSize: "14px" }} className="l-2">
                         &#xf061;
                       </i>
                     </span>
                     <span>
-                      <i class="fa fa-heart-o"></i> 112
+                      <i className="a-heart-o"></i> 112
                     </span>
                   </span>
                 </Card.Text>

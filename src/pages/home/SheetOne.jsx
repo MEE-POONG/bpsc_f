@@ -33,7 +33,7 @@ class SheetOne extends Component {
                 <Row>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
-                      <center class="align-self-center p-1">
+                      <center className="align-self-center p-1">
                         <Image src="/image/advice1.png" />
                         <br />
                         <p style={{ fontSize: "x-small", margin: "unset" }}>
@@ -47,7 +47,7 @@ class SheetOne extends Component {
                   </Col>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
-                      <center class="align-self-center p-1">
+                      <center className="align-self-center p-1">
                         <Image src="/image/together1.png" />
                         <br />
                         <p style={{ fontSize: "x-small", margin: "unset" }}>
@@ -61,7 +61,7 @@ class SheetOne extends Component {
                   </Col>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
-                      <center class="align-self-center p-1">
+                      <center className="align-self-center p-1">
                         <Image src="/image/patches1.png" />
                         <br />
                         <p style={{ fontSize: "x-small", margin: "unset" }}>
@@ -75,7 +75,7 @@ class SheetOne extends Component {
                   </Col>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
-                      <center class="align-self-center p-1">
+                      <center className="align-self-center p-1">
                         <Image src="/image/medical-report1.png" />
                         <br />
                         <p style={{ fontSize: "x-small", margin: "unset" }}>
@@ -107,7 +107,7 @@ class SheetOne extends Component {
                 <Row>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
-                      <center class="align-self-center p-1">
+                      <center className="align-self-center p-1">
                         <Image src="/image/advice1.png" />
                         <br />
                         <p style={{ fontSize: "x-small", margin: "unset" }}>
@@ -121,7 +121,7 @@ class SheetOne extends Component {
                   </Col>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
-                      <center class="align-self-center p-1">
+                      <center className="align-self-center p-1">
                         <Image src="/image/together1.png" />
                         <br />
                         <p style={{ fontSize: "x-small", margin: "unset" }}>
@@ -135,7 +135,7 @@ class SheetOne extends Component {
                   </Col>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
-                      <center class="align-self-center p-1">
+                      <center className="align-self-center p-1">
                         <Image src="/image/patches1.png" />
                         <br />
                         <p style={{ fontSize: "x-small", margin: "unset" }}>
@@ -149,7 +149,7 @@ class SheetOne extends Component {
                   </Col>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
-                      <center class="align-self-center p-1">
+                      <center className="align-self-center p-1">
                         <Image src="/image/medical-report1.png" />
                         <br />
                         <p style={{ fontSize: "x-small", margin: "unset" }}>

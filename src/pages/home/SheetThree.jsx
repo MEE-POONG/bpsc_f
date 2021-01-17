@@ -32,7 +32,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image7.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -54,17 +54,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image6.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -78,7 +78,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -100,17 +100,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -124,7 +124,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -146,17 +146,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -170,7 +170,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -192,17 +192,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -216,7 +216,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -238,17 +238,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -262,7 +262,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -284,17 +284,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -308,7 +308,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -330,17 +330,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -354,7 +354,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -376,17 +376,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -400,7 +400,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -422,17 +422,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -446,7 +446,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -468,17 +468,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -492,7 +492,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -514,17 +514,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -538,7 +538,7 @@ class SheetTwo extends Component {
                   <Card.Img
                     src="image/image8.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </Card.Body>
                 <Card.Body>
@@ -560,17 +560,17 @@ class SheetTwo extends Component {
                         roundedCircle
                         src="image/image9.png"
                         alt=""
-                        class="card-img-top"
+                        className="card-img-top"
                       />
                     </span>
-                    <span class="pl-1">user</span>
+                    <span className="pl-1">user</span>
                   </div>
                   <div>
                     <span className="mr-1">
-                      <i class="fa fa-eye"></i> 7998
+                      <i className="fa fa-eye"></i> 7998
                     </span>
                     <span>
-                      <i class="fa fa-comments-o"></i> 30{" "}
+                      <i className="fa fa-comments-o"></i> 30{" "}
                     </span>
                   </div>
                 </Card.Body>
@@ -583,7 +583,7 @@ class SheetTwo extends Component {
           <div lg="6" md="6" sm="12" xs="12" className="mobile-padding py-5">
             <Card className="box-card-shadow">
               <Card.Body className="image">
-                <Card.Img src="image/image7.png" alt="" class="card-img-top" />
+                <Card.Img src="image/image7.png" alt="" className="card-img-top" />
               </Card.Body>
               <Card.Body>
                 <Card.Title>
@@ -597,17 +597,17 @@ class SheetTwo extends Component {
                       roundedCircle
                       src="image/image6.png"
                       alt=""
-                      class="card-img-top"
+                      className="card-img-top"
                     />
                   </span>
-                  <span class="pl-1">user</span>
+                  <span className="pl-1">user</span>
                 </div>
                 <div>
                   <span className="mr-1">
-                    <i class="fa fa-eye"></i> 7998
+                    <i className="fa fa-eye"></i> 7998
                   </span>
                   <span>
-                    <i class="fa fa-comments-o"></i> 30{" "}
+                    <i className="fa fa-comments-o"></i> 30{" "}
                   </span>
                 </div>
               </Card.Body>
@@ -616,7 +616,7 @@ class SheetTwo extends Component {
           <div lg="6" md="6" sm="12" xs="12" className="mobile-padding py-5">
             <Card className="box-card-shadow">
               <Card.Body className="image">
-                <Card.Img src="image/image8.png" alt="" class="card-img-top" />
+                <Card.Img src="image/image8.png" alt="" className="card-img-top" />
               </Card.Body>
               <Card.Body>
                 <Card.Title>
@@ -632,17 +632,17 @@ class SheetTwo extends Component {
                       roundedCircle
                       src="image/image9.png"
                       alt=""
-                      class="card-img-top"
+                      className="card-img-top"
                     />
                   </span>
-                  <span class="pl-1">user</span>
+                  <span className="pl-1">user</span>
                 </div>
                 <div>
                   <span className="mr-1">
-                    <i class="fa fa-eye"></i> 7998
+                    <i className="fa fa-eye"></i> 7998
                   </span>
                   <span>
-                    <i class="fa fa-comments-o"></i> 30{" "}
+                    <i className="fa fa-comments-o"></i> 30{" "}
                   </span>
                 </div>
               </Card.Body>

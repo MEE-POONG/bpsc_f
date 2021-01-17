@@ -15,9 +15,9 @@ class TeamMember extends Component {
     return (
       <div className="team">
         <Container fluid className="py-5">
-          <Card classname="text-center ">
-            <Card.Body class="text-uppercase">
-              <Card.Subtitle class="text-uppercase team-title">
+          <Card className="text-center ">
+            <Card.Body className="text-uppercase">
+              <Card.Subtitle className="text-uppercase team-title">
                 our team members
               </Card.Subtitle>
               <Card.Title className="team-subtitle">
@@ -51,76 +51,76 @@ class TeamMember extends Component {
           >
           
             <SwiperSlide>
-              <div class="profile-card-2">
+              <div className="profile-card-2">
                 <img
-                  class="img img-responsive"
+                  className="img img-responsive"
                   src="/image/image24.png"
                   alt=""
                 />
-                <div class="profile-name">DR.YONG PAL</div>
-                <div class="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div class="profile-tel">TEL +666 666 6666</div>
+                <div className="profile-name">DR.YONG PAL</div>
+                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
+                <div className="profile-tel">TEL +666 666 6666</div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="profile-card-2">
+              <div className="profile-card-2">
                 <img
-                  class="img img-responsive"
+                  className="img img-responsive"
                   src="/image/image23.png"
                   alt=""
                 />
-                <div class="profile-name">DR.YONG PAL</div>
-                <div class="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div class="profile-tel">TEL +666 666 6666</div>
+                <div className="profile-name">DR.YONG PAL</div>
+                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
+                <div className="profile-tel">TEL +666 666 6666</div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="profile-card-2">
+              <div className="profile-card-2">
                 <img
-                  class="img img-responsive"
+                  className="img img-responsive"
                   src="/image/image26.png"
                   alt=""
                 />
-                <div class="profile-name">DR.YONG PAL</div>
-                <div class="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div class="profile-tel">TEL +666 666 6666</div>
+                <div className="profile-name">DR.YONG PAL</div>
+                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
+                <div className="profile-tel">TEL +666 666 6666</div>
               </div>
             </SwiperSlide>
           
             <SwiperSlide>
-              <div class="profile-card-2">
+              <div className="profile-card-2">
                 <img
-                  class="img img-responsive"
+                  className="img img-responsive"
                   src="/image/image24.png"
                   alt=""
                 />
-                <div class="profile-name">DR.YONG PAL</div>
-                <div class="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div class="profile-tel">TEL +666 666 6666</div>
+                <div className="profile-name">DR.YONG PAL</div>
+                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
+                <div className="profile-tel">TEL +666 666 6666</div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="profile-card-2">
+              <div className="profile-card-2">
                 <img
-                  class="img img-responsive"
+                  className="img img-responsive"
                   src="/image/image23.png"
                   alt=""
                 />
-                <div class="profile-name">DR.YONG PAL</div>
-                <div class="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div class="profile-tel">TEL +666 666 6666</div>
+                <div className="profile-name">DR.YONG PAL</div>
+                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
+                <div className="profile-tel">TEL +666 666 6666</div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="profile-card-2">
+              <div className="profile-card-2">
                 <img
-                  class="img img-responsive"
+                  className="img img-responsive"
                   src="/image/image26.png"
                   alt=""
                 />
-                <div class="profile-name">DR.YONG PAL</div>
-                <div class="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div class="profile-tel">TEL +666 666 6666</div>
+                <div className="profile-name">DR.YONG PAL</div>
+                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
+                <div className="profile-tel">TEL +666 666 6666</div>
               </div>
             </SwiperSlide>
           </Swiper>

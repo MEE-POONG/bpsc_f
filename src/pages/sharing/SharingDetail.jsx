@@ -18,7 +18,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -41,17 +41,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -63,7 +63,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -86,17 +86,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -108,7 +108,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -131,17 +131,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -153,7 +153,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -176,17 +176,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -198,7 +198,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -221,17 +221,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -243,7 +243,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -266,17 +266,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -288,7 +288,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -311,17 +311,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -333,7 +333,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -356,17 +356,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -378,7 +378,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -401,17 +401,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -423,7 +423,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -446,17 +446,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -468,7 +468,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -491,17 +491,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>
@@ -513,7 +513,7 @@ const SharingDetail = () => {
               <Card.Img
                 src="image/image7.png"
                 alt=""
-                class="card-img-top"
+                className="card-img-top"
               />
             </Card.Body>
             <Card.Body>
@@ -536,17 +536,17 @@ const SharingDetail = () => {
                     roundedCircle
                     src="image/image6.png"
                     alt=""
-                    class="card-img-top"
+                    className="card-img-top"
                   />
                 </span>
-                <span class="pl-1">user</span>
+                <span className="pl-1">user</span>
               </div>
               <div>
                 <span className="mr-1">
-                  <i class="fa fa-eye"></i> 7998
+                  <i className="fa fa-eye"></i> 7998
                     </span>
                 <span>
-                  <i class="fa fa-comments-o"></i> 30{" "}
+                  <i className="fa fa-comments-o"></i> 30{" "}
                 </span>
               </div>
             </Card.Footer>

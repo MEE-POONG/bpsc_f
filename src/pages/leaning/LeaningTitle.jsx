@@ -15,7 +15,7 @@ const LeaningSubTitle = () => {
                         <InputGroup.Prepend>
                             <InputGroup.Text variant="outline-secondary" id="basic-addon1"><FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
                         </InputGroup.Prepend>
-                        <FormControl onFocus={true} placeholder="Search..." aria-label="Username" aria-describedby="basic-addon1" />
+                        <FormControl placeholder="Search..." aria-label="Username" aria-describedby="basic-addon1" />
                     </InputGroup>
                 </Col>
             </Row>

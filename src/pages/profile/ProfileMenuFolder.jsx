@@ -14,7 +14,7 @@ const ProfileMenuFolder = () => {
                     <Card.Img
                       src="image/image7.png"
                       alt=""
-                      class="card-img-top"
+                      className="card-img-top"
                     />
                   </Col>
                   <Col lg="8">
