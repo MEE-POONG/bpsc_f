@@ -29,7 +29,7 @@ const TheHeader = ()=> {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto text-center">
-              <NavLink exact to="/" className="nav-link">
+              <NavLink to="/" className="nav-link">
                 HOME
               </NavLink>
               <NavLink to="/about" className="nav-link">

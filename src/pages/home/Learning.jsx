@@ -30,7 +30,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -64,15 +64,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -84,7 +84,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image11.png" alt="" class="card-img-top" />
+                    <img src="image/image11.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -118,15 +118,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -138,7 +138,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image10.png" alt="" class="card-img-top" />
+                    <img src="image/image10.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -172,15 +172,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -192,7 +192,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -226,15 +226,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -246,7 +246,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -280,15 +280,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -300,7 +300,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image11.png" alt="" class="card-img-top" />
+                    <img src="image/image11.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -334,15 +334,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -354,7 +354,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image10.png" alt="" class="card-img-top" />
+                    <img src="image/image10.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -388,15 +388,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -408,7 +408,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -442,15 +442,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -462,7 +462,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -496,15 +496,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -516,7 +516,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image11.png" alt="" class="card-img-top" />
+                    <img src="image/image11.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -550,15 +550,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -570,7 +570,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image10.png" alt="" class="card-img-top" />
+                    <img src="image/image10.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -604,15 +604,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -624,7 +624,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -658,15 +658,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -678,7 +678,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -712,15 +712,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -732,7 +732,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image11.png" alt="" class="card-img-top" />
+                    <img src="image/image11.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -766,15 +766,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -786,7 +786,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image10.png" alt="" class="card-img-top" />
+                    <img src="image/image10.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -820,15 +820,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -840,7 +840,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -874,15 +874,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -894,7 +894,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -928,15 +928,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -948,7 +948,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image11.png" alt="" class="card-img-top" />
+                    <img src="image/image11.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -982,15 +982,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -1002,7 +1002,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image10.png" alt="" class="card-img-top" />
+                    <img src="image/image10.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -1036,15 +1036,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -1056,7 +1056,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -1090,15 +1090,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -1110,7 +1110,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -1144,15 +1144,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -1164,7 +1164,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image11.png" alt="" class="card-img-top" />
+                    <img src="image/image11.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -1198,15 +1198,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -1218,7 +1218,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image10.png" alt="" class="card-img-top" />
+                    <img src="image/image10.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -1252,15 +1252,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>
@@ -1272,7 +1272,7 @@ class Abstain extends Component {
               <div className="mobile-padding py-5">
                 <Card>
                   <Card.Body className="image">
-                    <img src="image/image12.png" alt="" class="card-img-top" />
+                    <img src="image/image12.png" alt="" className="card-img-top" />
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>
@@ -1306,15 +1306,15 @@ class Abstain extends Component {
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
-                      <span class="d-flex justify-content-between">
+                      <span className="d-flex justify-content-between">
                         <span style={{ color: "#26BEB4" }}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} class="fa pl-2">
+                          <i style={{ fontSize: "14px" }} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
                         <span>
-                          <i class="fa fa-heart-o"></i> 112
+                          <i className="fa fa-heart-o"></i> 112
                         </span>
                       </span>
                     </Card.Text>

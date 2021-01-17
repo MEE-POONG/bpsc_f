@@ -26,7 +26,7 @@ export default function App() {
                     <Route
                       key={idx}
                       path={route.path}
-                      exact={route.exact}
+                      exact={+route?.exact}
                       name={route.name}
                       element={<route.component />}
                     />

@@ -14,7 +14,7 @@ import ProfileMenuLeaning from "./ProfileMenuLeaning";
 
 const ProfileMenu = () => {
   const [navActive, setNavActive] = useState(1);
-  const handleNavActive = (props) => setNavActive(props);
+  const handleNavActive = (ele) => setNavActive(ele);
   return (
     <div className="profile-menu text-uppercase">
       <div className="h4">
