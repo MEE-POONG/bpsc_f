@@ -9,6 +9,7 @@ import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import ProfileMenuMyShare from "./ProfileMenuMyShare";
 import ProfileMenuFolder from "./ProfileMenuFolder";
+import ProfileMenuSharing from "./ProfileMenuSharing";
 
 const ProfileMenu = () => {
   const [navActive, setNavActive] = useState(1);
@@ -79,6 +80,7 @@ const ProfileMenu = () => {
       </div>
       {navActive === 1 ? <ProfileMenuMyShare /> : ''}
       {navActive === 2 ? <ProfileMenuFolder /> : ''}
+      {navActive === 3 ? <ProfileMenuSharing /> : ''}
     </div>
   );
 };
