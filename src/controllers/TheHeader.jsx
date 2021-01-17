@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Navbar, Nav, Button, Image } from "react-bootstrap";
 // import routes from '../routes'
+import { NavLink } from "react-router-dom";
 
 class TheHeader extends Component {
   render() {
@@ -25,13 +26,23 @@ class TheHeader extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto text-center">
-              <Nav.Link href="/">HOME</Nav.Link>
-              <Nav.Link href="/about">ABOUT US</Nav.Link>
-              <Nav.Link href="/sharing">SHARING</Nav.Link>
-              <Nav.Link href="/sharing">E-LEARNING</Nav.Link>
-              <Nav.Link href="/doctors">DOCTORS</Nav.Link>
+              <NavLink exact to="/" className="nav-link">
+                HOME
+              </NavLink>
+              <NavLink to="/about" className="nav-link">
+                ABOUT US
+              </NavLink>
+              <NavLink to="/sharing" className="nav-link">
+                SHARING
+              </NavLink>
+              <NavLink to="/e-leaning" className="nav-link">
+                E-LEARNING
+              </NavLink>
+              <NavLink to="/doctor" className="nav-link">
+                DOCTORS
+              </NavLink>
               <Button variant="success" className="nav-link">
-                Login
+                LOGIN
               </Button>
             </Nav>
           </Navbar.Collapse>
