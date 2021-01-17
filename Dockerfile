@@ -1,21 +1,8 @@
-# pull the base image
-FROM node:alpine
+FROM node:12-buster-slim
 
-# set the working direction
-WORKDIR /app
-
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-
-# install app dependencies
+WORKDIR /usr/src/app
 COPY package.json ./
-
-COPY package-lock.json ./
-
 RUN npm install
+COPY . .
 
-# add app
-COPY . ./
-
-# start app
 CMD ["npm", "start"]
