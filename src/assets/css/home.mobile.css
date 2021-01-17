@@ -1,10 +1,12 @@
-
 @media only screen and (max-width: 600px) {
   .home .card-title {
     font-size: 2.2rem !important;
   }
   .home .card .card-text {
     font-size: 1.5rem !important;
+  }
+  .leaning-page .title .card-title {
+    font-size: 5rem !important;
   }
 }
 

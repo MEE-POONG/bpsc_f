@@ -508,6 +508,7 @@
   visibility: hidden;
   color: #000000;
   background-color: #26beb4;
+  height: 8rem!important;
 }
 .learning .card .absolute {
   position: absolute;
