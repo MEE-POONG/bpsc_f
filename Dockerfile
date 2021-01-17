@@ -1,19 +1,21 @@
-FROM node:9.4
+# pull the base image
+FROM node:alpine
 
-# Create app directory
-WORKDIR /usr/src/app
+# set the working direction
+WORKDIR /app
 
-# Expose port for service
-EXPOSE 5000
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
-# Install and configure `serve`.
-RUN npm install -g serve
+# install app dependencies
+COPY package.json ./
 
-# Copy source code to image
-COPY . .
+COPY package-lock.json ./
 
-# Install dependencies
 RUN npm install
 
-# Build app and start server from script
-CMD ["/usr/src/app/run"]
+# add app
+COPY . ./
+
+# start app
+CMD ["npm", "start"]
