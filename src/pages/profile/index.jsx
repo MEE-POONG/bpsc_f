@@ -4,7 +4,7 @@ import ProfileMenu from './ProfileMenu'
 class Profile extends Component {
   render() {
     return (
-      <div className="profile text-uppercase">
+      <div className="profile profile-page text-uppercase">
         <ProfileTitle />
         <ProfileMenu />
       </div>

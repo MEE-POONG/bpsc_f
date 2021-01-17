@@ -1,15 +1,16 @@
 import {
   faBook,
   faFolder,
-  faHeart,
   faMailBulk,
   faShare,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import ProfileMenuMyShare from "./ProfileMenuMyShare";
+import ProfileMenuFolder from "./ProfileMenuFolder";
 
-const ProfileTitle = () => {
+const ProfileMenu = () => {
   const [navActive, setNavActive] = useState(1);
   const handleNavActive = (props) => setNavActive(props);
   return (
@@ -76,8 +77,10 @@ const ProfileTitle = () => {
           </Row>
         </Col>
       </div>
+      {navActive === 1 ? <ProfileMenuMyShare /> : ''}
+      {navActive === 2 ? <ProfileMenuFolder /> : ''}
     </div>
   );
 };
 
-export default ProfileTitle;
+export default ProfileMenu;
