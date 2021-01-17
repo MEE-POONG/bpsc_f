@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Nav, Button, Image } from "react-bootstrap";
 // import routes from '../routes'
 import { NavLink, useNavigate } from "react-router-dom";
+import TheMotivational from "./TheMotivational";
 
 const TheHeader = ()=> {
 
@@ -49,6 +50,7 @@ const TheHeader = ()=> {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+        <TheMotivational/>
       </>
     );
 }
