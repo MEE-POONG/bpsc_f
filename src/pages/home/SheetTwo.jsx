@@ -51,7 +51,7 @@ class SheetTwo extends Component {
         <Container fluid className="p-0">
           <Card className="sharing">
             <Card.Body>
-              <Row>
+              <Row className="m-lg-0">
                 <Col lg="6" className="text-center py-5">
                   <Card.Title>Hope Sharing</Card.Title>
                   <Card.Subtitle>แบ่งปันประสบการณ์</Card.Subtitle>

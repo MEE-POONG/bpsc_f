@@ -2,6 +2,7 @@ import React from "react";
 
 import TheHeader from "./controllers/TheHeader";
 import "./assets/css/App.css";
+import "./assets/scss/App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import {
@@ -13,6 +14,7 @@ import FourZeroFour from "./pages/404";
 
 import Home from "./pages/home/Home";
 import About from "./pages/about";
+import Sharing from "./pages/sharing";
 
 export default function App() {
   // const loading = (
@@ -47,6 +49,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/sharing" element={<Sharing />} />
             <Route path="*" element={<FourZeroFour />} />
           </Routes>
         </div>
