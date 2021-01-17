@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Container, Image, Media, Row } from "react-bootstrap";
+import { Card, Col, Container, Media, Row } from "react-bootstrap";
 
 const ProfileMenuLeaning = () => {
   return (
