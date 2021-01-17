@@ -2,27 +2,39 @@
     color: black;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
+    font-size: initial;
+
 }
 .wrapper > .navbar-expand .navbar-nav .nav-link.btn {
     color: white;
     padding: 0px 30px 0px 30px;
+    font-size: initial;
+
 }
 
 .wrapper > .navbar-expand-md .navbar-nav .nav-link{
     color: black;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
+    font-size: initial;
+
 }
 .wrapper > .navbar-expand-md .navbar-nav .nav-link.btn {
     color: white;
     padding: 0px 30px 0px 30px;
+    font-size: initial;
+
 }
 .wrapper > .navbar-expand-lg .navbar-nav .nav-link{
     color: black;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
+    font-size: initial;
+
 }
 .wrapper > .navbar-expand-lg .navbar-nav .nav-link.btn {
     color: white;
     padding: 0px 30px 0px 30px;
+    font-size: initial;
+
 }
