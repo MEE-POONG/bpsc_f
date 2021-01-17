@@ -10,6 +10,7 @@ import { Col, Row } from "react-bootstrap";
 import ProfileMenuMyShare from "./ProfileMenuMyShare";
 import ProfileMenuFolder from "./ProfileMenuFolder";
 import ProfileMenuSharing from "./ProfileMenuSharing";
+import ProfileMenuLeaning from "./ProfileMenuLeaning";
 
 const ProfileMenu = () => {
   const [navActive, setNavActive] = useState(1);
@@ -78,9 +79,10 @@ const ProfileMenu = () => {
           </Row>
         </Col>
       </div>
-      {navActive === 1 ? <ProfileMenuMyShare /> : ''}
-      {navActive === 2 ? <ProfileMenuFolder /> : ''}
-      {navActive === 3 ? <ProfileMenuSharing /> : ''}
+      {navActive === 1 ? <ProfileMenuMyShare /> : ""}
+      {navActive === 2 ? <ProfileMenuFolder /> : ""}
+      {navActive === 3 ? <ProfileMenuSharing /> : ""}
+      {navActive === 4 ? <ProfileMenuLeaning /> : ""}
     </div>
   );
 };

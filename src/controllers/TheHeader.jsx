@@ -11,7 +11,7 @@ const TheHeader = ()=> {
       <>
         <Navbar
           variant="light"
-          className="container-xl"
+          className="container-xl py-5"
           style={{ boxShadow: "none" }}
           expand="lg"
         >

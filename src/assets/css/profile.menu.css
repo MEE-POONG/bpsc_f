@@ -14,3 +14,11 @@
 .profile .font-weight-bold {
   font-size: 1.9rem;
 }
+
+
+.profile .subtitle-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;  
+}
