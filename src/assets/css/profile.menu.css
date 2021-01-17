@@ -1,0 +1,13 @@
+.profile-menu-bg {
+  background: radial-gradient(
+    98.63% 27033.66% at 98.63% 100%,
+    #56b889 0%,
+    #26beb4 100%
+  );
+  color: white;
+  cursor: pointer;
+}
+.profile-menu-active {
+  background-color: #ffffff;
+  color: black;
+}
