@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import ProfileTitle from './ProfileTitle'
 class Profile extends Component {
   render() {
     return (

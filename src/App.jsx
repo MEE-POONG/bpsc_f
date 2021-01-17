@@ -11,7 +11,7 @@ import routes from "./routes.js";
 
 export default function App() {
   const loading = (
-    <div className="loader-body pt-3 text-center">Loading...</div>
+    <div className="loader-body pt-3 text-center">LOADING...</div>
   );
   return (
     <Router>

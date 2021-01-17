@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import { Navbar, Nav, Button, Image } from "react-bootstrap";
 // import routes from '../routes'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
-class TheHeader extends Component {
-  render() {
+const TheHeader = ()=> {
+
+  let navigate = useNavigate();
+
     return (
       <>
         <Navbar
@@ -41,7 +43,7 @@ class TheHeader extends Component {
               <NavLink to="/doctor" className="nav-link">
                 DOCTORS
               </NavLink>
-              <Button variant="success" className="nav-link">
+              <Button variant="success" className="nav-link" onClick={() => navigate('/profile')}>
                 LOGIN
               </Button>
             </Nav>
@@ -49,6 +51,5 @@ class TheHeader extends Component {
         </Navbar>
       </>
     );
-  }
 }
 export default TheHeader;
