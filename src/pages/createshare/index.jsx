@@ -1,9 +1,13 @@
 import React from "react";
-import CreateShare from "./CreateShare";
+import CreateTitle from "./CreateTitle";
+import CreateDetail from "./CreateDetail";
+import CreateTag from "./CreateTag";
 const Create = () => {
   return (
     <div className="create-page text-uppercase">
-      <CreateShare />
+      <CreateTitle />
+      <CreateDetail />
+      <CreateTag/>
     </div>
   );
 }
