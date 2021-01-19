@@ -106,12 +106,13 @@
             color: white;
             text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
-        .page-link,.page-link span{
+        .page-link,
+        .page-link span {
             font-size: 3rem;
             line-height: 24px;
             color: #26beb4;
         }
-        .page-link{
+        .page-link {
             margin: 0 1rem;
         }
         .page-item.active .page-link {

@@ -6,3 +6,31 @@
 @import "./profile.scss";
 @import "./create.scss";
 
+@media (min-width: 576px) {
+    .modal-dialog {
+        align-self: center;
+        max-width: 80% !important;
+        margin: 1.75rem auto !important;
+        .card-title {
+            font-size: 3.25rem;
+            font-weight: bold;
+        }
+        .card-subtitle, .card-text{
+            font-size: 2.5rem;
+        }
+        img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+        }
+        .modal-header {
+            border: unset;
+        }
+        .card{
+            box-shadow:unset;
+        }
+        .modal-content{
+            padding: 1.5rem;
+        }
+    }
+}
