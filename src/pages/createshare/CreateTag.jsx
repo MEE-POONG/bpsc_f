@@ -6,7 +6,7 @@ const CreateTag = () => {
     <div className="tag">
       <Container>
         <div >
-          <h1>เนื้อหาแชร์</h1>
+          <h1>ติด Tag ให้แชร์</h1>
         </div>
       </Container>
       <Container className="input-tag">
