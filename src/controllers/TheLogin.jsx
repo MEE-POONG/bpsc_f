@@ -17,7 +17,6 @@ const TheLogin = () => {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
-        className="motivation"
       >
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
