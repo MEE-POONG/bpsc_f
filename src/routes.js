@@ -20,10 +20,10 @@ const routes = [
   { path: "/e-leaning", name: "LEANING", component: Leaning },
   { path: "/doctor", name: "DOCTOR", component: Doctor },
   { path: "/gallery", name: "GALLERY", component: Gallery },
-  { path: "/gallery/:id", exact: true, name: "GALLERYID", component: GalleryAlbum },
+  { path: "/gallery/:id", exact: true, name: "GALLERY ID", component: GalleryAlbum },
   { path: "/login", name: "LOGIN", component: Login },
   { path: "/profile", name: "PROFILE", component: Profile },
-  { path: "/CreateShare", name: "PROFILE", component: CreateShare },
+  { path: "/create-share", name: "CREATE SHARE", component: CreateShare },
 
 
   { path: "*", name: "404", component: FourZeroFour }

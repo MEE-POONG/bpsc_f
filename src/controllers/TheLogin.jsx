@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Modal, Button, Image, Row } from "react-bootstrap";
-import { faFileDownload, faSignInAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Modal, Button, Image } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const TheLogin = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  let navigate = useNavigate();
+
   return (
     <>
       <Button variant="success" className="nav-link" onClick={handleShow}>
@@ -21,7 +22,7 @@ const TheLogin = () => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="scroll login-page">
-            <div class="card card-signin my-5 title">
+            <div class="card card-signin mb-5 title">
               <div class="card-body">
                 <h5 class="card-title text-center">
                   <Image
@@ -35,7 +36,7 @@ const TheLogin = () => {
                 <form class="form-signin">
                   <div class="form-label-group">
                     <input
-                      type="email"
+                    //   type="email"
                       id="inputEmail"
                       class="form-control"
                       required
@@ -66,7 +67,10 @@ const TheLogin = () => {
                   </div>
                   <button
                     class="btn btn-lg btn-primary btn-block text-uppercase"
-                    type="submit"
+                    onClick={() => {
+                        sessionStorage.setItem("BPSC_USER_LOGIN", true)
+                        navigate("/");
+                        }}
                   >
                     Sign in
                   </button>
@@ -75,13 +79,13 @@ const TheLogin = () => {
                     class="btn btn-lg btn-google btn-block text-uppercase"
                     type="submit"
                   >
-                    <i class="fab fa-google mr-2"></i> Sign in with Google
+                    Sign in with Google
                   </button>
                   <button
                     class="btn btn-lg btn-facebook btn-block text-uppercase"
                     type="submit"
                   >
-                    <i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook
+                    Sign in with Facebook
                   </button>
                 </form>
               </div>

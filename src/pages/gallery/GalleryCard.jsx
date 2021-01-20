@@ -15,7 +15,7 @@ const GalleryCard = () => {
             <Card className="box-card-shadow">
               <Card.Body className="image">
                 <Card.Img
-                  src="image/image7.png"
+                  src="/image/image7.png"
                   alt=""
                   className="card-img-top"
                 />

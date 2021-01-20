@@ -1,3 +1,32 @@
 .about-title .about-title-bg {
   background: rgba(38, 190, 180, 0.12);
 }
+.about-title .h1,
+.about-title h1 {
+  font-size: 6.5rem;
+}
+
+.about-title .h3,
+.about-title h3 {
+  font-size: 4.75rem;
+}
+.about-title .h5,
+.about-title h5 {
+  font-size: 2.25rem
+}
+
+@media only screen and (max-width: 600px) {
+  .about-title .h1,
+  .about-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-title .h3,
+  .about-title h3 {
+    font-size: 1.75rem;
+  }
+  .about-title .h5,
+  .about-title h5 {
+    font-size: 1.25rem
+  }
+}
