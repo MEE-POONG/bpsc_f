@@ -6,7 +6,7 @@ const Sharing = React.lazy(() => import("./pages/sharing"));
 const Leaning = React.lazy(() => import("./pages/leaning"));
 const Doctor = React.lazy(() => import("./pages/doctor"));
 const Gallery = React.lazy(() => import("./pages/gallery"));
-const Album = React.lazy(() => import("./pages/gallery/GalleryAlbum"));
+const GalleryAlbum = React.lazy(() => import("./pages/gallery/GalleryAlbum"));
 const CreateShare = React.lazy(() => import("./pages/createshare"));
 const Login = React.lazy(() => import("./pages/login"));
 const Profile = React.lazy(() => import("./pages/profile"));
@@ -20,7 +20,7 @@ const routes = [
   { path: "/e-leaning", name: "LEANING", component: Leaning },
   { path: "/doctor", name: "DOCTOR", component: Doctor },
   { path: "/gallery", name: "GALLERY", component: Gallery },
-  { path: "/gallery/:id", exact: true, name: "GALLERYID", component: Album },
+  { path: "/gallery/:id", exact: true, name: "GALLERYID", component: GalleryAlbum },
   { path: "/login", name: "LOGIN", component: Login },
   { path: "/profile", name: "PROFILE", component: Profile },
   { path: "/CreateShare", name: "PROFILE", component: CreateShare },

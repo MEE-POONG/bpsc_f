@@ -2,6 +2,8 @@
 import React from "react";
 import { Container, Row, Col, Pagination, Card, } from "react-bootstrap";
 import { NavLink, } from "react-router-dom";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const GalleryCard = () => {
 
@@ -9,7 +11,7 @@ const GalleryCard = () => {
     <Container className="detail">
       <Row className="py-5">
         <Col lg="3" md="4" sm="6" className="mb-5">
-          <NavLink to="/gallery/album" className="nav-link">
+          <NavLink to="/gallery/12" className="nav-link">
             <Card className="box-card-shadow">
               <Card.Body className="image">
                 <Card.Img
@@ -33,13 +35,11 @@ const GalleryCard = () => {
               </Card.Body>
               <Card.Footer>
                 <Card.Text className="mr-auto">
-                  <span className="d-flex justify-content-between">
-                    <span style={{ color: "#26BEB4" }}>
-                      READ MORE
+                  <span style={{ color: "#26BEB4" }}>
+                    READ MORE
                   </span>
-                    <span>
-                      <i className="fa fa-heart-o"></i> 112
-                        </span>
+                  <span style={{ color: "#26BEB4" }}>
+                    <FontAwesomeIcon icon={faArrowRight} />
                   </span>
                 </Card.Text>
               </Card.Footer>
