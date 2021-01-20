@@ -9,55 +9,7 @@ const DoctorCard = () => {
     <Container className="detail">
       <Row className="py-5">
         <Col lg="3" md="4" sm="6" className="mb-5">
-          <div className="profile-card-2">
-            <img
-              className="img img-responsive"
-              src="/image/image24.png"
-              alt=""
-            />
-            <div className="profile-name">DR.YONG PAL</div>
-            <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-            <div className="profile-tel">TEL +666 666 6666</div>
-          </div>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <div className="profile-card-2">
-            <img
-              className="img img-responsive"
-              src="/image/image24.png"
-              alt=""
-            />
-            <div className="profile-name">DR.YONG PAL</div>
-            <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-            <div className="profile-tel">TEL +666 666 6666</div>
-          </div>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <div className="profile-card-2">
-            <img
-              className="img img-responsive"
-              src="/image/image24.png"
-              alt=""
-            />
-            <div className="profile-name">DR.YONG PAL</div>
-            <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-            <div className="profile-tel">TEL +666 666 6666</div>
-          </div>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <div className="profile-card-2">
-            <img
-              className="img img-responsive"
-              src="/image/image24.png"
-              alt=""
-            />
-            <div className="profile-name">DR.YONG PAL</div>
-            <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-            <div className="profile-tel">TEL +666 666 6666</div>
-          </div>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <div className="profile-card-2">
+          <div className="profile-card-2" onClick={handleShow}>
             <img
               className="img img-responsive"
               src="/image/image24.png"
@@ -80,9 +32,6 @@ const DoctorCard = () => {
           <Pagination.Last />
         </Pagination>
       </div>
-      <Button variant="primary" onClick={handleShow}>
-        Launch static backdrop modal
-            </Button>
       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className="d-flex justify-content-center">
         <Modal.Header closeButton>
         </Modal.Header>

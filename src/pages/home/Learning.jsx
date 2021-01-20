@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, div, Media } from "react-bootstrap";
+import { Card, Media } from "react-bootstrap";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
