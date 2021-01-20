@@ -5,23 +5,23 @@ import { useNavigate } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+};
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+
 const TheLogin = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const navigate = useNavigate();
-
-  const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
-  };
-
-  if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-  }
 
   const handleLogin = () => {
     const provider = new firebase.auth.FacebookAuthProvider();
@@ -113,9 +113,7 @@ const TheLogin = () => {
                     Sign in
                   </button>
                   <hr class="my-4" />
-                  <button
-                    class="btn btn-lg btn-google btn-block text-uppercase"
-                  >
+                  <button class="btn btn-lg btn-google btn-block text-uppercase">
                     Sign in with Google
                   </button>
                   <button
