@@ -10,6 +10,7 @@ const GalleryAlbum = React.lazy(() => import("./pages/gallery/GalleryAlbum"));
 const CreateShare = React.lazy(() => import("./pages/createshare"));
 const Login = React.lazy(() => import("./pages/login"));
 const Profile = React.lazy(() => import("./pages/profile"));
+
 const FourZeroFour = React.lazy(() => import("./pages/404"));
 
 const routes = [
