@@ -1,0 +1,38 @@
+.login-page {
+    .title {
+        .card-title {
+            font-size: 10rem;
+            font-weight: bold;
+        }
+        .card-subtitle {
+            font-size: 4rem;
+        }
+        .input-group-text {
+            background-color: #ffffff00;
+            border: 0px solid #ced4da;
+            font-size: 24px;
+        }
+        .input-group {
+            border: 2px solid #4d4b4b;
+            box-sizing: border-box;
+            border-radius: 100px;
+        }
+        .form-control {
+            border: unset;
+            margin-right: 1rem;
+            font-size: 24px;
+            margin: 0;
+            background-color: #fff0;
+        }
+        .form-control:focus {
+            color: #495057;
+            background-color: #fff0;
+            border-color: #ffffff00;
+            outline: 0;
+            box-shadow: unset;
+        }
+        .set-seaech {
+            border: unset;
+        }
+    }
+}

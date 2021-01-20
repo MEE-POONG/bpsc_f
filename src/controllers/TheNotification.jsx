@@ -3,7 +3,7 @@ import { Modal, Button, Image, Row } from "react-bootstrap";
 import { faBell, faCommentAlt, faFileDownload, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const TheMotivational = () => {
+const TheNotification = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -224,4 +224,4 @@ const TheMotivational = () => {
         </>
     );
 }
-export default TheMotivational;
+export default TheNotification;
