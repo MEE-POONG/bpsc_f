@@ -1,5 +1,5 @@
-import React from "react";
-import { Navbar, Nav, Button, Image } from "react-bootstrap";
+import React,{useState} from "react";
+import { Navbar, Nav, Button, Image, Card, Modal, Row, Col } from "react-bootstrap";
 // import routes from '../routes'
 import { NavLink, useNavigate } from "react-router-dom";
 import Notification from "./TheNotification";
