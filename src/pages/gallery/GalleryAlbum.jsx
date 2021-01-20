@@ -1,5 +1,5 @@
 
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Image, Pagination, Modal, Button, Card, } from "react-bootstrap";
 const GalleryAlbum = () => {
   const [show, setShow] = useState(false);
@@ -22,7 +22,7 @@ const GalleryAlbum = () => {
         </Card.Body>
         <Row>
           <Col lg="3">
-            <Image src="image/image7.png" onClick={handleShow}/>
+            <Image src="image/image7.png" onClick={handleShow} />
           </Col>
         </Row>
       </Container>
@@ -30,38 +30,7 @@ const GalleryAlbum = () => {
         <Modal.Header closeButton>
         </Modal.Header>
         <Modal.Body>
-          <Row className="">
-            <Col lg="6">
-              <Image src="image/home/home1.png" />
-            </Col>
-            <Col lg="6">
-              <Card>
-                <Card.Body>
-                  <Card.Title>
-                    Dr.Name
-                  </Card.Title>
-                  <Card.Subtitle>
-                    cardiothoracic surgeon
-                  </Card.Subtitle>
-                  <Card.Text>
-                    ประวัติโดยย่อ เคยทำงานที่ไหน
-                    ติดต่อ
-                    TEL +666 666 6666
-                    Email
-                  </Card.Text>
-                  <Card.Text>
-                    TEL +666 666 6666
-                  </Card.Text>
-                  <Card.Text>
-                    Email
-                  </Card.Text>
-                  <Card.Text>
-                    Hospital
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
+          <Image src="image/home/home1.png" />
         </Modal.Body>
       </Modal>
     </div>
