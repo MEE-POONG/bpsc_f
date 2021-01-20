@@ -1,9 +1,5 @@
 .profile-menu-bg {
-  background: radial-gradient(
-    98.63% 27033.66% at 98.63% 100%,
-    #56b889 0%,
-    #26beb4 100%
-  );
+  background: radial-gradient(98.63% 27033.66% at 98.63% 100%, #56b889 0%, #26beb4 100%);
   color: white;
   cursor: pointer;
 }
@@ -15,10 +11,9 @@
   font-size: 1.9rem;
 }
 
-
 .profile .subtitle-text {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
 }

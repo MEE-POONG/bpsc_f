@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import {Col, Container, Image, Row} from "react-bootstrap";
 
 const AboutSubTitle = () => {
   return (
@@ -13,17 +13,16 @@ const AboutSubTitle = () => {
             <Col xs="12">
               <p className="h1 font-weight-bold">What we provide ?</p>
               <p className="h3 subtitle-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore ...
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore ...
               </p>
             </Col>
             <Col xs="12" className="pt-5">
               <p className="h1 font-weight-bold">Our values</p>
               <p className="h3 subtitle-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore ...
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore ...
               </p>
             </Col>
           </Col>

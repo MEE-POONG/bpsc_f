@@ -507,7 +507,7 @@
   visibility: hidden;
   color: #000000;
   background-color: #26beb4;
-  height: 8rem!important;
+  height: 8rem !important;
 }
 .learning .card .absolute {
   position: absolute;
@@ -582,7 +582,7 @@
   position: absolute;
   bottom: 10px;
   left: 30px;
-  color:#000000;
+  color: #000000;
   transition: all linear 0.25s;
 }
 
@@ -598,20 +598,23 @@
   opacity: 1;
   bottom: 80px;
   color: white;
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .profile-card-2:hover .profile-username {
   opacity: 1;
   bottom: 60px;
   color: white;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 .profile-card-2:hover .profile-tel {
   opacity: 1;
   bottom: 40px;
   color: white;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .event {

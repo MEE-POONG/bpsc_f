@@ -8,6 +8,6 @@ const Sharing = () => {
       <SharingDetail />
     </div>
   );
-}
+};
 
 export default Sharing;

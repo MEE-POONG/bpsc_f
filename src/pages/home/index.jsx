@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import SlideTitle from './SlideTitle';
+import React, {Component} from "react";
+import SlideTitle from "./SlideTitle";
 import SheetOne from "./SheetOne";
 import SheetTwo from "./SheetTwo";
 import Abstain from "./Abstain";
@@ -21,6 +21,6 @@ class Home extends Component {
       </div>
     );
   }
-};
+}
 
 export default Home;

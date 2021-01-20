@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Card, Image } from "react-bootstrap";
+import React, {Component} from "react";
+import {Card, Image} from "react-bootstrap";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
@@ -29,24 +29,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image7.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image7.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -75,24 +68,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -121,24 +107,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -167,24 +146,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -213,24 +185,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -259,24 +224,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -305,24 +263,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -351,24 +302,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -397,24 +341,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -443,24 +380,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -489,24 +419,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">
@@ -535,24 +458,17 @@ class SheetTwo extends Component {
             <div className="mobile-padding py-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image8.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image8.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Subtitle>Lorem ipsum dolor sit amet</Card.Subtitle>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                   <div className="user">
                     <span className="mr-1">

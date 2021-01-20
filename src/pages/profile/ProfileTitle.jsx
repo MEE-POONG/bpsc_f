@@ -1,7 +1,7 @@
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faEdit} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Button, Container, Image } from "react-bootstrap";
+import {Button, Container, Image} from "react-bootstrap";
 
 const ProfileTitle = () => {
   return (

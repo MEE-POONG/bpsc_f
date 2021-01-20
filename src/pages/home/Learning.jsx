@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Card, Media } from "react-bootstrap";
+import React, {Component} from "react";
+import {Card, Media} from "react-bootstrap";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
@@ -45,7 +45,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -53,21 +53,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -99,7 +98,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -107,21 +106,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -153,7 +151,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -161,21 +159,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -207,7 +204,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -215,21 +212,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -261,7 +257,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -269,21 +265,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -315,7 +310,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -323,21 +318,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -369,7 +363,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -377,21 +371,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -423,7 +416,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -431,21 +424,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -477,7 +469,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -485,21 +477,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -531,7 +522,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -539,21 +530,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -585,7 +575,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -593,21 +583,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -639,7 +628,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -647,21 +636,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -693,7 +681,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -701,21 +689,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -747,7 +734,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -755,21 +742,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -801,7 +787,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -809,21 +795,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -855,7 +840,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -863,21 +848,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -909,7 +893,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -917,21 +901,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -963,7 +946,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -971,21 +954,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -1017,7 +999,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -1025,21 +1007,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -1071,7 +1052,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -1079,21 +1060,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -1125,7 +1105,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -1133,21 +1113,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -1179,7 +1158,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -1187,21 +1166,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -1233,7 +1211,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -1241,21 +1219,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>
@@ -1287,7 +1264,7 @@ class Abstain extends Component {
                         </Card>
                         <Media.Body>
                           <p>
-                            <b style={{ color: "#000" }}>
+                            <b style={{color: "#000"}}>
                               what you need to know about BPSC?
                             </b>
                           </p>
@@ -1295,21 +1272,20 @@ class Abstain extends Component {
                       </Media>
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <Card.Text className="mr-auto">
                       <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                        <span style={{color: "#26BEB4"}}>
                           READ MORE
-                          <i style={{ fontSize: "14px" }} className="fa pl-2">
+                          <i style={{fontSize: "14px"}} className="fa pl-2">
                             &#xf061;
                           </i>
                         </span>

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Container, Card, Button, Row, Col } from "react-bootstrap";
+import React, {Component} from "react";
+import {Container, Card, Button, Row, Col} from "react-bootstrap";
 import SheetThree from "./SheetThree";
 
 class SheetTwo extends Component {
@@ -13,9 +13,7 @@ class SheetTwo extends Component {
                 <Card className="sharing">
                   <Card.Body>
                     <Card.Title>500+</Card.Title>
-                    <Card.Subtitle>
-                      โรวพยาบาลสร้างระบบ BPSC สำเร็จ
-                    </Card.Subtitle>
+                    <Card.Subtitle>โรวพยาบาลสร้างระบบ BPSC สำเร็จ</Card.Subtitle>
                   </Card.Body>
                 </Card>
               </Col>
@@ -39,9 +37,7 @@ class SheetTwo extends Component {
                 <Card className="sharing">
                   <Card.Body>
                     <Card.Title>240+</Card.Title>
-                    <Card.Subtitle>
-                      ผู้ได้รับการรักษามีคุณภาพชีวิตที่ดีขึ้น
-                    </Card.Subtitle>
+                    <Card.Subtitle>ผู้ได้รับการรักษามีคุณภาพชีวิตที่ดีขึ้น</Card.Subtitle>
                   </Card.Body>
                 </Card>
               </Col>
@@ -56,10 +52,8 @@ class SheetTwo extends Component {
                   <Card.Title>Hope Sharing</Card.Title>
                   <Card.Subtitle>แบ่งปันประสบการณ์</Card.Subtitle>
                   <div>
-                    <Card.Text>
-                      Short describtion about Hope Sharing .......
-                    </Card.Text>
-                      <Button variant="green">Discover more {"-->"}</Button>
+                    <Card.Text>Short describtion about Hope Sharing .......</Card.Text>
+                    <Button variant="green">Discover more {"-->"}</Button>
                   </div>
                 </Col>
                 <Col lg="6">

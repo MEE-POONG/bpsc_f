@@ -8,6 +8,6 @@ const Login = () => {
       {/* <GalleryCard /> */}
     </div>
   );
-}
+};
 
 export default Login;

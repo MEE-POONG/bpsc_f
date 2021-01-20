@@ -7,9 +7,9 @@ const Create = () => {
     <div className="create-page text-uppercase">
       <CreateTitle />
       <CreateDetail />
-      <CreateTag/>
+      <CreateTag />
     </div>
   );
-}
+};
 
 export default Create;

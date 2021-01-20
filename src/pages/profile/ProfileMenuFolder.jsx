@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import {Card, Col, Container, Row} from "react-bootstrap";
 
 const ProfileMenuFolder = () => {
   return (
@@ -11,11 +11,7 @@ const ProfileMenuFolder = () => {
               <Card.Body className="image">
                 <Row>
                   <Col lg="4">
-                    <Card.Img
-                      src="image/image7.png"
-                      alt=""
-                      className="card-img-top"
-                    />
+                    <Card.Img src="image/image7.png" alt="" className="card-img-top" />
                   </Col>
                   <Col lg="8">
                     <div className="float-right h4 pt-2">5 ชั่วโมงที่แล้ว</div>
@@ -23,13 +19,12 @@ const ProfileMenuFolder = () => {
                       HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
                     </Card.Title>
                     <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
+                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
                       ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consectetur
+                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                      sit amet consectetur
                     </Card.Text>
                     <div className="pt-5 about-talk-with-us-btn-right">
                       <button

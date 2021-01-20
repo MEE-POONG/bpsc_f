@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Container, Image, Row } from "react-bootstrap";
+import {Card, Col, Container, Image, Row} from "react-bootstrap";
 
 const ProfileMenuMyShare = () => {
   return (
@@ -10,23 +10,16 @@ const ProfileMenuMyShare = () => {
             <Col lg="3" md="4" sm="6" className="mb-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image7.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image7.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
@@ -55,23 +48,16 @@ const ProfileMenuMyShare = () => {
             <Col lg="3" md="4" sm="6" className="mb-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image7.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image7.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
@@ -100,23 +86,16 @@ const ProfileMenuMyShare = () => {
             <Col lg="3" md="4" sm="6" className="mb-5">
               <Card className="box-card-shadow">
                 <Card.Body className="image">
-                  <Card.Img
-                    src="image/image7.png"
-                    alt=""
-                    className="card-img-top"
-                  />
+                  <Card.Img src="image/image7.png" alt="" className="card-img-top" />
                 </Card.Body>
                 <Card.Body>
-                  <Card.Title>
-                    HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก
-                  </Card.Title>
+                  <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>

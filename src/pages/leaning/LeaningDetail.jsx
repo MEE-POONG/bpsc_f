@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Card, Row, Col, Pagination, Media } from "react-bootstrap";
+import {Container, Card, Row, Col, Pagination, Media} from "react-bootstrap";
 const LeaningDetail = () => {
   return (
     <Container className="detail learning">
@@ -28,28 +28,25 @@ const LeaningDetail = () => {
                     </Card>
                     <Media.Body>
                       <p>
-                        <b style={{ color: "#000" }}>
-                          what you need to know about BPSC?
-                        </b>
+                        <b style={{color: "#000"}}>what you need to know about BPSC?</b>
                       </p>
                     </Media.Body>
                   </Media>
                 </Card.Title>
                 <Card.Text className="subtitle-text">
-                  Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                  amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                  ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                  consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                  dolor sit amet consecteturLorem ipsum dolor sit amet
-                  consecteturLorem ipsum dolor sit amet consectetur
+                  Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                  consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                  amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                  sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                  dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <Card.Text className="mr-auto">
                   <span className="ex justify-content-between">
-                    <span style={{ color: "#26BEB4" }}>
+                    <span style={{color: "#26BEB4"}}>
                       READ MORE
-                      <i style={{ fontSize: "14px" }} className="l-2">
+                      <i style={{fontSize: "14px"}} className="l-2">
                         &#xf061;
                       </i>
                     </span>
@@ -80,28 +77,25 @@ const LeaningDetail = () => {
                     </Card>
                     <Media.Body>
                       <p>
-                        <b style={{ color: "#000" }}>
-                          what you need to know about BPSC?
-                        </b>
+                        <b style={{color: "#000"}}>what you need to know about BPSC?</b>
                       </p>
                     </Media.Body>
                   </Media>
                 </Card.Title>
                 <Card.Text className="subtitle-text">
-                  Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                  amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                  ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                  consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                  dolor sit amet consecteturLorem ipsum dolor sit amet
-                  consecteturLorem ipsum dolor sit amet consectetur
+                  Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                  consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                  amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                  sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                  dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <Card.Text className="mr-auto">
                   <span className="ex justify-content-between">
-                    <span style={{ color: "#26BEB4" }}>
+                    <span style={{color: "#26BEB4"}}>
                       READ MORE
-                      <i style={{ fontSize: "14px" }} className="l-2">
+                      <i style={{fontSize: "14px"}} className="l-2">
                         &#xf061;
                       </i>
                     </span>
@@ -132,28 +126,25 @@ const LeaningDetail = () => {
                     </Card>
                     <Media.Body>
                       <p>
-                        <b style={{ color: "#000" }}>
-                          what you need to know about BPSC?
-                        </b>
+                        <b style={{color: "#000"}}>what you need to know about BPSC?</b>
                       </p>
                     </Media.Body>
                   </Media>
                 </Card.Title>
                 <Card.Text className="subtitle-text">
-                  Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                  amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                  ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                  consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                  dolor sit amet consecteturLorem ipsum dolor sit amet
-                  consecteturLorem ipsum dolor sit amet consectetur
+                  Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                  consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                  amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                  sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                  dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <Card.Text className="mr-auto">
                   <span className="ex justify-content-between">
-                    <span style={{ color: "#26BEB4" }}>
+                    <span style={{color: "#26BEB4"}}>
                       READ MORE
-                      <i style={{ fontSize: "14px" }} className="l-2">
+                      <i style={{fontSize: "14px"}} className="l-2">
                         &#xf061;
                       </i>
                     </span>
@@ -184,28 +175,25 @@ const LeaningDetail = () => {
                     </Card>
                     <Media.Body>
                       <p>
-                        <b style={{ color: "#000" }}>
-                          what you need to know about BPSC?
-                        </b>
+                        <b style={{color: "#000"}}>what you need to know about BPSC?</b>
                       </p>
                     </Media.Body>
                   </Media>
                 </Card.Title>
                 <Card.Text className="subtitle-text">
-                  Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                  amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                  ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                  consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                  dolor sit amet consecteturLorem ipsum dolor sit amet
-                  consecteturLorem ipsum dolor sit amet consectetur
+                  Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                  consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                  amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
+                  sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                  dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
                 <Card.Text className="mr-auto">
                   <span className="ex justify-content-between">
-                    <span style={{ color: "#26BEB4" }}>
+                    <span style={{color: "#26BEB4"}}>
                       READ MORE
-                      <i style={{ fontSize: "14px" }} className="l-2">
+                      <i style={{fontSize: "14px"}} className="l-2">
                         &#xf061;
                       </i>
                     </span>
@@ -220,7 +208,7 @@ const LeaningDetail = () => {
         </Row>
       </Container>
       <div>
-        <Pagination className="my-5" style={{ float: "right" }}>
+        <Pagination className="my-5" style={{float: "right"}}>
           <Pagination.First />
           <Pagination.Prev />
           <Pagination.Item>{1}</Pagination.Item>

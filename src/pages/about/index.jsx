@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import AboutTitle from "./AboutTitle";
 import AboutSubTitle from "./AboutSubTitle";
 import AboutTeam from "./AboutTeam";
 import AboutContactUS from "./AboutContactUS";
 import AboutTalkWithUS from "./AboutTalkWithUS";
-import { Col, Row } from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 
 class About extends Component {
   render() {

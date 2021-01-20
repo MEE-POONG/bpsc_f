@@ -1,11 +1,5 @@
-import React, { Component } from "react";
-import {
-  Row,
-  Col,
-  Card,
-  Image,
-  Container,
-} from "react-bootstrap";
+import React, {Component} from "react";
+import {Row, Col, Card, Image, Container} from "react-bootstrap";
 
 class SheetOne extends Component {
   render() {
@@ -20,13 +14,13 @@ class SheetOne extends Component {
               <span>OUR INNOVATION</span>
             </button>
           </div>
-          <Container style={{ display: "none" }}>
+          <Container style={{display: "none"}}>
             <Row className="m-0">
               <Col lg="6">
                 <Card.Title>4 INNOVATIONS IN BPSC</Card.Title>
                 <div className="subtitle">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore ...
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  tempor incididunt ut labore ...
                 </div>
               </Col>
               <Col lg="6">
@@ -36,12 +30,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/advice1.png" />
                         <br />
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          BRIEF ADVICE
-                        </p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          (BA)
-                        </p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>BRIEF ADVICE</p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>(BA)</p>
                       </center>
                     </Card>
                   </Col>
@@ -50,12 +40,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/together1.png" />
                         <br />
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          BRIEF ADVICE
-                        </p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          (BA)
-                        </p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>BRIEF ADVICE</p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>(BA)</p>
                       </center>
                     </Card>
                   </Col>
@@ -64,12 +50,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/patches1.png" />
                         <br />
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          BRIEF ADVICE
-                        </p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          (BA)
-                        </p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>BRIEF ADVICE</p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>(BA)</p>
                       </center>
                     </Card>
                   </Col>
@@ -78,12 +60,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/medical-report1.png" />
                         <br />
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          BRIEF ADVICE
-                        </p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          (BA)
-                        </p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>BRIEF ADVICE</p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>(BA)</p>
                       </center>
                     </Card>
                   </Col>
@@ -99,8 +77,8 @@ class SheetOne extends Component {
               <Col lg="6">
                 <Card.Title>4 INNOVATIONS IN BPSC</Card.Title>
                 <div className="subtitle">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore ...
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  tempor incididunt ut labore ...
                 </div>
               </Col>
               <Col lg="6">
@@ -110,12 +88,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/advice1.png" />
                         <br />
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          BRIEF ADVICE
-                        </p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          (BA)
-                        </p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>BRIEF ADVICE</p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>(BA)</p>
                       </center>
                     </Card>
                   </Col>
@@ -124,12 +98,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/together1.png" />
                         <br />
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          BRIEF ADVICE
-                        </p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          (BA)
-                        </p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>BRIEF ADVICE</p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>(BA)</p>
                       </center>
                     </Card>
                   </Col>
@@ -138,12 +108,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/patches1.png" />
                         <br />
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          BRIEF ADVICE
-                        </p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          (BA)
-                        </p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>BRIEF ADVICE</p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>(BA)</p>
                       </center>
                     </Card>
                   </Col>
@@ -152,12 +118,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/medical-report1.png" />
                         <br />
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          BRIEF ADVICE
-                        </p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>
-                          (BA)
-                        </p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>BRIEF ADVICE</p>
+                        <p style={{fontSize: "x-small", margin: "unset"}}>(BA)</p>
                       </center>
                     </Card>
                   </Col>

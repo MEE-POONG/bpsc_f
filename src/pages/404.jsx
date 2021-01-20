@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import "../assets/css/404.css";
 
 class FourZeroFour extends Component {

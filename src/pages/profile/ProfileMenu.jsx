@@ -1,12 +1,7 @@
-import {
-  faBook,
-  faFolder,
-  faMailBulk,
-  faShare,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import {faBook, faFolder, faMailBulk, faShare} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import React, {useState} from "react";
+import {Col, Row} from "react-bootstrap";
 import ProfileMenuMyShare from "./ProfileMenuMyShare";
 import ProfileMenuFolder from "./ProfileMenuFolder";
 import ProfileMenuSharing from "./ProfileMenuSharing";

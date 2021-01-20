@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Container, div, Card } from "react-bootstrap";
+import React, {Component} from "react";
+import {Container, div, Card} from "react-bootstrap";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
@@ -37,8 +37,8 @@ class EventBox extends Component {
                       <Card.Title>08</Card.Title>
                       <Card.Subtitle>JUNE</Card.Subtitle>
                       <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore ...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore ...
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -51,8 +51,8 @@ class EventBox extends Component {
                       <Card.Title>8</Card.Title>
                       <Card.Subtitle>JUNE</Card.Subtitle>
                       <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore ...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore ...
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -65,8 +65,8 @@ class EventBox extends Component {
                       <Card.Title>8</Card.Title>
                       <Card.Subtitle>JUNE</Card.Subtitle>
                       <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore ...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore ...
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -79,8 +79,8 @@ class EventBox extends Component {
                       <Card.Title>8</Card.Title>
                       <Card.Subtitle>JUNE</Card.Subtitle>
                       <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore ...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore ...
                       </Card.Text>
                     </Card.Body>
                   </Card>

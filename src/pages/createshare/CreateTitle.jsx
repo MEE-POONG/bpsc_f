@@ -1,18 +1,13 @@
-
 import React from "react";
-import { Container, Image, Form } from "react-bootstrap";
+import {Container, Image, Form} from "react-bootstrap";
 const CreateTitle = () => {
   return (
     <div>
       <div className="tab-btn mb-5">
-        <Container >
+        <Container>
           <div className="d-flex justify-content-end">
-            <div className="save">
-              บันทุกแบบล่าง
-            </div>
-            <div className="share">
-              เผยแพร่
-            </div>
+            <div className="save">บันทุกแบบล่าง</div>
+            <div className="share">เผยแพร่</div>
           </div>
         </Container>
       </div>
@@ -23,12 +18,8 @@ const CreateTitle = () => {
       </Container>
       <Container className="box-sheare justify-content-between">
         <div className="up-img">
-          <div className="text-up">
-            ภาพปก
-          </div>
-          <div className="btn-img">
-            เลือกไฟล์
-          </div>
+          <div className="text-up">ภาพปก</div>
+          <div className="btn-img">เลือกไฟล์</div>
           <div className="scroll-img">
             <Image src="image/home/home1.png" />
             <Image src="image/home/home1.png" />
@@ -50,14 +41,13 @@ const CreateTitle = () => {
             <Form.Control type="text" placeholder="Enter email" />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>รายละเอียดย่อของแชร์  (0/300)</Form.Label>
+            <Form.Label>รายละเอียดย่อของแชร์ (0/300)</Form.Label>
             <Form.Control type="text" as="textarea" />
           </Form.Group>
         </div>
       </Container>
     </div>
-
   );
-}
+};
 
 export default CreateTitle;

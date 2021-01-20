@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Container, Media, Row } from "react-bootstrap";
+import {Card, Col, Container, Media, Row} from "react-bootstrap";
 
 const ProfileMenuLeaning = () => {
   return (
@@ -25,28 +25,25 @@ const ProfileMenuLeaning = () => {
                       </Card>
                       <Media.Body>
                         <p>
-                          <b style={{ color: "#000" }}>
-                            what you need to know about BPSC?
-                          </b>
+                          <b style={{color: "#000"}}>what you need to know about BPSC?</b>
                         </p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
                   <Card.Text className="mr-auto">
                     <span className="d-flex justify-content-between">
-                      <span style={{ color: "#26BEB4" }}>
+                      <span style={{color: "#26BEB4"}}>
                         READ MORE
-                        <i style={{ fontSize: "14px" }} className="fa pl-2">
+                        <i style={{fontSize: "14px"}} className="fa pl-2">
                           &#xf061;
                         </i>
                       </span>
@@ -58,7 +55,7 @@ const ProfileMenuLeaning = () => {
                 </Card.Footer>
               </Card>
             </Col>
-          
+
             <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
               <Card>
                 <Card.Body className="image">
@@ -77,28 +74,25 @@ const ProfileMenuLeaning = () => {
                       </Card>
                       <Media.Body>
                         <p>
-                          <b style={{ color: "#000" }}>
-                            what you need to know about BPSC?
-                          </b>
+                          <b style={{color: "#000"}}>what you need to know about BPSC?</b>
                         </p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
                   <Card.Text className="mr-auto">
                     <span className="d-flex justify-content-between">
-                      <span style={{ color: "#26BEB4" }}>
+                      <span style={{color: "#26BEB4"}}>
                         READ MORE
-                        <i style={{ fontSize: "14px" }} className="fa pl-2">
+                        <i style={{fontSize: "14px"}} className="fa pl-2">
                           &#xf061;
                         </i>
                       </span>
@@ -110,7 +104,7 @@ const ProfileMenuLeaning = () => {
                 </Card.Footer>
               </Card>
             </Col>
-          
+
             <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
               <Card>
                 <Card.Body className="image">
@@ -129,28 +123,25 @@ const ProfileMenuLeaning = () => {
                       </Card>
                       <Media.Body>
                         <p>
-                          <b style={{ color: "#000" }}>
-                            what you need to know about BPSC?
-                          </b>
+                          <b style={{color: "#000"}}>what you need to know about BPSC?</b>
                         </p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
                   <Card.Text className="mr-auto">
                     <span className="d-flex justify-content-between">
-                      <span style={{ color: "#26BEB4" }}>
+                      <span style={{color: "#26BEB4"}}>
                         READ MORE
-                        <i style={{ fontSize: "14px" }} className="fa pl-2">
+                        <i style={{fontSize: "14px"}} className="fa pl-2">
                           &#xf061;
                         </i>
                       </span>
@@ -162,7 +153,7 @@ const ProfileMenuLeaning = () => {
                 </Card.Footer>
               </Card>
             </Col>
-          
+
             <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
               <Card>
                 <Card.Body className="image">
@@ -181,28 +172,25 @@ const ProfileMenuLeaning = () => {
                       </Card>
                       <Media.Body>
                         <p>
-                          <b style={{ color: "#000" }}>
-                            what you need to know about BPSC?
-                          </b>
+                          <b style={{color: "#000"}}>what you need to know about BPSC?</b>
                         </p>
                       </Media.Body>
                     </Media>
                   </Card.Title>
                   <Card.Text className="subtitle-text">
-                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                    amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                    dolor sit amet consecteturLorem ipsum dolor sit amet
-                    consecteturLorem ipsum dolor sit amet consectetur
+                    Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
+                    consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
+                    amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
+                    dolor sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
+                    ipsum dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer>
                   <Card.Text className="mr-auto">
                     <span className="d-flex justify-content-between">
-                      <span style={{ color: "#26BEB4" }}>
+                      <span style={{color: "#26BEB4"}}>
                         READ MORE
-                        <i style={{ fontSize: "14px" }} className="fa pl-2">
+                        <i style={{fontSize: "14px"}} className="fa pl-2">
                           &#xf061;
                         </i>
                       </span>
@@ -214,7 +202,6 @@ const ProfileMenuLeaning = () => {
                 </Card.Footer>
               </Card>
             </Col>
-          
           </Row>
         </Container>
       </div>

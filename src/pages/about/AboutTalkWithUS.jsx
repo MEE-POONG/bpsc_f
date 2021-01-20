@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import {Container} from "react-bootstrap";
 
 const AboutTalkWithUS = () => {
   return (
@@ -34,10 +34,16 @@ const AboutTalkWithUS = () => {
               ></textarea>
             </div>
             <div className="pt-5 about-talk-with-us-btn-right">
-              <button type="button" className="btn btn-danger about-talk-with-us-btn-danger ">
+              <button
+                type="button"
+                className="btn btn-danger about-talk-with-us-btn-danger "
+              >
                 Danger
               </button>
-              <button type="button" className="btn btn-success about-talk-with-us-btn-success">
+              <button
+                type="button"
+                className="btn btn-success about-talk-with-us-btn-success"
+              >
                 Success
               </button>
             </div>

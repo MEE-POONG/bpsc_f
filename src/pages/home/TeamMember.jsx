@@ -1,14 +1,10 @@
-import React, { Component } from "react";
-import { Container, Card, Button } from "react-bootstrap";
+import React, {Component} from "react";
+import {Container, Card, Button} from "react-bootstrap";
 
-
-
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
-
-
 
 class TeamMember extends Component {
   render() {
@@ -23,18 +19,16 @@ class TeamMember extends Component {
               <Card.Title className="team-subtitle">
                 we have quality complete expert
               </Card.Title>
-              <Card.Title className="team-subtitle">
-                reviews in our program
-              </Card.Title>
+              <Card.Title className="team-subtitle">reviews in our program</Card.Title>
               <Card.Text className="team-subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore ...
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore ...
               </Card.Text>
             </Card.Body>
           </Card>
         </Container>
         <Container fluid>
-        <Swiper
+          <Swiper
             spaceBetween={50}
             breakpoints={{
               // when window width is >= 640px
@@ -49,14 +43,9 @@ class TeamMember extends Component {
               },
             }}
           >
-          
             <SwiperSlide>
               <div className="profile-card-2">
-                <img
-                  className="img img-responsive"
-                  src="/image/image24.png"
-                  alt=""
-                />
+                <img className="img img-responsive" src="/image/image24.png" alt="" />
                 <div className="profile-name">DR.YONG PAL</div>
                 <div className="profile-username">CARDIOTHORACIC SURGEON</div>
                 <div className="profile-tel">TEL +666 666 6666</div>
@@ -64,11 +53,7 @@ class TeamMember extends Component {
             </SwiperSlide>
             <SwiperSlide>
               <div className="profile-card-2">
-                <img
-                  className="img img-responsive"
-                  src="/image/image23.png"
-                  alt=""
-                />
+                <img className="img img-responsive" src="/image/image23.png" alt="" />
                 <div className="profile-name">DR.YONG PAL</div>
                 <div className="profile-username">CARDIOTHORACIC SURGEON</div>
                 <div className="profile-tel">TEL +666 666 6666</div>
@@ -76,24 +61,16 @@ class TeamMember extends Component {
             </SwiperSlide>
             <SwiperSlide>
               <div className="profile-card-2">
-                <img
-                  className="img img-responsive"
-                  src="/image/image26.png"
-                  alt=""
-                />
+                <img className="img img-responsive" src="/image/image26.png" alt="" />
                 <div className="profile-name">DR.YONG PAL</div>
                 <div className="profile-username">CARDIOTHORACIC SURGEON</div>
                 <div className="profile-tel">TEL +666 666 6666</div>
               </div>
             </SwiperSlide>
-          
+
             <SwiperSlide>
               <div className="profile-card-2">
-                <img
-                  className="img img-responsive"
-                  src="/image/image24.png"
-                  alt=""
-                />
+                <img className="img img-responsive" src="/image/image24.png" alt="" />
                 <div className="profile-name">DR.YONG PAL</div>
                 <div className="profile-username">CARDIOTHORACIC SURGEON</div>
                 <div className="profile-tel">TEL +666 666 6666</div>
@@ -101,11 +78,7 @@ class TeamMember extends Component {
             </SwiperSlide>
             <SwiperSlide>
               <div className="profile-card-2">
-                <img
-                  className="img img-responsive"
-                  src="/image/image23.png"
-                  alt=""
-                />
+                <img className="img img-responsive" src="/image/image23.png" alt="" />
                 <div className="profile-name">DR.YONG PAL</div>
                 <div className="profile-username">CARDIOTHORACIC SURGEON</div>
                 <div className="profile-tel">TEL +666 666 6666</div>
@@ -113,11 +86,7 @@ class TeamMember extends Component {
             </SwiperSlide>
             <SwiperSlide>
               <div className="profile-card-2">
-                <img
-                  className="img img-responsive"
-                  src="/image/image26.png"
-                  alt=""
-                />
+                <img className="img img-responsive" src="/image/image26.png" alt="" />
                 <div className="profile-name">DR.YONG PAL</div>
                 <div className="profile-username">CARDIOTHORACIC SURGEON</div>
                 <div className="profile-tel">TEL +666 666 6666</div>

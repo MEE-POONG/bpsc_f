@@ -1,7 +1,7 @@
 import React from "react";
-import { Navbar, Nav, Image, NavDropdown } from "react-bootstrap";
+import {Navbar, Nav, Image, NavDropdown} from "react-bootstrap";
 // import routes from '../routes'
-import { NavLink, useNavigate } from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import Notification from "./TheNotification";
 import TheLogin from "./TheLogin";
 import {
@@ -11,7 +11,7 @@ import {
   faEye,
   faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const TheHeader = () => {
   let navigate = useNavigate();
@@ -21,7 +21,7 @@ const TheHeader = () => {
       <Navbar
         variant="light"
         className="container-xl py-5"
-        style={{ boxShadow: "none" }}
+        style={{boxShadow: "none"}}
         expand="lg"
       >
         {/* <Navbar bg="light" variant="light"> */}
@@ -31,7 +31,7 @@ const TheHeader = () => {
             src="image/header/Logo.png"
             width="100"
             className="d-inline-block align-tops"
-            style={{ objectFit: "contain" }}
+            style={{objectFit: "contain"}}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -68,7 +68,7 @@ const TheHeader = () => {
                             alt=""
                             width="50px"
                             height="50px"
-                            style={{ borderRadius: "50%" }}
+                            style={{borderRadius: "50%"}}
                           />
                         </a>
                       </div>
@@ -85,15 +85,15 @@ const TheHeader = () => {
                 <NavDropdown.Item onClick={() => navigate("profile")}>
                   <FontAwesomeIcon icon={faUser} /> &nbsp; โปรไฟล์ของฉัน
                 </NavDropdown.Item>
-                <NavDropdown.Item >
+                <NavDropdown.Item>
                   <FontAwesomeIcon icon={faBell} /> &nbsp; <Notification />
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={() => navigate("create-share")}>
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์
                 </NavDropdown.Item>
-                <NavDropdown.Item >
+                {/* <NavDropdown.Item>
                   <FontAwesomeIcon icon={faEye} /> &nbsp;แชร์ที่เคยดู
-                </NavDropdown.Item>
+                </NavDropdown.Item> */}
                 <NavDropdown.Divider />
                 <NavDropdown.Item
                   onClick={() => {

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Image, Modal, Card } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import React, {useState} from "react";
+import {Container, Row, Col, Image, Modal, Card} from "react-bootstrap";
+import {useNavigate} from "react-router-dom";
 const GalleryAlbum = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -12,8 +12,8 @@ const GalleryAlbum = () => {
         <Card.Body className="text-center">
           <Card.Title>Album Name</Card.Title>
           <Card.Text className="team-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore ...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore ...
           </Card.Text>
           <div className="btn-back mt-5" onClick={() => navigate("/gallery")}>
             BAck to Gallery

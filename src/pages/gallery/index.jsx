@@ -8,6 +8,6 @@ const Gallery = () => {
       <GalleryCard />
     </div>
   );
-}
+};
 
 export default Gallery;

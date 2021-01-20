@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Modal, Button, Image } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import React, {useState} from "react";
+import {Modal, Button, Image} from "react-bootstrap";
+import {useNavigate} from "react-router-dom";
 
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -31,8 +31,6 @@ const TheLogin = () => {
       .then(function (result) {
         const token = result.credential.accessToken;
         const user = result.user;
-        console.log(user.email);
-        console.log(token);
         // ...
       })
       .catch(function (error) {
@@ -40,10 +38,6 @@ const TheLogin = () => {
         const errorMessage = error.message;
         const email = error.email;
         const credential = error.credential;
-        console.log("errorCode", errorCode);
-        console.log("errorMessage", errorMessage);
-        console.log("email", email);
-        console.log("credential", credential);
       });
   };
   return (
@@ -51,12 +45,7 @@ const TheLogin = () => {
       <Button variant="success" className="nav-link" onClick={handleShow}>
         LOGIN
       </Button>
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
+      <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <div className="container-sm scroll login-page">
@@ -68,7 +57,7 @@ const TheLogin = () => {
                     src="image/header/Logo.png"
                     width="100"
                     className="d-inline-block align-tops"
-                    style={{ objectFit: "contain" }}
+                    style={{objectFit: "contain"}}
                   />
                 </h5>
                 <div class="form-signin">

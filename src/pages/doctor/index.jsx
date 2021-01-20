@@ -8,6 +8,6 @@ const Doctor = () => {
       <DoctorCard />
     </div>
   );
-}
+};
 
 export default Doctor;

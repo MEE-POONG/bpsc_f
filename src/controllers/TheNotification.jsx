@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { Modal, Image, Row } from "react-bootstrap";
+import React, {useState} from "react";
+import {Modal, Image, Row} from "react-bootstrap";
 import {
   faBell,
   faCommentAlt,
   faFileDownload,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const TheNotification = () => {
   const [show, setShow] = useState(false);

@@ -1,7 +1,6 @@
-
 import React from "react";
-import { Container} from "react-bootstrap";
-import CKEditor from 'ckeditor4-react';
+import {Container} from "react-bootstrap";
+import CKEditor from "ckeditor4-react";
 const CreateDetail = () => {
   return (
     <Container className="px-0">
@@ -16,6 +15,6 @@ const CreateDetail = () => {
       </div>
     </Container>
   );
-}
+};
 
 export default CreateDetail;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import {Container} from "react-bootstrap";
 
 const AboutTitle = () => {
   return (
@@ -9,8 +9,8 @@ const AboutTitle = () => {
           <p className="h1 font-weight-bold">about BPSC</p>
           <p className="h3">ภาพระบบสาธารณะสุขที่เราวาดฝัน</p>
           <p className="h5 pt-5">
-            เป็นระบบสาธารณะสุขที่ทั้งบุคลากรและผู้รับบริการ
-            ได้ช่วยรักษากันและกัน มากกว่าเพียงแค่การจ่ายยา...
+            เป็นระบบสาธารณะสุขที่ทั้งบุคลากรและผู้รับบริการ ได้ช่วยรักษากันและกัน
+            มากกว่าเพียงแค่การจ่ายยา...
           </p>
         </Container>
       </div>
