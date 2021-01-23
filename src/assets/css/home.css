@@ -129,7 +129,8 @@
 } */
 .sheet-one .file-green.back {
   padding: 5% 0;
-  background: radial-gradient(98.18% 853.99% at 0% 100%, #8be0b7 0%, #32c7bd 100%);
+  background: rgb(75, 131, 195);
+  background: linear-gradient(25deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
   width: 100%;
   top: 0;
 }
@@ -408,7 +409,8 @@
   padding: 0;
 }
 .abstain .bg-abstain {
-  background: radial-gradient(101.48% 313.73% at 100% 100%, #8be0b7 0%, #46d1c8 100%);
+  background: rgb(75, 131, 195);
+  background: linear-gradient(25deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
 }
 .abstain .card {
   position: relative;
@@ -598,27 +600,25 @@
   opacity: 1;
   bottom: 80px;
   color: white;
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .profile-card-2:hover .profile-username {
   opacity: 1;
   bottom: 60px;
   color: white;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .profile-card-2:hover .profile-tel {
   opacity: 1;
   bottom: 40px;
   color: white;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .event {
   background: rgba(38, 190, 180, 0.25);
+  background: linear-gradient(25deg, rgba(75,131,195,0.25) 0%, rgba(46,163,173,0.25) 50%, rgba(78,232,158,0.25) 100%);
 }
 .event .container {
   padding: 3.5rem;

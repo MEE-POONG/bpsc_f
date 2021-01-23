@@ -1,0 +1,19 @@
+.home{
+    .sheet-one{
+        color: white;
+    }
+    @media only screen and (min-width: 1400px) {
+        .sheet-one{
+            .card-title{
+                font-size: 3.5rem !important;
+            }
+            .subtitle {
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+            .box-set{
+                color: #000000;
+            }
+        }
+    }
+}

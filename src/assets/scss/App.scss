@@ -1,12 +1,12 @@
 @import "./motivation.scss";
 @import "./sharing.scss";
+@import "./home.scss";
 @import "./leaning.scss";
 @import "./doctor.scss";
 @import "./gallery.scss";
-// @import "./login.scss";
+@import "./login.scss";
 @import "./profile.scss";
 @import "./create.scss";
-@import "./login.scss";
 
 @media (min-width: 576px) {
     .modal-dialog {

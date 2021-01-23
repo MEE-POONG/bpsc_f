@@ -1,5 +1,6 @@
 .about-team .about-team-bg {
-  background: radial-gradient(98.18% 853.99% at 0% 100%, #8be0b7 0%, #32c7bd 100%);
+  background: rgb(75, 131, 195);
+  background: linear-gradient(25deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
 }
 .about-team-circle {
   border-radius: 50%;

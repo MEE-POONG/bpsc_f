@@ -23,7 +23,7 @@ class SheetOne extends Component {
                   tempor incididunt ut labore ...
                 </div>
               </Col>
-              <Col lg="6">
+              <Col lg="6" className="box-set">
                 <Row>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
@@ -81,7 +81,7 @@ class SheetOne extends Component {
                   tempor incididunt ut labore ...
                 </div>
               </Col>
-              <Col lg="6">
+              <Col lg="6" className="box-set">
                 <Row>
                   <Col lg="6" md="6" xs="6" className="pt-3">
                     <Card>
