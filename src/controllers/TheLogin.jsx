@@ -80,7 +80,7 @@ const TheLogin = () => {
     e.preventDefault();
     API_FORGET_PASSWORD(handelEmail)
       .then(() => {
-        Swal.fire("สำเร็จ!", "สมัครสมาชิกสำเร็จ!", "success").then(() =>
+        Swal.fire("สำเร็จ!", "โปรดเช็ค email!", "success").then(() =>
           window.location.reload()
         );
       })
