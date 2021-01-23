@@ -96,7 +96,7 @@
 .sheet-one .trapezoid {
   color: #ffffff;
   margin-left: 0.5rem;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   border: unset;
   padding: 0.75rem;
   background: rgb(78, 232, 158);
@@ -105,7 +105,6 @@
 .sheet-one .trapezoid.back {
   /* border-bottom: 40px solid #; */
   background: #56b889;
-
 }
 .sheet-one .trapezoid span {
   /* position: absolute;
@@ -127,7 +126,12 @@
 .sheet-one .file-green.back {
   padding: 5% 0;
   background: rgb(75, 131, 195);
-  background: linear-gradient(25deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
+  background: linear-gradient(
+    25deg,
+    rgba(75, 131, 195, 1) 0%,
+    rgba(46, 163, 173, 1) 50%,
+    rgba(78, 232, 158, 1) 100%
+  );
   width: 100%;
   top: 0;
 }
@@ -421,7 +425,12 @@
 }
 .abstain .bg-abstain {
   background: rgb(75, 131, 195);
-  background: linear-gradient(25deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
+  background: linear-gradient(
+    25deg,
+    rgba(75, 131, 195, 1) 0%,
+    rgba(46, 163, 173, 1) 50%,
+    rgba(78, 232, 158, 1) 100%
+  );
 }
 .abstain .card {
   position: relative;
@@ -515,11 +524,16 @@
 .learning .card .date {
   padding: 0.75rem;
   margin: 0 1rem 0 0.5rem;
-  width: 3.5rem;
+  width: 4rem;
   text-align: center;
   visibility: hidden;
   color: #ffffff;
-  background: linear-gradient(351deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
+  background: linear-gradient(
+    351deg,
+    rgba(75, 131, 195, 1) 0%,
+    rgba(46, 163, 173, 1) 50%,
+    rgba(78, 232, 158, 1) 100%
+  );
   height: max-content !important;
 }
 .learning .card .absolute {
@@ -552,7 +566,12 @@
 .profile-card-2 {
   max-width: fit-content;
   background: rgb(75, 131, 195);
-  background: linear-gradient(351deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 25%, rgba(78, 232, 158, 1) 100%);
+  background: linear-gradient(
+    351deg,
+    rgba(75, 131, 195, 1) 0%,
+    rgba(46, 163, 173, 1) 25%,
+    rgba(78, 232, 158, 1) 100%
+  );
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-position: center;
   overflow: hidden;
@@ -612,20 +631,23 @@
   opacity: 1;
   bottom: 80px;
   color: white;
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .profile-card-2:hover .profile-username {
   opacity: 1;
   bottom: 60px;
   color: white;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 .profile-card-2:hover .profile-tel {
   opacity: 1;
   bottom: 40px;
   color: white;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .event {
@@ -754,4 +776,8 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+
+.box-login .form-control {
+  max-width: -webkit-fill-available;
 }

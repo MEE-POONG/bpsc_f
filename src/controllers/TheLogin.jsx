@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import { Modal, Button, Image, Card, Form, ListGroup } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import React, {useState} from "react";
+import {Modal, Button, Image, Card, Form} from "react-bootstrap";
+import {useNavigate} from "react-router-dom";
 
 import firebase from "firebase/app";
 import "firebase/auth";
 import TheRegister from "./TheRegister";
+import {API_FORGET_PASSWORD} from "../apis";
+import Swal from "sweetalert2";
+import jwt_decode from "jwt-decode";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -20,11 +23,19 @@ if (!firebase.apps.length) {
 
 const TheLogin = () => {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
+  const [signUpForm, setSignUpForm] = useState(false);
+  const handleClose = () => {
+    setShow(false);
+    handleNonSignUp();
+  };
   const handleShow = () => setShow(true);
+  const handleNonSignUp = () => setSignUpForm(false);
+  const handleSignUp = () => setSignUpForm(true);
+  const [handelEmail, setHandelEmail] = useState("");
+  const [handlePassword, setHandlePassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleLoginFB = () => {
     const provider = new firebase.auth.FacebookAuthProvider();
     firebase
       .auth()
@@ -41,51 +52,129 @@ const TheLogin = () => {
         const credential = error.credential;
       });
   };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    API_LOGIN(handelEmail, handlePassword)
+      .then((response) => {
+        var decoded = jwt_decode(response.data.accessToken);
+        localStorage.setItem("token", response.data.refreshToken);
+        localStorage.setItem("id", decoded.id);
+        localStorage.setItem("isAdmin", decoded.isAdmin);
+        localStorage.setItem("email", decoded.email);
+        localStorage.setItem("firstName", decoded.firstName);
+        localStorage.setItem("lastName", decoded.lastName);
+        localStorage.setItem("loginMethod", decoded.loginMethod);
+        sessionStorage.setItem("BPSC_USER_LOGIN", true);
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorMSG = error?.response?.data;
+        Swal.fire({
+          icon: "error",
+          title: errorMSG?.error,
+          text: errorMSG?.message,
+        });
+      });
+  };
+  const handleForgetPassword = (e) => {
+    e.preventDefault();
+    API_FORGET_PASSWORD(handelEmail)
+      .then(() => {
+        Swal.fire("สำเร็จ!", "สมัครสมาชิกสำเร็จ!", "success").then(() =>
+          window.location.reload()
+        );
+      })
+      .catch((error) => {
+        const errorMSG = error?.response?.data;
+        Swal.fire({
+          icon: "error",
+          title: errorMSG?.error,
+          text: errorMSG?.message,
+        });
+      });
+  };
   return (
     <>
       <Button variant="success" className="nav-link" onClick={handleShow}>
         LOGIN
       </Button>
-      <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className="box-login">
+      <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+        className="box-login"
+      >
         <Modal.Header closeButton>
-          <h1>ลงชื่อเข้าใช้งาน BPSC</h1>
+          <h1> {signUpForm ? "BPSC อยากรู้จักคุณ" : "ลงชื่อเข้าใช้งาน BPSC"} </h1>
         </Modal.Header>
         <Modal.Body>
-          <Image alt="" src="image/header/Logo.png" className="d-inline-block align-tops" style={{ objectFit: "contain" }} />
-          <Card.Body>
-            <Form>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label><h4>อีเมล</h4></Form.Label>
-                <Form.Control size="lg" type="email" placeholder="อีเมล" />
-              </Form.Group>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label><h4>รหัสผ่าน</h4></Form.Label>
-                <Form.Control size="lg" type="password" placeholder="รหัสผ่าน" />
-              </Form.Group>
-              <button className="btn btn-lg btn-primary btn-block text-uppercase mb-3" onClick={() => {
-                sessionStorage.setItem("BPSC_USER_LOGIN", true);
-                navigate("/");
-              }}>
-                <h4 className="m-0">เข้าสู่ระบบ</h4>
+          <Image
+            alt=""
+            src="image/header/Logo.png"
+            className="d-inline-block align-tops"
+            style={{objectFit: "contain", maxWidth: "-webkit-fill-available"}}
+          />
+          {signUpForm ? (
+            <>
+              <TheRegister />
+              <button className="btn btn-lg btn-google" onClick={handleNonSignUp}>
+                ย้อนกลับ
               </button>
-              <button className="btn-repass">
-                <h4 className="m-0">ลืมรหัสผ่าน</h4>
-              </button>
-            </Form>
-            <hr class="my-4" />
-
-          </Card.Body>
-          <Card.Footer>
-            <TheRegister />
-            <button className="btn btn-lg btn-facebook"
-              onClick={() => handleLogin()}
-            >
-              Sign in with Facebook
+            </>
+          ) : (
+            <>
+              <Card.Body>
+                <Form>
+                  <Form.Group controlId="formBasicEmail">
+                    <Form.Label>
+                      <h4>อีเมล</h4>
+                    </Form.Label>
+                    <Form.Control
+                      size="lg"
+                      type="email"
+                      placeholder="อีเมล"
+                      onChange={(e) => setHandelEmail(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Form.Group controlId="formBasicPassword">
+                    <Form.Label>
+                      <h4>รหัสผ่าน</h4>
+                    </Form.Label>
+                    <Form.Control
+                      size="lg"
+                      type="password"
+                      placeholder="รหัสผ่าน"
+                      onChange={(e) => setHandlePassword(e.target.value)}
+                    />
+                  </Form.Group>
+                  <button
+                    className="btn btn-lg btn-primary btn-block text-uppercase mb-3"
+                    onClick={(e) => handleLogin(e)}
+                  >
+                    <h4 className="m-0">เข้าสู่ระบบ</h4>
                   </button>
-          </Card.Footer>
+                  <button className="btn-repass" onChange={() => handleForgetPassword()}>
+                    <h4 className="m-0">ลืมรหัสผ่าน</h4>
+                  </button>
+                </Form>
+                <hr className="my-4" />
+              </Card.Body>
+              <Card.Footer>
+                <button className="btn btn-lg btn-google" onClick={handleSignUp}>
+                  สมัคสมาชิก
+                </button>
+                <button
+                  className="btn btn-lg btn-facebook"
+                  onClick={() => handleLoginFB()}
+                >
+                  Sign in with Facebook
+                </button>
+              </Card.Footer>
+            </>
+          )}
         </Modal.Body>
       </Modal>
-
     </>
   );
 };

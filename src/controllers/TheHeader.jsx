@@ -58,11 +58,11 @@ const TheHeader = () => {
             {sessionStorage.getItem("BPSC_USER_LOGIN") === "true" ? (
               <NavDropdown
                 title={
-                  <div class="row">
-                    <div class="col-sm-2">
-                      <div class="nav-item">
+                  <div className="row">
+                    <div className="col-sm-2">
+                      <div className="nav-item">
                         <a href={() => {}}>
-                          <span class="notify-badge">NEW</span>
+                          <span className="notify-badge">NEW</span>
                           <img
                             src="http://placehold.it/200x200"
                             alt=""
