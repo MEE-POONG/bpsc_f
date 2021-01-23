@@ -6,7 +6,7 @@ import {Col, Container, Row} from "react-bootstrap";
 const AboutContactUS = () => {
   return (
     <div className="about-contact-us">
-      <div className="scroll-num p-5 about-contact-us-bg">
+      <div className="scroll-num p-5">
         <Container className="text-center py-5">
           <p className="display-4 font-weight-bold text-white">contact us</p>
           <p className="h1 font-weight-bold text-white">
