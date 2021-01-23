@@ -36,3 +36,70 @@
         }
     }
 }
+.box-login {
+    .form-control {
+        font-size: 1.75rem;
+    }
+    .btn-singin, .btn-repass {
+        border-radius: 8px;
+        width: 100%;
+        padding: 0.5em 0;
+        text-align: center;
+        font-size: 18px;
+        background: #2d9cdb;
+        color: #fff;
+        border: unset;
+    }
+    .btn-singin:hover{
+        background-color: #5a95f5!important;
+    }
+    .btn-repass{
+        color: #2d9cdb;
+        background: #ffffff;
+        font-size: 18px;
+        text-align: center;
+    }
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgb(117, 117, 117);
+    }
+    .btn-google, .btn-facebook{
+        width: 100%;
+        border-radius: 5rem;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 1rem;
+        border: unset;
+    }
+    .btn-google{
+        background-color: #ea4335;
+    }
+    .btn-facebook{
+        background-color: #3b5998;
+    }
+    .card-footer {
+        padding: .75rem 1.25rem;
+        background-color: rgba(0, 0, 0, 0);
+        border-top: 0px solid rgba(0, 0, 0, 0);
+    }
+    .close {
+        font-size: 2.5rem;
+        color: rgb(255, 0, 0);
+    }
+}
+@media (min-width: 576px) {
+    .box-login {
+        .modal-dialog {
+            width: max-content;
+            margin: 5rem auto !important;
+            img {
+                height: auto;
+                object-fit: contain;
+                margin: auto;
+                border-radius: 0%;
+            }
+        }
+    }
+}

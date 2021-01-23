@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import {Modal, Button, Image} from "react-bootstrap";
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import { Modal, Button, Image, Card, Form, ListGroup } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -45,76 +45,45 @@ const TheLogin = () => {
       <Button variant="success" className="nav-link" onClick={handleShow}>
         LOGIN
       </Button>
-      <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
-        <Modal.Header closeButton></Modal.Header>
+      <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} className="box-login">
+        <Modal.Header closeButton>
+          <h1>ลงชื่อเข้าใช้งาน BPSC</h1>
+        </Modal.Header>
         <Modal.Body>
-          <div className="container-sm scroll login-page">
-            <div class="card card-signin mb-5 title">
-              <div class="card-body">
-                <h5 class="card-title text-center">
-                  <Image
-                    alt=""
-                    src="image/header/Logo.png"
-                    width="100"
-                    className="d-inline-block align-tops"
-                    style={{objectFit: "contain"}}
-                  />
-                </h5>
-                <div class="form-signin">
-                  <div class="form-label-group">
-                    <input
-                      //   type="email"
-                      id="inputEmail"
-                      class="form-control"
-                      required
-                      autofocus
-                    />
-                    <label for="inputEmail">Email address</label>
-                  </div>
+          {/* <Image alt="" src="image/header/Logo.png" className="d-inline-block align-tops" style={{ objectFit: "contain" }}/> */}
+          <Card.Body>
+            <Form>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label><h4>อีเมล</h4></Form.Label>
+                <Form.Control size="lg" type="email" placeholder="อีเมล" />
+              </Form.Group>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label><h4>รหัสผ่าน</h4></Form.Label>
+                <Form.Control size="lg" type="password" placeholder="รหัสผ่าน" />
+              </Form.Group>
+              <button className="btn btn-lg btn-primary btn-block text-uppercase mb-3" onClick={() => {
+                sessionStorage.setItem("BPSC_USER_LOGIN", true);
+                navigate("/");
+              }}>
+                <h4 className="m-0">เข้าสู่ระบบ</h4>
+              </button>
+              <button className="btn-repass">
+                <h4 className="m-0">ลืมรหัสผ่าน</h4>
+              </button>
+            </Form>
+            <hr class="my-4" />
 
-                  <div class="form-label-group">
-                    <input
-                      type="password"
-                      id="inputPassword"
-                      class="form-control"
-                      required
-                    />
-                    <label for="inputPassword">Password</label>
-                  </div>
-
-                  {/* <div class="custom-control custom-checkbox mb-3">
-                    <input
-                      type="checkbox"
-                      class="custom-control-input"
-                      id="customCheck1"
-                    />
-                    <label class="custom-control-label" for="customCheck1">
-                      Remember password
-                    </label>
-                  </div> */}
-                  <button
-                    class="btn btn-lg btn-primary btn-block text-uppercase"
-                    onClick={() => {
-                      sessionStorage.setItem("BPSC_USER_LOGIN", true);
-                      navigate("/");
-                    }}
-                  >
-                    Sign in
+          </Card.Body>
+          <Card.Footer>
+            <button className="btn btn-lg btn-google">
+              Sign in with Google
                   </button>
-                  <hr class="my-4" />
-                  <button class="btn btn-lg btn-google btn-block text-uppercase">
-                    Sign in with Google
+            <button className="btn btn-lg btn-facebook"
+              onClick={() => handleLogin()}
+            >
+              Sign in with Facebook
                   </button>
-                  <button
-                    class="btn btn-lg btn-facebook btn-block text-uppercase"
-                    onClick={() => handleLogin()}
-                  >
-                    Sign in with Facebook
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          </Card.Footer>
         </Modal.Body>
       </Modal>
     </>
