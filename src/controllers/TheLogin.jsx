@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import firebase from "firebase/app";
 import "firebase/auth";
+import TheRegister from "./TheRegister";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -50,7 +51,7 @@ const TheLogin = () => {
           <h1>ลงชื่อเข้าใช้งาน BPSC</h1>
         </Modal.Header>
         <Modal.Body>
-          {/* <Image alt="" src="image/header/Logo.png" className="d-inline-block align-tops" style={{ objectFit: "contain" }}/> */}
+          <Image alt="" src="image/header/Logo.png" className="d-inline-block align-tops" style={{ objectFit: "contain" }} />
           <Card.Body>
             <Form>
               <Form.Group controlId="formBasicEmail">
@@ -75,9 +76,7 @@ const TheLogin = () => {
 
           </Card.Body>
           <Card.Footer>
-            <button className="btn btn-lg btn-google">
-              Sign in with Google
-                  </button>
+            <TheRegister />
             <button className="btn btn-lg btn-facebook"
               onClick={() => handleLogin()}
             >
@@ -86,6 +85,7 @@ const TheLogin = () => {
           </Card.Footer>
         </Modal.Body>
       </Modal>
+
     </>
   );
 };
