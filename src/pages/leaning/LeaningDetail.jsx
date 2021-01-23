@@ -1,5 +1,7 @@
 import React from "react";
 import {Container, Card, Row, Col, Pagination, Media} from "react-bootstrap";
+import {faArrowRight, faHeart} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 const LeaningDetail = () => {
   return (
     <Container className="detail learning">
@@ -42,16 +44,13 @@ const LeaningDetail = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Card.Text className="mr-auto">
-                  <span className="ex justify-content-between">
+                <Card.Text className="mr-auto ">
+                  <span className="d-flex justify-content-between">
                     <span style={{color: "#26BEB4"}}>
-                      READ MORE
-                      <i style={{fontSize: "14px"}} className="l-2">
-                        &#xf061;
-                      </i>
+                    READ MORE{' '}<FontAwesomeIcon icon={faArrowRight} />
                     </span>
-                    <span>
-                      <i className="a-heart-o"></i> 112
+                    <span  style={{color: "#26BEB4"}}>
+                    <FontAwesomeIcon icon={faHeart} /> 112
                     </span>
                   </span>
                 </Card.Text>
@@ -91,16 +90,13 @@ const LeaningDetail = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Card.Text className="mr-auto">
-                  <span className="ex justify-content-between">
+                <Card.Text className="mr-auto ">
+                  <span className="d-flex justify-content-between">
                     <span style={{color: "#26BEB4"}}>
-                      READ MORE
-                      <i style={{fontSize: "14px"}} className="l-2">
-                        &#xf061;
-                      </i>
+                    READ MORE{' '}<FontAwesomeIcon icon={faArrowRight} />
                     </span>
-                    <span>
-                      <i className="a-heart-o"></i> 112
+                    <span  style={{color: "#26BEB4"}}>
+                    <FontAwesomeIcon icon={faHeart} /> 112
                     </span>
                   </span>
                 </Card.Text>
@@ -140,16 +136,13 @@ const LeaningDetail = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Card.Text className="mr-auto">
-                  <span className="ex justify-content-between">
+                <Card.Text className="mr-auto ">
+                  <span className="d-flex justify-content-between">
                     <span style={{color: "#26BEB4"}}>
-                      READ MORE
-                      <i style={{fontSize: "14px"}} className="l-2">
-                        &#xf061;
-                      </i>
+                    READ MORE{' '}<FontAwesomeIcon icon={faArrowRight} />
                     </span>
-                    <span>
-                      <i className="a-heart-o"></i> 112
+                    <span  style={{color: "#26BEB4"}}>
+                    <FontAwesomeIcon icon={faHeart} /> 112
                     </span>
                   </span>
                 </Card.Text>
@@ -189,16 +182,13 @@ const LeaningDetail = () => {
                 </Card.Text>
               </Card.Body>
               <Card.Footer>
-                <Card.Text className="mr-auto">
-                  <span className="ex justify-content-between">
+                <Card.Text className="mr-auto ">
+                  <span className="d-flex justify-content-between">
                     <span style={{color: "#26BEB4"}}>
-                      READ MORE
-                      <i style={{fontSize: "14px"}} className="l-2">
-                        &#xf061;
-                      </i>
+                    READ MORE{' '}<FontAwesomeIcon icon={faArrowRight} />
                     </span>
-                    <span>
-                      <i className="a-heart-o"></i> 112
+                    <span  style={{color: "#26BEB4"}}>
+                    <FontAwesomeIcon icon={faHeart} /> 112
                     </span>
                   </span>
                 </Card.Text>

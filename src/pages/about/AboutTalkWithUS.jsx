@@ -9,7 +9,7 @@ const AboutTalkWithUS = () => {
           <div className="pt-5">
             <p className="display-4 font-weight-bold">Talk with us</p>
           </div>
-          <div className="pt-5">
+          <div className="pt-5 input-group-lg">
             <input
               type="text"
               className="form-control about-talk-with-us-input"
@@ -17,7 +17,7 @@ const AboutTalkWithUS = () => {
               aria-label="YOUR NAME"
               aria-describedby="basic-addon1"
             />
-            <div className="pt-5">
+            <div className="pt-5 input-group-lg input-group-lg">
               <input
                 type="text"
                 className="form-control about-talk-with-us-input"

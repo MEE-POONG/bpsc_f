@@ -147,7 +147,12 @@
         .page-item.active .page-link {
             z-index: 3;
             color: #fff;
-            background-color: #26beb4;
+            background: linear-gradient(
+                351deg,
+                rgba(75, 131, 195, 1) 0%,
+                rgba(46, 163, 173, 1) 13%,
+                rgba(78, 232, 158, 1) 100%
+            );
             border-color: #26beb4;
         }
     }

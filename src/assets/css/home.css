@@ -371,7 +371,7 @@
   border: unset;
 }
 .my-file .green {
-  background-color: #26beb4;
+  background-image: linear-gradient(to right, #1fa9ff, #00b0f8, #00b6ee, #00bbe2, #00bfd5, #00c0cb, #0fc0c0, #27c0b4, #33bea9, #3fbc9f, #4bba94, #56b889);
 }
 .tab-script {
   position: absolute;
@@ -507,9 +507,9 @@
   width: 3.5rem;
   text-align: center;
   visibility: hidden;
-  color: #000000;
-  background-color: #26beb4;
-  height: 8rem !important;
+  color: #ffffff;
+  background: linear-gradient(351deg, rgba(75,131,195,1) 0%, rgba(46,163,173,1) 50%, rgba(78,232,158,1) 100%);
+  height: max-content !important;
 }
 .learning .card .absolute {
   position: absolute;
@@ -540,7 +540,8 @@
 
 .profile-card-2 {
   max-width: fit-content;
-  background-color: #27b4a2;
+  background: rgb(75,131,195);
+background: linear-gradient(351deg, rgba(75,131,195,1) 0%, rgba(46,163,173,1) 25%, rgba(78,232,158,1) 100%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-position: center;
   overflow: hidden;
