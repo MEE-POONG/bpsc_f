@@ -94,29 +94,26 @@
   position: relative;
 }
 .sheet-one .trapezoid {
-  width: 10em;
-  text-align: center;
-  height: 0;
-  position: relative;
-  border-right: 20px solid white;
-  border-bottom: 40px solid #8be0b7;
-  border-top: 0;
-  border-left: 20px solid white;
-  box-sizing: content-box;
-  /* position: absolute; */
-  bottom: 100%;
-  left: 10px;
+  color: #ffffff;
+  margin-left: 0.5rem;
+  margin-right: .5rem;
+  border: unset;
+  padding: 0.75rem;
+  background: rgb(78, 232, 158);
+  border-radius: 12px 12px 0 0;
 }
 .sheet-one .trapezoid.back {
-  border-bottom: 40px solid #56b889;
+  /* border-bottom: 40px solid #; */
+  background: #56b889;
+
 }
 .sheet-one .trapezoid span {
-  position: absolute;
+  /* position: absolute;
   top: 10px;
   text-align: center;
   width: 100%;
   color: #fff;
-  left: 0;
+  left: 0; */
 }
 /* .sheet-one .file-green {
   padding: 5% 0;
@@ -371,7 +368,21 @@
   border: unset;
 }
 .my-file .green {
-  background-image: linear-gradient(to right, #1fa9ff, #00b0f8, #00b6ee, #00bbe2, #00bfd5, #00c0cb, #0fc0c0, #27c0b4, #33bea9, #3fbc9f, #4bba94, #56b889);
+  background-image: linear-gradient(
+    to right,
+    #1fa9ff,
+    #00b0f8,
+    #00b6ee,
+    #00bbe2,
+    #00bfd5,
+    #00c0cb,
+    #0fc0c0,
+    #27c0b4,
+    #33bea9,
+    #3fbc9f,
+    #4bba94,
+    #56b889
+  );
 }
 .tab-script {
   position: absolute;
@@ -508,7 +519,7 @@
   text-align: center;
   visibility: hidden;
   color: #ffffff;
-  background: linear-gradient(351deg, rgba(75,131,195,1) 0%, rgba(46,163,173,1) 50%, rgba(78,232,158,1) 100%);
+  background: linear-gradient(351deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
   height: max-content !important;
 }
 .learning .card .absolute {
@@ -540,8 +551,8 @@
 
 .profile-card-2 {
   max-width: fit-content;
-  background: rgb(75,131,195);
-background: linear-gradient(351deg, rgba(75,131,195,1) 0%, rgba(46,163,173,1) 25%, rgba(78,232,158,1) 100%);
+  background: rgb(75, 131, 195);
+  background: linear-gradient(351deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 25%, rgba(78, 232, 158, 1) 100%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-position: center;
   overflow: hidden;
@@ -619,7 +630,12 @@ background: linear-gradient(351deg, rgba(75,131,195,1) 0%, rgba(46,163,173,1) 25
 
 .event {
   background: rgba(38, 190, 180, 0.25);
-  background: linear-gradient(25deg, rgba(75,131,195,0.25) 0%, rgba(46,163,173,0.25) 50%, rgba(78,232,158,0.25) 100%);
+  background: linear-gradient(
+    25deg,
+    rgba(75, 131, 195, 0.25) 0%,
+    rgba(46, 163, 173, 0.25) 50%,
+    rgba(78, 232, 158, 0.25) 100%
+  );
 }
 .event .container {
   padding: 3.5rem;

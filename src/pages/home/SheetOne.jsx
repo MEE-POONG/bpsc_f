@@ -6,7 +6,7 @@ class SheetOne extends Component {
     return (
       <div className="sheet-one">
         <div className="file-green">
-          <div className="row">
+          <div className="row m-0">
             <button className="trapezoid">
               <span>OUR INNOVATION</span>
             </button>
