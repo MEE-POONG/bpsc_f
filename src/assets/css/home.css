@@ -127,7 +127,7 @@
 .sheet-one .file-green.back {
   padding: 5% 0;
   background: rgb(75, 131, 195);
-  background: linear-gradient(25deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
+  background: radial-gradient(98.18% 853.99% at 0% 100%, #8BE0B7 0%, #5694CD 100%);
   width: 100%;
   top: 0;
 }
@@ -421,7 +421,7 @@
 }
 .abstain .bg-abstain {
   background: rgb(75, 131, 195);
-  background: linear-gradient(25deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
+  background: radial-gradient(127.4% 393.83% at 100% 100%, #8BE0B7 22.03%, #72BDC2 74.01%, #5694CD 100%);
 }
 .abstain .card {
   position: relative;

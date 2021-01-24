@@ -162,3 +162,110 @@
         }
     }
 }
+.leaning-list {
+    .contact {
+        color: #757575;
+        font-weight: bold;
+    }
+    .tag {
+        font-size: 1.5rem;
+    }
+    .tag-list {
+        span {
+            background-color: #8be0b7;
+            border-radius: 20px;
+            width: max-content;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+    }
+    .comment {
+        border-radius: 20px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .input-comment {
+            height: 100px;
+            width: 80%;
+            vertical-align: middle;
+            border-radius: 20px;
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+        .input-comment:focus {
+            // border: unset;
+            outline: unset;
+        }
+    }
+    .list {
+        text-align: left;
+        span.img {
+            width: 20%;
+        }
+        span.detail {
+            width: 80%;
+        }
+        img {
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .detail {
+            width: 80%;
+            vertical-align: middle;
+            display: inline-block;
+            margin-left: 5rem;
+            // float: right;
+            .date {
+                color: #757575;
+                font-size: 1.5rem;
+            }
+            .text {
+                color: #000000;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .box-list {
+        position: relative;
+        text-align: center;
+        .btn-show-list {
+            position: absolute;
+            font-size: 3rem;
+            border: unset;
+            background-color: unset;
+            bottom: 0;
+        }
+    }
+    .sheet {
+        background: radial-gradient(97.78% 355.61% at 2.22% 100%, #beece9 0%, #8be0b7 100%);
+        .th {
+            background: #26beb4;
+        }
+        .file{
+            font-size: 1.75rem;
+            font-weight: bold;
+            .download {
+                background-color: #f2c94c;
+            }
+            .preview {
+                background-color: #ffffff;
+            }
+            .download,.preview{
+                border: unset;
+                // sw
+                border-radius: 20px;
+                padding: 0.75rem 1rem;
+            }
+        }
+    }
+}
