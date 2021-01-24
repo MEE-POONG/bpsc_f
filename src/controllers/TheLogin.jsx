@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 import TheRegister from "./TheRegister";
-import {API_FORGET_PASSWORD} from "../apis";
+import {API_LOGIN, API_FORGET_PASSWORD, API_RE_VERIFICATION} from "../apis";
 import Swal from "sweetalert2";
 import jwt_decode from "jwt-decode";
 
@@ -37,12 +37,14 @@ const TheLogin = () => {
 
   const handleLoginFB = () => {
     const provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithRedirect(provider);
     firebase
       .auth()
-      .signInWithPopup(provider)
+      .getRedirectResult()
       .then(function (result) {
         const token = result.credential.accessToken;
         const user = result.user;
+        console.log("login to facebook");
         // ...
       })
       .catch(function (error) {
@@ -69,11 +71,28 @@ const TheLogin = () => {
       })
       .catch((error) => {
         const errorMSG = error?.response?.data;
-        Swal.fire({
-          icon: "error",
-          title: errorMSG?.error,
-          text: errorMSG?.message,
-        });
+        if (errorMSG?.error === "Email not Verify") {
+          Swal.fire({
+            title: errorMSG?.error,
+            text: errorMSG?.message,
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, Reverify!",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              API_RE_VERIFICATION(handelEmail)
+              Swal.fire("THANK YOU!", "Check your email.", "success");
+            }
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: errorMSG?.error,
+            text: errorMSG?.message,
+          });
+        }
       });
   };
   const handleForgetPassword = (e) => {
@@ -99,6 +118,7 @@ const TheLogin = () => {
         LOGIN
       </Button>
       <Modal
+        size="md"
         show={show}
         onHide={handleClose}
         backdrop="static"
@@ -109,12 +129,14 @@ const TheLogin = () => {
           <h1> {signUpForm ? "BPSC อยากรู้จักคุณ" : "ลงชื่อเข้าใช้งาน BPSC"} </h1>
         </Modal.Header>
         <Modal.Body>
-          <Image
-            alt=""
-            src="image/header/Logo.png"
-            className="d-inline-block align-tops"
-            style={{objectFit: "contain", maxWidth: "-webkit-fill-available"}}
-          />
+          <div className="text-center">
+            <Image
+              alt=""
+              src="image/header/Logo.png"
+              className="d-inline-block align-tops"
+              style={{objectFit: "contain", maxWidth: "-webkit-fill-available"}}
+            />
+          </div>
           {signUpForm ? (
             <>
               <TheRegister />

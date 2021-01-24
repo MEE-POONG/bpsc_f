@@ -45,9 +45,14 @@ export const API_FORGET_PASSWORD = (email) => {
   var config = {
     method: "post",
     url: `https://api.thaibpsc.com/forgetPassword?email=${email}`,
-    headers: {
-      Cookie: "__cfduid=d39907312190412f688bad9245ac0bdce1611394839",
-    },
+  };
+  return axios(config);
+};
+export const API_VERIFICATION = (token) => {
+  var config = {
+    method: "post",
+    url:
+      `https://api.thaibpsc.com/verify?token=${token}`,
   };
   return axios(config);
 };
@@ -55,9 +60,6 @@ export const API_RE_VERIFICATION = (email) => {
   var config = {
     method: "post",
     url: `https://api.thaibpsc.com/ReSendVerification?email=${email}`,
-    headers: {
-      Cookie: "__cfduid=d39907312190412f688bad9245ac0bdce1611394839",
-    },
   };
 
   return axios(config);
