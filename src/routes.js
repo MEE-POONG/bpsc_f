@@ -11,6 +11,8 @@ const GalleryAlbum = React.lazy(() => import("./pages/gallery/GalleryAlbum"));
 const CreateShare = React.lazy(() => import("./pages/createshare"));
 const Login = React.lazy(() => import("./pages/login"));
 const Profile = React.lazy(() => import("./pages/profile"));
+const Verify = React.lazy(() => import("./pages/verify"));
+const RePassword = React.lazy(() => import("./pages/repassword"));
 
 const FourZeroFour = React.lazy(() => import("./pages/404"));
 
@@ -37,6 +39,8 @@ const routes = [
   { path: "/login", name: "LOGIN", component: Login },
   { path: "/profile", name: "PROFILE", component: Profile },
   { path: "/create-share", name: "CREATE SHARE", component: CreateShare },
+  { path: "/verify", name: "VERIFY", component: Verify },
+  { path: "/changeForgetPassword", name: "RE PASSWORD", component: RePassword },
 
   { path: "*", name: "404", component: FourZeroFour },
 ];

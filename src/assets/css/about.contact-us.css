@@ -1,3 +1,8 @@
 .about-contact-us-bg {
-  background: linear-gradient(345deg, rgba(778, 232, 158, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(75, 131, 195, 1) 100%);
+  background: linear-gradient(
+    345deg,
+    rgba(778, 232, 158, 1) 0%,
+    rgba(46, 163, 173, 1) 50%,
+    rgba(75, 131, 195, 1) 100%
+  );
 }

@@ -58,3 +58,26 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .sharing-page .title .card-title {
+    font-size: 5rem !important;
+  }
+  .sharing-page .title .card-subtitle {
+    font-size: 3rem !important;
+    padding-bottom: 10px;
+  }
+  .leaning-page .title .card-subtitle {
+    font-size: 2rem !important;
+    padding-bottom: 10px !important;
+  }
+  .gallery-page .title .card-title,
+  .gallery-page .title-album .card-title {
+    font-size: 5rem !important;
+    font-weight: bold !important;
+  }
+  .doctor-page .title .card-title {
+    font-size: 5rem !important;
+    font-weight: bold !important;
+  }
+}
