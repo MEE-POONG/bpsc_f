@@ -251,20 +251,26 @@
         .th {
             background: #26beb4;
         }
-        .file{
-            font-size: 1.75rem;
-            font-weight: bold;
+        .file {
+            td{
+                font-size: 1.75rem;
+                font-weight: bold;
+            }
+            .hr{
+                border-bottom: 3px solid;
+                padding-bottom: 0.75rem;
+            }
             .download {
                 background-color: #f2c94c;
             }
             .preview {
                 background-color: #ffffff;
             }
-            .download,.preview{
+            .download,
+            .preview {
                 border: unset;
-                // sw
                 border-radius: 20px;
-                padding: 0.75rem 1rem;
+                padding: 0.75rem;
             }
         }
     }
