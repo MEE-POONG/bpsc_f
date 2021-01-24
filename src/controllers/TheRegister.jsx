@@ -15,7 +15,7 @@ const TheRegister = () => {
     password2: "",
   });
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
     API_REGISTER(singUpForm)
       .then((e) => {
@@ -100,7 +100,7 @@ const TheRegister = () => {
         </Form.Group>
         <button
           className="btn btn-lg btn-primary btn-block text-uppercase mb-3"
-          onClick={(e) => handleLogin(e)}
+          onClick={(e) => handleRegister(e)}
         >
           <h4 className="m-0">ยืนยัน</h4>
         </button>

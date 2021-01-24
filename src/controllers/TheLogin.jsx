@@ -82,7 +82,7 @@ const TheLogin = () => {
             confirmButtonText: "Yes, Reverify!",
           }).then((result) => {
             if (result.isConfirmed) {
-              API_RE_VERIFICATION(handelEmail)
+              API_RE_VERIFICATION(handelEmail);
               Swal.fire("THANK YOU!", "Check your email.", "success");
             }
           });
@@ -176,7 +176,7 @@ const TheLogin = () => {
                   >
                     <h4 className="m-0">เข้าสู่ระบบ</h4>
                   </button>
-                  <button className="btn-repass" onChange={() => handleForgetPassword()}>
+                  <button className="btn-repass" onClick={(e) => handleForgetPassword(e)}>
                     <h4 className="m-0">ลืมรหัสผ่าน</h4>
                   </button>
                 </Form>

@@ -48,11 +48,24 @@ export const API_FORGET_PASSWORD = (email) => {
   };
   return axios(config);
 };
+export const API_CHANGE_FORGET_PASSWORD = (password, token) => {
+  var data = JSON.stringify(password);
+
+  var config = {
+    method: "post",
+    url: `https://api.thaibpsc.com/changeForgetPassword?token=${token}`,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: data,
+  };
+
+  return axios(config);
+};
 export const API_VERIFICATION = (token) => {
   var config = {
     method: "post",
-    url:
-      `https://api.thaibpsc.com/verify?token=${token}`,
+    url: `https://api.thaibpsc.com/verify?token=${token}`,
   };
   return axios(config);
 };
