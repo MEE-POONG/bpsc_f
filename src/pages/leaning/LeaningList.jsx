@@ -87,56 +87,35 @@ const LeaningList = () => {
                 </Row>
                 <Button bsPrefix="btn-show-list" ><FontAwesomeIcon icon={faChevronDown} /></Button>
             </Container>
-            <Container className="sheet p-5">
-                <Row className="p-lg-5 th">
-                    <Col lg="8" md="8"><h1>เอกสารที่เกี่ยวข้อง</h1></Col>
-                    <Col lg="2" md="2"><h1>Size</h1></Col>
-                    <Col lg="2" md="2"><h1>Download</h1></Col>
-                </Row>
-                <Row className="p-lg-5 file align-items-center">
-                    <Col lg="8" md="8" className="hr">
-                        <Image src="../image/pdf.png" />
-                        <span className="ml-5">Lorem ipsum dolor sit amet, consectetur</span>
-                    </Col>
-                    <Col lg="2" md="2" >404.80 kb</Col>
-                    <Col lg="2" md="2" className="text-center">
-                        <Button bsPrefix="download mb3">Download</Button>
-                        <Button bsPrefix="preview">Preview</Button>
-                    </Col>
-                    <Col lg="8" md="8">
-                        <Image src="../image/pdf.png" />
-                        <span className="ml-5">Lorem ipsum dolor sit amet, consectetur</span>
-                    </Col>
-                    <Col lg="2" md="2">404.80 kb</Col>
-                    <Col lg="2" md="2" className="text-center">
-                        <Button bsPrefix="download mb3">Download</Button>
-                        <Button bsPrefix="preview">Preview</Button>
-                    </Col>
-                </Row>
+            <Container className="sheet p-5 mb-5">
                 <Table responsive="sm">
-                <thead> 
+                    <thead style={{ background: "#26beb4" }}>
                         <tr>
                             <th><h1>เอกสารที่เกี่ยวข้อง</h1></th>
-                            <th><h1>Size</h1></th>
-                            <th><h1>Download</h1></th>
+                            <th className="text-center"><h1>Size</h1></th>
+                            <th className="text-center"><h1>Download</h1></th>
                         </tr>
                     </thead>
-                    
                     <tbody className="file">
                         <tr>
-                            <td><Image src="../image/pdf.png" />
+                            <td className="text-start"><Image src="../image/pdf.png" />
                                 <span className="ml-5">Lorem ipsum dolor sit amet, consectetur</span>
                             </td>
-                            <td>404.80 kb</td>
-                            <td>
+                            <td className="text-center">404.80 kb</td>
+                            <td className="text-center">
                                 <Button bsPrefix="download mb3">Download</Button>
                                 <Button bsPrefix="preview">Preview</Button>
                             </td>
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td></td>
-                            <td></td>
+                            <td className="text-start"><Image src="../image/pdf.png" />
+                                <span className="ml-5">Lorem ipsum dolor sit amet, consectetur</span>
+                            </td>
+                            <td className="text-center">404.80 kb</td>
+                            <td className="text-center">
+                                <Button bsPrefix="download mb3">Download</Button>
+                                <Button bsPrefix="preview">Preview</Button>
+                            </td>
                         </tr>
                     </tbody>
                 </Table>

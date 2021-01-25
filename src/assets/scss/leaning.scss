@@ -248,18 +248,25 @@
     }
     .sheet {
         background: radial-gradient(97.78% 355.61% at 2.22% 100%, #beece9 0%, #8be0b7 100%);
-        .th {
-            background: #26beb4;
-        }
+
         .file {
-            td{
+            table{
+                padding: 7rem;
+            }
+            tr{
+                border-bottom: 3px solid #26BEB4;
+            }
+            td {
+                vertical-align: middle;
+                // background: #26beb4;
+
+
+            }
+            td {
                 font-size: 1.75rem;
                 font-weight: bold;
             }
-            .hr{
-                border-bottom: 3px solid;
-                padding-bottom: 0.75rem;
-            }
+
             .download {
                 background-color: #f2c94c;
             }
@@ -271,6 +278,8 @@
                 border: unset;
                 border-radius: 20px;
                 padding: 0.75rem;
+                display: block;
+                margin: .5rem auto;
             }
         }
     }
