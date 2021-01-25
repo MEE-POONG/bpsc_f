@@ -5,8 +5,7 @@ const GalleryTitle = () => {
     <Container className="title mb-5">
       <Row>
         <Col lg="12">
-          <Card.Title>Gallery</Card.Title>
-          <Card.Title>Blog</Card.Title>
+          <Card.Title>Gallery Blog</Card.Title>
         </Col>
       </Row>
     </Container>
