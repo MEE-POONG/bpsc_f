@@ -111,7 +111,7 @@
 @media (min-width: 576px) {
     .box-login {
         .modal-dialog {
-            max-width: 500px;
+            max-width: 500px !important;
             margin: 3rem auto !important;
             img {
                 height: auto;

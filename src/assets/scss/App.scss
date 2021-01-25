@@ -12,7 +12,7 @@
     .modal-dialog {
         align-self: center;
         margin: 1.75rem auto !important;
-
+        max-width: 80% !important;
         .card-title {
             font-size: 3.25rem;
             font-weight: bold;
@@ -40,10 +40,6 @@
         .modal-content {
             padding: 1.5rem;
         }
-    }
-
-    .doctor-page .modal-dialog {
-        max-width: 80% !important;
     }
 }
 
