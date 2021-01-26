@@ -99,13 +99,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/healthcare-2.png" />
                         <br />
-<<<<<<< HEAD
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>BRIEF ADVICE</p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>(BA)</p>
-=======
                         <p style={{fontSize: "x-small", margin: "unset"}}>BRIEF INTERVENTION</p>
                         <p style={{fontSize: "x-small", margin: "unset"}}>(BI)</p>
->>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
                       </center>
                     </Card>
                   </Col>
@@ -114,13 +109,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/love.png" />
                         <br />
-<<<<<<< HEAD
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>BRIEF ADVICE</p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>(BA)</p>
-=======
                         <p style={{fontSize: "x-small", margin: "unset"}}>BASED BRIEF INTERVENTION</p>
                         <p style={{fontSize: "x-small", margin: "unset"}}>(MBBI)</p>
->>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
                       </center>
                     </Card>
                   </Col>
@@ -129,13 +119,8 @@ class SheetOne extends Component {
                       <center className="align-self-center p-1">
                         <Image src="/image/together1.png" />
                         <br />
-<<<<<<< HEAD
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>BRIEF ADVICE</p>
-                        <p style={{ fontSize: "x-small", margin: "unset" }}>(BA)</p>
-=======
                         <p style={{fontSize: "x-small", margin: "unset"}}>MINDFULNESS BASED THERAPY COUNSELING</p>
                         <p style={{fontSize: "x-small", margin: "unset"}}>(MBTC)</p>
->>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
                       </center>
                     </Card>
                   </Col>
