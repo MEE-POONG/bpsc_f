@@ -106,7 +106,7 @@ const LeaningList = () => {
                 </Media>
                 <Button bsPrefix="btn-show-list" ><FontAwesomeIcon icon={faChevronDown} /></Button>
             </Container>
-            <Container className="sheet p-5 mb-5">
+            <Container className="sheet p-lg-5 p-md-5 mb-5">
                 <Table responsive="sm">
                     <tr style={{ background: "#26beb4" }}>
                         <th className="head-th text-left">เอกสารที่เกี่ยวข้อง</th>
