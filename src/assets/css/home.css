@@ -312,21 +312,13 @@
   cursor: pointer;
 }
 .sheet-three .card-title {
-<<<<<<< HEAD
   font-size: 2rem !important;
   line-height: 1.5;
-=======
-  font-size: 1.8rem !important;
->>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
   transition: 1s;
   cursor: pointer;
 }
 .sheet-three .card-subtitle {
-<<<<<<< HEAD
   font-size: 1.25rem;
-=======
-  font-size: 1.2rem;
->>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
   transition: 1s;
   cursor: pointer;
   /* color: #ffa710; */
@@ -435,16 +427,7 @@
 }
 .abstain .bg-abstain {
   background: rgb(75, 131, 195);
-<<<<<<< HEAD
   background: radial-gradient(127.4% 393.83% at 100% 100%, #8be0b7 22.03%, #72bdc2 74.01%, #5694cd 100%);
-=======
-  background: radial-gradient(
-    127.4% 393.83% at 100% 100%,
-    #8be0b7 22.03%,
-    #72bdc2 74.01%,
-    #5694cd 100%
-  );
->>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
 }
 .abstain .card {
   position: relative;
@@ -564,12 +547,7 @@
   line-height: 3rem;
 }
 .team .card-subtitle {
-<<<<<<< HEAD
   font-size: 2rem;
-=======
-  font-size: 1.5rem;
-  /* line-height: 2rem; */
->>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
 }
 .team .card-text {
   font-size: 1rem;
