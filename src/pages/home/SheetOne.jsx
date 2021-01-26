@@ -133,10 +133,10 @@ const SheetOne = () => {
     <div className="sheet-one">
       <div className="file-green">
         <div className="row m-0">
-          <button className="trapezoid" onClick={setIn}>
+          <button className={`trapezoid ${chkInnovation && "back"}`} onClick={setIn}>
             <span>IN INNOVATION</span>
           </button>
-          <button className="trapezoid back" onClick={setOur}>
+          <button className={`trapezoid ${!chkInnovation && "back"}`} onClick={setOur}>
             <span>OUR INNOVATION</span>
           </button>
         </div>
