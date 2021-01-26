@@ -8,9 +8,6 @@
   .leaning-page .title .card-title {
     font-size: 5rem !important;
   }
-}
-
-@media only screen and (max-width: 600px) {
   .sheet-three .card-title {
     font-size: 0.6rem !important;
     transition: 1s;
@@ -20,26 +17,16 @@
     font-size: 0.5rem !important;
     color: #747373 !important;
   }
-}
-
-@media only screen and (max-width: 600px) {
   .mobile-padding {
     padding-top: 15px;
+    margin-right: -50px;
   }
-}
-
-@media only screen and (max-width: 600px) {
   .sheet-one .trapezoid {
     width: 8em;
   }
-}
-@media only screen and (max-width: 600px) {
   .hide-short-desc {
     display: none !important ;
   }
-}
-
-@media only screen and (max-width: 600px) {
   .sheet-one .card-title {
     font-size: 2rem;
     line-height: 1;
@@ -48,18 +35,6 @@
     font-size: 1.2rem;
     z-index: 1;
   }
-}
-
-@media only screen and (max-width: 800px) {
-  .hide-frequently-img {
-    display: none;
-  }
-  .frequently .end.list-group-item {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
   .sharing-page .title .card-title {
     font-size: 5rem !important;
   }
@@ -79,5 +54,24 @@
   .doctor-page .title .card-title {
     font-size: 5rem !important;
     font-weight: bold !important;
+  }
+  .btn-home-img{
+    text-align: center;
+  }
+
+}
+@media only screen and (max-width: 325px) {
+  .home-image h1.card-title{
+    font-size: 2rem !important;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hide-frequently-img {
+    display: none;
+  }
+  .frequently .end.list-group-item {
+    width: 100%;
   }
 }

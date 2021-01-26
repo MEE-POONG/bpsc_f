@@ -26,7 +26,7 @@ class SlideTitle extends Component {
                     เป็นระบบสาธารณะสุขที่ทั้งบุคลากรและผู้รับบริการ ได้ช่วยรักษากันและกัน
                     มากกว่าเพียงแค่การจ่ายยา...
                   </Card.Text>
-                  <div>
+                  <div className="btn-home-img">
                     <Button variant="success">MODE ABOUT US BPSC</Button>
                   </div>
                 </Card.Body>

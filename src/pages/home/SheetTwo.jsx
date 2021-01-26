@@ -9,7 +9,7 @@ class SheetTwo extends Component {
         <div className="scroll-num my-5">
           <Container>
             <Row className="text-center">
-              <Col>
+              <Col xs="6" md="3" lg="3">
                 <Card className="sharing">
                   <Card.Body>
                     <Card.Title>500+</Card.Title>
@@ -17,7 +17,7 @@ class SheetTwo extends Component {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col>
+              <Col  xs="6" md="3" lg="3">
                 <Card className="sharing">
                   <Card.Body>
                     <Card.Title>260+</Card.Title>
@@ -25,7 +25,7 @@ class SheetTwo extends Component {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col>
+              <Col  xs="6" md="3" lg="3">
                 <Card className="sharing">
                   <Card.Body>
                     <Card.Title>816+</Card.Title>
@@ -33,7 +33,7 @@ class SheetTwo extends Component {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col>
+              <Col xs="6" md="3" lg="3">
                 <Card className="sharing">
                   <Card.Body>
                     <Card.Title>240+</Card.Title>

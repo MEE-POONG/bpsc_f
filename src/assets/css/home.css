@@ -124,7 +124,8 @@
   );
 } */
 .sheet-one .file-green.back {
-  padding: 5% 0;
+  position: relative;
+  padding: 7rem 0 5rem 0;
   background: rgb(75, 131, 195);
   background: radial-gradient(98.18% 853.99% at 0% 100%, #8BE0B7 0%, #5694CD 100%);
   width: 100%;
@@ -285,7 +286,7 @@
   padding: 0;
 }
 .sheet-three .card-body {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 .sheet-three .row {
   height: 100%;
@@ -310,12 +311,13 @@
   cursor: pointer;
 }
 .sheet-three .card-title {
-  font-size: 0.6rem !important;
+  font-size: 2rem !important;
+  line-height: 1.5;
   transition: 1s;
   cursor: pointer;
 }
 .sheet-three .card-subtitle {
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   transition: 1s;
   cursor: pointer;
   /* color: #ffa710; */
@@ -723,8 +725,12 @@
 }
 
 .sharing .card .card-text {
-  font-size: 0.5rem !important;
   color: #747373 !important;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 1.25rem !important;
 }
 .box-card-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;

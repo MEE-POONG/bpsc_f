@@ -4,11 +4,46 @@
         .trapezoid {
             font-weight: bold;
         }
+        .btn-sheet{
+            button{
+                padding-left: 0;
+                padding-right: 0;
+                color: #ffffff;
+                font-size: 1.75rem;
+                font-weight: bold;
+                margin: 0 0.75rem;
+                background: unset;
+                border: unset;
+            }
+
+            button:active{
+                color: #000000;
+                font-size: 2rem;
+                border-bottom: 2px solid #000000;
+            }
+         
+        }
     }
+    .sheet-two{
+        .scroll-num{
+            .card-subtitle{
+                line-height: 1.5;
+            }
+        }     
+    }
+    .sheet-three{
+        .mobile-padding {
+            margin-right: -50px;
+          }
+    }
+    .box-set{
+        color: #000000;
+    }
+
     @media only screen and (min-width: 1400px) {
         .sheet-one {
             .card-title {
-                font-size: 3.5rem !important;
+                font-size: 4rem !important;
             }
             .subtitle {
                 font-size: 2.5rem;
@@ -17,11 +52,34 @@
             .box-set {
                 color: #000000;
             }
-
         }
         .trapezoid {
             margin: 0 0.5rem;
             font-size: 1.75rem;
+        }
+        .scroll-num .card{
+            .card-title {
+                font-size: 4rem !important;
+            }
+            .card-subtitle{
+                font-size: 1.25rem;
+            }
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .sheet-one {
+            .btn-sheet{
+                display: flex;
+                justify-content: center;
+                button {
+                    font-size: 1.5rem;
+                }
+            }
+            .btn-sheet{
+                button:active {
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 }

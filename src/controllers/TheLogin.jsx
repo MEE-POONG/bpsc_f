@@ -123,7 +123,7 @@ const TheLogin = () => {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
-        className="box-login"
+        className="box-login p-0"
       >
         <Modal.Header closeButton>
           <h1> {signUpForm ? "BPSC อยากรู้จักคุณ" : "ลงชื่อเข้าใช้งาน BPSC"} </h1>
