@@ -1,73 +1,93 @@
-import React, {Component} from "react";
+import React, {useState, useEffect} from "react";
 import {Container, Card, Button, Row, Col} from "react-bootstrap";
 import SheetThree from "./SheetThree";
+import {useScrollPosition} from "@n8tb1t/use-scroll-position";
 
-class SheetTwo extends Component {
-  render() {
-    return (
-      <div className="sheet-two">
-        <div className="scroll-num my-5">
-          <Container>
-            <Row className="text-center">
-              <Col>
-                <Card className="sharing">
-                  <Card.Body>
-                    <Card.Title>500+</Card.Title>
-                    <Card.Subtitle>โรวพยาบาลสร้างระบบ BPSC สำเร็จ</Card.Subtitle>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col>
-                <Card className="sharing">
-                  <Card.Body>
-                    <Card.Title>260+</Card.Title>
-                    <Card.Subtitle>เกิดเป็นโรงพยาบาลต้นแบบขยายผล</Card.Subtitle>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col>
-                <Card className="sharing">
-                  <Card.Body>
-                    <Card.Title>816+</Card.Title>
-                    <Card.Subtitle>บุคคลกรว่ามีความสุข</Card.Subtitle>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col>
-                <Card className="sharing">
-                  <Card.Body>
-                    <Card.Title>240+</Card.Title>
-                    <Card.Subtitle>ผู้ได้รับการรักษามีคุณภาพชีวิตที่ดีขึ้น</Card.Subtitle>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <Container fluid className="p-0">
-          <Card className="sharing">
-            <Card.Body>
-              <Row className="m-lg-0">
-                <Col lg="6" className="text-center py-5">
-                  <Card.Title>Hope Sharing</Card.Title>
-                  <Card.Subtitle>แบ่งปันประสบการณ์</Card.Subtitle>
-                  <div>
-                    <Card.Text>
-                      “สนทนาสุขใจ ลดเสี่ยง เลี่ยง NCD”<br></br>
-                      เพราะโรคไม่ติดต่อเรื้อรัง (Non-Communicable Disease, NCD) คือภัยเงียบทำลายสังคมและเศรษฐกิจ นอกจากการแลกเปลี่ยนความรู้ในกลุ่มบุคลากร (CoPs) เพื่อพัฒนาทักษะการสื่อสารแล้ว ความคิดเห็นจากคุณ จะเป็นกุญแจสำคัญที่นำเราไปสู่การพัฒนา เพื่อดูแลผู้ป่วยอย่างยั่งยืน
-                    </Card.Text>
-                    <Button variant="green">Discover more {"-->"}</Button>
-                  </div>
-                </Col>
-                <Col lg="6">
-                  <SheetThree />
-                </Col>
-              </Row>
-            </Card.Body>
-          </Card>
+const SheetTwo = () => {
+  const [setStart, setSetStart] = useState(false);
+  const [runningOne, setRunningOne] = useState(0);
+  const [runningTwo, setRunningTwo] = useState(0);
+  const [runningTree, setRunningTree] = useState(0);
+  const [runningFour, setRunningFour] = useState(0);
+  useEffect(() => {
+    if (setStart) {
+      runningOne < 500 && setRunningOne((e) => (e += 1));
+      runningTwo < 260 && setRunningTwo((e) => (e += 1));
+      runningTree < 816 && setRunningTree((e) => (e += 1));
+      runningFour < 240 && setRunningFour((e) => (e += 1));
+    }
+  });
+
+  useScrollPosition(({prevPos, currPos}) => {
+    currPos.y <= -1006 && setSetStart(true);
+  });
+  return (
+    <div className="sheet-two">
+      <div className="scroll-num my-5">
+        <Container>
+          <Row className="text-center">
+            <Col>
+              <Card className="sharing">
+                <Card.Body>
+                  <Card.Title>{runningOne}+</Card.Title>
+                  <Card.Subtitle>โรวพยาบาลสร้างระบบ BPSC สำเร็จ</Card.Subtitle>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card className="sharing">
+                <Card.Body>
+                  <Card.Title>{runningTwo}+</Card.Title>
+                  <Card.Subtitle>เกิดเป็นโรงพยาบาลต้นแบบขยายผล</Card.Subtitle>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card className="sharing">
+                <Card.Body>
+                  <Card.Title>{runningTree}+</Card.Title>
+                  <Card.Subtitle>บุคคลกรว่ามีความสุข</Card.Subtitle>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card className="sharing">
+                <Card.Body>
+                  <Card.Title>{runningFour}+</Card.Title>
+                  <Card.Subtitle>ผู้ได้รับการรักษามีคุณภาพชีวิตที่ดีขึ้น</Card.Subtitle>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </div>
-    );
-  }
-}
+      <Container fluid className="p-0">
+        <Card className="sharing">
+          <Card.Body>
+            <Row className="m-lg-0">
+              <Col lg="6" className="text-center py-5">
+                <Card.Title>Hope Sharing</Card.Title>
+                <Card.Subtitle>แบ่งปันประสบการณ์</Card.Subtitle>
+                <div>
+                  <Card.Text>
+                    “สนทนาสุขใจ ลดเสี่ยง เลี่ยง NCD”<br></br>
+                    เพราะโรคไม่ติดต่อเรื้อรัง (Non-Communicable Disease, NCD)
+                    คือภัยเงียบทำลายสังคมและเศรษฐกิจ
+                    นอกจากการแลกเปลี่ยนความรู้ในกลุ่มบุคลากร (CoPs)
+                    เพื่อพัฒนาทักษะการสื่อสารแล้ว ความคิดเห็นจากคุณ
+                    จะเป็นกุญแจสำคัญที่นำเราไปสู่การพัฒนา เพื่อดูแลผู้ป่วยอย่างยั่งยืน
+                  </Card.Text>
+                  <Button variant="green">Discover more {"-->"}</Button>
+                </div>
+              </Col>
+              <Col lg="6">
+                <SheetThree />
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+      </Container>
+    </div>
+  );
+};
 export default SheetTwo;

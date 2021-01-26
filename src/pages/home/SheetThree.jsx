@@ -21,7 +21,7 @@ class SheetTwo extends Component {
             // when window width is >= 768px
             768: {
               width: 768,
-              slidesPerView: 3,
+              slidesPerView: 2,
             },
           }}
         >

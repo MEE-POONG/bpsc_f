@@ -69,3 +69,6 @@ body {
 @import url("home.mobile.css");
 @import url("about.css");
 @import url("profile.css");
+.btn {
+  font-size: initial !important;
+}
