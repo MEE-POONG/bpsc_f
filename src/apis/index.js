@@ -44,7 +44,7 @@ export const API_REGISTER = (formRegister) => {
 export const API_FORGET_PASSWORD = (email) => {
   var config = {
     method: "post",
-    url: `https://api.thaibpsc.com/forgetPassword?email=${email}`,
+    url: `/forgetPassword?email=${email}`,
   };
   return axios(config);
 };
@@ -53,7 +53,7 @@ export const API_CHANGE_FORGET_PASSWORD = (password, token) => {
 
   var config = {
     method: "post",
-    url: `https://api.thaibpsc.com/changeForgetPassword?token=${token}`,
+    url: `/changeForgetPassword?token=${token}`,
     headers: {
       "Content-Type": "application/json",
     },
@@ -65,14 +65,22 @@ export const API_CHANGE_FORGET_PASSWORD = (password, token) => {
 export const API_VERIFICATION = (token) => {
   var config = {
     method: "post",
-    url: `https://api.thaibpsc.com/verify?token=${token}`,
+    url: `/verify?token=${token}`,
   };
   return axios(config);
 };
 export const API_RE_VERIFICATION = (email) => {
   var config = {
     method: "post",
-    url: `https://api.thaibpsc.com/ReSendVerification?email=${email}`,
+    url: `/ReSendVerification?email=${email}`,
+  };
+
+  return axios(config);
+};
+export const API_GET_FAQ = () => {
+  var config = {
+    method: "get",
+    url: "/faq",
   };
 
   return axios(config);

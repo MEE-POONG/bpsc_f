@@ -11,32 +11,39 @@
 @media (min-width: 576px) {
     .modal-dialog {
         align-self: center;
-        // max-width: 80% !important;
         margin: 1.75rem auto !important;
+        max-width: 80% !important;
         .card-title {
             font-size: 3.25rem;
             font-weight: bold;
         }
-        .card-subtitle, .card-text{
+
+        .card-subtitle,
+        .card-text {
             font-size: 2.5rem;
         }
+
         img {
             width: 350px;
             height: 350px;
             border-radius: 50%;
         }
+
         .modal-header {
             border: unset;
         }
-        .card{
-            box-shadow:unset;
+
+        .card {
+            box-shadow: unset;
         }
-        .modal-content{
+
+        .modal-content {
             padding: 1.5rem;
         }
     }
 }
-.btn-save{
+
+.btn-save {
     font-size: 2rem;
     background-color: #56B889;
     border-radius: 12px;

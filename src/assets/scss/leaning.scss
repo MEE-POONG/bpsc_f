@@ -287,7 +287,7 @@
                 font-size: 1.75rem;
                 font-weight: bold;
             }
-            .media-body{
+            .media-body {
                 align-self: center;
                 margin-left: 1rem;
             }
@@ -308,12 +308,19 @@
             }
         }
         @media only screen and (max-width: 600px) {
-            img{
+            img {
                 height: 35px;
             }
-                .file {
-                    font-size: 1.5rem !important        ;
+            .file {
+                font-size: 1.5rem !important;
+                .td,.media-body,.text-start,.text-center{
+                    font-size: 1.25rem;
                 }
+            }
+            
+        }
+        @media only screen and (max-width: 600px) {
+        padding: 0;
         }
     }
 
