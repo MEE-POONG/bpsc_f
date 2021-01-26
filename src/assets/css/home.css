@@ -555,7 +555,7 @@
 }
 .team .card-subtitle {
   font-size: 1.5rem;
-  line-height: 2rem;
+  /* line-height: 2rem; */
 }
 .team .card-text {
   font-size: 1rem;
@@ -697,23 +697,23 @@
 }
 /* frequently */
 .frequently .start.list-group-item {
-  width: 60%;
+  width: 40%;
 }
 .frequently .end.list-group-item {
-  width: 40%;
+  width: 60%;
 }
 .frequently .list-group-item {
   padding: 0;
 }
 .frequently .card-title {
-  font-size: 24px;
+  font-size: 24px !important;
 }
 .frequently .card-subtitle {
-  font-size: 12px;
-  color: #757575;
+  font-size: 20px;
+  color: #000 !important;
 }
-.frequently .card-text {
-  font-size: 12px;
+.frequently .card .card-text{
+  font-size: 16px !important;
   color: #56b889;
 }
 .frequently button {
