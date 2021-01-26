@@ -13,10 +13,10 @@ class TeamMember extends Component {
         <Container fluid className="py-5">
           <Card className="text-center ">
             <Card.Body className="text-uppercase">
-              <Card.Subtitle className="text-uppercase team-title">
+              <Card.Subtitle className="text-uppercase">
                 our team members
               </Card.Subtitle>
-              <Card.Title className="team-subtitle">
+              <Card.Title className="">
                 we have quality complete expert
               </Card.Title>
               <Card.Title className="team-subtitle">reviews in our program</Card.Title>

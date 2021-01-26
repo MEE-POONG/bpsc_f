@@ -202,7 +202,7 @@ const TheLogin = () => {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
-        className="box-login"
+        className="box-login p-0"
       >
         <Modal.Header closeButton>{titleCardLogin}</Modal.Header>
         <Modal.Body>

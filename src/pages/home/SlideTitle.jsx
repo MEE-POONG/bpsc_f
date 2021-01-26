@@ -26,7 +26,7 @@ class SlideTitle extends Component {
                     BPSC ดูแลผู้ป่วยด้วยหัวใจ เพราะคนไข้ไม่ได้ป่วยแค่กาย<br></br><br></br>
                     BPSC คือการดูแลแบบบูรณาการ ที่มุ่งเน้นการสื่อสารเพื่อสร้างสัมพันธภาพอันดี ระหว่างผู้ป่วยและบุคลากรทางการแพทย์ เพื่อให้ผู้ป่วยเปิดใจรับคำแนะนำ และดำเนินการต่อยอด ไปสู่การประเมินผู้ป่วยแบบองค์รวม ส่งเสริมการปรับพฤติกรรม (Motivational Interviewing, MI) ที่ช่วยป้องกันการเกิดโรคไม่ติดต่อเรื้อรัง (Non-Communicable Disease, NCD) และลดการกลับเป็นซ้ำ เพื่อสุขภาพที่ยั่งยืนของคนไทย
                   </Card.Text>
-                  <div>
+                  <div className="btn-home-img">
                     <Button variant="success">MODE ABOUT US BPSC</Button>
                   </div>
                 </Card.Body>

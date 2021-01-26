@@ -21,12 +21,13 @@ const SheetTwo = () => {
   useScrollPosition(({prevPos, currPos}) => {
     currPos.y <= -1006 && setSetStart(true);
   });
+  
   return (
     <div className="sheet-two">
       <div className="scroll-num my-5">
         <Container>
           <Row className="text-center">
-            <Col>
+            <Col xs="6" md="3" lg="3">
               <Card className="sharing">
                 <Card.Body>
                   <Card.Title>{runningOne}+</Card.Title>
@@ -34,7 +35,7 @@ const SheetTwo = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
+            <Col xs="6" md="3" lg="3">
               <Card className="sharing">
                 <Card.Body>
                   <Card.Title>{runningTwo}+</Card.Title>
@@ -42,7 +43,7 @@ const SheetTwo = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
+            <Col xs="6" md="3" lg="3">
               <Card className="sharing">
                 <Card.Body>
                   <Card.Title>{runningTree}+</Card.Title>
@@ -50,7 +51,7 @@ const SheetTwo = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
+            <Col xs="6" md="3" lg="3">
               <Card className="sharing">
                 <Card.Body>
                   <Card.Title>{runningFour}+</Card.Title>
