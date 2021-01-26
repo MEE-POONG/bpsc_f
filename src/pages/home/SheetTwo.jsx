@@ -52,7 +52,10 @@ class SheetTwo extends Component {
                   <Card.Title>Hope Sharing</Card.Title>
                   <Card.Subtitle>แบ่งปันประสบการณ์</Card.Subtitle>
                   <div>
-                    <Card.Text>Short describtion about Hope Sharing .......</Card.Text>
+                    <Card.Text>
+                      “สนทนาสุขใจ ลดเสี่ยง เลี่ยง NCD”<br></br>
+                      เพราะโรคไม่ติดต่อเรื้อรัง (Non-Communicable Disease, NCD) คือภัยเงียบทำลายสังคมและเศรษฐกิจ นอกจากการแลกเปลี่ยนความรู้ในกลุ่มบุคลากร (CoPs) เพื่อพัฒนาทักษะการสื่อสารแล้ว ความคิดเห็นจากคุณ จะเป็นกุญแจสำคัญที่นำเราไปสู่การพัฒนา เพื่อดูแลผู้ป่วยอย่างยั่งยืน
+                    </Card.Text>
                     <Button variant="green">Discover more {"-->"}</Button>
                   </div>
                 </Col>

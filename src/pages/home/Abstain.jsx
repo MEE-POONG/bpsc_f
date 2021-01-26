@@ -12,9 +12,8 @@ class Abstain extends Component {
               <Card.Title style={{color: "#000"}}>E - LEARNING</Card.Title>
               <Container>
                 <Card.Text style={{color: "#000"}}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt ut labore ...
+                  สำหรับท่านที่อยากรู้จักระบบ BPSC มากขึ้น
+เรามีเครื่องมือออนไลน์เพื่อต่อยอดการเรียนรู้ ที่ท่านจะสามารถนำไปประยุกต์ใช้ ให้เกิดประสิทธิภาพสูงสุดในการดูแลผู้ป่วย
                   <div className="pt-5">
                     <Button variant="success">MODE ABOUT US BPSC</Button>
                   </div>
