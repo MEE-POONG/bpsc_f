@@ -1,6 +1,7 @@
 .home {
     .sheet-one {
         color: white;
+
         .trapezoid {
             font-weight: bold;
         }
@@ -38,6 +39,7 @@
     }
     .box-set{
         color: #000000;
+        text-align: -webkit-center;
     }
 
     @media only screen and (min-width: 1400px) {
@@ -45,14 +47,18 @@
             .card-title {
                 font-size: 4rem !important;
             }
+
             .subtitle {
                 font-size: 2.5rem;
                 font-weight: bold;
             }
+
             .box-set {
                 color: #000000;
+                text-align: -webkit-center;
             }
         }
+
         .trapezoid {
             margin: 0 0.5rem;
             font-size: 1.75rem;

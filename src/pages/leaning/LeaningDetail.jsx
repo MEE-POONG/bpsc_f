@@ -8,7 +8,7 @@ const LeaningDetail = () => {
     <Container className="detail learning">
       <Row>
         <Col xs="12" lg="12">
-          <Card.Subtitle className="scroll">152 Sharing</Card.Subtitle>
+          <Card.Subtitle className="scroll">123 E-learning</Card.Subtitle>
         </Col>
       </Row>{" "}
       <Container fluid>

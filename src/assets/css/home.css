@@ -240,7 +240,7 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  line-height: 1;
+  /* line-height: 1; */
 }
 .sheet-two .text-50 {
   width: 50%;
@@ -312,16 +312,28 @@
   cursor: pointer;
 }
 .sheet-three .card-title {
+<<<<<<< HEAD
   font-size: 2rem !important;
   line-height: 1.5;
+=======
+  font-size: 1.8rem !important;
+>>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
   transition: 1s;
   cursor: pointer;
 }
 .sheet-three .card-subtitle {
+<<<<<<< HEAD
   font-size: 1.25rem;
+=======
+  font-size: 1.2rem;
+>>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
   transition: 1s;
   cursor: pointer;
   /* color: #ffa710; */
+}
+.sheet-three .card .card-body p {
+  font-size: 1.3rem !important;
+  color: #747373 !important;
 }
 .sheet-three .card-title i:hover {
   transform: scale(1.25) rotate(100deg);
@@ -423,7 +435,16 @@
 }
 .abstain .bg-abstain {
   background: rgb(75, 131, 195);
+<<<<<<< HEAD
   background: radial-gradient(127.4% 393.83% at 100% 100%, #8be0b7 22.03%, #72bdc2 74.01%, #5694cd 100%);
+=======
+  background: radial-gradient(
+    127.4% 393.83% at 100% 100%,
+    #8be0b7 22.03%,
+    #72bdc2 74.01%,
+    #5694cd 100%
+  );
+>>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
 }
 .abstain .card {
   position: relative;
@@ -543,7 +564,12 @@
   line-height: 3rem;
 }
 .team .card-subtitle {
+<<<<<<< HEAD
   font-size: 2rem;
+=======
+  font-size: 1.5rem;
+  /* line-height: 2rem; */
+>>>>>>> db93408d2e6fbf72c5f7efb2c7d54e9a0d479a18
 }
 .team .card-text {
   font-size: 1rem;
@@ -677,23 +703,23 @@
 }
 /* frequently */
 .frequently .start.list-group-item {
-  width: 60%;
+  width: 40%;
 }
 .frequently .end.list-group-item {
-  width: 40%;
+  width: 60%;
 }
 .frequently .list-group-item {
   padding: 0;
 }
 .frequently .card-title {
-  font-size: 24px;
+  font-size: 24px !important;
 }
 .frequently .card-subtitle {
-  font-size: 12px;
-  color: #757575;
+  font-size: 20px;
+  color: #000 !important;
 }
-.frequently .card-text {
-  font-size: 12px;
+.frequently .card .card-text{
+  font-size: 16px !important;
   color: #56b889;
 }
 .frequently button {

@@ -29,8 +29,9 @@ const TheLogin = () => {
     handleNonSignUp();
   };
   const handleShow = () => setShow(true);
-  const handleNonSignUp = () => setSignUpForm(false);
-  const handleSignUp = () => setSignUpForm(true);
+  const handleNonSignUp = () => setSignUpForm("LOGIN");
+  const handleSignUp = () => setSignUpForm("SING UP");
+  const handleForget = () => setSignUpForm("FORGET");
   const [handelEmail, setHandelEmail] = useState("");
   const [handlePassword, setHandlePassword] = useState("");
   const navigate = useNavigate();
@@ -43,9 +44,16 @@ const TheLogin = () => {
       .getRedirectResult()
       .then(function (result) {
         const token = result.credential.accessToken;
-        const user = result.user;
-        console.log("login to facebook");
-        // ...
+        var decoded = jwt_decode(token);
+        localStorage.setItem("token", token);
+        localStorage.setItem("id", decoded.id);
+        localStorage.setItem("isAdmin", decoded.isAdmin);
+        localStorage.setItem("email", decoded.email);
+        localStorage.setItem("firstName", decoded.firstName);
+        localStorage.setItem("lastName", decoded.lastName);
+        localStorage.setItem("loginMethod", decoded.loginMethod);
+        sessionStorage.setItem("BPSC_USER_LOGIN", true);
+        navigate("/");
       })
       .catch(function (error) {
         const errorCode = error.code;
@@ -112,6 +120,77 @@ const TheLogin = () => {
         });
       });
   };
+  const titleCardLogin = (
+    <h1>
+      {signUpForm === "SING UP"
+        ? "BPSC อยากรู้จักคุณ"
+        : signUpForm === "FORGET"
+        ? "ลืมรหัสผ่าน"
+        : "ลงชื่อเข้าใช้งาน BPSC"}
+    </h1>
+  );
+  const contentCardLogin = (
+    <Card.Body>
+      <Form>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>
+            <h4>อีเมล</h4>
+          </Form.Label>
+          <Form.Control
+            size="lg"
+            type="email"
+            placeholder="อีเมล"
+            onChange={(e) => setHandelEmail(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>
+            <h4>รหัสผ่าน</h4>
+          </Form.Label>
+          <Form.Control
+            size="lg"
+            type="password"
+            placeholder="รหัสผ่าน"
+            onChange={(e) => setHandlePassword(e.target.value)}
+          />
+        </Form.Group>
+        <button
+          className="btn btn-lg btn-primary btn-block text-uppercase mb-3"
+          onClick={(e) => handleLogin(e)}
+        >
+          <h4 className="m-0">เข้าสู่ระบบ</h4>
+        </button>
+        <button className="btn-repass" onClick={handleForget}>
+          <h4 className="m-0">ลืมรหัสผ่าน</h4>
+        </button>
+      </Form>
+      <hr className="my-4" />
+    </Card.Body>
+  );
+  const contentCardForget = (
+    <Card.Body>
+      <Form>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>
+            <h4>อีเมล</h4>
+          </Form.Label>
+          <Form.Control
+            size="lg"
+            type="email"
+            placeholder="อีเมล"
+            onChange={(e) => setHandelEmail(e.target.value)}
+          />
+        </Form.Group>
+        <button
+          className="btn btn-lg btn-primary btn-block text-uppercase mb-3"
+          onClick={(e) => handleForgetPassword(e)}
+        >
+          <h4 className="m-0">RESET</h4>
+        </button>
+      </Form>
+      <hr className="my-4" />
+    </Card.Body>
+  );
   return (
     <>
       <Button variant="success" className="nav-link" onClick={handleShow}>
@@ -125,9 +204,7 @@ const TheLogin = () => {
         keyboard={false}
         className="box-login p-0"
       >
-        <Modal.Header closeButton>
-          <h1> {signUpForm ? "BPSC อยากรู้จักคุณ" : "ลงชื่อเข้าใช้งาน BPSC"} </h1>
-        </Modal.Header>
+        <Modal.Header closeButton>{titleCardLogin}</Modal.Header>
         <Modal.Body>
           <div className="text-center">
             <Image
@@ -137,51 +214,23 @@ const TheLogin = () => {
               style={{objectFit: "contain", maxWidth: "-webkit-fill-available"}}
             />
           </div>
-          {signUpForm ? (
+          {signUpForm === "SING UP" ? (
             <>
               <TheRegister />
               <button className="btn btn-lg btn-google" onClick={handleNonSignUp}>
                 ย้อนกลับ
               </button>
             </>
+          ) : signUpForm === "FORGET" ? (
+            <>
+              {contentCardForget}
+              <button className="btn btn-lg btn-google" onClick={handleNonSignUp}>
+                ย้อนกลับ
+              </button>
+            </>
           ) : (
             <>
-              <Card.Body>
-                <Form>
-                  <Form.Group controlId="formBasicEmail">
-                    <Form.Label>
-                      <h4>อีเมล</h4>
-                    </Form.Label>
-                    <Form.Control
-                      size="lg"
-                      type="email"
-                      placeholder="อีเมล"
-                      onChange={(e) => setHandelEmail(e.target.value)}
-                    />
-                  </Form.Group>
-                  <Form.Group controlId="formBasicPassword">
-                    <Form.Label>
-                      <h4>รหัสผ่าน</h4>
-                    </Form.Label>
-                    <Form.Control
-                      size="lg"
-                      type="password"
-                      placeholder="รหัสผ่าน"
-                      onChange={(e) => setHandlePassword(e.target.value)}
-                    />
-                  </Form.Group>
-                  <button
-                    className="btn btn-lg btn-primary btn-block text-uppercase mb-3"
-                    onClick={(e) => handleLogin(e)}
-                  >
-                    <h4 className="m-0">เข้าสู่ระบบ</h4>
-                  </button>
-                  <button className="btn-repass" onClick={(e) => handleForgetPassword(e)}>
-                    <h4 className="m-0">ลืมรหัสผ่าน</h4>
-                  </button>
-                </Form>
-                <hr className="my-4" />
-              </Card.Body>
+              {contentCardLogin}
               <Card.Footer>
                 <button className="btn btn-lg btn-google" onClick={handleSignUp}>
                   สมัคสมาชิก
