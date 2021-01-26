@@ -36,6 +36,13 @@
         }
     }
     .detail {
+        .media-body {
+            font-size: 1.5rem;
+        }
+        .card .card-text {
+            font-size: 1.5rem !important;
+            color: #747373 !important;
+        }
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             height: 100%;
@@ -171,11 +178,17 @@
         font-size: 1.5rem;
     }
     .tag-list {
-        span {
+        display: flex;
+        flex-wrap: wrap;
+        .tag {
+            display: contents;
+        }
+        p {
             background-color: #8be0b7;
             border-radius: 20px;
             width: max-content;
             padding: 0.5rem 1rem;
+            margin: 0.5rem;
             font-size: 0.75rem;
             font-weight: bold;
         }
@@ -193,7 +206,6 @@
         }
         .input-comment {
             height: 100px;
-            width: 80%;
             vertical-align: middle;
             border-radius: 20px;
             padding: 1rem;
@@ -203,9 +215,23 @@
             // border: unset;
             outline: unset;
         }
+        @media only screen and (max-width: 600px) {
+            img {
+                height: 70px;
+                width: 70px;
+            }
+            .input-comment {
+                height: 70px;
+            }
+        }
     }
     .list {
-        text-align: left;
+        position: relative;
+        text-align: center;
+        .media {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
         span.img {
             width: 20%;
         }
@@ -219,10 +245,9 @@
             border-radius: 50%;
         }
         .detail {
-            width: 80%;
             vertical-align: middle;
             display: inline-block;
-            margin-left: 5rem;
+            margin-left: 1rem;
             // float: right;
             .date {
                 color: #757575;
@@ -234,37 +259,37 @@
                 font-size: 1.5rem;
             }
         }
-    }
-    .box-list {
-        position: relative;
-        text-align: center;
         .btn-show-list {
-            position: absolute;
-            font-size: 3rem;
+            font-size: 5rem;
             border: unset;
             background-color: unset;
             bottom: 0;
         }
     }
+
     .sheet {
         background: radial-gradient(97.78% 355.61% at 2.22% 100%, #beece9 0%, #8be0b7 100%);
-
+        .head-th {
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1.5rem;
+        }
         .file {
-            table{
+            table {
                 padding: 7rem;
             }
-            tr{
-                border-bottom: 3px solid #26BEB4;
+            tr {
+                border-bottom: 3px solid #26beb4;
             }
             td {
                 vertical-align: middle;
-                // background: #26beb4;
-
-
-            }
-            td {
                 font-size: 1.75rem;
                 font-weight: bold;
+            }
+            .media-body{
+                align-self: center;
+                margin-left: 1rem;
             }
 
             .download {
@@ -279,8 +304,40 @@
                 border-radius: 20px;
                 padding: 0.75rem;
                 display: block;
-                margin: .5rem auto;
+                margin: 0.5rem auto;
             }
         }
+        @media only screen and (max-width: 600px) {
+            img{
+                height: 35px;
+            }
+                .file {
+                    font-size: 1.5rem !important        ;
+                }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        iframe {
+            width: 100%;
+            height: 320px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        iframe {
+            width: 100%;
+            height: 520px;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .leaning-page .title .card-title {
+        font-size: 4rem !important;
     }
 }

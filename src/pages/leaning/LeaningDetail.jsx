@@ -14,7 +14,7 @@ const LeaningDetail = () => {
       <Container fluid>
         <Row className="py-5">
           <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
-            <NavLink to="/e-leaning/12" className="nav-link">
+            <NavLink to="/e-leaning/12" className="p-0 nav-link">
               <Card>
                 <Card.Body className="image">
                   <img src="image/image12.png" alt="" className="card-img-top" />
@@ -62,7 +62,7 @@ const LeaningDetail = () => {
           </Col>
 
           <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
-          <NavLink to="/e-leaning/12" className="nav-link">
+          <NavLink to="/e-leaning/12" className="p-0 nav-link">
               <Card>
                 <Card.Body className="image">
                   <img src="image/image12.png" alt="" className="card-img-top" />
@@ -110,7 +110,7 @@ const LeaningDetail = () => {
           </Col>
 
           <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
-          <NavLink to="/e-leaning/12" className="nav-link">
+          <NavLink to="/e-leaning/12" className="p-0 nav-link">
               <Card>
                 <Card.Body className="image">
                   <img src="image/image12.png" alt="" className="card-img-top" />
@@ -158,7 +158,7 @@ const LeaningDetail = () => {
           </Col>
 
           <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
-          <NavLink to="/e-leaning/12" className="nav-link">
+          <NavLink to="/e-leaning/12" className="p-0 nav-link">
               <Card>
                 <Card.Body className="image">
                   <img src="image/image12.png" alt="" className="card-img-top" />
