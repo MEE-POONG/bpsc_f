@@ -238,7 +238,7 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  line-height: 1;
+  /* line-height: 1; */
 }
 .sheet-two .text-50 {
   width: 50%;
@@ -315,7 +315,7 @@
   cursor: pointer;
 }
 .sheet-three .card-subtitle {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   transition: 1s;
   cursor: pointer;
   /* color: #ffa710; */
