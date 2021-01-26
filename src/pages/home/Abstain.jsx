@@ -8,14 +8,14 @@ class Abstain extends Component {
       <div className="abstain text-uppercase text-center">
         <Container fluid>
           <Card className="bg-abstain">
-            <Card.Body className="p-5">
+            <Card.Body className="p-sm-3">
               <Card.Title style={{color: "#000"}}>E - LEARNING</Card.Title>
               <Container>
-                <Card.Text style={{color: "#000"}}>
+                <Card.Text style={{color: "#000",textAlign:"justify"}}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                   tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
                   adipiscing elit, sed do eiusmod tempor incididunt ut labore ...
-                  <div className="pt-5">
+                  <div className="pt-5 text-center">
                     <Button variant="success">MODE ABOUT US BPSC</Button>
                   </div>
                 </Card.Text>

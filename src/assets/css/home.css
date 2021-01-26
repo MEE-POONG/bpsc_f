@@ -544,11 +544,10 @@
 }
 .team .card-title {
   font-size: 3rem;
-  line-height: 5rem;
+  line-height: 3rem;
 }
 .team .card-subtitle {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2rem;
 }
 .team .card-text {
   font-size: 1rem;
