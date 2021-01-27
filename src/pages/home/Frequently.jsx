@@ -5,10 +5,9 @@ const Frequently = () => {
   const [faqData, setFaqData] = useState(null);
   useEffect(() => {
     API_GET_FAQ().then((result) => {
-      console.log(result);
       setFaqData(result?.data);
     });
-  }, [faqData]);
+  }, []);
   return (
     <div className="frequently text-uppercase">
       <Container fluid className="m-0 p-0">
