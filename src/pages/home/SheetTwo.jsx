@@ -31,7 +31,7 @@ const SheetTwo = () => {
               <Card className="sharing">
                 <Card.Body>
                   <Card.Title>{runningOne}+</Card.Title>
-                  <Card.Subtitle>โรวพยาบาลสร้างระบบ BPSC สำเร็จ</Card.Subtitle>
+                  <Card.Subtitle>โรงพยาบาลสร้างระบบ BPSC สำเร็จ</Card.Subtitle>
                 </Card.Body>
               </Card>
             </Col>

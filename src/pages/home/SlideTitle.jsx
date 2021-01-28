@@ -7,7 +7,7 @@ class SlideTitle extends Component {
         <div className="title-video">
           <iframe
             title="This is a unique title"
-            src="https://www.youtube-nocookie.com/embed/xOj_VgaOB9A"
+            src="https://www.youtube-nocookie.com/embed/gJBQWXcTg2U"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
