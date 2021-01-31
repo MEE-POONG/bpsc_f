@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {faEdit} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {Button, Container, Image, Form, Modal, Card, Row, Col} from "react-bootstrap";
+import {Button, Container, Image, Form, Modal, Row, Col} from "react-bootstrap";
 
 const ProfileTitle = () => {
   const [username] = useState(

@@ -694,7 +694,7 @@
 }
 .frequently .card-subtitle {
   font-size: 20px;
-  color: #000 !important;
+  /* color: #000; */
 }
 .frequently .card .card-text{
   font-size: 16px !important;
