@@ -1,6 +1,14 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {Container, Card, Row, Col, Image, Pagination} from "react-bootstrap";
+import {API_GET_SHARING, IMAGE_URL} from "../../apis";
+
 const SharingDetail = () => {
+  const [sharing, setSharing] = useState(null);
+  useEffect(() => {
+    API_GET_SHARING().then((result) => {
+      setSharing(result?.data);
+    });
+  }, []);
   return (
     <Container className="detail">
       <Row>
@@ -9,462 +17,65 @@ const SharingDetail = () => {
         </Col>
       </Row>
       <Row className="py-5">
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
+        {sharing?.data?.map(
+          ({
+            id,
+            title,
+            view,
+            favorite,
+            sharingPicture,
+            firstName,
+            lastName,
+            userPicture,
+          }) => (
+            <Col lg="3" md="4" sm="6" className="mb-5" key={id}>
+              <Card className="box-card-shadow">
+                <Card.Body className="image">
+                  <Card.Img
+                    src={
+                      sharingPicture
+                        ? IMAGE_URL + sharingPicture
+                        : "https://chiccarrent.com/files/images/default-placeholder.png"
+                    }
+                    alt={title}
                     className="card-img-top"
                   />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
-        <Col lg="3" md="4" sm="6" className="mb-5">
-          <Card className="box-card-shadow">
-            <Card.Body className="image">
-              <Card.Img src="image/image7.png" alt="" className="card-img-top" />
-            </Card.Body>
-            <Card.Body>
-              <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-              <Card.Text className="subtitle-text">
-                Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor sit
-                amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                sit amet consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                dolor sit amet consecteturLorem ipsum dolor sit amet consectetur
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <div className="user">
-                <span className="mr-1">
-                  <Image
-                    roundedCircle
-                    src="image/image6.png"
-                    alt=""
-                    className="card-img-top"
-                  />
-                </span>
-                <span className="pl-1">user</span>
-              </div>
-              <div>
-                <span className="mr-1">
-                  <i className="fa fa-eye"></i> 7998
-                </span>
-                <span>
-                  <i className="fa fa-comments-o"></i> 30{" "}
-                </span>
-              </div>
-            </Card.Footer>
-          </Card>
-        </Col>
+                </Card.Body>
+                <Card.Body>
+                  <Card.Title>{title}</Card.Title>
+                  {/* <Card.Text className="subtitle-text">''</Card.Text> */}
+                </Card.Body>
+                <Card.Footer>
+                  <div className="user">
+                    <span className="mr-1">
+                      <Image
+                        roundedCircle
+                        src={
+                          userPicture
+                            ? IMAGE_URL + userPicture
+                            : "https://chiccarrent.com/files/images/default-placeholder.png"
+                        }
+                        alt={title}
+                        className="card-img-top"
+                      />
+                    </span>
+                    <span className="pl-1">
+                      {firstName} {lastName}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="mr-1">
+                      <i className="fa fa-eye"></i> {view}
+                    </span>
+                    <span>
+                      <i className="fa fa-comments-o"></i> {favorite}
+                    </span>
+                  </div>
+                </Card.Footer>
+              </Card>
+            </Col>
+          )
+        )}
       </Row>
       <div>
         <Pagination className="my-5" style={{float: "right"}}>

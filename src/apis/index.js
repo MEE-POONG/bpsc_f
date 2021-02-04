@@ -1,6 +1,8 @@
 import axios from "axios";
 axios.defaults.baseURL = "https://api.thaibpsc.com";
 
+export const IMAGE_URL = "https://api.thaibpsc.com/image/"
+
 axios.interceptors.request.use(
   function (config) {
     const token = localStorage.getItem("token");
@@ -81,6 +83,14 @@ export const API_GET_FAQ = () => {
   var config = {
     method: "get",
     url: "/faq",
+  };
+
+  return axios(config);
+};
+export const API_GET_SHARING = () => {
+  var config = {
+    method: "get",
+    url: "/sharing",
   };
 
   return axios(config);

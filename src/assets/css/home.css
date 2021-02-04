@@ -773,3 +773,11 @@
     font-size: 4rem !important;
   }
 }
+
+
+.text-overflow-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
