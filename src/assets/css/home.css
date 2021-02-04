@@ -98,10 +98,12 @@
   color: #ffffff;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  width: 15rem;
   border: unset;
   padding: 0.75rem;
-  background: rgb(78, 232, 158);
+  background: #8be0b7;
   border-radius: 12px 12px 0 0;
+  font-size: 12px;
 }
 .sheet-one .trapezoid.back {
   /* border-bottom: 40px solid #; */
@@ -126,7 +128,7 @@
 } */
 .sheet-one .file-green.back {
   position: relative;
-  padding: 7rem 0 5rem 0;
+  padding: 5rem 0 5rem 0;
   background: rgb(75, 131, 195);
   background: radial-gradient(98.18% 853.99% at 0% 100%, #8be0b7 0%, #5694cd 100%);
   width: 100%;
@@ -427,7 +429,12 @@
 }
 .abstain .bg-abstain {
   background: rgb(75, 131, 195);
-  background: radial-gradient(127.4% 393.83% at 100% 100%, #8be0b7 22.03%, #72bdc2 74.01%, #5694cd 100%);
+  background: radial-gradient(
+    127.4% 393.83% at 100% 100%,
+    #8be0b7 22.03%,
+    #72bdc2 74.01%,
+    #5694cd 100%
+  );
 }
 .abstain .card {
   position: relative;
@@ -525,7 +532,12 @@
   text-align: center;
   visibility: hidden;
   color: #ffffff;
-  background: linear-gradient(351deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
+  background: linear-gradient(
+    351deg,
+    rgba(75, 131, 195, 1) 0%,
+    rgba(46, 163, 173, 1) 50%,
+    rgba(78, 232, 158, 1) 100%
+  );
   height: max-content !important;
 }
 .learning .card .absolute {
@@ -557,7 +569,12 @@
 .profile-card-2 {
   max-width: fit-content;
   background: rgb(75, 131, 195);
-  background: linear-gradient(351deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 25%, rgba(78, 232, 158, 1) 100%);
+  background: linear-gradient(
+    351deg,
+    rgba(75, 131, 195, 1) 0%,
+    rgba(46, 163, 173, 1) 25%,
+    rgba(78, 232, 158, 1) 100%
+  );
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-position: center;
   overflow: hidden;
@@ -617,20 +634,23 @@
   opacity: 1;
   bottom: 50%;
   color: white;
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .profile-card-2:hover .profile-username {
   opacity: 1;
   bottom: 40%;
   color: white;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 .profile-card-2:hover .profile-tel {
   opacity: 1;
   bottom: 30%;
   color: white;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .event {
@@ -696,7 +716,7 @@
   font-size: 20px;
   /* color: #000; */
 }
-.frequently .card .card-text{
+.frequently .card .card-text {
   font-size: 16px !important;
   color: #56b889;
 }
@@ -774,10 +794,16 @@
   }
 }
 
-
 .text-overflow-1 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+#faqquestion {
+  border-radius: 10px;
+  background: #06978d;
+  padding: 10px 10px 10px 15px;
+  color: white;
 }

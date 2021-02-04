@@ -25,7 +25,7 @@ const Frequently = () => {
                 <br />
                 {faqData?.data?.map(({id, question, answer}) => (
                   <div key={id}>
-                    <Card.Subtitle className="btn-success p-3 white--text">{question}</Card.Subtitle>
+                    <Card.Subtitle id="faqquestion">{question}</Card.Subtitle>
                     <Card.Text className="p-3">{answer}</Card.Text>
                   </div>
                 ))}
