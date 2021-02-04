@@ -1,4 +1,5 @@
-import React, {Component} from "react";
+import moment from "moment";
+import React, {useState, useEffect} from "react";
 import {Container, div, Card} from "react-bootstrap";
 
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -6,15 +7,25 @@ import {Swiper, SwiperSlide} from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.scss";
 
-class EventBox extends Component {
-  render() {
-    return (
-      <div className="event text-uppercase">
-        <Container>
-          <div className="text-left text-uppercase">
-            <Card.Title>Up coming events</Card.Title>
-          </div>
-          <div className="m-0 my-5 card-day">
+import {API_GET_EVENT} from "../../apis";
+
+const EventBox = () => {
+  const [event, setEvent] = useState(null);
+
+  useEffect(() => {
+    API_GET_EVENT().then((result) => {
+      setEvent(result?.data);
+    });
+  }, []);
+
+  return (
+    <div className="event text-uppercase">
+      <Container>
+        <div className="text-left text-uppercase">
+          <Card.Title>Up coming events</Card.Title>
+        </div>
+        <div className="m-0 my-5 card-day">
+          {event ? (
             <Swiper
               spaceBetween={50}
               breakpoints={{
@@ -30,68 +41,32 @@ class EventBox extends Component {
                 },
               }}
             >
-              <SwiperSlide>
-                <div>
-                  <Card className="bg-1">
-                    <Card.Body>
-                      <Card.Title>08</Card.Title>
-                      <Card.Subtitle>JUNE</Card.Subtitle>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore ...
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <Card className="bg-2">
-                    <Card.Body>
-                      <Card.Title>8</Card.Title>
-                      <Card.Subtitle>JUNE</Card.Subtitle>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore ...
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <Card className="bg-3">
-                    <Card.Body>
-                      <Card.Title>8</Card.Title>
-                      <Card.Subtitle>JUNE</Card.Subtitle>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore ...
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>
-                  <Card className="bg-4">
-                    <Card.Body>
-                      <Card.Title>8</Card.Title>
-                      <Card.Subtitle>JUNE</Card.Subtitle>
-                      <Card.Text>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore ...
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                </div>
-              </SwiperSlide>
+              {event?.data?.map(
+                ({id, title, content, location, time, eventStart, eventEnd}, idx) => (
+                  <SwiperSlide>
+                    <div>
+                      <Card className={`bg-${idx > 3 ? 4 : idx + 1} height-293`}>
+                        <Card.Body>
+                          <Card.Title>{moment(eventStart).format("DD")}</Card.Title>
+                          <Card.Subtitle>
+                            {moment(eventStart).format("MMM")}
+                          </Card.Subtitle>
+                          <Card.Text className="text-overflow-5">
+                            {title}
+                            {content}
+                          </Card.Text>
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </SwiperSlide>
+                )
+              )}
             </Swiper>
-          </div>
-        </Container>
-      </div>
-    );
-  }
-}
+          ) : null}
+        </div>
+      </Container>
+    </div>
+  );
+};
 
 export default EventBox;

@@ -95,6 +95,14 @@ export const API_GET_SHARING = () => {
 
   return axios(config);
 };
+export const API_GET_EVENT = () => {
+  var config = {
+    method: "get",
+    url: "/event",
+  };
+
+  return axios(config);
+};
 // export const API_LOGIN = () => {
 //   // Add a response interceptor
 //   return axios.interceptors.response.use(
