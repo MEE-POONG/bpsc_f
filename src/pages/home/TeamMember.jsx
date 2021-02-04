@@ -1,33 +1,39 @@
-import React, {Component} from "react";
+import React, {useState, useEffect} from "react";
 import {Container, Card, Button} from "react-bootstrap";
 
 import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
+import {API_GET_DOCTOR, IMAGE_URL} from "../../apis";
 
-class TeamMember extends Component {
-  render() {
-    return (
-      <div className="team">
-        <Container fluid className="py-5">
-          <Card className="text-center ">
-            <Card.Body className="text-uppercase">
-              <Card.Subtitle className="text-uppercase">
-                our team members
-              </Card.Subtitle>
-              <Card.Title className="">
-                we have quality complete expert
-              </Card.Title>
-              <Card.Title className="team-subtitle">reviews in our program</Card.Title>
-              <Card.Text className="team-subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore ...
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Container>
-        <Container fluid>
+const TeamMember = () => {
+  const [doctor, setDoctor] = useState(null);
+
+  useEffect(() => {
+    API_GET_DOCTOR().then((result) => {
+      console.log(result?.data);
+      setDoctor(result?.data);
+    });
+  }, []);
+
+  return (
+    <div className="team">
+      <Container fluid className="py-5">
+        <Card className="text-center ">
+          <Card.Body className="text-uppercase">
+            <Card.Subtitle className="text-uppercase">our team members</Card.Subtitle>
+            <Card.Title className="">we have quality complete expert</Card.Title>
+            <Card.Title className="team-subtitle">reviews in our program</Card.Title>
+            <Card.Text className="team-subtitle">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore ...
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Container>
+      <Container fluid>
+        {doctor ? (
           <Swiper
             spaceBetween={50}
             breakpoints={{
@@ -43,63 +49,37 @@ class TeamMember extends Component {
               },
             }}
           >
-            <SwiperSlide>
-              <div className="profile-card-2">
-                <img className="img img-responsive" src="/image/image24.png" alt="" />
-                <div className="profile-name">DR.YONG PAL</div>
-                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div className="profile-tel">TEL +666 666 6666</div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="profile-card-2">
-                <img className="img img-responsive" src="/image/image23.png" alt="" />
-                <div className="profile-name">DR.YONG PAL</div>
-                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div className="profile-tel">TEL +666 666 6666</div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="profile-card-2">
-                <img className="img img-responsive" src="/image/image26.png" alt="" />
-                <div className="profile-name">DR.YONG PAL</div>
-                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div className="profile-tel">TEL +666 666 6666</div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="profile-card-2">
-                <img className="img img-responsive" src="/image/image24.png" alt="" />
-                <div className="profile-name">DR.YONG PAL</div>
-                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div className="profile-tel">TEL +666 666 6666</div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="profile-card-2">
-                <img className="img img-responsive" src="/image/image23.png" alt="" />
-                <div className="profile-name">DR.YONG PAL</div>
-                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div className="profile-tel">TEL +666 666 6666</div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="profile-card-2">
-                <img className="img img-responsive" src="/image/image26.png" alt="" />
-                <div className="profile-name">DR.YONG PAL</div>
-                <div className="profile-username">CARDIOTHORACIC SURGEON</div>
-                <div className="profile-tel">TEL +666 666 6666</div>
-              </div>
-            </SwiperSlide>
+            {doctor?.data?.map(
+              ({id, firstName, lastName, email, phone, picture, content}, idx) => (
+                <SwiperSlide key={idx}>
+                  <div className="profile-card-2">
+                    <img
+                      className="img img-responsive"
+                      src={
+                        picture
+                          ? IMAGE_URL + picture
+                          : "https://chiccarrent.com/files/images/default-placeholder.png"
+                      }
+                      alt={id}
+                    />
+                    <div className="profile-name">
+                      DR.{firstName}
+                      {/* {lastName} */}
+                    </div>
+                    <div className="profile-username">{email}</div>
+                    <div className="profile-tel">TEL {phone || "-"}</div>
+                  </div>
+                </SwiperSlide>
+              )
+            )}
           </Swiper>
-          <div className="text-center my-5">
-            <Button>MODE ABOUT US BPSC</Button>
-          </div>
-        </Container>
-      </div>
-    );
-  }
-}
+        ) : null}
+        <div className="text-center my-5">
+          <Button>MODE ABOUT US BPSC</Button>
+        </div>
+      </Container>
+    </div>
+  );
+};
 
 export default TeamMember;

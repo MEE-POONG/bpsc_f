@@ -1,6 +1,6 @@
 import moment from "moment";
 import React, {useState, useEffect} from "react";
-import {Container, div, Card} from "react-bootstrap";
+import {Container, Card} from "react-bootstrap";
 
 import {Swiper, SwiperSlide} from "swiper/react";
 
