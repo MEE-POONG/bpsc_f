@@ -12,7 +12,6 @@ const TeamMember = () => {
 
   useEffect(() => {
     API_GET_DOCTOR().then((result) => {
-      console.log(result?.data);
       setDoctor(result?.data);
     });
   }, []);
