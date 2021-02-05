@@ -67,7 +67,8 @@ const TheLogin = () => {
     API_LOGIN(handelEmail, handlePassword)
       .then((response) => {
         var decoded = jwt_decode(response.data.accessToken);
-        localStorage.setItem("token", response.data.refreshToken);
+        localStorage.setItem("token", response.data.accessToken);
+        localStorage.setItem("refresh-token", response.data.refreshToken);
         localStorage.setItem("id", decoded.id);
         localStorage.setItem("isAdmin", decoded.isAdmin);
         localStorage.setItem("email", decoded.email);

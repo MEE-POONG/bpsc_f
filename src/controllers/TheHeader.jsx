@@ -97,6 +97,7 @@ const TheHeader = () => {
                 <NavDropdown.Item
                   onClick={() => {
                     sessionStorage.clear();
+                    localStorage.clear();
                     navigate("/");
                   }}
                 >

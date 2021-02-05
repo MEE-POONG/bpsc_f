@@ -1,18 +1,56 @@
 import axios from "axios";
 axios.defaults.baseURL = "https://api.thaibpsc.com";
 
-export const IMAGE_URL = "https://api.thaibpsc.com/image/"
+export const IMAGE_URL = "https://api.thaibpsc.com/image/";
 
-axios.interceptors.request.use(
-  function (config) {
-    const token = localStorage.getItem("token");
-    if (token) {
-      config.headers["Authorization"] = `Bearer ${token}`;
-    }
-    return config;
+// axios.interceptors.request.use(
+//   function (config) {
+//     const token = localStorage.getItem("token");
+//     if (token) {
+//       config.headers["Authorization"] = `Bearer ${token}`;
+//     }
+//     return config;
+//   },
+//   function (error) {
+//     return Promise.reject(error);
+//   }
+// );
+
+axios.interceptors.response.use(
+  (response) => {
+    return response;
   },
-  function (error) {
-    return Promise.reject(error);
+  (err) => {
+    return new Promise((resolve, reject) => {
+      const originalReq = err.config;
+      if (err?.response?.status === 401 && err.config && !err.config.__isRetryRequest) {
+        originalReq._retry = true;
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        var raw = JSON.stringify({token: localStorage.getItem("token")});
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        let res = fetch("https://api.thaibpsc.com/refresh-token", requestOptions)
+          .then((res) => res.json())
+          .then((res) => {
+            console.log(res);
+            originalReq.headers["Token"] = res.token;
+            originalReq.headers["Device"] = "device";
+
+            return axios(originalReq);
+          });
+
+        resolve(res);
+      }
+
+      return Promise.reject(err);
+    });
   }
 );
 
@@ -87,10 +125,19 @@ export const API_GET_FAQ = () => {
 
   return axios(config);
 };
-export const API_GET_SHARING = () => {
+export const API_GET_SHARING_BY_ID = (id) => {
+  console.log(id);
   var config = {
     method: "get",
-    url: "/sharing",
+    url: `/sharing/19`,
+  };
+
+  return axios(config);
+};
+export const API_GET_SHARING = (title = "", page = "", size = "", tag = "") => {
+  var config = {
+    method: "get",
+    url: `/sharing?title=${title}&size=${size}&tag=${tag}&page=${page}`,
   };
 
   return axios(config);

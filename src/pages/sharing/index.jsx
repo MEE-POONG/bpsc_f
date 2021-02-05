@@ -4,7 +4,7 @@ import SharingTitle from "./SharingTitle";
 const Sharing = () => {
   return (
     <div className="sharing-page text-uppercase">
-      <SharingTitle />
+      {/* <SharingTitle /> */}
       <SharingDetail />
     </div>
   );
