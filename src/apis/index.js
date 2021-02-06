@@ -126,10 +126,9 @@ export const API_GET_FAQ = () => {
   return axios(config);
 };
 export const API_GET_SHARING_BY_ID = (id) => {
-  console.log(id);
   var config = {
     method: "get",
-    url: `/sharing/19`,
+    url: `/sharing/${id}`,
   };
 
   return axios(config);

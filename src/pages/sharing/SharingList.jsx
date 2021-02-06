@@ -17,11 +17,13 @@ import {NavLink} from "react-router-dom";
 import {useParams} from "react-router-dom";
 
 import {API_GET_SHARING_BY_ID, IMAGE_URL} from "../../apis";
+import moment from "moment";
 
 const SharingList = () => {
   const {id} = useParams();
   const [sharing, setSharing] = useState(null);
   useEffect(() => {
+      console.log(id);
     API_GET_SHARING_BY_ID(id).then((result) => {
       console.log(result?.data);
       setSharing(result?.data);
@@ -38,14 +40,13 @@ const SharingList = () => {
           </NavLink>
         </Col>
         <Col className="text-center mb-5" xs="12" lg="12">
-          <Image
+          {sharing?.sharing?.sharingPicture && <Image
             src={
-              sharing?.sharing?.sharingPicture
-                ? IMAGE_URL + sharing?.sharing?.sharingPicture
-                : "https://chiccarrent.com/files/images/default-placeholder.png"
+              IMAGE_URL + sharing?.sharing?.sharingPicture
             }
+            width={'100%'}
             alt={sharing?.sharing?.title}
-          />
+          />}
         </Col>
         <Col className="mb-5" xs="12" lg="12">
           <div
@@ -62,7 +63,7 @@ const SharingList = () => {
             {sharing?.sharing?.firstName} {sharing?.sharing?.lastName}
           </h1>
           <h3 className="contact">
-            <span className="mr-5">16 OCT 2020</span>
+            <span className="mr-5">{moment(sharing?.sharing?.createAt).format("LL")}</span>
             <span className="mr-2">
               <FontAwesomeIcon icon={faHeart} />
             </span>
@@ -78,30 +79,9 @@ const SharingList = () => {
         </Col>
         <Col xs="12" lg="12" className="mt-5 tag-list">
           <div className="tag mr-5">
-            <p>การสื่อสาร</p>
-            <p>การสื่อสาร</p>
-            <p>การปฏิบัติ</p>
-            <p>ผู้ร่วมสร้างสรรค์นวัตกรรม</p>
-            <p>การสื่อสาร</p>
-            <p>การสื่อสาร</p>
-            <p>การปฏิบัติ</p>
-            <p>ผู้ร่วมสร้างสรรค์นวัตกรรม</p>
-            <p>การสื่อสาร</p>
-            <p>การสื่อสาร</p>
-            <p>การปฏิบัติ</p>
-            <p>ผู้ร่วมสร้างสรรค์นวัตกรรม</p>
-            <p>การสื่อสาร</p>
-            <p>การสื่อสาร</p>
-            <p>การปฏิบัติ</p>
-            <p>ผู้ร่วมสร้างสรรค์นวัตกรรม</p>
-            <p>การสื่อสาร</p>
-            <p>การสื่อสาร</p>
-            <p>การปฏิบัติ</p>
-            <p>ผู้ร่วมสร้างสรรค์นวัตกรรม</p>
-            <p>การสื่อสาร</p>
-            <p>การสื่อสาร</p>
-            <p>การปฏิบัติ</p>
-            <p>ผู้ร่วมสร้างสรรค์นวัตกรรม</p>
+            {sharing?.tags?.map(({tag}) => (
+              <p>{tag}</p>
+            ))}
           </div>
         </Col>
       </Row>
