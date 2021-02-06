@@ -23,9 +23,7 @@ const SharingList = () => {
   const {id} = useParams();
   const [sharing, setSharing] = useState(null);
   useEffect(() => {
-      console.log(id);
     API_GET_SHARING_BY_ID(id).then((result) => {
-      console.log(result?.data);
       setSharing(result?.data);
     });
   }, []);
@@ -40,13 +38,13 @@ const SharingList = () => {
           </NavLink>
         </Col>
         <Col className="text-center mb-5" xs="12" lg="12">
-          {sharing?.sharing?.sharingPicture && <Image
-            src={
-              IMAGE_URL + sharing?.sharing?.sharingPicture
-            }
-            width={'100%'}
-            alt={sharing?.sharing?.title}
-          />}
+          {sharing?.sharing?.sharingPicture && (
+            <Image
+              src={IMAGE_URL + sharing?.sharing?.sharingPicture}
+              width={"100%"}
+              alt={sharing?.sharing?.title}
+            />
+          )}
         </Col>
         <Col className="mb-5" xs="12" lg="12">
           <div
@@ -63,7 +61,9 @@ const SharingList = () => {
             {sharing?.sharing?.firstName} {sharing?.sharing?.lastName}
           </h1>
           <h3 className="contact">
-            <span className="mr-5">{moment(sharing?.sharing?.createAt).format("LL")}</span>
+            <span className="mr-5">
+              {moment(sharing?.sharing?.createAt).format("LL")}
+            </span>
             <span className="mr-2">
               <FontAwesomeIcon icon={faHeart} />
             </span>
