@@ -20,7 +20,7 @@ const AboutProvide = () => {
                   src="image/about/medical-mask-2.png"
                   alt="Generic placeholder"
                 />
-                <Media.Body className="text-left">
+                <Media.Body className="text">
                   <h3>เข้าร่วม BPSC แล้วได้อะไร?</h3>
                   <p>- สร้างรูปแบบการให้บริการทางพฤติกรรม ที่ตอบสนองความต้องการของผู้บริการ แบบไม่แยกส่วน</p>
                   <p>- นวัตกรรมที่มีประสิทธิภาพ</p>
@@ -37,7 +37,7 @@ const AboutProvide = () => {
                   src="image/about/hospital-1.png"
                   alt="Generic placeholder"
                 />
-                <Media.Body className="text-left">
+                <Media.Body className="text">
                   <h3>ร่วมสร้างการเปลี่ยนแปลงไปกับเรา</h3>
                   <h5>BPSC เปิดรับโรงพยาบาลทุกระดับ</h5>
                   <p>- โรงพยาบาลชุมชลรวมทั้งเครือข่าย</p>
@@ -62,7 +62,8 @@ const AboutProvide = () => {
             />
           </div>
           <div className="Innovation">
-
+              <img className="Innovation-img-left" src="image/about/provide-1.png" />
+              <img className="Innovation-img-right" src="image/about/provide-2.png" />
           </div>
         </Container>
       </div>

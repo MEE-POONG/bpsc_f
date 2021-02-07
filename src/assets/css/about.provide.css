@@ -22,7 +22,42 @@
 .about-provide .subtitle {
   font-size: 2rem;
 }
+.about-provide .provide-icon{
+  margin: 1rem 0.5rem 0;
+  height: 100px;
+}
 .about-provide .img-provide {
   width: 100%;
   object-fit: cover;
+}
+.about-provide .detail .text.media-body{
+  text-align: left;
+  margin-left: 1rem;
+}
+.about-provide .detail .text.media-body p{
+  font-size: 1.25rem;
+}
+.about-provide .Innovation{
+  margin-top: 5rem;
+}
+.about-provide .provide-title h1{
+  color: #E7B00B;
+}
+.about-provide .provide-title hr{
+  border-top: 3px solid #757575;
+  width: 20%;
+}
+.about-provide .Innovation{
+  position: relative;
+  height: 450px;
+}
+.about-provide .Innovation .Innovation-img-left, .about-provide .Innovation .Innovation-img-right{
+  position: absolute;
+  height: 350px;
+}
+.about-provide .Innovation .Innovation-img-left{
+  left: 0;
+}
+.about-provide .Innovation .Innovation-img-right{
+  right: 0;
 }
