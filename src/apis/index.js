@@ -2,6 +2,7 @@ import axios from "axios";
 axios.defaults.baseURL = "https://api.thaibpsc.com";
 
 export const IMAGE_URL = "https://api.thaibpsc.com/image/";
+export const DOWNLOAD_URL = "https://api.thaibpsc.com/documentDownload/";
 
 // axios.interceptors.request.use(
 //   function (config) {
@@ -157,10 +158,18 @@ export const API_GET_LEARNING = (title = "", page = "", size = "", tag = "") => 
 
   return axios(config);
 };
-export const API_GET_LEARNING_COMMENT = (id, page = "", size = "") => {
+export const API_GET_LEARNING_COMMENT = (id, size = 1, page = "") => {
   var config = {
     method: "get",
     url: `/comment/${id}?size=${size}&page=${page}`,
+  };
+
+  return axios(config);
+};
+export const API_GET_LEARNING_DOCUMENT = (id, page = "", size = "") => {
+  var config = {
+    method: "get",
+    url: `/document/${id}?size=${size}&page=${page}`,
   };
 
   return axios(config);

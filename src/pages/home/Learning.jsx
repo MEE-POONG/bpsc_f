@@ -51,6 +51,7 @@ const Abstain = () => {
                   firstName,
                   lastName,
                   userPicture,
+                  content,
                 },
                 idx
               ) => (
@@ -89,14 +90,7 @@ const Abstain = () => {
                             </Media.Body>
                           </Media>
                         </Card.Title>
-                        {/* <Card.Text className="subtitle-text">
-                          Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                          consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                          dolor sit amet consecteturLorem ipsum dolor sit amet
-                          consecteturLorem ipsum dolor sit amet consecteturLorem ipsum
-                          dolor sit amet consecteturLorem ipsum dolor sit amet
-                          consecteturLorem ipsum dolor sit amet consectetur
-                        </Card.Text> */}
+                        {content}
                       </Card.Body>
                       <Card.Footer>
                         <Card.Text className="mr-auto">

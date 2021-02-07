@@ -50,6 +50,7 @@ const SheetThree = () => {
                 firstName,
                 lastName,
                 userPicture,
+                content,
               },
               idx
             ) => (
@@ -73,7 +74,7 @@ const SheetThree = () => {
                     </Card.Body>
                     <Card.Body>
                       <Card.Title className="text-overflow-1">{title}</Card.Title>
-                      {/* <Card.Text className="subtitle-text">''</Card.Text> */}
+                      <Card.Text className="subtitle-text">{content}</Card.Text>
                       <div className="user">
                         <span className="mr-1">
                           <Image

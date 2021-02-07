@@ -8,7 +8,7 @@ import {
   Image,
   Button,
   FormControl,
-  Table
+  Table,
 } from "react-bootstrap";
 import {
   faArrowRight,
@@ -20,7 +20,13 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {useParams} from "react-router-dom";
 
-import {API_GET_ELEARNING_BY_ID, API_GET_LEARNING_COMMENT, IMAGE_URL} from "../../apis";
+import {
+  API_GET_ELEARNING_BY_ID,
+  API_GET_LEARNING_COMMENT,
+  API_GET_LEARNING_DOCUMENT,
+  IMAGE_URL,
+  DOWNLOAD_URL,
+} from "../../apis";
 import moment from "moment";
 import {NavLink} from "react-router-dom";
 
@@ -28,19 +34,31 @@ const LeaningList = () => {
   const {id} = useParams();
   const [elearning, setElearning] = useState(null);
   const [comment, setComment] = useState(null);
+  const [commentSearch, setCommentSearch] = useState(3);
+  const setSearch = () => setCommentSearch((e) => (e += 3));
+  const [document, setDocument] = useState(null);
+  const [documentClick, setDocumentClick] = useState(1);
+  const setClick = () => setDocumentClick((e) => (e += 1));
   useEffect(() => {
     API_GET_ELEARNING_BY_ID(id).then((result) => {
       setElearning(result?.data);
     });
-    API_GET_LEARNING_COMMENT(id).then((result) => {
+  }, []);
+  useEffect(() => {
+    API_GET_LEARNING_DOCUMENT(id).then((result) => {
+      setDocument(result?.data);
+    });
+  }, [documentClick]);
+  useEffect(() => {
+    API_GET_LEARNING_COMMENT(id, commentSearch).then((result) => {
       setComment(result?.data);
     });
-  }, []);
+  }, [commentSearch]);
   return (
     <Container className="leaning-list">
       <Row>
         <Col className="text-right" xs="12" lg="12">
-          <NavLink to={"/sharing/"} className="p-0 nav-link">
+          <NavLink to={"/e-leaning/"} className="p-0 nav-link">
             <Button bsPrefix="btn-save" className="mb-5">
               BACK
             </Button>
@@ -121,7 +139,7 @@ const LeaningList = () => {
           )
         )}
         {comment?.totalPage > 1 ? (
-          <Button bsPrefix="btn-show-list" onClick={() => {}}>
+          <Button bsPrefix="btn-show-list" onClick={setSearch}>
             <FontAwesomeIcon icon={faChevronDown} />
           </Button>
         ) : null}
@@ -130,49 +148,27 @@ const LeaningList = () => {
         <Table responsive="sm">
           <tr style={{background: "#26beb4"}}>
             <th className="head-th text-left">เอกสารที่เกี่ยวข้อง</th>
-            <th className="head-th ">Size</th>
+            <th className="head-th ">Total Download</th>
             <th className="head-th">Download</th>
           </tr>
           <tbody className="file">
-            <tr>
-              <td className="text-start">
-                <Media>
-                  <Image src="../image/pdf.png" />
-                  <Media.Body>Lorem ipsum dolor sit amet, consectetur</Media.Body>
-                </Media>
-              </td>
-              <td className="text-center">404.80 kb</td>
-              <td className="text-center">
-                <Button bsPrefix="download mb3">Download</Button>
-                <Button bsPrefix="preview">Preview</Button>
-              </td>
-            </tr>
-            <tr>
-              <td className="text-start">
-                <Media>
-                  <Image src="../image/pdf.png" />
-                  <Media.Body>Lorem ipsum dolor sit amet, consectetur</Media.Body>
-                </Media>
-              </td>
-              <td className="text-center">404.80 kb</td>
-              <td className="text-center">
-                <Button bsPrefix="download mb3">Download</Button>
-                <Button bsPrefix="preview">Preview</Button>
-              </td>
-            </tr>
-            <tr>
-              <td className="text-start">
-                <Media>
-                  <Image src="../image/pdf.png" />
-                  <Media.Body>Lorem ipsum dolor sit amet, consectetur</Media.Body>
-                </Media>
-              </td>
-              <td className="text-center">404.80 kb</td>
-              <td className="text-center">
-                <Button bsPrefix="download mb3">Download</Button>
-                <Button bsPrefix="preview">Preview</Button>
-              </td>
-            </tr>
+            {document?.map(({id, filename, Download}, idx) => (
+              <tr>
+                <td className="text-start">
+                  <Media>
+                    <Image src="../image/pdf.png" />
+                    <Media.Body>{filename}</Media.Body>
+                  </Media>
+                </td>
+                <td className="text-center">{Download}</td>
+                <td className="text-center">
+                  <a href={DOWNLOAD_URL + id} onClick={setClick} target="_blank">
+                    <Button bsPrefix="download mb3">Download</Button>
+                  </a>
+                  {/* <Button bsPrefix="preview">Preview</Button> */}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </Table>
       </Container>

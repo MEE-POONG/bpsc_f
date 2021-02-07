@@ -76,6 +76,7 @@ const LeaningDetail = () => {
                   firstName,
                   lastName,
                   userPicture,
+                  content,
                 },
                 idx
               ) => (
@@ -114,14 +115,7 @@ const LeaningDetail = () => {
                           </Media.Body>
                         </Media>
                       </Card.Title>
-                      {/* <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consectetur
-                    </Card.Text> */}
+                      <Card.Text className="subtitle-text">{content}</Card.Text>
                     </Card.Body>
                     <Card.Footer>
                       <Card.Text className="mr-auto ">

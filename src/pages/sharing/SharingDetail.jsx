@@ -54,7 +54,9 @@ const SharingDetail = () => {
       <Container className="detail">
         <Row>
           <Col xs="12" lg="12">
-            <Card.Subtitle className="scroll">{sharing?.totalRecord} Sharing</Card.Subtitle>
+            <Card.Subtitle className="scroll">
+              {sharing?.totalRecord} Sharing
+            </Card.Subtitle>
           </Col>
         </Row>
         <Row className="py-5">
@@ -68,6 +70,7 @@ const SharingDetail = () => {
               firstName,
               lastName,
               userPicture,
+              content,
             }) => (
               <Col
                 lg="3"
@@ -92,7 +95,7 @@ const SharingDetail = () => {
                   </Card.Body>
                   <Card.Body>
                     <Card.Title>{title}</Card.Title>
-                    {/* <Card.Text className="subtitle-text">''</Card.Text> */}
+                    <Card.Text className="subtitle-text">{content}</Card.Text>
                   </Card.Body>
                   <Card.Footer>
                     <div className="user">
