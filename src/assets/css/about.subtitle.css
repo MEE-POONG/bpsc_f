@@ -1,9 +1,10 @@
-.about-subtitle-image {
-  width: inherit;
+.about-subtitle img{
+  width: 10rem;
 }
-.about-subtitle .subtitle-text {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
+.about-subtitle .card-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.about-subtitle .card-subtitle {
+  font-size: 1.5rem;
 }

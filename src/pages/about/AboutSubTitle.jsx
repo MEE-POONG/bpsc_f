@@ -1,30 +1,43 @@
 import React from "react";
-import {Col, Container, Image, Row} from "react-bootstrap";
+import { Card, Col, Container, Image, Row } from "react-bootstrap";
 
 const AboutSubTitle = () => {
   return (
     <div className="about-subtitle">
       <Container className="p-5">
-        <Row className="">
-          <Col sm="6" className="text-center">
-            <Image className="about-subtitle-image" src="/image/image44.png" />
+        <Row className="text-center">
+          <Col sm="4">
+              <Image className="about-subtitle-image" src="/image/about/about-1.png" />
+              <Card.Body>
+                <Card.Title>
+                  What?
+                </Card.Title>
+                <Card.Subtitle>
+                  เกิดจากการพัฒนาด้านระบบสาธารณสุข ในการให้บริการด้านพฤติกรรมและสังคมจิตใจ
+                </Card.Subtitle>
+              </Card.Body>
           </Col>
-          <Col sm="6">
-            <Col xs="12">
-              <p className="h1 font-weight-bold">What we provide ?</p>
-              <p className="h3 subtitle-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore ...
-              </p>
-            </Col>
-            <Col xs="12" className="pt-5">
-              <p className="h1 font-weight-bold">Our values</p>
-              <p className="h3 subtitle-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore ...
-              </p>
-            </Col>
+          <Col sm="4">
+              <Image className="about-subtitle-image" src="/image/about/about-2.png" />
+              <Card.Body>
+                <Card.Title>
+                  Why?
+                </Card.Title>
+                <Card.Subtitle>
+                  เพื่อรักษา NCD  มีปัจจัยเสี่ยงทั้งทางด้านพฤติกรรมและปัญหาสังคมจิตใจส่งผลต่อโรคทางจิตเวช คือ กังวล ซึมเศร้า ปละติดสารเสพติด
+                </Card.Subtitle>
+              </Card.Body>
+          </Col>
+          <Col sm="4">
+              <Image className="about-subtitle-image" src="/image/about/about-3.png" />
+              <Card.Body>
+                <Card.Title>
+                  How?
+                </Card.Title>
+                <Card.Subtitle>
+                  ทำให้คนไข้ได้รับการเปลี่ยนแปลงพฤติกรรมอย่างยั้งยืน
+                </Card.Subtitle>
+              </Card.Body>
           </Col>
         </Row>
       </Container>
