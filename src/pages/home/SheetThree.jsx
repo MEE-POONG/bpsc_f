@@ -7,8 +7,11 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/swiper.scss";
 
 import {API_GET_SHARING, IMAGE_URL} from "../../apis";
+import {useNavigate} from "react-router-dom";
 
 const SheetThree = () => {
+  const navigate = useNavigate();
+
   const [sharing, setSharing] = useState(null);
   useEffect(() => {
     API_GET_SHARING().then((result) => {
@@ -51,7 +54,10 @@ const SheetThree = () => {
               idx
             ) => (
               <SwiperSlide>
-                <div className="mobile-padding pl-lg-5 px-md-5 py-5">
+                <div
+                  className="mobile-padding pl-lg-5 px-md-5 py-5"
+                  onClick={() => navigate("/sharing/" + id)}
+                >
                   <Card className="box-card-shadow">
                     <Card.Body className="image">
                       <Card.Img

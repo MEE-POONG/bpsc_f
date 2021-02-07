@@ -1,7 +1,10 @@
 import React, {useState} from "react";
 import {Row, Col, Card, Image, Container} from "react-bootstrap";
+import {useNavigate} from "react-router-dom";
 
 const SheetOne = () => {
+  const navigate = useNavigate();
+
   const [chkInnovation, setChkInnovation] = useState(false);
   const setIn = () => setChkInnovation(false);
   const setOur = () => setChkInnovation(true);
@@ -15,11 +18,17 @@ const SheetOne = () => {
         </Card.Text>
         <Card.Text style={{fontSize: "15px"}}>
           <br></br>
-            เพราะเราเชื่อว่า “การสื่อสารสองทาง” จะช่วยสร้างสัมพันธภาพอันดีระหว่างผู้ป่วยและบุคลากรทางการแพทย์ เพื่อให้ผู้ป่วยกล้าเปิดใจเล่าปัญหา ที่ทำให้ผลการรักษาไม่เป็นไปตามที่คาดหวัง
+          เพราะเราเชื่อว่า “การสื่อสารสองทาง”
+          จะช่วยสร้างสัมพันธภาพอันดีระหว่างผู้ป่วยและบุคลากรทางการแพทย์
+          เพื่อให้ผู้ป่วยกล้าเปิดใจเล่าปัญหา ที่ทำให้ผลการรักษาไม่เป็นไปตามที่คาดหวัง
         </Card.Text>
         <Card.Text style={{fontSize: "15px"}}>
           <br></br>
-          เราจึงสร้าง BPSC ซึ่งเป็นนวัตกรรมการดูแลผู้ป่วยแบบใหม่ ที่จะทำให้เกิดความร่วมมือในการแก้ปัญหา นำไปสู่ทางออก เป็นการรักษาผู้ป่วยทั้งกายและใจ โดยเน้นผู้ป่วยกลุ่มโรคไม่ติดต่อเรื้อรัง (Non-Communicable Disease, NCD), มีปัญหาสุขภาพจิต และติดสารเสพติด ผ่านทาง 4 นวัตกรรมหลัก
+          เราจึงสร้าง BPSC ซึ่งเป็นนวัตกรรมการดูแลผู้ป่วยแบบใหม่
+          ที่จะทำให้เกิดความร่วมมือในการแก้ปัญหา นำไปสู่ทางออก
+          เป็นการรักษาผู้ป่วยทั้งกายและใจ โดยเน้นผู้ป่วยกลุ่มโรคไม่ติดต่อเรื้อรัง
+          (Non-Communicable Disease, NCD), มีปัญหาสุขภาพจิต และติดสารเสพติด ผ่านทาง 4
+          นวัตกรรมหลัก
         </Card.Text>
       </Col>
     </Row>

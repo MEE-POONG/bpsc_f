@@ -54,7 +54,7 @@ const SharingDetail = () => {
       <Container className="detail">
         <Row>
           <Col xs="12" lg="12">
-            <Card.Subtitle className="scroll">152 Sharing</Card.Subtitle>
+            <Card.Subtitle className="scroll">{sharing?.totalRecord} Sharing</Card.Subtitle>
           </Col>
         </Row>
         <Row className="py-5">

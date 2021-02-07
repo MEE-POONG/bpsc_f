@@ -2,8 +2,10 @@ import React, {useState, useEffect} from "react";
 import {Container, Card, Button, Row, Col} from "react-bootstrap";
 import SheetThree from "./SheetThree";
 import {useScrollPosition} from "@n8tb1t/use-scroll-position";
+import {useNavigate} from "react-router-dom";
 
 const SheetTwo = () => {
+  const navigate = useNavigate();
   const [setStart, setSetStart] = useState(false);
   const [runningOne, setRunningOne] = useState(0);
   const [runningTwo, setRunningTwo] = useState(0);
@@ -21,7 +23,7 @@ const SheetTwo = () => {
   useScrollPosition(({prevPos, currPos}) => {
     currPos.y <= -1006 && setSetStart(true);
   });
-  
+
   return (
     <div className="sheet-two">
       <div className="scroll-num my-5">
@@ -78,7 +80,9 @@ const SheetTwo = () => {
                     เพื่อพัฒนาทักษะการสื่อสารแล้ว ความคิดเห็นจากคุณ
                     จะเป็นกุญแจสำคัญที่นำเราไปสู่การพัฒนา เพื่อดูแลผู้ป่วยอย่างยั่งยืน
                   </Card.Text>
-                  <Button variant="green">Discover more {"-->"}</Button>
+                  <Button variant="green" onClick={() => navigate("/sharing/")}>
+                    Discover more {"-->"}
+                  </Button>
                 </div>
               </Col>
               <Col lg="6">

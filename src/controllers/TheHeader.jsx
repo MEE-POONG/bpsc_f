@@ -26,8 +26,8 @@ const TheHeader = () => {
         {/* <Navbar bg="light" variant="light"> */}
         <Navbar.Brand href="/">
           <Image
-            alt=""
-            src="image/header/Logo.png"
+            alt="BPSC LOGO"
+            src="/image/header/Logo.png"
             width="100"
             className="d-inline-block align-tops"
             style={{objectFit: "contain"}}

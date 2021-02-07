@@ -133,10 +133,34 @@ export const API_GET_SHARING_BY_ID = (id) => {
 
   return axios(config);
 };
+export const API_GET_ELEARNING_BY_ID = (id) => {
+  var config = {
+    method: "get",
+    url: `/elearning/${id}`,
+  };
+
+  return axios(config);
+};
 export const API_GET_SHARING = (title = "", page = "", size = "", tag = "") => {
   var config = {
     method: "get",
     url: `/sharing?title=${title}&size=${size}&tag=${tag}&page=${page}`,
+  };
+
+  return axios(config);
+};
+export const API_GET_LEARNING = (title = "", page = "", size = "", tag = "") => {
+  var config = {
+    method: "get",
+    url: `/elearning?title=${title}&size=${size}&tag=${tag}&page=${page}`,
+  };
+
+  return axios(config);
+};
+export const API_GET_LEARNING_COMMENT = (id, page = "", size = "") => {
+  var config = {
+    method: "get",
+    url: `/comment/${id}?size=${size}&page=${page}`,
   };
 
   return axios(config);

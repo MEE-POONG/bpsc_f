@@ -41,7 +41,6 @@ const SharingList = () => {
           {sharing?.sharing?.sharingPicture && (
             <Image
               src={IMAGE_URL + sharing?.sharing?.sharingPicture}
-              width={"100%"}
               alt={sharing?.sharing?.title}
             />
           )}
@@ -85,6 +84,7 @@ const SharingList = () => {
           </div>
         </Col>
       </Row>
+      <div className="py-5"/>
     </Container>
   );
 };
