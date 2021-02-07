@@ -97,7 +97,7 @@ const SheetThree = () => {
                           <i className="fa fa-eye"></i> {view}
                         </span>
                         <span>
-                          <i className="fa fa-comments-o"></i> {favorite}
+                          <i className="fa fa-heart-o"></i> {favorite}
                         </span>
                       </div>
                     </Card.Body>

@@ -104,9 +104,14 @@ const Abstain = () => {
                                 &#xf061;
                               </i>
                             </span>
-                            <span>
-                              <i className="fa fa-heart-o"></i> {favorite}
-                            </span>
+                            <div>
+                              <span className="mr-1">
+                                <i className="fa fa-eye"></i> {view}
+                              </span>
+                              <span>
+                                <i className="fa fa-heart-o"></i> {favorite}
+                              </span>
+                            </div>
                           </span>
                         </Card.Text>
                       </Card.Footer>

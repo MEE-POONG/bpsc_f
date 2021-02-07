@@ -6,9 +6,11 @@ import {Swiper, SwiperSlide} from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.scss";
 import {API_GET_DOCTOR, IMAGE_URL} from "../../apis";
+import {useNavigate} from "react-router-dom";
 
 const TeamMember = () => {
   const [doctor, setDoctor] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     API_GET_DOCTOR().then((result) => {
@@ -73,8 +75,8 @@ const TeamMember = () => {
             )}
           </Swiper>
         ) : null}
-        <div className="text-center my-5">
-          <Button>MODE ABOUT US BPSC</Button>
+        <div className="text-center my-5"onClick={() => navigate("/doctor/")}>
+          <Button>MODE DOCTORS</Button>
         </div>
       </Container>
     </div>

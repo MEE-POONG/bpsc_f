@@ -18,7 +18,7 @@ const Abstain = () => {
                 เรามีเครื่องมือออนไลน์เพื่อต่อยอดการเรียนรู้
                 ที่ท่านจะสามารถนำไปประยุกต์ใช้ ให้เกิดประสิทธิภาพสูงสุดในการดูแลผู้ป่วย
                 <div className="pt-5 text-center">
-                  <Button variant="success" onClick={() => navigate("/e-leaning/")}>MODE ABOUT US BPSC</Button>
+                  <Button variant="success" onClick={() => navigate("/e-leaning/")}>MORE E - LEARNING</Button>
                 </div>
               </Card.Text>
             </Container>
