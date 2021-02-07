@@ -1,0 +1,28 @@
+.about-provide .header {
+  color: #ffffff;
+  background: rgb(75, 131, 195);
+  background: radial-gradient(98.18% 853.99% at 0% 100%, #35b176 0%, #2072be 100%);
+}
+.about-provide .detail,
+.about-provide h1,
+.about-provide h2,
+.about-provide h3,
+.about-provide h4,
+.about-provide h5 {
+  font-weight: bold;
+}
+.about-provide-circle {
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
+}
+.about-provide .title {
+  font-size: 4rem;
+}
+.about-provide .subtitle {
+  font-size: 2rem;
+}
+.about-provide .img-provide {
+  width: 100%;
+  object-fit: cover;
+}
