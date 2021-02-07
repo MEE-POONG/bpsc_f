@@ -51,3 +51,9 @@
     border: unset;
     padding: 0.5rem 1rem;
 }
+.f-gradient{
+	text-transform: uppercase;
+	background: linear-gradient(to right, #26BEB4 0%, #5694CD 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

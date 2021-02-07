@@ -5,6 +5,7 @@ import AboutTeam from "./AboutTeam";
 import AboutContactUS from "./AboutContactUS";
 import AboutTalkWithUS from "./AboutTalkWithUS";
 import {Col, Row} from "react-bootstrap";
+import AboutProvide from "./AboutProvide";
 
 class About extends Component {
   render() {
@@ -12,6 +13,7 @@ class About extends Component {
       <div className="about text-uppercase">
         <AboutTitle />
         <AboutSubTitle />
+        <AboutProvide />
         <AboutTeam />
         <Row className="mx-0">
           <Col md="6" className="p-0 about-contact-us-bg">

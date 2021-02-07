@@ -1,11 +1,23 @@
-.about-title .about-title-bg {
-  background: rgba(38, 190, 180, 0.12);
+.about-title .card-body {
+  /* background: rgba(38, 190, 180, 0.12); */
+  background: radial-gradient(98.18% 853.99% at 0% 100%, #35B176 0%, #2072BE 100%);
+  border-radius: 0px 10px 0px 10px;
+  width: max-content;
 }
 .about-title .h1,
 .about-title h1 {
   font-size: 5rem;
 }
-
+.about-title .card-body{
+  color: #ffffff;
+  margin: auto;
+}
+.about-title .text-sub{
+  font-size: 2.5rem;
+}
+.about-title .text-detail{
+  font-size: 1.75rem;
+}
 .about-title .h3,
 .about-title h3 {
   font-size: 4.75rem;
