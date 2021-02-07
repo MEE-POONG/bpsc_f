@@ -5,7 +5,7 @@ class Leaning extends Component {
   render() {
     return (
       <div className="leaning-page text-uppercase">
-        <LeaningTitle />
+        {/* <LeaningTitle /> */}
         <LeaningDetail />
       </div>
     );

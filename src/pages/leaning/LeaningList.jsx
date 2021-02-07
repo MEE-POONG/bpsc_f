@@ -8,7 +8,7 @@ import {
   Image,
   Button,
   FormControl,
-  Table,
+  Table
 } from "react-bootstrap";
 import {
   faArrowRight,
@@ -22,6 +22,7 @@ import {useParams} from "react-router-dom";
 
 import {API_GET_ELEARNING_BY_ID, API_GET_LEARNING_COMMENT, IMAGE_URL} from "../../apis";
 import moment from "moment";
+import {NavLink} from "react-router-dom";
 
 const LeaningList = () => {
   const {id} = useParams();
@@ -39,9 +40,11 @@ const LeaningList = () => {
     <Container className="leaning-list">
       <Row>
         <Col className="text-right" xs="12" lg="12">
-          <Button bsPrefix="btn-save" className="mb-5">
-            BACK
-          </Button>
+          <NavLink to={"/sharing/"} className="p-0 nav-link">
+            <Button bsPrefix="btn-save" className="mb-5">
+              BACK
+            </Button>
+          </NavLink>
         </Col>
         <Col className="text-center mb-5" xs="12" lg="12">
           <iframe
