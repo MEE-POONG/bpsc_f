@@ -1,0 +1,14 @@
+.about-innovation .card-img:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}    
+.about-innovation .card-img {
+  border-radius: 20px;
+}
+.about-innovation .f-gradient{
+  width: 60%;
+  font-size: 5rem;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}

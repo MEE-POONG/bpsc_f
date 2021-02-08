@@ -1,4 +1,5 @@
-.about-provide .header {
+.about-provide .header,
+.about-innovation .header {
   color: #ffffff;
   background: rgb(75, 131, 195);
   background: radial-gradient(98.18% 853.99% at 0% 100%, #35b176 0%, #2072be 100%);
@@ -8,7 +9,13 @@
 .about-provide h2,
 .about-provide h3,
 .about-provide h4,
-.about-provide h5 {
+.about-provide h5,
+.about-innovation .detail,
+.about-innovation h1,
+.about-innovation h2,
+.about-innovation h3,
+.about-innovation h4,
+.about-innovation h5 {
   font-weight: bold;
 }
 .about-provide-circle {
@@ -16,13 +23,13 @@
   width: 25rem;
   height: 25rem;
 }
-.about-provide .title {
+.about-provide .title,.about-innovation .title {
   font-size: 4rem;
 }
-.about-provide .subtitle {
+.about-provide .subtitle,.about-innovation .subtitle {
   font-size: 2rem;
 }
-.about-provide .provide-icon{
+.about-provide .provide-icon {
   margin: 1rem 0.5rem 0;
   height: 100px;
 }
@@ -30,34 +37,35 @@
   width: 100%;
   object-fit: cover;
 }
-.about-provide .detail .text.media-body{
+.about-provide .detail .text.media-body {
   text-align: left;
   margin-left: 1rem;
 }
-.about-provide .detail .text.media-body p{
+.about-provide .detail .text.media-body p {
   font-size: 1.25rem;
 }
-.about-provide .Innovation{
+.about-provide .Innovation {
   margin-top: 5rem;
 }
-.about-provide .provide-title h1{
-  color: #E7B00B;
+.about-provide .provide-title h1 {
+  color: #e7b00b;
 }
-.about-provide .provide-title hr{
+.about-provide .provide-title hr {
   border-top: 3px solid #757575;
   width: 20%;
 }
-.about-provide .Innovation{
+.about-provide .Innovation {
   position: relative;
   height: 450px;
 }
-.about-provide .Innovation .Innovation-img-left, .about-provide .Innovation .Innovation-img-right{
+.about-provide .Innovation .Innovation-img-left,
+.about-provide .Innovation .Innovation-img-right {
   position: absolute;
   height: 350px;
 }
-.about-provide .Innovation .Innovation-img-left{
+.about-provide .Innovation .Innovation-img-left {
   left: 0;
 }
-.about-provide .Innovation .Innovation-img-right{
+.about-provide .Innovation .Innovation-img-right {
   right: 0;
 }
