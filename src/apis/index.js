@@ -174,6 +174,22 @@ export const API_GET_LEARNING_DOCUMENT = (id, page = "", size = "") => {
 
   return axios(config);
 };
+export const API_GET_GALLERY = (page = "", size = "") => {
+  var config = {
+    method: "get",
+    url: `/gallery?size=${size}&page=${page}`,
+  };
+
+  return axios(config);
+};
+export const API_GET_GALLERY_BY_ID = (id, page = "", size = "") => {
+  var config = {
+    method: "get",
+    url: `/gallery/${id}?size=${size}&page=${page}`,
+  };
+
+  return axios(config);
+};
 export const API_GET_EVENT = () => {
   var config = {
     method: "get",
