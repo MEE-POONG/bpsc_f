@@ -23,10 +23,12 @@
   width: 25rem;
   height: 25rem;
 }
-.about-provide .title,.about-innovation .title {
+.about-provide .title,
+.about-innovation .title {
   font-size: 4rem;
 }
-.about-provide .subtitle,.about-innovation .subtitle {
+.about-provide .subtitle,
+.about-innovation .subtitle {
   font-size: 2rem;
 }
 .about-provide .provide-icon {
@@ -68,4 +70,55 @@
 }
 .about-provide .Innovation .Innovation-img-right {
   right: 0;
+}
+@media only screen and (max-width: 1199px) {
+  .about-provide .Innovation {
+    height: 350px;
+  }
+  .about-provide .Innovation .Innovation-img-left,
+  .about-provide .Innovation .Innovation-img-right {
+    height: 292px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .about-provide .Innovation {
+    height: 300px;
+  }
+  .about-provide .Innovation .Innovation-img-left,
+  .about-provide .Innovation .Innovation-img-right {
+    height: 217px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .about-provide .Innovation {
+    height: 200px;
+  }
+  .about-provide .Innovation .Innovation-img-left,
+  .about-provide .Innovation .Innovation-img-right {
+    height: 160px;
+  }
+} 
+@media only screen and (max-width: 575px) {
+  .about-provide .Innovation .Innovation-img-left,
+  .about-provide .Innovation .Innovation-img-right {
+    height: 170px;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .about-provide .Innovation .Innovation-img-left,
+  .about-provide .Innovation .Innovation-img-right {
+    height: 155px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .about-provide .Innovation .Innovation-img-left,
+  .about-provide .Innovation .Innovation-img-right {
+    height: 122px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .about-provide .Innovation .Innovation-img-left,
+  .about-provide .Innovation .Innovation-img-right {
+    height: 108px;
+  }
 }
