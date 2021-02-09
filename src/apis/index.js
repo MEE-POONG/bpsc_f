@@ -74,7 +74,7 @@ const REFRESH_TOKEN = () => {
 
   return axios(config)
     .then(function (response) {
-      console.log(response);
+      // console.log(response);
       localStorage.setItem("token", response.data.accessToken);
       localStorage.setItem("refresh-token", response.data.refreshToken);
       return response.data;
@@ -317,6 +317,24 @@ export const API_GET_USER_UPDATE = async (id, userData) => {
   var config = {
     method: "put",
     url: `/user/updateUser/${id}`,
+    headers: {
+      Authorization: "Bearer " + reft.accessToken,
+      "Content-Type": "application/json",
+    },
+    data,
+  };
+
+  return axios(config);
+};
+export const API_GET_USER_UPDATE_PHOTO = async (id, userData) => {
+  var FormData = require("form-data");
+  var data = new FormData();
+  data.append("file", userData);
+
+  const reft = await REFRESH_TOKEN();
+  var config = {
+    method: "put",
+    url: `/user/profilePicture/${id}`,
     headers: {
       Authorization: "Bearer " + reft.accessToken,
       "Content-Type": "application/json",

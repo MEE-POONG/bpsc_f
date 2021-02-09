@@ -2,7 +2,12 @@ import React, {useState, useEffect} from "react";
 import {faEdit} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Button, Container, Image, Form, Modal, Row, Col} from "react-bootstrap";
-import {API_GET_USER_INFO, API_GET_USER_UPDATE, IMAGE_URL} from "../../apis";
+import {
+  API_GET_USER_INFO,
+  API_GET_USER_UPDATE,
+  API_GET_USER_UPDATE_PHOTO,
+  IMAGE_URL,
+} from "../../apis";
 import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -14,10 +19,13 @@ const ProfileTitle = () => {
   const handleShow = () => setShow(true);
 
   useEffect(() => {
+    handleGetUserInfo();
+  }, []);
+  const handleGetUserInfo = () => {
     API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
       setUserInfo(result?.data);
     });
-  }, [show]);
+  };
   const navigate = useNavigate();
 
   const [editProfileForm, setEditProfileForm] = useState({
@@ -26,12 +34,30 @@ const ProfileTitle = () => {
   });
 
   const userUpdate = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     API_GET_USER_UPDATE(localStorage.getItem("id"), editProfileForm)
       .then(() => {
-        Swal.fire("สำเร็จ!", "เปลี่ยนแปลงข้อมูลสำเร็จ!", "success").then(() =>
-          handleClose()
-        );
+        Swal.fire("สำเร็จ!", "เปลี่ยนแปลงข้อมูลสำเร็จ!", "success").then(() => {
+          handleClose();
+          handleGetUserInfo();
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: error?.error,
+          text: error?.message,
+        });
+      });
+  };
+  const userUpdatePhoto = (e) => {
+    console.log(e.target.files[0]);
+    API_GET_USER_UPDATE_PHOTO(localStorage.getItem("id"), e.target.files[0])
+      .then(() => {
+        Swal.fire("สำเร็จ!", "เปลี่ยนแปลงข้อมูลสำเร็จ!", "success").then(() => {
+          handleClose();
+          handleGetUserInfo();
+        });
       })
       .catch((error) => {
         Swal.fire({
@@ -77,15 +103,25 @@ const ProfileTitle = () => {
               <div>
                 <div class="avatar-upload">
                   <div class="avatar-edit">
-                    <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                    <input
+                      type="file"
+                      id="imageUpload"
+                      accept=".png, .jpg, .jpeg"
+                      onChange={(e) => userUpdatePhoto(e)}
+                    />
                     <label for="imageUpload"></label>
                   </div>
                   <div class="avatar-preview">
                     <div
                       id="imagePreview"
                       style={{
-                        backgroundImage:
-                          "url(https://api.thaibpsc.com/image/1119766f2711496a15d5639b77c2065e2b9e20f22e94)",
+                        backgroundImage: `url(
+              ${
+                userInfo?.picture
+                  ? IMAGE_URL + userInfo?.picture
+                  : "https://chiccarrent.com/files/images/default-placeholder.png"
+              }
+            )`,
                       }}
                     ></div>
                   </div>
@@ -125,12 +161,18 @@ const ProfileTitle = () => {
                 </Form.Group>
                 <Row>
                   <Col>
-                    <button className="btn btn-lg btn-danger btn-block text-uppercase mb-3">
+                    <div
+                      className="btn btn-lg btn-danger btn-block text-uppercase mb-3"
+                      onClick={handleClose}
+                    >
                       <h4 className="m-0">CANCLE</h4>
-                    </button>
+                    </div>
                   </Col>
                   <Col>
-                    <button className="btn btn-lg btn-success btn-block text-uppercase mb-3" onClick={(e) => userUpdate(e)}>
+                    <button
+                      className="btn btn-lg btn-success btn-block text-uppercase mb-3"
+                      onClick={(e) => userUpdate(e)}
+                    >
                       <h4 className="m-0">OK</h4>
                     </button>
                   </Col>
