@@ -12,7 +12,7 @@ const ProfileMenu = () => {
   const handleNavActive = (ele) => setNavActive(ele);
   return (
     <div className="profile-menu text-uppercase">
-      <div className="h4">
+      <div className="h2">
         <Col className="profile-menu-bg text-center">
           <Row>
             <Col
@@ -53,7 +53,7 @@ const ProfileMenu = () => {
                   <FontAwesomeIcon icon={faShare} />
                 </Col>
                 <Col md="12">
-                  <p className="pl-3">Sharing</p>
+                  <p className="pl-3">Sharing ที่ถูกใจ</p>
                 </Col>
               </Row>
             </Col>
@@ -67,7 +67,7 @@ const ProfileMenu = () => {
                   <FontAwesomeIcon icon={faBook} />
                 </Col>
                 <Col md="12">
-                  <p className="pl-3">E Learning</p>
+                  <p className="pl-3">E Learning ที่ถูกใจ</p>
                 </Col>
               </Row>
             </Col>

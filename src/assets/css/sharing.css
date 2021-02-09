@@ -1,3 +1,9 @@
-.sharing {
+/* .sharing {
   background-color: unset;
+} */
+
+
+
+input[type="file"] {
+  display: none;
 }

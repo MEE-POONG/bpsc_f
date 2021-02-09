@@ -6,8 +6,8 @@ const Create = () => {
   return (
     <div className="create-page text-uppercase">
       <CreateTitle />
-      <CreateDetail />
-      <CreateTag />
+      {/* <CreateDetail /> */}
+      {/* <CreateTag /> */}
     </div>
   );
 };
