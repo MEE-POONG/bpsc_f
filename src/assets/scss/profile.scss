@@ -220,4 +220,38 @@
             background-position: center;
         }
     }
+    @media (min-width: 576px) {
+        .modal-dialog {
+            align-self: center;
+            margin: 1.75rem auto !important;
+            max-width: 80% !important;
+            .card-title {
+                font-size: 3.25rem;
+                font-weight: bold;
+            }
+    
+            .card-subtitle,
+            .card-text {
+                font-size: 2.5rem;
+            }
+    
+            img {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+            }
+    
+            .modal-header {
+                border: unset;
+            }
+    
+            .card {
+                box-shadow: unset;
+            }
+    
+            .modal-content {
+                padding: 1.5rem;
+            }
+        }
+    }
 }
