@@ -1,16 +1,18 @@
 import React, {useState, useEffect} from "react";
 import {Card, Col, Container, Image, Row} from "react-bootstrap";
 
-import {API_GET_FAVORITE_SHARING, IMAGE_URL} from "../../apis";
+import {API_GET_MY_SHARING, IMAGE_URL} from "../../apis";
+import {useNavigate} from "react-router-dom";
 
 const ProfileMenuMyShare = () => {
   const [favorite, setFavorite] = useState(null);
 
   useEffect(() => {
-    API_GET_FAVORITE_SHARING().then((result) => {
+    API_GET_MY_SHARING().then((result) => {
       setFavorite(result?.data);
     });
   }, []);
+  const navigate = useNavigate();
 
   return (
     <div className="profile-title-menu-my-share text-uppercase">
@@ -33,7 +35,13 @@ const ProfileMenuMyShare = () => {
                 },
                 idx
               ) => (
-                <Col lg="3" md="4" sm="6" className="mb-5">
+                <Col
+                  lg="3"
+                  md="4"
+                  sm="6"
+                  className="mb-5"
+                  onClick={() => navigate("/sharing/" + id)}
+                >
                   <Card className="box-card-shadow">
                     <Card.Body className="image">
                       <Card.Img
@@ -73,7 +81,7 @@ const ProfileMenuMyShare = () => {
                           <i className="fa fa-eye"></i> {view}
                         </span>
                         <span>
-                          <i className="fa fa-comments-o"></i> {favorite}
+                          <i className="fa fa fa-heart-o"></i> {favorite}
                         </span>
                       </div>
                     </Card.Footer>

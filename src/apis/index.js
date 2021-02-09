@@ -17,43 +17,73 @@ export const DOWNLOAD_URL = "https://api.thaibpsc.com/documentDownload/";
 //   }
 // );
 
-axios.interceptors.response.use(
-  (response) => {
-    return response;
-  },
-  (err) => {
-    return new Promise((resolve, reject) => {
-      const originalReq = err.config;
-      if (err?.response?.status === 401 && err.config && !err.config.__isRetryRequest) {
-        originalReq._retry = true;
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        var raw = JSON.stringify({token: localStorage.getItem("token")});
+// axios.interceptors.response.use(
+//   (response) => {
+//     return response;
+//   },
+//   (err) => {
+//     return new Promise((resolve, reject) => {
+//       const originalReq = err.config;
+//       if (err?.response?.status === 401 && err.config && !err.config.__isRetryRequest) {
+//         originalReq._retry = true;
+//         var myHeaders = new Headers();
+//         myHeaders.append("Content-Type", "application/json");
+//         var raw = JSON.stringify({token: localStorage.getItem("token")});
 
-        var requestOptions = {
-          method: "POST",
-          headers: myHeaders,
-          body: raw,
-          redirect: "follow",
-        };
+//         var requestOptions = {
+//           method: "POST",
+//           headers: myHeaders,
+//           body: raw,
+//           redirect: "follow",
+//         };
 
-        let res = fetch("https://api.thaibpsc.com/refresh-token", requestOptions)
-          .then((res) => res.json())
-          .then((res) => {
-            console.log(res);
-            originalReq.headers["Token"] = res.token;
-            originalReq.headers["Device"] = "device";
+//         let res = fetch("https://api.thaibpsc.com/refresh-token", requestOptions)
+//           .then((res) => res.json())
+//           .then((res) => {
+//             console.log(res);
+//             originalReq.headers["Token"] = res.token;
+//             originalReq.headers["Device"] = "device";
 
-            return axios(originalReq);
-          });
+//             return axios(originalReq);
+//           });
 
-        resolve(res);
-      }
+//         resolve(res);
+//       }
 
-      return Promise.reject(err);
+//       return Promise.reject(err);
+//     });
+//   }
+// );
+
+const REFRESH_TOKEN = () => {
+  const token = localStorage.getItem("refresh-token");
+
+  var data = JSON.stringify({
+    token: token,
+  });
+
+  var config = {
+    method: "post",
+    url: "/refresh-token",
+    headers: {
+      Authorization: "Bearer " + token,
+      "Content-Type": "application/json",
+    },
+    data: data,
+  };
+
+  return axios(config)
+    .then(function (response) {
+      console.log(response);
+      localStorage.setItem("token", response.data.accessToken);
+      localStorage.setItem("refresh-token", response.data.refreshToken);
+      return response.data;
+    })
+    .catch(function (error) {
+      console.log(error);
+      return;
     });
-  }
-);
+};
 
 export const API_LOGIN = (email, password) => {
   var data = JSON.stringify({email, password});
@@ -214,15 +244,59 @@ export const API_GET_DOCTOR = () => {
 
   return axios(config);
 };
-export const API_GET_FAVORITE_SHARING = (page = "", size = "") => {
+export const API_GET_FAVORITE_SHARING = async (page = "", size = "") => {
+  const reft = await REFRESH_TOKEN();
   var config = {
     method: "get",
     url: `/favoriteSharing?size=${size}&page=${page}`,
+    headers: {
+      Authorization: "Bearer " + reft.accessToken,
+      "Content-Type": "application/json",
+    },
+  };
+
+  return axios(config);
+};
+export const API_GET_MY_SHARING = async () => {
+  const reft = await REFRESH_TOKEN();
+  var config = {
+    method: "get",
+    url: `/mySharing`,
+    headers: {
+      Authorization: "Bearer " + reft.accessToken,
+      "Content-Type": "application/json",
+    },
+  };
+
+  return axios(config);
+};
+export const API_GET_DRAFT_SHARING = async () => {
+  const reft = await REFRESH_TOKEN();
+  var config = {
+    method: "get",
+    url: `/draftSharing`,
+    headers: {
+      Authorization: "Bearer " + reft.accessToken,
+      "Content-Type": "application/json",
+    },
   };
 
   return axios(config);
 };
 
+export const API_GET_ELEARNING_SHARING = async (page = "", size = "") => {
+  const reft = await REFRESH_TOKEN();
+  var config = {
+    method: "get",
+    url: `/favoriteElearning?size=${size}&page=${page}`,
+    headers: {
+      Authorization: "Bearer " + reft.accessToken,
+      "Content-Type": "application/json",
+    },
+  };
+
+  return axios(config);
+};
 // export const API_LOGIN = () => {
 //   // Add a response interceptor
 //   return axios.interceptors.response.use(
