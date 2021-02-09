@@ -40,7 +40,7 @@ const ProfileMenuMyShare = () => {
                   md="4"
                   sm="6"
                   className="mb-5"
-                  onClick={() => navigate("/sharing/" + id)}
+                  // onClick={() => navigate("/sharing/" + id)}
                 >
                   <Card className="box-card-shadow">
                     <Card.Body className="image">

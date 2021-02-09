@@ -3,7 +3,12 @@ import {useState} from "react";
 import {Container, Image, Form, Row, Col, Badge} from "react-bootstrap";
 import CKEditor from "ckeditor4-react";
 
-import {API_CREATE_SHARING, API_GET_TAGS, IMAGE_URL} from "../../apis";
+import {
+  API_CREATE_SHARING,
+  API_GET_TAGS,
+  API_UPDATE_SHARING_PHOTO,
+  IMAGE_URL,
+} from "../../apis";
 
 import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
@@ -18,6 +23,8 @@ const CreateTitle = () => {
     tags: [{id: 1}],
   });
   const [tagData, setTagData] = useState(null);
+  const [imgData, setImgData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     API_GET_TAGS()
@@ -30,7 +37,25 @@ const CreateTitle = () => {
     API_CREATE_SHARING(sharingData)
       .then((e) => {
         console.log(e);
-        Swal.fire("สำเร็จ!", "สร้างแชร์สำเร็จ!", "success").then(() => {});
+        Swal.fire("สำเร็จ!", "สร้างแชร์สำเร็จ!", "success").then(() => {
+          console.log(imgData);
+          if (imgData) {
+            API_UPDATE_SHARING_PHOTO(e?.data?.id, imgData)
+              .then((e) => {
+                console.log(e);
+                Swal.fire("สำเร็จ!", "บันทึกรูปแชร์สำเร็จ!", "success").then(() =>
+                  navigate("/profile")
+                );
+              })
+              .catch(() =>
+                Swal.fire({
+                  icon: "error",
+                  title: e?.error,
+                  text: e?.message,
+                })
+              );
+          }
+        });
       })
       .catch((e) => {
         console.log(e);
@@ -48,17 +73,17 @@ const CreateTitle = () => {
           <div className="d-flex justify-content-end">
             <div
               className="save"
+              onMouseOver={() => setSharingData({...sharingData, isDraft: "true"})}
               onClick={() => {
-                setSharingData({...sharingData, isDraft: "true"});
                 createSharing();
               }}
             >
-              บันทุกแบบล่าง
+              บันทึกแบบร่าง
             </div>
             <div
               className="share"
+              onMouseOver={() => setSharingData({...sharingData, isDraft: "false"})}
               onClick={async () => {
-                setSharingData({...sharingData, isDraft: "false"});
                 createSharing();
               }}
             >
@@ -90,6 +115,7 @@ const CreateTitle = () => {
                     // Try to select a file, then try selecting another one.
                     // onChange={forceUpdate}
                     // multiple
+                    onChange={(e) => setImgData(e.target.files[0])}
                   />
                   <label htmlFor="file">
                     <span
@@ -117,11 +143,19 @@ const CreateTitle = () => {
               </div>
             </Col>
             <Col md="12">
-              <div className="views-img">
+              <div
+                style={{
+                  textAlignLast: "center",
+                }}
+              >
                 <Image
-                  src="image/home/home1.png"
+                  src={
+                    imgData
+                      ? URL.createObjectURL(imgData)
+                      : "https://chiccarrent.com/files/images/default-placeholder.png"
+                  }
                   style={{
-                    maxWidth: "-webkit-fill-available",
+                    maxWidth: "500px",
                   }}
                 />
               </div>
@@ -191,7 +225,7 @@ const CreateTitle = () => {
           {/* </Form.Group> */}
           {/* </Form> */}
           <Form.Group style={{marginTop: "20px"}}>
-            <Form.Label>รายละเอียดย่อของแชร์</Form.Label>
+            {/* <Form.Label>รายละเอียดย่อของแชร์</Form.Label> */}
             <Typeahead
               id="basic-typeahead-multiple"
               labelKey="name"
@@ -199,7 +233,7 @@ const CreateTitle = () => {
               onChange={(e) => setSharingData({...sharingData, tags: e})}
               options={tagData?.data}
               labelKey="title"
-              placeholder="Choose several states..."
+              placeholder="เลือก TAG"
               selected={sharingData.tag}
             />
           </Form.Group>

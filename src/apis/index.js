@@ -375,6 +375,26 @@ export const API_CREATE_SHARING = async (userData) => {
 
   return axios(config);
 };
+export const API_UPDATE_SHARING_PHOTO = async (id, userData) => {
+  const reft = await REFRESH_TOKEN();
+
+  var FormData = require("form-data");
+  var data = new FormData();
+  data.append("file", userData);
+
+  var config = {
+    method: "put",
+    url: `/sharingPicture/${id}`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
+    data,
+  };
+
+  return axios(config);
+};
+
 export const API_GET_TAGS = () => {
   var config = {
     method: "get",
