@@ -85,7 +85,6 @@ const EventBox = () => {
                 }
                 alt={showData + 1}
               /> */}
-          <Card>
             <Card.Body>
               {/* <Card.Title>Dr.{doctor?.data[showData].firstName}</Card.Title>
                   <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle>
@@ -93,7 +92,6 @@ const EventBox = () => {
                   <Card.Text>TEL {doctor?.data[showData].phone}</Card.Text>
                   <Card.Text>{doctor?.data[showData].email}</Card.Text> */}
             </Card.Body>
-          </Card>
         </Modal.Body>
       </Modal>
     </div>
