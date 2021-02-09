@@ -1,29 +1,61 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {faEdit} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Button, Container, Image, Form, Modal, Row, Col} from "react-bootstrap";
+import {API_GET_USER_INFO, API_GET_USER_UPDATE, IMAGE_URL} from "../../apis";
+import {useNavigate} from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ProfileTitle = () => {
-  const [username] = useState(
-    localStorage.getItem("firstName") + " " + localStorage.getItem("lastName")
-  );
-  const [email] = useState(localStorage.getItem("email"));
+  const [userInfo, setUserInfo] = useState(null);
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  useEffect(() => {
+    API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
+      setUserInfo(result?.data);
+    });
+  }, [show]);
+  const navigate = useNavigate();
+
   const [editProfileForm, setEditProfileForm] = useState({
     firstName: "",
     lastName: "",
   });
+
+  const userUpdate = (e) => {
+    e.preventDefault()
+    API_GET_USER_UPDATE(localStorage.getItem("id"), editProfileForm)
+      .then(() => {
+        Swal.fire("สำเร็จ!", "เปลี่ยนแปลงข้อมูลสำเร็จ!", "success").then(() =>
+          handleClose()
+        );
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: error?.error,
+          text: error?.message,
+        });
+      });
+  };
   return (
     <div className="profile-title text-uppercase">
       <div className="profile-title-bg scroll-num py-5">
         <Container className="text-center">
-          <Image src="/image/image 19.png" className="about-team-circle" />
-          <p className="h1 pt-4">{username}</p>
-          <p className="h1 pt-2">{email}</p>
+          <Image
+            src={
+              userInfo?.picture
+                ? IMAGE_URL + userInfo?.picture
+                : "https://chiccarrent.com/files/images/default-placeholder.png"
+            }
+            alt={userInfo?.firstName + " " + userInfo?.LastName}
+            className="about-team-circle"
+          />
+          <p className="h1 pt-4">{userInfo?.firstName + " " + userInfo?.LastName}</p>
+          <p className="h1 pt-2">{userInfo?.email}</p>
           <div className="pt-2">
             <Button variant="light" className="text-dark" onClick={handleShow}>
               EDIT <FontAwesomeIcon icon={faEdit} />
@@ -98,7 +130,7 @@ const ProfileTitle = () => {
                     </button>
                   </Col>
                   <Col>
-                    <button className="btn btn-lg btn-success btn-block text-uppercase mb-3">
+                    <button className="btn btn-lg btn-success btn-block text-uppercase mb-3" onClick={(e) => userUpdate(e)}>
                       <h4 className="m-0">OK</h4>
                     </button>
                   </Col>

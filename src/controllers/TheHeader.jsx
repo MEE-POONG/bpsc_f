@@ -1,20 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {Navbar, Nav, Image, NavDropdown} from "react-bootstrap";
 // import routes from '../routes'
 import {NavLink, useNavigate} from "react-router-dom";
 import Notification from "./TheNotification";
 import TheLogin from "./TheLogin";
-import {
-  faUser,
-  faBell,
-  faPen,
-  faSignOutAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import {faUser, faBell, faPen, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {API_GET_USER_INFO, API_GET_USER_UPDATE, IMAGE_URL} from "../apis";
 
 const TheHeader = () => {
   let navigate = useNavigate();
+  const [userInfo, setUserInfo] = useState(null);
 
+  useEffect(() => {
+    API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
+      setUserInfo(result?.data);
+    });
+  }, []);
   return (
     <>
       <Navbar
@@ -63,8 +65,12 @@ const TheHeader = () => {
                         <a href={() => {}}>
                           <span className="notify-badge">NEW</span>
                           <img
-                            src="http://placehold.it/200x200"
-                            alt=""
+                            src={
+                              userInfo?.picture
+                                ? IMAGE_URL + userInfo?.picture
+                                : "https://chiccarrent.com/files/images/default-placeholder.png"
+                            }
+                            alt={userInfo?.firstName + " " + userInfo?.LastName}
                             width="50px"
                             height="50px"
                             style={{borderRadius: "50%"}}
