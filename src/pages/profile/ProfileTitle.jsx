@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from "react";
-import {faEdit} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {Button, Container, Image, Form, Modal, Row, Col} from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Container, Image, Form, Modal, Row, Col } from "react-bootstrap";
 import {
   API_GET_USER_INFO,
   API_GET_USER_UPDATE,
   API_GET_USER_UPDATE_PHOTO,
   IMAGE_URL,
 } from "../../apis";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ProfileTitle = () => {
@@ -95,20 +95,20 @@ const ProfileTitle = () => {
           onHide={handleClose}
           backdrop="static"
           keyboard={false}
-          className="d-flex justify-content-center"
+          className="d-flex justify-content-center profile-popup-edit"
+          // bsPrefix="profile-popup-edit"
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Container className="text-center">
-              <div>
                 <div class="avatar-upload">
                   <div class="avatar-edit">
-                    <input
+                    {/* <input
                       type="file"
                       id="imageUpload"
                       accept=".png, .jpg, .jpeg"
                       onChange={(e) => userUpdatePhoto(e)}
-                    />
+                    /> */}
                     <label for="imageUpload"></label>
                   </div>
                   <div class="avatar-preview">
@@ -116,23 +116,21 @@ const ProfileTitle = () => {
                       id="imagePreview"
                       style={{
                         backgroundImage: `url(
-              ${
-                userInfo?.picture
-                  ? IMAGE_URL + userInfo?.picture
-                  : "https://chiccarrent.com/files/images/default-placeholder.png"
-              }
-            )`,
+                        ${userInfo?.picture
+                            ? IMAGE_URL + userInfo?.picture
+                            : "https://chiccarrent.com/files/images/default-placeholder.png"
+                          }
+                        )`,
                       }}
                     ></div>
                   </div>
                 </div>
-              </div>
 
               <Form className="text-left">
                 <Form.Group controlId="formBasicFirstName">
                   <Form.Label>
                     <h4>
-                      ชื่อ<span style={{color: "red"}}>*</span>
+                      ชื่อ<span style={{ color: "red" }}>*</span>
                     </h4>
                   </Form.Label>
                   <Form.Control
@@ -140,14 +138,14 @@ const ProfileTitle = () => {
                     type="text"
                     placeholder="ชื่อ"
                     onChange={(e) =>
-                      setEditProfileForm({...editProfileForm, firstName: e.target.value})
+                      setEditProfileForm({ ...editProfileForm, firstName: e.target.value })
                     }
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicLastName">
                   <Form.Label>
                     <h4>
-                      นามสกุล<span style={{color: "red"}}>*</span>
+                      นามสกุล<span style={{ color: "red" }}>*</span>
                     </h4>
                   </Form.Label>
                   <Form.Control
@@ -155,7 +153,7 @@ const ProfileTitle = () => {
                     type="text"
                     placeholder="นามสกุล"
                     onChange={(e) =>
-                      setEditProfileForm({...editProfileForm, lastName: e.target.value})
+                      setEditProfileForm({ ...editProfileForm, lastName: e.target.value })
                     }
                   />
                 </Form.Group>
