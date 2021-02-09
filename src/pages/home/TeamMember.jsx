@@ -1,14 +1,19 @@
-import React, {useState, useEffect} from "react";
-import {Container, Card, Button} from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container, Card, Button, Modal, Row, Col } from "react-bootstrap";
 
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
-import {API_GET_DOCTOR, IMAGE_URL} from "../../apis";
-import {useNavigate} from "react-router-dom";
+import { API_GET_DOCTOR, IMAGE_URL } from "../../apis";
+import { useNavigate } from "react-router-dom";
 
 const TeamMember = () => {
+  const [show, setShow] = useState(false);
+  const [showData, setShowData] = useState(0);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const handleShowData = (id) => setShowData(id);
   const [doctor, setDoctor] = useState(null);
   const navigate = useNavigate();
 
@@ -51,9 +56,12 @@ const TeamMember = () => {
             }}
           >
             {doctor?.data?.map(
-              ({id, firstName, lastName, email, phone, picture, content}, idx) => (
+              ({ id, firstName, lastName, email, phone, picture, content }, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="profile-card-2">
+                  <div className="profile-card-2" onClick={() => {
+                    handleShow();
+                    // handleShowData(idx);
+                  }}>
                     <img
                       className="img img-responsive"
                       src={
@@ -75,10 +83,39 @@ const TeamMember = () => {
             )}
           </Swiper>
         ) : null}
-        <div className="text-center my-5"onClick={() => navigate("/doctor/")}>
+        <div className="text-center my-5" onClick={() => navigate("/doctor/")}>
           <Button>MODE DOCTORS</Button>
         </div>
       </Container>
+      <Modal show={show}
+        onHide={handleClose}>
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>
+          <Row>
+            <Col lg="6">
+              {/* <img className="view-img"
+                src={
+                  doctor?.data[showData].picture
+                    ? IMAGE_URL + doctor?.data[showData].picture
+                    : "https://chiccarrent.com/files/images/default-placeholder.png"
+                }
+                alt={showData + 1}
+              /> */}
+            </Col>
+            <Col lg="6">
+              <Card>
+                <Card.Body>
+                  {/* <Card.Title>Dr.{doctor?.data[showData].firstName}</Card.Title>
+                  <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle>
+                  <Card.Text>{doctor?.data[showData].content}</Card.Text>
+                  <Card.Text>TEL {doctor?.data[showData].phone}</Card.Text>
+                  <Card.Text>{doctor?.data[showData].email}</Card.Text> */}
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };

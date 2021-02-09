@@ -1,13 +1,13 @@
 import moment from "moment";
-import React, {useState, useEffect} from "react";
-import {Container, Card} from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container, Card } from "react-bootstrap";
 
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
 
-import {API_GET_EVENT} from "../../apis";
+import { API_GET_EVENT } from "../../apis";
 
 const EventBox = () => {
   const [event, setEvent] = useState(null);
@@ -42,7 +42,7 @@ const EventBox = () => {
               }}
             >
               {event?.data?.map(
-                ({id, title, content, location, time, eventStart, eventEnd}, idx) => (
+                ({ id, title, content, location, time, eventStart, eventEnd }, idx) => (
                   <SwiperSlide>
                     <div>
                       <Card className={`bg-${idx > 3 ? 4 : idx + 1} height-293`}>
@@ -52,8 +52,8 @@ const EventBox = () => {
                             {moment(eventStart).format("MMM")}
                           </Card.Subtitle>
                           <Card.Text className="text-overflow-5">
-                            {title}
-                            {content}
+                            <Card.Title>{title}</Card.Title>
+                            <Card.Subtitle>{content}</Card.Subtitle>
                           </Card.Text>
                         </Card.Body>
                       </Card>
