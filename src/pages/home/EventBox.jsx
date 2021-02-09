@@ -1,13 +1,13 @@
 import moment from "moment";
-import React, { useState, useEffect } from "react";
-import { Container, Card, Modal } from "react-bootstrap";
+import React, {useState, useEffect} from "react";
+import {Container, Card, Modal} from "react-bootstrap";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
 
-import { API_GET_EVENT } from "../../apis";
+import {API_GET_EVENT} from "../../apis";
 
 const EventBox = () => {
   const [show, setShow] = useState(false);
@@ -47,13 +47,16 @@ const EventBox = () => {
               }}
             >
               {event?.data?.map(
-                ({ id, title, content, location, time, eventStart, eventEnd }, idx) => (
+                ({id, title, content, location, time, eventStart, eventEnd}, idx) => (
                   <SwiperSlide>
                     <div>
-                      <Card className={`bg-${idx > 3 ? 4 : idx + 1} height-293`} onClick={() => {
-                        handleShow();
-                        // handleShowData(idx);
-                      }}>
+                      <Card
+                        className={`bg-${idx > 3 ? 4 : idx + 1} height-293`}
+                        onClick={() => {
+                          handleShow();
+                          handleShowData(idx);
+                        }}
+                      >
                         <Card.Body>
                           <Card.Title>{moment(eventStart).format("DD")}</Card.Title>
                           <Card.Subtitle>
@@ -73,8 +76,7 @@ const EventBox = () => {
           ) : null}
         </div>
       </Container>
-      <Modal show={show}
-        onHide={handleClose}>
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           {/* <img className="view-img"
@@ -85,13 +87,13 @@ const EventBox = () => {
                 }
                 alt={showData + 1}
               /> */}
-            <Card.Body>
-              {/* <Card.Title>Dr.{doctor?.data[showData].firstName}</Card.Title>
-                  <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle>
-                  <Card.Text>{doctor?.data[showData].content}</Card.Text>
-                  <Card.Text>TEL {doctor?.data[showData].phone}</Card.Text>
-                  <Card.Text>{doctor?.data[showData].email}</Card.Text> */}
-            </Card.Body>
+          <Card.Body>
+            <Card.Title><h2>{event?.data[showData].title}</h2></Card.Title>
+            <Card.Subtitle><h3>{event?.data[showData].content}</h3></Card.Subtitle>
+            {/* <Card.Text>{event?.data[showData].content}</Card.Text>
+                  <Card.Text>TEL {event?.data[showData].phone}</Card.Text>
+                  <Card.Text>{event?.data[showData].email}</Card.Text> */}
+          </Card.Body>
         </Modal.Body>
       </Modal>
     </div>

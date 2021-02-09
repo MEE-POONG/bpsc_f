@@ -94,8 +94,8 @@ const DoctorCard = () => {
             <Col lg="6">
               <Card>
                 <Card.Body>
-                  <Card.Title>Dr.{doctor?.data[showData].firstName}</Card.Title>
-                  <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle>
+                  <Card.Title>{doctor?.data[showData].firstName} {doctor?.data[showData].lastName}</Card.Title>
+                  {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
                   <Card.Text>{doctor?.data[showData].content}</Card.Text>
                   <Card.Text>TEL {doctor?.data[showData].phone}</Card.Text>
                   <Card.Text>{doctor?.data[showData].email}</Card.Text>

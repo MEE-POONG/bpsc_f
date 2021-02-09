@@ -35,7 +35,7 @@ const ProfileMenuFolder = () => {
                 },
                 idx
               ) => (
-                <Card className="box-card-shadow border-radius-25">
+                <Card className="box-card-shadow border-radius-25 mb-5">
                   <Card.Body className="image">
                     <Row>
                       <Col lg="4">
