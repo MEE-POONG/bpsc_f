@@ -76,13 +76,13 @@ const DoctorCard = () => {
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
-        className="d-flex justify-content-center"
+        className="d-flex justify-content-center doctor-page"
       >
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <Row>
             <Col lg="6">
-              <Image
+            <img className="view-img"
                 src={
                   doctor?.data[showData].picture
                     ? IMAGE_URL + doctor?.data[showData].picture
@@ -99,7 +99,6 @@ const DoctorCard = () => {
                   <Card.Text>{doctor?.data[showData].content}</Card.Text>
                   <Card.Text>TEL {doctor?.data[showData].phone}</Card.Text>
                   <Card.Text>{doctor?.data[showData].email}</Card.Text>
-                  {/* <Card.Text>Hospital</Card.Text> */}
                 </Card.Body>
               </Card>
             </Col>

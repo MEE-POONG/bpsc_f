@@ -65,7 +65,7 @@ const Abstain = () => {
                               ? IMAGE_URL + elearningPicture
                               : "https://chiccarrent.com/files/images/default-placeholder.png"
                           }
-                          style={{height: "359px"}}
+                          style={{height: "359px",objectFit: "cover"}}
                           alt={title}
                           className="card-img-top"
                         />
