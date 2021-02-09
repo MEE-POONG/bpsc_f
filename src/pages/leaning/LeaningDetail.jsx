@@ -10,7 +10,7 @@ import {
   Media,
 } from "react-bootstrap";
 import {NavLink} from "react-router-dom";
-import {faArrowRight, faHeart, faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faArrowRight, faEye, faHeart, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {API_GET_LEARNING, IMAGE_URL} from "../../apis";
@@ -120,11 +120,8 @@ const LeaningDetail = () => {
                     <Card.Footer>
                       <Card.Text className="mr-auto ">
                         <span className="d-flex justify-content-between">
-                          <span
-                            style={{color: "#26BEB4"}}
-                            onClick={() => navigate("/e-leaning/" + id)}
-                          >
-                            READ MORE <FontAwesomeIcon icon={faArrowRight} />
+                          <span style={{color: "#26BEB4"}}>
+                            <FontAwesomeIcon icon={faEye} /> {view}
                           </span>
                           <span style={{color: "#26BEB4"}}>
                             <FontAwesomeIcon icon={faHeart} /> {favorite}

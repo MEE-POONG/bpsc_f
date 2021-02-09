@@ -95,7 +95,7 @@ const Abstain = () => {
                       <Card.Footer>
                         <Card.Text className="mr-auto">
                           <span className="d-flex justify-content-between">
-                            <span
+                            {/* <span
                               style={{color: "#26BEB4"}}
                               onClick={() => navigate("/e-leaning/" + id)}
                             >
@@ -103,7 +103,7 @@ const Abstain = () => {
                               <i style={{fontSize: "14px"}} className="fa pl-2">
                                 &#xf061;
                               </i>
-                            </span>
+                            </span> */}
                             <div>
                               <span className="mr-1">
                                 <i className="fa fa-eye"></i> {view}
