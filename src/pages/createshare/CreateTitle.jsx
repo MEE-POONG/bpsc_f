@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {useState} from "react";
 import {Container, Image, Form, Row, Col, Badge} from "react-bootstrap";
 import CKEditor from "ckeditor4-react";
 
-import {API_CREATE_SHARING, IMAGE_URL} from "../../apis";
+import {API_CREATE_SHARING, API_GET_TAGS, IMAGE_URL} from "../../apis";
 
 import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
+import {Typeahead} from "react-bootstrap-typeahead";
+import "react-bootstrap-typeahead/css/Typeahead.css";
 
 const CreateTitle = () => {
   const [sharingData, setSharingData] = useState({
@@ -15,6 +17,15 @@ const CreateTitle = () => {
     isDraft: "true",
     tags: [{id: 1}],
   });
+  const [tagData, setTagData] = useState(null);
+
+  useEffect(() => {
+    API_GET_TAGS()
+      .then((e) => {
+        setTagData(e?.data);
+      })
+      .catch();
+  }, []);
   const createSharing = () => {
     API_CREATE_SHARING(sharingData)
       .then((e) => {
@@ -170,15 +181,28 @@ const CreateTitle = () => {
           </div>
         </Container>
         <Container className="input-tag">
-          <Badge pill variant="primary">
+          {/* <Badge pill variant="primary">
             Primary
-          </Badge>
-          <Form>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>รายละเอียดย่อของแชร์ (0/300)</Form.Label>
-              <Form.Control type="text" as="textarea" />
-            </Form.Group>
-          </Form>
+          </Badge> */}
+          {/* <Form> */}
+          {/* <Form.Group controlId="formBasicEmail"> */}
+          {/* <Form.Label>รายละเอียดย่อของแชร์ (0/300)</Form.Label> */}
+          {/* <Form.Control type="text" as="textarea" /> */}
+          {/* </Form.Group> */}
+          {/* </Form> */}
+          <Form.Group style={{marginTop: "20px"}}>
+            <Form.Label>รายละเอียดย่อของแชร์</Form.Label>
+            <Typeahead
+              id="basic-typeahead-multiple"
+              labelKey="name"
+              multiple
+              onChange={(e) => setSharingData({...sharingData, tags: e})}
+              options={tagData?.data}
+              labelKey="title"
+              placeholder="Choose several states..."
+              selected={sharingData.tag}
+            />
+          </Form.Group>
         </Container>
       </div>
     </div>
