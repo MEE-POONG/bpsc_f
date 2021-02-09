@@ -190,6 +190,14 @@ export const API_GET_GALLERY_BY_ID = (id, page = "", size = "") => {
 
   return axios(config);
 };
+export const API_GET_GALLERY_PHOTO_BY_ID = (id, page = "", size = "") => {
+  var config = {
+    method: "get",
+    url: `/galleryPhoto/${id}?size=${size}&page=${page}`,
+  };
+
+  return axios(config);
+};
 export const API_GET_EVENT = () => {
   var config = {
     method: "get",
@@ -206,6 +214,15 @@ export const API_GET_DOCTOR = () => {
 
   return axios(config);
 };
+export const API_GET_FAVORITE_SHARING = (page = "", size = "") => {
+  var config = {
+    method: "get",
+    url: `/favoriteSharing?size=${size}&page=${page}`,
+  };
+
+  return axios(config);
+};
+
 // export const API_LOGIN = () => {
 //   // Add a response interceptor
 //   return axios.interceptors.response.use(

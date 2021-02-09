@@ -8,14 +8,15 @@ const DoctorCard = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleShowData = (id) => setShowData(id);
+  const [page, setPage] = useState(1);
 
   const [doctor, setDoctor] = useState(null);
 
   useEffect(() => {
-    API_GET_DOCTOR().then((result) => {
+    API_GET_DOCTOR(page).then((result) => {
       setDoctor(result?.data);
     });
-  }, []);
+  }, [page]);
 
   return (
     <Container className="detail">
@@ -49,13 +50,25 @@ const DoctorCard = () => {
       </Row>
       <div>
         <Pagination className="my-5" style={{float: "right"}}>
-          <Pagination.First />
-          <Pagination.Prev />
-          <Pagination.Item>{1}</Pagination.Item>
-          <Pagination.Item active>{2}</Pagination.Item>
-          <Pagination.Item>{3}</Pagination.Item>
-          <Pagination.Next />
-          <Pagination.Last />
+          {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+          {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+          {page > 1 && (
+            <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+              {page - 1}
+            </Pagination.Item>
+          )}
+          {<Pagination.Item active>{page}</Pagination.Item>}
+          {page < doctor?.totalPage && (
+            <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+              {page + 1}
+            </Pagination.Item>
+          )}
+          {page < doctor?.totalPage && (
+            <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+          )}
+          {page < doctor?.totalPage && (
+            <Pagination.Last onClick={() => setPage(doctor?.totalPage)} />
+          )}
         </Pagination>
       </div>
       <Modal

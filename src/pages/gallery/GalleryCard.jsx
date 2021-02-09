@@ -21,48 +21,37 @@ const GalleryCard = () => {
   return (
     <Container className="detail">
       <Row className="py-5">
-        {gallery?.data?.map(
-          ({
-            id,
-            title,
-            view,
-            favorite,
-            galleryPicture,
-            firstName,
-            lastName,
-            userPicture,
-            content,
-          }) => (
-            <Col lg="3" md="4" sm="6" className="mb-5">
-              <NavLink to="/gallery/12" className="nav-link">
-                <Card className="box-card-shadow">
-                  <Card.Body className="image">
-                    <Card.Img src="/image/image7.png" alt="" className="card-img-top" />
-                  </Card.Body>
-                  <Card.Body>
-                    <Card.Title>HOW TO BA คนไข้ที่มีพฤติกรรมดื่มสุราหนัก</Card.Title>
-                    <Card.Text className="subtitle-text">
-                      Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consecteturLorem ipsum dolor sit amet consecteturLorem
-                      ipsum dolor sit amet consecteturLorem ipsum dolor sit amet
-                      consecteturLorem ipsum dolor sit amet consecteturLorem ipsum dolor
-                      sit amet consectetur
-                    </Card.Text>
-                  </Card.Body>
-                  <Card.Footer>
-                    <Card.Text className="mr-auto">
-                      <span style={{color: "#26BEB4"}}>READ MORE</span>
-                      <span style={{color: "#26BEB4"}}>
-                        <FontAwesomeIcon icon={faArrowRight} />
-                      </span>
-                    </Card.Text>
-                  </Card.Footer>
-                </Card>
-              </NavLink>
-            </Col>
-          )
-        )}
+        {gallery?.data?.map(({id, title, content, photo}) => (
+          <Col lg="3" md="4" sm="6" className="mb-5">
+            <NavLink to={`/gallery/${id}`} className="nav-link">
+              <Card className="box-card-shadow">
+                <Card.Body className="image">
+                  <Card.Img
+                    src={
+                      photo
+                        ? IMAGE_URL + photo
+                        : "https://chiccarrent.com/files/images/default-placeholder.png"
+                    }
+                    alt={title}
+                    className="card-img-top"
+                  />
+                </Card.Body>
+                <Card.Body>
+                  <Card.Title>{title}</Card.Title>
+                  <Card.Text className="subtitle-text">{content}</Card.Text>
+                </Card.Body>
+                <Card.Footer>
+                  <Card.Text className="mr-auto">
+                    <span style={{color: "#26BEB4"}}>READ MORE</span>
+                    <span style={{color: "#26BEB4"}}>
+                      <FontAwesomeIcon icon={faArrowRight} />
+                    </span>
+                  </Card.Text>
+                </Card.Footer>
+              </Card>
+            </NavLink>
+          </Col>
+        ))}
       </Row>
 
       <div>

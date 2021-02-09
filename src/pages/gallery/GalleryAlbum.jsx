@@ -1,43 +1,152 @@
-import React, {useState} from "react";
-import {Container, Row, Col, Image, Modal, Card} from "react-bootstrap";
+import React, {useState, useEffect} from "react";
+import {
+  Container,
+  Row,
+  Col,
+  Image,
+  Modal,
+  Card,
+  Button,
+  Pagination,
+} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
+
+import {useParams} from "react-router-dom";
+
+import {API_GET_GALLERY_BY_ID, API_GET_GALLERY_PHOTO_BY_ID, IMAGE_URL} from "../../apis";
+import moment from "moment";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
+import {
+  faArrowRight,
+  faChevronLeft,
+  faChevronRight,
+  faChevronDown,
+  faEye,
+  faHeart,
+} from "@fortawesome/free-solid-svg-icons";
 const GalleryAlbum = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const navigate = useNavigate();
+
+  const [page, setPage] = useState(1);
+  const {id} = useParams();
+  const [gallery, setGallery] = useState(null);
+  const [galleryPhoto, setGalleryPhoto] = useState(null);
+  const [galleryPhotoID, setGalleryPhotoID] = useState(null);
+  const setPhotoID = (idx) => setGalleryPhotoID(idx);
+  const setPhotoLeftID = () => setGalleryPhotoID((e) => (e -= 1));
+  const setPhotoRightID = () => setGalleryPhotoID((e) => (e += 1));
+  useEffect(() => {
+    API_GET_GALLERY_BY_ID(id).then((result) => {
+      setGallery(result?.data);
+    });
+  }, []);
+  useEffect(() => {
+    API_GET_GALLERY_PHOTO_BY_ID(id, page).then((result) => {
+      setGalleryPhoto(result?.data);
+    });
+  }, [page]);
+
   return (
-    <div className="gallery-page text-uppercase">
-      <Container className="title-album ">
-        <Card.Body className="text-center">
-          <Card.Title>Album Name</Card.Title>
-          <Card.Text className="team-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore ...
-          </Card.Text>
-          <div className="btn-back mt-5" onClick={() => navigate("/gallery")}>
-            BAck to Gallery
-          </div>
-        </Card.Body>
-        <Row>
-          <Col lg="3">
-            <Image src="/image/image7.png" onClick={handleShow} />
-          </Col>
-        </Row>
-      </Container>
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-        className="d-flex justify-content-center"
-      >
-        <Modal.Header closeButton></Modal.Header>
-        <Modal.Body>
-          <Image src="/image/home/home1.png" />
-        </Modal.Body>
-      </Modal>
-    </div>
+    <Container className="detail">
+      <div className="gallery-page text-uppercase">
+        <Container className="title-album ">
+          <Card.Body className="text-center">
+            <Card.Title>{gallery?.gallery?.title}</Card.Title>
+            <Card.Text className="team-subtitle">{gallery?.gallery?.content}</Card.Text>
+            <div className="btn-back mt-5" onClick={() => navigate("/gallery")}>
+              BAck to Gallery
+            </div>
+          </Card.Body>
+          <Row>
+            {galleryPhoto?.data?.map(({id, title, description, photo}, idx) => (
+              <Col lg="3" className="pt-4">
+                <Image
+                  src={
+                    photo
+                      ? IMAGE_URL + photo
+                      : "https://chiccarrent.com/files/images/default-placeholder.png"
+                  }
+                  alt={title}
+                  onClick={() => {
+                    handleShow();
+                    setPhotoID(idx);
+                  }}
+                />
+              </Col>
+            ))}
+          </Row>
+        </Container>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+          className="d-flex justify-content-center"
+        >
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>
+            <Row>
+              <Col style={{placeSelf: "center"}}>
+                {galleryPhotoID < 1 ? null : (
+                  <FontAwesomeIcon
+                    onClick={setPhotoLeftID}
+                    style={{fontSize: "xxx-large"}}
+                    icon={faChevronLeft}
+                  />
+                )}
+              </Col>
+              <Col>
+                <Image
+                  src={
+                    galleryPhoto?.data[galleryPhotoID]?.photo
+                      ? IMAGE_URL + galleryPhoto?.data[galleryPhotoID]?.photo
+                      : "https://chiccarrent.com/files/images/default-placeholder.png"
+                  }
+                  alt={galleryPhoto?.data[galleryPhotoID]?.title}
+                />
+              </Col>
+              <Col style={{placeSelf: "center"}}>
+                {galleryPhotoID >= galleryPhoto?.data.length - 1 ? null : (
+                  <FontAwesomeIcon
+                    onClick={setPhotoRightID}
+                    style={{fontSize: "xxx-large"}}
+                    icon={faChevronRight}
+                  />
+                )}
+              </Col>
+            </Row>
+          </Modal.Body>
+        </Modal>
+
+        <div className="detail">
+          <Pagination className="my-5" style={{float: "right"}}>
+            {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+            {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+            {page > 1 && (
+              <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+                {page - 1}
+              </Pagination.Item>
+            )}
+            {<Pagination.Item active>{page}</Pagination.Item>}
+            {page < galleryPhoto?.totalPage && (
+              <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+                {page + 1}
+              </Pagination.Item>
+            )}
+            {page < galleryPhoto?.totalPage && (
+              <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+            )}
+            {page < galleryPhoto?.totalPage && (
+              <Pagination.Last onClick={() => setPage(galleryPhoto?.totalPage)} />
+            )}
+          </Pagination>
+        </div>
+      </div>
+    </Container>
   );
 };
 
