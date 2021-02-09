@@ -1,6 +1,6 @@
 import moment from "moment";
 import React, { useState, useEffect } from "react";
-import { Container, Card } from "react-bootstrap";
+import { Container, Card, Modal } from "react-bootstrap";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,6 +10,11 @@ import "swiper/swiper.scss";
 import { API_GET_EVENT } from "../../apis";
 
 const EventBox = () => {
+  const [show, setShow] = useState(false);
+  const [showData, setShowData] = useState(0);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const handleShowData = (id) => setShowData(id);
   const [event, setEvent] = useState(null);
 
   useEffect(() => {
@@ -45,7 +50,10 @@ const EventBox = () => {
                 ({ id, title, content, location, time, eventStart, eventEnd }, idx) => (
                   <SwiperSlide>
                     <div>
-                      <Card className={`bg-${idx > 3 ? 4 : idx + 1} height-293`}>
+                      <Card className={`bg-${idx > 3 ? 4 : idx + 1} height-293`} onClick={() => {
+                        handleShow();
+                        // handleShowData(idx);
+                      }}>
                         <Card.Body>
                           <Card.Title>{moment(eventStart).format("DD")}</Card.Title>
                           <Card.Subtitle>
@@ -65,6 +73,29 @@ const EventBox = () => {
           ) : null}
         </div>
       </Container>
+      <Modal show={show}
+        onHide={handleClose}>
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>
+          {/* <img className="view-img"
+                src={
+                  doctor?.data[showData].picture
+                    ? IMAGE_URL + doctor?.data[showData].picture
+                    : "https://chiccarrent.com/files/images/default-placeholder.png"
+                }
+                alt={showData + 1}
+              /> */}
+          <Card>
+            <Card.Body>
+              {/* <Card.Title>Dr.{doctor?.data[showData].firstName}</Card.Title>
+                  <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle>
+                  <Card.Text>{doctor?.data[showData].content}</Card.Text>
+                  <Card.Text>TEL {doctor?.data[showData].phone}</Card.Text>
+                  <Card.Text>{doctor?.data[showData].email}</Card.Text> */}
+            </Card.Body>
+          </Card>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };
