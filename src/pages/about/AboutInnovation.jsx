@@ -13,16 +13,16 @@ const AboutInnovation = () => {
       <div className="mt-5 detail">
         <Container className="text-center">
           <Row>
-            <Col lg="3" md="3" >
+            <Col lg="3" md="3" sm="6">
                 <Card.Img src="image/about/innovation-1.png" />
             </Col>
-            <Col lg="3" md="3">
+            <Col lg="3" md="3" sm="6">
                 <Card.Img src="image/about/innovation-2.png" />
             </Col>
-            <Col lg="3" md="3">
+            <Col lg="3" md="3" sm="6">
                 <Card.Img src="image/about/innovation-3.png" />
             </Col>
-            <Col lg="3" md="3">
+            <Col lg="3" md="3" sm="6">
                 <Card.Img src="image/about/innovation-4.png" />
             </Col>
           </Row>
