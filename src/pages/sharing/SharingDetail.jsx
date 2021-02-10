@@ -99,7 +99,7 @@ const SharingDetail = () => {
                       className="card-img-top"
                     />
                   </Card.Body>
-                  <Card.Body>
+                  <Card.Body onClick={() => navigate("/sharing/" + id)}>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text className="subtitle-text">{content}</Card.Text>
                   </Card.Body>

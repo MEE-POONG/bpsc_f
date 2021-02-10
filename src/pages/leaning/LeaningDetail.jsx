@@ -110,7 +110,7 @@ const LeaningDetail = () => {
                         className="card-img-top"
                       />
                     </Card.Body>
-                    <Card.Body>
+                    <Card.Body onClick={() => navigate(`/e-leaning/${id}`)}>
                       <Card.Title>
                         <Media>
                           <Card className="date absolute">

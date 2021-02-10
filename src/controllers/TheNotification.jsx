@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {Modal, Image, Row} from "react-bootstrap";
 import {
   faBell,
@@ -7,11 +7,20 @@ import {
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {API_GET_NOTIFICATION, IMAGE_URL} from "../apis";
 
 const TheNotification = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [notification, setNotification] = useState(null);
+  useEffect(() => {
+    API_GET_NOTIFICATION().then((result) => {
+      setNotification(result?.data);
+    });
+  }, []);
+
   return (
     <>
       <span onClick={handleShow}> การแจ้งเตือน </span>
@@ -24,211 +33,23 @@ const TheNotification = () => {
       >
         <Modal.Header closeButton>
           <Modal.Title>
-            <FontAwesomeIcon icon={faBell} className="icon-title" />
+            <FontAwesomeIcon icon={faBell} className="icon-title pr-2" />
             การแจ้งเตือน
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="scroll">
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faCommentAlt} className="icon-btn" />
-              <span className="ml-3">15 ข้อความใหม่ ในแชร์ของคุณ</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faHeart} className="icon-btn" />
-              <span className="ml-3">27 ถูกใจแชร์ของคุณ</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faCommentAlt} className="icon-btn" />
-              <span className="ml-3">15 ข้อความใหม่ ในแชร์ของคุณ</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
-            <Row className="blue-green mx-0 mb-4">
-              <Image src="image/home/home1.png" roundedCircle />
-              <FontAwesomeIcon icon={faFileDownload} className="icon-btn" />
-              <span className="ml-3">มีการอัพโหลด E-Learning ใหม่</span>
-            </Row>
+            {notification?.data?.map(({id, type, typeId, content, isSeen}) => (
+              <Row className="blue-green mx-0 mb-4">
+                {/* <Image src="image/home/home1.png" roundedCircle />
+                <FontAwesomeIcon icon={faCommentAlt} className="icon-btn" /> */}
+                <span className="ml-3">{content}</span>
+              </Row>
+            ))}
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Row className="blue-green">
+          <Row className="blue-green" onClick={handleClose}>
             <span>OK</span>
           </Row>
         </Modal.Footer>

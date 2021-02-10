@@ -18,6 +18,8 @@ const TheHeader = () => {
   let navigate = useNavigate();
   const [userInfo, setUserInfo] = useState(null);
   const [getNotification, setGetNotification] = useState(0);
+  const [readHover, setReadHover] = useState(0);
+  const handleHover = () => setReadHover((e) => (e += 1));
   useEffect(() => {
     API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
       setUserInfo(result?.data);
@@ -31,7 +33,7 @@ const TheHeader = () => {
   };
   useEffect(() => {
     checkNotification();
-  }, [moment().format("YYYY MM DD HH mm"), userInfo]);
+  }, [moment().format("YYYY MM DD HH mm"), userInfo, readHover]);
 
   return (
     <>
@@ -40,6 +42,7 @@ const TheHeader = () => {
         className="container-xl py-5"
         style={{boxShadow: "none"}}
         expand="lg"
+        onMouseOver={handleHover}
       >
         {/* <Navbar bg="light" variant="light"> */}
         <Navbar.Brand href="/">
@@ -79,7 +82,9 @@ const TheHeader = () => {
                     <div className="col-sm-2">
                       <div className="nav-item">
                         <a href={() => {}}>
-                          {getNotification && <span className="notify-badge">{getNotification}</span>}
+                          {getNotification ? (
+                            <span className="notify-badge">{getNotification}</span>
+                          ) : null}
                           <img
                             src={
                               userInfo?.picture
