@@ -152,6 +152,7 @@ const LeaningList = () => {
             ))}
           </div>
         </Col>
+
         <Col xs="12" lg="12" className="mt-5 comment align-items-center">
           <Media>
             <img
@@ -169,8 +170,9 @@ const LeaningList = () => {
               <FormControl
                 bsPrefix="input-comment"
                 as="textarea"
-                placeholder="Add a Public Comment..."
+                placeholder={`${localStorage.getItem("token") ? 'Add a Public Comment...' : 'กรุณาเข้าสู่ระบบเพื่อแสดงความคิดเห็น'}`}
                 onChange={(e) => setCreateComment(e.target.value)}
+                disabled={!localStorage.getItem("token")}
               />
             </Media.Body>
             <div
@@ -182,12 +184,14 @@ const LeaningList = () => {
                 type="button"
                 className="btn btn-success about-talk-with-us-btn-success"
                 onClick={() => handleCreateComment()}
+                disabled={!localStorage.getItem("token")}
               >
                 SEND
               </button>
             </div>
           </Media>
         </Col>
+      
       </Row>
       <Container fluid className="list mb-5 py-5">
         {comment?.data?.map(
