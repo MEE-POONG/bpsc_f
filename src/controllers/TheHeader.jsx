@@ -112,7 +112,8 @@ const TheHeader = () => {
                   <FontAwesomeIcon icon={faUser} /> &nbsp; โปรไฟล์ของฉัน
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <FontAwesomeIcon icon={faBell} /> &nbsp; <Notification />
+                  {/* <FontAwesomeIcon icon={faBell} /> &nbsp;  */}
+                  <Notification />
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={() => navigate("create-share")}>
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์

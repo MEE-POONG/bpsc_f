@@ -23,7 +23,9 @@ const TheNotification = () => {
 
   return (
     <>
-      <span onClick={handleShow}> การแจ้งเตือน </span>
+      <span onClick={handleShow}>
+        <FontAwesomeIcon icon={faBell} /> &nbsp; การแจ้งเตือน{" "}
+      </span>
       <Modal
         show={show}
         onHide={handleClose}

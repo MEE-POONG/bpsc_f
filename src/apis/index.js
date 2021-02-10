@@ -374,14 +374,14 @@ export const API_GET_USER_UPDATE = async (id, userData) => {
 
   return axios(config);
 };
-export const API_GET_USER_PWD_UPDATE = async (id, userData) => {
+export const API_GET_USER_PWD_UPDATE = async (userData) => {
   const reft = await REFRESH_TOKEN();
 
   var data = JSON.stringify(userData);
 
   var config = {
     method: "put",
-    url: `/user/changePassword/${id}`,
+    url: `/user/changePassword/`,
     headers: {
       Authorization: "Bearer " + reft?.accessToken,
       "Content-Type": "application/json",

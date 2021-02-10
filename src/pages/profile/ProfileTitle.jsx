@@ -19,6 +19,10 @@ const ProfileTitle = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [showPwd, setShowPwd] = useState(false);
+  const handleClosePwd = () => setShowPwd(false);
+  const handleShowPwd = () => setShowPwd(true);
+
   useEffect(() => {
     handleGetUserInfo();
   }, []);
@@ -64,7 +68,7 @@ const ProfileTitle = () => {
   };
   const userPwdUpdate = (e) => {
     e.preventDefault();
-    API_GET_USER_PWD_UPDATE(localStorage.getItem("id"), editPwdForm)
+    API_GET_USER_PWD_UPDATE(editPwdForm)
       .then(() => {
         Swal.fire("สำเร็จ!", "เปลี่ยนแปลงรหัสผ่านสำเร็จ!", "success").then(() => {
           handleClose();
@@ -130,22 +134,23 @@ const ProfileTitle = () => {
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Container className="text-center">
-                <div class="avatar-upload">
-                  <div class="avatar-edit">
-                    <input
-                      type="file"
-                      id="imageUpload"
-                      accept=".png, .jpg, .jpeg"
-                      onChange={(e) => userUpdatePhoto(e)}
-                    />
-                    <label for="imageUpload"></label>
-                  </div>
-                  <div class="avatar-preview">
-                    <div
-                      id="imagePreview"
-                      style={{
-                        backgroundImage: `url(
-                        ${userInfo?.picture
+              <div class="avatar-upload">
+                <div class="avatar-edit">
+                  <input
+                    type="file"
+                    id="imageUpload"
+                    accept=".png, .jpg, .jpeg"
+                    onChange={(e) => userUpdatePhoto(e)}
+                  />
+                  <label for="imageUpload"></label>
+                </div>
+                <div class="avatar-preview">
+                  <div
+                    id="imagePreview"
+                    style={{
+                      backgroundImage: `url(
+                        ${
+                          userInfo?.picture
                             ? IMAGE_URL + userInfo?.picture
                             : "https://chiccarrent.com/files/images/default-placeholder.png"
                         }
@@ -154,59 +159,133 @@ const ProfileTitle = () => {
                   ></div>
                 </div>
               </div>
+              {!showPwd ? (
+                <Form className="text-left">
+                  <Form.Group controlId="formBasicFirstName">
+                    <Form.Label>
+                      <h4>
+                        ชื่อ<span style={{color: "red"}}>*</span>
+                      </h4>
+                    </Form.Label>
+                    <Form.Control
+                      size="lg"
+                      type="text"
+                      placeholder="ชื่อ"
+                      value={editProfileForm.firstName}
+                      onChange={(e) =>
+                        setEditProfileForm({
+                          ...editProfileForm,
+                          firstName: e.target.value,
+                        })
+                      }
+                    />
+                  </Form.Group>
+                  <Form.Group controlId="formBasicLastName">
+                    <Form.Label>
+                      <h4>
+                        นามสกุล<span style={{color: "red"}}>*</span>
+                      </h4>
+                    </Form.Label>
+                    <Form.Control
+                      size="lg"
+                      type="text"
+                      placeholder="นามสกุล"
+                      value={editProfileForm.lastName}
+                      onChange={(e) =>
+                        setEditProfileForm({...editProfileForm, lastName: e.target.value})
+                      }
+                    />
+                  </Form.Group>
 
-              <Form className="text-left">
-                <Form.Group controlId="formBasicFirstName">
-                  <Form.Label>
-                    <h4>
-                      ชื่อ<span style={{color: "red"}}>*</span>
-                    </h4>
-                  </Form.Label>
-                  <Form.Control
-                    size="lg"
-                    type="text"
-                    placeholder="ชื่อ"
-                    value={editProfileForm.firstName}
-                    onChange={(e) =>
-                      setEditProfileForm({...editProfileForm, firstName: e.target.value})
-                    }
-                  />
-                </Form.Group>
-                <Form.Group controlId="formBasicLastName">
-                  <Form.Label>
-                    <h4>
-                      นามสกุล<span style={{color: "red"}}>*</span>
-                    </h4>
-                  </Form.Label>
-                  <Form.Control
-                    size="lg"
-                    type="text"
-                    placeholder="นามสกุล"
-                    value={editProfileForm.lastName}
-                    onChange={(e) =>
-                      setEditProfileForm({...editProfileForm, lastName: e.target.value})
-                    }
-                  />
-                </Form.Group>
-                <Row>
-                  <Col>
-                    <div
-                      className="btn btn-lg btn-danger btn-block text-uppercase mb-3"
-                      onClick={handleClose}
-                    >
-                      <h4 className="m-0">CANCLE</h4>
-                    </div>
-                  </Col>
-                  <Col>
-                    <button
-                      className="btn btn-lg btn-success btn-block text-uppercase mb-3"
-                      onClick={(e) => userUpdate(e)}
-                    >
-                      <h4 className="m-0">OK</h4>
-                    </button>
-                  </Col>
-                </Row>
-              </Form>
+                  <Row>
+                    <Col xs="12">
+                      <button
+                        type="button"
+                        style={{width: "100%"}}
+                        className="mx-0 btn btn-success about-talk-with-us-btn-success"
+                        onClick={() => handleShowPwd()}
+                      >
+                        เปลี่ยนรหัสผ่าน
+                      </button>
+                    </Col>
+                    <Col sm="6">
+                      <div
+                        style={{width: "100%"}}
+                        className="btn btn-lg btn-danger btn-block text-uppercase mb-3"
+                        onClick={handleClose}
+                      >
+                        <h4 className="m-0">CANCLE</h4>
+                      </div>
+                    </Col>
+                    <Col sm="6">
+                      <button
+                        style={{width: "100%"}}
+                        className="btn btn-lg btn-success btn-block text-uppercase mb-3 btn btn-success about-talk-with-us-btn-success"
+                        onClick={(e) => userUpdate(e)}
+                      >
+                        <h4 className="m-0">OK</h4>
+                      </button>
+                    </Col>
+                  </Row>
+                </Form>
+              ) : (
+                <Form className="text-left">
+                  <Form.Group controlId="formBasicFirstName">
+                    <Form.Label>
+                      <h4>
+                        Password<span style={{color: "red"}}>*</span>
+                      </h4>
+                    </Form.Label>
+                    <Form.Control
+                      size="lg"
+                      type="password"
+                      value={editPwdForm.password1}
+                      onChange={(e) =>
+                        setEditPwdForm({
+                          ...editPwdForm,
+                          password1: e.target.value,
+                        })
+                      }
+                    />
+                  </Form.Group>
+                  <Form.Group controlId="formBasicLastName">
+                    <Form.Label>
+                      <h4>
+                        Re Password<span style={{color: "red"}}>*</span>
+                      </h4>
+                    </Form.Label>
+                    <Form.Control
+                      size="lg"
+                      type="password"
+                      value={editPwdForm.password2}
+                      onChange={(e) =>
+                        setEditPwdForm({...editPwdForm, password2: e.target.value})
+                      }
+                    />
+                  </Form.Group>
+
+                  <Row>
+                    <Col sm="6">
+                      <div
+                        style={{width: "100%"}}
+                        className="btn btn-lg btn-danger btn-block text-uppercase mb-3"
+                        onClick={handleClosePwd}
+                      >
+                        <h4 className="m-0">CANCLE</h4>
+                      </div>
+                    </Col>
+                    <Col sm="6">
+                      <button
+                        style={{width: "100%"}}
+                        className="btn btn-lg btn-success btn-block text-uppercase mb-3 btn btn-success about-talk-with-us-btn-success"
+                        onClick={(e) => userPwdUpdate(e)}
+                      >
+                        <h4 className="m-0">OK</h4>
+                      </button>
+                    </Col>
+                  </Row>
+                </Form>
+              )}
             </Container>
           </Modal.Body>
         </Modal>
