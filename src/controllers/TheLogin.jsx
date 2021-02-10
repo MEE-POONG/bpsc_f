@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 import TheRegister from "./TheRegister";
-import {API_LOGIN, API_FORGET_PASSWORD, API_RE_VERIFICATION} from "../apis";
+import {API_LOGIN, API_FORGET_PASSWORD, API_RE_VERIFICATION, API_LOGIN_FACEBOOK} from "../apis";
 import Swal from "sweetalert2";
 import jwt_decode from "jwt-decode";
 
@@ -43,16 +43,55 @@ const TheLogin = () => {
       .auth()
       .getRedirectResult()
       .then(function (result) {
-        const token = result.credential.accessToken;
-        var decoded = jwt_decode(token);
-        localStorage.setItem("token", token);
-        localStorage.setItem("id", decoded.id);
-        localStorage.setItem("isAdmin", decoded.isAdmin);
-        localStorage.setItem("email", decoded.email);
-        localStorage.setItem("firstName", decoded.firstName);
-        localStorage.setItem("lastName", decoded.lastName);
-        localStorage.setItem("loginMethod", decoded.loginMethod);
-        sessionStorage.setItem("BPSC_USER_LOGIN", true);
+        API_LOGIN_FACEBOOK(result.credential.accessToken)
+        .then((response) => {
+          var decoded = jwt_decode(response.data.accessToken);
+          localStorage.setItem("token", response.data.accessToken);
+          localStorage.setItem("refresh-token", response.data.refreshToken);
+          localStorage.setItem("id", decoded.id);
+          localStorage.setItem("isAdmin", decoded.isAdmin);
+          localStorage.setItem("email", decoded.email);
+          localStorage.setItem("firstName", decoded.firstName);
+          localStorage.setItem("lastName", decoded.lastName);
+          localStorage.setItem("loginMethod", decoded.loginMethod);
+          sessionStorage.setItem("BPSC_USER_LOGIN", true);
+          navigate("/");
+        })
+        .catch((error) => {
+          const errorMSG = error?.response?.data;
+          if (errorMSG?.error === "Email not Verify") {
+            Swal.fire({
+              title: errorMSG?.error,
+              text: errorMSG?.message,
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Yes, Reverify!",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                API_RE_VERIFICATION(handelEmail);
+                Swal.fire("THANK YOU!", "Check your email.", "success");
+              }
+            });
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: errorMSG?.error,
+              text: errorMSG?.message,
+            });
+          }
+        });
+        // const token = result.credential.accessToken;
+        // var decoded = jwt_decode(token);
+        // localStorage.setItem("token", token);
+        // localStorage.setItem("id", decoded.id);
+        // localStorage.setItem("isAdmin", decoded.isAdmin);
+        // localStorage.setItem("email", decoded.email);
+        // localStorage.setItem("firstName", decoded.firstName);
+        // localStorage.setItem("lastName", decoded.lastName);
+        // localStorage.setItem("loginMethod", decoded.loginMethod);
+        // sessionStorage.setItem("BPSC_USER_LOGIN", true);
         navigate("/");
       })
       .catch(function (error) {
