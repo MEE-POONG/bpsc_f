@@ -504,7 +504,7 @@ export const API_CHECK_NOTIFICATION = async () => {
   const reft = await REFRESH_TOKEN();
 
   var config = {
-    method: "post",
+    method: "get",
     url: `/checkNotification`,
     headers: {
       Authorization: "Bearer " + reft?.accessToken,

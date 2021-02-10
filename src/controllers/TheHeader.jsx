@@ -31,7 +31,7 @@ const TheHeader = () => {
   };
   useEffect(() => {
     checkNotification();
-  }, [moment().format("YYYY MM DD HH mm")]);
+  }, [moment().format("YYYY MM DD HH mm"), userInfo]);
 
   return (
     <>
@@ -79,7 +79,7 @@ const TheHeader = () => {
                     <div className="col-sm-2">
                       <div className="nav-item">
                         <a href={() => {}}>
-                          <span className="notify-badge">{getNotification}</span>
+                          {getNotification && <span className="notify-badge">{getNotification}</span>}
                           <img
                             src={
                               userInfo?.picture
