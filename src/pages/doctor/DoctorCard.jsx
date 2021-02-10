@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Container, Row, Col, Image, Pagination, Modal, Card} from "react-bootstrap";
 import {API_GET_DOCTOR, IMAGE_URL} from "../../apis";
+import {useNavigate} from "react-router-dom";
 
 const DoctorCard = () => {
   const [show, setShow] = useState(false);
@@ -9,6 +10,7 @@ const DoctorCard = () => {
   const handleShow = () => setShow(true);
   const handleShowData = (id) => setShowData(id);
   const [page, setPage] = useState(1);
+  const navigate = useNavigate();
 
   const [doctor, setDoctor] = useState(null);
 
@@ -40,7 +42,7 @@ const DoctorCard = () => {
                   }
                   alt={id}
                 />
-                <div className="profile-name">DR.{firstName}</div>
+                <div className="profile-name">{firstName}</div>
                 <div className="profile-username">{email || "-"}</div>
                 <div className="profile-tel">TEL {phone || "-"}</div>
               </div>
@@ -82,7 +84,11 @@ const DoctorCard = () => {
         <Modal.Body>
           <Row>
             <Col lg="6">
-            <img className="view-img"
+              <img
+                className="view-img"
+                style={{
+                  textAlign: "center",
+                }}
                 src={
                   doctor?.data[showData].picture
                     ? IMAGE_URL + doctor?.data[showData].picture
@@ -93,14 +99,37 @@ const DoctorCard = () => {
             </Col>
             <Col lg="6">
               {/* <Card> */}
-                <Card.Body>
-                  <Card.Title><h1>{doctor?.data[showData].firstName} {doctor?.data[showData].lastName}</h1></Card.Title>
-                  {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
-                  <Card.Text><h4>{doctor?.data[showData].content}</h4></Card.Text>
-                  <Card.Text><h4>{doctor?.data[showData].phone && 'TEL'} {doctor?.data[showData].phone}</h4></Card.Text>
-                  <Card.Text><h4>{doctor?.data[showData].email}</h4></Card.Text>
-                  <Card.Text><h4>{doctor?.data[showData].hospital}</h4></Card.Text>
-                </Card.Body>
+              <Card.Body>
+                <Card.Title>
+                  <h1>
+                    {doctor?.data[showData].firstName} {doctor?.data[showData].lastName}
+                  </h1>
+                </Card.Title>
+                {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
+                <Card.Text>
+                  <h4>{doctor?.data[showData].content}</h4>
+                </Card.Text>
+                <Card.Text>
+                  <h4>
+                    {doctor?.data[showData].phone && "TEL"} {doctor?.data[showData].phone}
+                  </h4>
+                </Card.Text>
+                <Card.Text>
+                  <h4>{doctor?.data[showData].email}</h4>
+                </Card.Text>
+                <Card.Text>
+                  <h4>{doctor?.data[showData].hospital}</h4>
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer style={{textAlign: "center", cursor: "pointer"}}>
+                <button
+                  type="button"
+                  className="btn btn-success about-talk-with-us-btn-success"
+                  onClick={() => navigate("/ContactDoctor/" + doctor?.data[showData].id)}
+                >
+                  CONTACT DOCTOR
+                </button>
+              </Card.Footer>
               {/* </Card> */}
             </Col>
           </Row>

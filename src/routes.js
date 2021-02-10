@@ -7,6 +7,7 @@ const SharingList = React.lazy(() => import("./pages/sharing/SharingList"));
 const Leaning = React.lazy(() => import("./pages/leaning"));
 const LeaningList = React.lazy(() => import("./pages/leaning/LeaningList"));
 const Doctor = React.lazy(() => import("./pages/doctor"));
+const ContactDoctor = React.lazy(() => import("./pages/doctor/ContactDoctor"));
 const Gallery = React.lazy(() => import("./pages/gallery"));
 const GalleryAlbum = React.lazy(() => import("./pages/gallery/GalleryAlbum"));
 const CreateShare = React.lazy(() => import("./pages/createshare"));
@@ -36,6 +37,7 @@ const routes = [
     component: LeaningList,
   },
   {path: "/doctor", name: "DOCTOR", component: Doctor},
+  {path: "/ContactDoctor/:id", name: "CONTACT DOCTOR", component: ContactDoctor},
   {path: "/gallery", name: "GALLERY", component: Gallery},
   {
     path: "/gallery/:id",
