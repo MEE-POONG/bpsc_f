@@ -51,7 +51,7 @@ const ProfileTitle = () => {
       });
   };
   const userUpdatePhoto = (e) => {
-    console.log(e.target.files[0]);
+    // console.log(e.target.files[0]);
     API_GET_USER_UPDATE_PHOTO(localStorage.getItem("id"), e.target.files[0])
       .then(() => {
         Swal.fire("สำเร็จ!", "เปลี่ยนแปลงข้อมูลสำเร็จ!", "success").then(() => {

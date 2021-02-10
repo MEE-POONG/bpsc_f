@@ -106,15 +106,16 @@ const TeamMember = () => {
               />
             </Col>
             <Col lg="6">
-              <Card>
+              {/* <Card> */}
                 <Card.Body>
-                  <Card.Title>{doctor?.data[showData].firstName} {doctor?.data[showData].lastName}</Card.Title>
-                  {/* <Card.Subtitle>{}</Card.Subtitle> */}
-                  <Card.Text>{doctor?.data[showData].content}</Card.Text>
-                  <Card.Text>{doctor?.data[showData].phone && 'TEL'} {doctor?.data[showData].phone}</Card.Text>
-                  <Card.Text>{doctor?.data[showData].email}</Card.Text>
+                  <Card.Title><h1>{doctor?.data[showData].firstName} {doctor?.data[showData].lastName}</h1></Card.Title>
+                  {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
+                  <Card.Text><h4>{doctor?.data[showData].content}</h4></Card.Text>
+                  <Card.Text><h4>{doctor?.data[showData].phone && 'TEL'} {doctor?.data[showData].phone}</h4></Card.Text>
+                  <Card.Text><h4>{doctor?.data[showData].email}</h4></Card.Text>
+                  <Card.Text><h4>{doctor?.data[showData].hospital}</h4></Card.Text>
                 </Card.Body>
-              </Card>
+              {/* </Card> */}
             </Col>
           </Row>
         </Modal.Body>

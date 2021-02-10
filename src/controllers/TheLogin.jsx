@@ -5,7 +5,12 @@ import {useNavigate} from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
 import TheRegister from "./TheRegister";
-import {API_LOGIN, API_FORGET_PASSWORD, API_RE_VERIFICATION, API_LOGIN_FACEBOOK} from "../apis";
+import {
+  API_LOGIN,
+  API_FORGET_PASSWORD,
+  API_RE_VERIFICATION,
+  API_LOGIN_FACEBOOK,
+} from "../apis";
 import Swal from "sweetalert2";
 import jwt_decode from "jwt-decode";
 
@@ -37,70 +42,140 @@ const TheLogin = () => {
   const navigate = useNavigate();
 
   const handleLoginFB = () => {
-    const provider = new firebase.auth.FacebookAuthProvider();
-    firebase.auth().signInWithRedirect(provider);
+    var provider = new firebase.auth.FacebookAuthProvider();
     firebase
       .auth()
-      .getRedirectResult()
-      .then(function (result) {
-        API_LOGIN_FACEBOOK(result.credential.accessToken)
-        .then((response) => {
-          var decoded = jwt_decode(response.data.accessToken);
-          localStorage.setItem("token", response.data.accessToken);
-          localStorage.setItem("refresh-token", response.data.refreshToken);
-          localStorage.setItem("id", decoded.id);
-          localStorage.setItem("isAdmin", decoded.isAdmin);
-          localStorage.setItem("email", decoded.email);
-          localStorage.setItem("firstName", decoded.firstName);
-          localStorage.setItem("lastName", decoded.lastName);
-          localStorage.setItem("loginMethod", decoded.loginMethod);
-          sessionStorage.setItem("BPSC_USER_LOGIN", true);
-          navigate("/");
-        })
-        .catch((error) => {
-          const errorMSG = error?.response?.data;
-          if (errorMSG?.error === "Email not Verify") {
-            Swal.fire({
-              title: errorMSG?.error,
-              text: errorMSG?.message,
-              icon: "warning",
-              showCancelButton: true,
-              confirmButtonColor: "#3085d6",
-              cancelButtonColor: "#d33",
-              confirmButtonText: "Yes, Reverify!",
-            }).then((result) => {
-              if (result.isConfirmed) {
-                API_RE_VERIFICATION(handelEmail);
-                Swal.fire("THANK YOU!", "Check your email.", "success");
+      .signInWithPopup(provider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+
+        // The signed-in user info.
+        var user = result.user;
+
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        var accessToken = credential.accessToken;
+        // console.log("accessToken", accessToken);
+        if (accessToken) {
+          API_LOGIN_FACEBOOK(accessToken)
+            .then((response) => {
+              // console.log("LOGIN_FB", response);
+              var decoded = jwt_decode(response.data.accessToken);
+              localStorage.setItem("token", response.data.accessToken);
+              localStorage.setItem("refresh-token", response.data.refreshToken);
+              localStorage.setItem("id", decoded.id);
+              localStorage.setItem("isAdmin", decoded.isAdmin);
+              localStorage.setItem("email", decoded.email);
+              localStorage.setItem("firstName", decoded.firstName);
+              localStorage.setItem("lastName", decoded.lastName);
+              localStorage.setItem("loginMethod", decoded.loginMethod);
+              sessionStorage.setItem("BPSC_USER_LOGIN", true);
+              navigate("/");
+            })
+            .catch((error) => {
+              const errorMSG = error?.response?.data;
+              if (errorMSG?.error === "Email not Verify") {
+                Swal.fire({
+                  title: errorMSG?.error,
+                  text: errorMSG?.message,
+                  icon: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#3085d6",
+                  cancelButtonColor: "#d33",
+                  confirmButtonText: "Yes, Reverify!",
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    API_RE_VERIFICATION(handelEmail);
+                    Swal.fire("THANK YOU!", "Check your email.", "success");
+                  }
+                });
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: errorMSG?.error,
+                  text: errorMSG?.message,
+                });
               }
             });
-          } else {
-            Swal.fire({
-              icon: "error",
-              title: errorMSG?.error,
-              text: errorMSG?.message,
-            });
-          }
-        });
-        // const token = result.credential.accessToken;
-        // var decoded = jwt_decode(token);
-        // localStorage.setItem("token", token);
-        // localStorage.setItem("id", decoded.id);
-        // localStorage.setItem("isAdmin", decoded.isAdmin);
-        // localStorage.setItem("email", decoded.email);
-        // localStorage.setItem("firstName", decoded.firstName);
-        // localStorage.setItem("lastName", decoded.lastName);
-        // localStorage.setItem("loginMethod", decoded.loginMethod);
-        // sessionStorage.setItem("BPSC_USER_LOGIN", true);
-        navigate("/");
+        }
+        // ...
       })
-      .catch(function (error) {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.email;
-        const credential = error.credential;
+      .catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // console.log("credential", credential);
+        // ...
       });
   };
+  // const handleLoginFB = () => {
+  //   const provider = new firebase.auth.FacebookAuthProvider();
+  //   firebase
+  //     .auth()
+  //     .signInWithPopup(provider)
+  //     .then((result) => {
+  //       /** @type {firebase.auth.OAuthCredential} */
+  //       var credential = result.credential;
+
+  //       // The signed-in user info.
+  //       var user = result.user;
+
+  //       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+  //       var accessToken = credential.accessToken;
+  //         console.log("FB", accessToken);
+  //         API_LOGIN_FACEBOOK(accessToken)
+  //           .then((response) => {
+  //             console.log("LOGIN_FB", response);
+  //             var decoded = jwt_decode(response.data.accessToken);
+  //             localStorage.setItem("token", response.data.accessToken);
+  //             localStorage.setItem("refresh-token", response.data.refreshToken);
+  //             localStorage.setItem("id", decoded.id);
+  //             localStorage.setItem("isAdmin", decoded.isAdmin);
+  //             localStorage.setItem("email", decoded.email);
+  //             localStorage.setItem("firstName", decoded.firstName);
+  //             localStorage.setItem("lastName", decoded.lastName);
+  //             localStorage.setItem("loginMethod", decoded.loginMethod);
+  //             sessionStorage.setItem("BPSC_USER_LOGIN", true);
+  //             // navigate("/");
+  //           })
+  //           .catch((error) => {
+  //             const errorMSG = error?.response?.data;
+  //             if (errorMSG?.error === "Email not Verify") {
+  //               Swal.fire({
+  //                 title: errorMSG?.error,
+  //                 text: errorMSG?.message,
+  //                 icon: "warning",
+  //                 showCancelButton: true,
+  //                 confirmButtonColor: "#3085d6",
+  //                 cancelButtonColor: "#d33",
+  //                 confirmButtonText: "Yes, Reverify!",
+  //               }).then((result) => {
+  //                 if (result.isConfirmed) {
+  //                   API_RE_VERIFICATION(handelEmail);
+  //                   Swal.fire("THANK YOU!", "Check your email.", "success");
+  //                 }
+  //               });
+  //             } else {
+  //               Swal.fire({
+  //                 icon: "error",
+  //                 title: errorMSG?.error,
+  //                 text: errorMSG?.message,
+  //               });
+  //             }
+  //           });
+
+  //     })
+  //     .catch(function (error) {
+  //       const errorCode = error.code;
+  //       const errorMessage = error.message;
+  //       const email = error.email;
+  //       const credential = error.credential;
+  //     });
+  // };
   const handleLogin = (e) => {
     e.preventDefault();
     API_LOGIN(handelEmail, handlePassword)
