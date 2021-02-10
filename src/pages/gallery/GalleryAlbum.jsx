@@ -45,6 +45,7 @@ const GalleryAlbum = () => {
     });
   }, []);
   useEffect(() => {
+    setGalleryPhoto(null);
     API_GET_GALLERY_PHOTO_BY_ID(id, page).then((result) => {
       setGalleryPhoto(result?.data);
     });

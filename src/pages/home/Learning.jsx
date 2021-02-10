@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Card, Media} from "react-bootstrap";
-import { faEye, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faEye, faHeart} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
@@ -66,7 +66,7 @@ const Abstain = () => {
                               ? IMAGE_URL + elearningPicture
                               : "https://chiccarrent.com/files/images/default-placeholder.png"
                           }
-                          style={{height: "359px",objectFit: "cover"}}
+                          style={{height: "359px", objectFit: "cover"}}
                           alt={title}
                           className="card-img-top"
                         />
@@ -93,17 +93,17 @@ const Abstain = () => {
                         </Card.Title>
                         {content}
                         <Card.Text className="mr-auto mt-4">
-                        <span className="d-flex justify-content-between">
-                          <span style={{ color: "#26BEB4" }}>
-                            <FontAwesomeIcon icon={faEye} />
-                            {/* {view} */}
+                          <span className="d-flex justify-content-between">
+                            <span style={{color: "#26BEB4"}}>
+                              <FontAwesomeIcon icon={faEye} />
+                              {view}
+                            </span>
+                            <span style={{color: "#26BEB4"}}>
+                              <FontAwesomeIcon icon={faHeart} />
+                              {favorite}
+                            </span>
                           </span>
-                          <span style={{ color: "#26BEB4" }}>
-                            <FontAwesomeIcon icon={faHeart} />
-                            {/* {favorite} */}
-                          </span>
-                        </span>
-                      </Card.Text>
+                        </Card.Text>
                       </Card.Body>
                     </Card>
                   </div>

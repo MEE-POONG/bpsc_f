@@ -97,11 +97,11 @@ const SheetThree = () => {
                         <span className="d-flex justify-content-between">
                           <span style={{ color: "#26BEB4" }}>
                             <FontAwesomeIcon icon={faEye} />
-                            {/* {view} */}
+                            {view}
                           </span>
                           <span style={{ color: "#26BEB4" }}>
                             <FontAwesomeIcon icon={faHeart} />
-                            {/* {favorite} */}
+                            {favorite}
                           </span>
                         </span>
                       </Card.Text>
