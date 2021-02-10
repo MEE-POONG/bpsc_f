@@ -116,9 +116,9 @@ const SharingDetail = () => {
                         {firstName} {lastName}
                       </span>
                     </div>
-                    <Card.Text className="mr-auto ">
-                      <span className="d-flex justify-content-between">
-                        <span style={{ color: "#26BEB4" }}>
+                    <Card.Text>
+                      <span>
+                        <span style={{ color: "#26BEB4" }} className="mr-5">
                           <FontAwesomeIcon icon={faEye} /> {view}
                         </span>
                         <span style={{ color: "#26BEB4" }}>

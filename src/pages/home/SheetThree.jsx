@@ -93,14 +93,14 @@ const SheetThree = () => {
                         </span>
                       </div>
                       <Card.Text>
-                        <span className="mr-5">
-                          <span style={{ color: "#26BEB4" }} >
-                            <FontAwesomeIcon icon={faEye} />
-                            {view}
+                        <span >
+                          <span style={{ color: "#26BEB4" }} className="mr-5">
+                            <FontAwesomeIcon icon={faEye} /> 
+                             {view}
                           </span>
                           <span style={{ color: "#26BEB4" }}>
-                            <FontAwesomeIcon icon={faHeart} />
-                            {favorite}
+                            <FontAwesomeIcon icon={faHeart} /> 
+                             {favorite}
                           </span>
                         </span>
                       </Card.Text>
