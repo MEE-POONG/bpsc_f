@@ -84,6 +84,7 @@ const SharingDetail = () => {
                 <Card className="box-card-shadow">
                   <Card.Body className="image">
                     <Card.Img
+                      style={{ height: "200px" }}
                       src={
                         sharingPicture
                           ? IMAGE_URL + sharingPicture

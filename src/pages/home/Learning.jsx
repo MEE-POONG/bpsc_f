@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from "react";
-import {Card, Media} from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Card, Media } from "react-bootstrap";
 import { faEye, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
 
-import {API_GET_LEARNING, IMAGE_URL} from "../../apis";
+import { API_GET_LEARNING, IMAGE_URL } from "../../apis";
 import moment from "moment";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Abstain = () => {
   const navigate = useNavigate();
@@ -66,7 +66,7 @@ const Abstain = () => {
                               ? IMAGE_URL + elearningPicture
                               : "https://chiccarrent.com/files/images/default-placeholder.png"
                           }
-                          style={{height: "359px",objectFit: "cover"}}
+                          style={{ height: "359px", objectFit: "cover" }}
                           alt={title}
                           className="card-img-top"
                         />
@@ -86,24 +86,24 @@ const Abstain = () => {
                             </Card>
                             <Media.Body>
                               <p>
-                                <b style={{color: "#000"}}>{title}</b>
+                                <b style={{ color: "#000" }}>{title}</b>
                               </p>
                             </Media.Body>
                           </Media>
                         </Card.Title>
                         {content}
                         <Card.Text className="mr-auto mt-4">
-                        <span className="d-flex justify-content-between">
-                          <span style={{ color: "#26BEB4" }}>
-                            <FontAwesomeIcon icon={faEye} />
-                            {/* {view} */}
+                          <span className="d-flex justify-content-between">
+                            <span style={{ color: "#26BEB4" }}>
+                              <FontAwesomeIcon icon={faEye} />
+                              {/* {view} */}
+                            </span>
+                            <span style={{ color: "#26BEB4" }}>
+                              <FontAwesomeIcon icon={faHeart} />
+                              {/* {favorite} */}
+                            </span>
                           </span>
-                          <span style={{ color: "#26BEB4" }}>
-                            <FontAwesomeIcon icon={faHeart} />
-                            {/* {favorite} */}
-                          </span>
-                        </span>
-                      </Card.Text>
+                        </Card.Text>
                       </Card.Body>
                     </Card>
                   </div>

@@ -68,7 +68,6 @@ const SheetThree = () => {
                             ? IMAGE_URL + sharingPicture
                             : "https://chiccarrent.com/files/images/default-placeholder.png"
                         }
-                        style={{ height: "349px" }}
                         alt={title}
                         className="card-img-top"
                       />
