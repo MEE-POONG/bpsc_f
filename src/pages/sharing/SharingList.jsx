@@ -70,7 +70,7 @@ const SharingList = () => {
             </span>
             <span className="mr-5">{sharing?.sharing?.favorite}</span>
             <span className="mr-2">
-              <FontAwesomeIcon icon={faEye} />
+              <FontAwesomeIcon className="pr-2" icon={faEye} />
             </span>
             <span className="mr-2">{sharing?.sharing?.view}</span>
           </h3>

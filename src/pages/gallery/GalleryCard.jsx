@@ -43,7 +43,7 @@ const GalleryCard = () => {
                   <Card.Text className="mr-auto ">
                     <span className="d-flex justify-content-between">
                       <span style={{color: "#26BEB4"}}>
-                        <FontAwesomeIcon icon={faEye} />
+                        <FontAwesomeIcon className="pr-2" icon={faEye} />
                         {view}
                       </span>
                       <span style={{color: "#26BEB4"}}>

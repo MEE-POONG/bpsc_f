@@ -99,7 +99,7 @@ const SharingDetail = () => {
                       className="card-img-top"
                     />
                   </Card.Body>
-                  <Card.Body>
+                  <Card.Body onClick={() => navigate("/sharing/" + id)}>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text className="subtitle-text">{content}</Card.Text>
                   </Card.Body>
@@ -124,17 +124,17 @@ const SharingDetail = () => {
                     <Card.Text className="mr-auto ">
                       <span>
                         <span style={{color: "#26BEB4"}} className="mr-5">
-                          <FontAwesomeIcon icon={faEye} /> {view}
+                          <FontAwesomeIcon className="pr-2" icon={faEye} /> {view}
                         </span>
                         <span style={{color: "#26BEB4"}}>
                           {/* <FontAwesomeIcon
                               icon={isFavorite ? faHeart : faHeartBroken}
                             /> */}
                           {isFavorite ? (
-                            <i className="fa fa fa-heart"></i>
+                            <i className="fa fa fa-heart pr-2"></i>
                           ) : (
                             <i
-                              className="fa fa fa-heart-o"
+                              className="fa fa fa-heart-o pr-2"
                               onClick={() => handleFav(id)}
                             ></i>
                           )}

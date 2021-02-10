@@ -1,7 +1,19 @@
 import React, {useState, useEffect} from "react";
-import {Container, Row, Col, Image, Pagination, Modal, Card} from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Image,
+  Pagination,
+  InputGroup,
+  FormControl,
+  Modal,
+  Card,
+} from "react-bootstrap";
 import {API_GET_DOCTOR, IMAGE_URL} from "../../apis";
 import {useNavigate} from "react-router-dom";
+import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const DoctorCard = () => {
   const [show, setShow] = useState(false);
@@ -10,132 +22,170 @@ const DoctorCard = () => {
   const handleShow = () => setShow(true);
   const handleShowData = (id) => setShowData(id);
   const [page, setPage] = useState(1);
+  const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
   const [doctor, setDoctor] = useState(null);
 
   useEffect(() => {
-    API_GET_DOCTOR(page).then((result) => {
+    API_GET_DOCTOR(search, page).then((result) => {
       setDoctor(result?.data);
     });
-  }, [page]);
+    console.log(search, page);
+  }, [search, page]);
 
   return (
-    <Container className="detail">
-      <Row className="py-5">
-        {doctor?.data?.map(
-          ({id, firstName, lastName, email, phone, picture, content}, idx) => (
-            <Col lg="4" md="4" sm="6" className="mb-5">
-              <div
-                className="profile-card-2"
-                onClick={() => {
-                  handleShow();
-                  handleShowData(idx);
+    <div>
+      <Container className="title mb-5">
+        <Row>
+          <Col lg="8">
+            <Card.Title>Doctor</Card.Title>
+          </Col>
+          {/* <Col lg="4" className="align-self-center">
+            <InputGroup>
+              <InputGroup.Prepend>
+                <InputGroup.Text variant="outline-secondary" id="basic-addon1">
+                  <FontAwesomeIcon icon={faSearch} />
+                </InputGroup.Text>
+              </InputGroup.Prepend>
+              <FormControl
+                placeholder="Search..."
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                  setPage(1);
                 }}
-              >
-                <img
-                  className="img img-responsive"
-                  src={
-                    picture
-                      ? IMAGE_URL + picture
-                      : "https://chiccarrent.com/files/images/default-placeholder.png"
-                  }
-                  alt={id}
-                />
-                <div className="profile-name">{firstName}</div>
-                <div className="profile-username">{email || "-"}</div>
-                <div className="profile-tel">TEL {phone || "-"}</div>
-              </div>
-            </Col>
-          )
-        )}
-      </Row>
-      <div>
-        <Pagination className="my-5" style={{float: "right"}}>
-          {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
-          {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
-          {page > 1 && (
-            <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
-              {page - 1}
-            </Pagination.Item>
+              />
+            </InputGroup>
+          </Col> */}
+        </Row>
+      </Container>
+      <Container className="detail">
+        <Row className="py-5">
+          {doctor?.data?.map(
+            ({id, firstName, lastName, email, phone, picture, content}, idx) => (
+              <Col lg="4" md="4" sm="6" className="mb-5">
+                <div
+                  className="profile-card-2"
+                  onClick={() => {
+                    handleShow();
+                    handleShowData(idx);
+                  }}
+                >
+                  <img
+                    className="img img-responsive"
+                    src={
+                      picture
+                        ? IMAGE_URL + picture
+                        : "https://chiccarrent.com/files/images/default-placeholder.png"
+                    }
+                    alt={id}
+                  />
+                  <div className="profile-name">{firstName}</div>
+                  <div className="profile-username">{email || "-"}</div>
+                  <div className="profile-tel">TEL {phone || "-"}</div>
+                </div>
+              </Col>
+            )
           )}
-          {<Pagination.Item active>{page}</Pagination.Item>}
-          {page < doctor?.totalPage && (
-            <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
-              {page + 1}
-            </Pagination.Item>
-          )}
-          {page < doctor?.totalPage && (
-            <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
-          )}
-          {page < doctor?.totalPage && (
-            <Pagination.Last onClick={() => setPage(doctor?.totalPage)} />
-          )}
-        </Pagination>
-      </div>
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-        className="d-flex justify-content-center doctor-page"
-      >
-        <Modal.Header closeButton></Modal.Header>
-        <Modal.Body>
-          <Row>
-            <Col lg="6">
-              <img
-                className="view-img"
+        </Row>
+        <div>
+          <Pagination className="my-5" style={{float: "right"}}>
+            {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+            {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+            {page > 1 && (
+              <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+                {page - 1}
+              </Pagination.Item>
+            )}
+            {<Pagination.Item active>{page}</Pagination.Item>}
+            {page < doctor?.totalPage && (
+              <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+                {page + 1}
+              </Pagination.Item>
+            )}
+            {page < doctor?.totalPage && (
+              <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+            )}
+            {page < doctor?.totalPage && (
+              <Pagination.Last onClick={() => setPage(doctor?.totalPage)} />
+            )}
+          </Pagination>
+        </div>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+          className="d-flex justify-content-center doctor-page"
+        >
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>
+            <Row>
+              <Col
+                lg="6"
                 style={{
                   textAlign: "center",
                 }}
-                src={
-                  doctor?.data[showData].picture
-                    ? IMAGE_URL + doctor?.data[showData].picture
-                    : "https://chiccarrent.com/files/images/default-placeholder.png"
-                }
-                alt={showData + 1}
-              />
-            </Col>
-            <Col lg="6">
-              {/* <Card> */}
-              <Card.Body>
-                <Card.Title>
-                  <h1>
-                    {doctor?.data[showData].firstName} {doctor?.data[showData].lastName}
-                  </h1>
-                </Card.Title>
-                {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
-                <Card.Text>
-                  <h4>{doctor?.data[showData].content}</h4>
-                </Card.Text>
-                <Card.Text>
-                  <h4>
-                    {doctor?.data[showData].phone && "TEL"} {doctor?.data[showData].phone}
-                  </h4>
-                </Card.Text>
-                <Card.Text>
-                  <h4>{doctor?.data[showData].email}</h4>
-                </Card.Text>
-                <Card.Text>
-                  <h4>{doctor?.data[showData].hospital}</h4>
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer style={{textAlign: "center", cursor: "pointer"}}>
-                <button
-                  type="button"
-                  className="btn btn-success about-talk-with-us-btn-success"
-                  onClick={() => navigate("/ContactDoctor/" + doctor?.data[showData].id)}
+              >
+                <img
+                  className="view-img"
+                  src={
+                    doctor?.data[showData].picture
+                      ? IMAGE_URL + doctor?.data[showData].picture
+                      : "https://chiccarrent.com/files/images/default-placeholder.png"
+                  }
+                  alt={showData + 1}
+                />
+              </Col>
+              <Col lg="6">
+                {/* <Card> */}
+                <Card.Body>
+                  <Card.Title>
+                    <h1>
+                      {doctor?.data[showData].firstName} {doctor?.data[showData].lastName}
+                    </h1>
+                  </Card.Title>
+                  {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
+                  <Card.Text>
+                    <h4>{doctor?.data[showData].content}</h4>
+                  </Card.Text>
+                  <Card.Text>
+                    <h4>
+                      {doctor?.data[showData].phone && "TEL"}{" "}
+                      {doctor?.data[showData].phone}
+                    </h4>
+                  </Card.Text>
+                  <Card.Text>
+                    <h4>{doctor?.data[showData].email}</h4>
+                  </Card.Text>
+                  <Card.Text>
+                    <h4>{doctor?.data[showData].hospital}</h4>
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer
+                  style={{
+                    textAlign: "center",
+                    cursor: "pointer",
+                    backgroundColor: "white",
+                  }}
                 >
-                  CONTACT DOCTOR
-                </button>
-              </Card.Footer>
-              {/* </Card> */}
-            </Col>
-          </Row>
-        </Modal.Body>
-      </Modal>
-    </Container>
+                  <button
+                    type="button"
+                    className="btn btn-success about-talk-with-us-btn-success"
+                    onClick={() =>
+                      navigate("/ContactDoctor/" + doctor?.data[showData].id)
+                    }
+                  >
+                    CONTACT DOCTOR
+                  </button>
+                </Card.Footer>
+                {/* </Card> */}
+              </Col>
+            </Row>
+          </Modal.Body>
+        </Modal>
+      </Container>
+    </div>
   );
 };
 

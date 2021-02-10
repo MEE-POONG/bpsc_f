@@ -126,10 +126,10 @@ const LeaningList = () => {
             </span>
             <span className="mr-2">
               {elearning?.elearning?.isFavorite ? (
-                <i className="fa fa fa-heart"></i>
+                <i className="fa fa fa-heart pr-2"></i>
               ) : (
                 <i
-                  className="fa fa fa-heart-o"
+                  className="fa fa fa-heart-o pr-2"
                   style={{cursor: "pointer"}}
                   onClick={() => handleFav(id)}
                 ></i>
@@ -137,7 +137,7 @@ const LeaningList = () => {
             </span>
             <span className="mr-5">{elearning?.elearning?.favorite}</span>
             <span className="mr-2">
-              <FontAwesomeIcon icon={faEye} />
+              <FontAwesomeIcon className="pr-2" icon={faEye} />
             </span>
             <span className="mr-2">{elearning?.elearning?.view}</span>
           </h3>
@@ -152,6 +152,7 @@ const LeaningList = () => {
             ))}
           </div>
         </Col>
+
         <Col xs="12" lg="12" className="mt-5 comment align-items-center">
           <Media>
             <img
@@ -169,8 +170,9 @@ const LeaningList = () => {
               <FormControl
                 bsPrefix="input-comment"
                 as="textarea"
-                placeholder="Add a Public Comment..."
+                placeholder={`${localStorage.getItem("token") ? 'Add a Public Comment...' : 'กรุณาเข้าสู่ระบบเพื่อแสดงความคิดเห็น'}`}
                 onChange={(e) => setCreateComment(e.target.value)}
+                disabled={!localStorage.getItem("token")}
               />
             </Media.Body>
             <div
@@ -182,12 +184,14 @@ const LeaningList = () => {
                 type="button"
                 className="btn btn-success about-talk-with-us-btn-success"
                 onClick={() => handleCreateComment()}
+                disabled={!localStorage.getItem("token")}
               >
                 SEND
               </button>
             </div>
           </Media>
         </Col>
+      
       </Row>
       <Container fluid className="list mb-5 py-5">
         {comment?.data?.map(
@@ -226,7 +230,7 @@ const LeaningList = () => {
               <tr>
                 <td className="text-start">
                   <Media>
-                    <Image src="../image/pdf.png" />
+                    <Image src="https://sites.google.com/site/gansugsa/_/rsrc/1454402804802/google-doc/unnamed.png?height=200&width=200" />
                     <Media.Body>{filename}</Media.Body>
                   </Media>
                 </td>

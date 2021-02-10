@@ -179,55 +179,53 @@ export const API_GET_SHARING_BY_ID = (id) => {
   return axios(config);
 };
 export const API_GET_ELEARNING_BY_ID = async (id) => {
-  
-  let headers = {}
+  let headers = {};
   if (localStorage.getItem("refresh-token")) {
     const reft = await REFRESH_TOKEN();
     headers = {
       Authorization: "Bearer " + reft?.accessToken,
       "Content-Type": "application/json",
-    }
+    };
   }
   var config = {
     method: "get",
     url: `/elearning/${id}`,
-    headers: headers
+    headers: headers,
   };
 
   return axios(config);
 };
 export const API_GET_SHARING = async (title = "", page = "", size = "", tag = "") => {
-
-  let headers = {}
+  let headers = {};
   if (localStorage.getItem("refresh-token")) {
     const reft = await REFRESH_TOKEN();
     headers = {
       Authorization: "Bearer " + reft?.accessToken,
       "Content-Type": "application/json",
-    }
+    };
   }
 
   var config = {
     method: "get",
     url: `/sharing?title=${title}&size=${size}&tag=${tag}&page=${page}`,
-    headers: headers
+    headers: headers,
   };
 
   return axios(config);
 };
 export const API_GET_LEARNING = async (title = "", page = "", size = "", tag = "") => {
-  let headers = {}
+  let headers = {};
   if (localStorage.getItem("refresh-token")) {
     const reft = await REFRESH_TOKEN();
     headers = {
       Authorization: "Bearer " + reft?.accessToken,
       "Content-Type": "application/json",
-    }
+    };
   }
   var config = {
     method: "get",
     url: `/elearning?title=${title}&size=${size}&tag=${tag}&page=${page}`,
-    headers: headers
+    headers: headers,
   };
 
   return axios(config);
@@ -280,10 +278,10 @@ export const API_GET_EVENT = () => {
 
   return axios(config);
 };
-export const API_GET_DOCTOR = () => {
+export const API_GET_DOCTOR = (title = "", page = "", size = "", tag = "") => {
   var config = {
     method: "get",
-    url: "/doctor",
+    url: `/doctor?title=${title}&size=${size}&tag=${tag}&page=${page}`,
   };
 
   return axios(config);
@@ -486,21 +484,48 @@ export const API_GET_TAGS = () => {
 
   return axios(config);
 };
-// export const API_LOGIN = () => {
-//   // Add a response interceptor
-//   return axios.interceptors.response.use(
-//     function (response) {
-//       // Any status code that lie within the range of 2xx cause this function to trigger
-//       // Do something with response data
-//       console.log(response);
-//       return response;
+
+// export const API_CHECK_NOTIFICATION = async () => {
+//   const reft = await REFRESH_TOKEN();
+
+//   var config = {
+//     method: "post",
+//     url: `/checkNotification`,
+//     headers: {
+//       Authorization: "Bearer " + reft?.accessToken,
+//       "Content-Type": "application/json",
 //     },
-//     function (error) {
-//       if (error.response && error.response.status === 401) {
-//         redirect("/");
-//         return;
-//       }
-//       return Promise.reject(error);
-//     }
-//   );
+//   };
+
+//   return axios(config);
 // };
+
+export const API_CHECK_NOTIFICATION = async () => {
+  const reft = await REFRESH_TOKEN();
+
+  var config = {
+    method: "get",
+    url: `/checkNotification`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
+  };
+
+  return axios(config);
+};
+
+export const API_GET_NOTIFICATION = async (page = "", size = "") => {
+  const reft = await REFRESH_TOKEN();
+
+  var config = {
+    method: "get",
+    url: `/notification?size=${size}&page=${page}`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
+  };
+
+  return axios(config);
+};

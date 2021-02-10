@@ -6,17 +6,35 @@ import Notification from "./TheNotification";
 import TheLogin from "./TheLogin";
 import {faUser, faBell, faPen, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {API_GET_USER_INFO, API_GET_USER_UPDATE, IMAGE_URL} from "../apis";
+import {
+  API_GET_USER_INFO,
+  API_GET_USER_UPDATE,
+  API_CHECK_NOTIFICATION,
+  IMAGE_URL,
+} from "../apis";
+import moment from "moment";
 
 const TheHeader = () => {
   let navigate = useNavigate();
   const [userInfo, setUserInfo] = useState(null);
-
+  const [getNotification, setGetNotification] = useState(0);
+  const [readHover, setReadHover] = useState(0);
+  const handleHover = () => setReadHover((e) => (e += 1));
   useEffect(() => {
     API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
       setUserInfo(result?.data);
     });
-  }, []);
+  }, [localStorage.getItem("id")]);
+
+  const checkNotification = () => {
+    API_CHECK_NOTIFICATION().then((result) => {
+      setGetNotification(result?.data?.notification);
+    });
+  };
+  useEffect(() => {
+    checkNotification();
+  }, [moment().format("YYYY MM DD HH mm"), userInfo, readHover]);
+
   return (
     <>
       <Navbar
@@ -24,6 +42,7 @@ const TheHeader = () => {
         className="container-xl py-5"
         style={{boxShadow: "none"}}
         expand="lg"
+        onMouseOver={handleHover}
       >
         {/* <Navbar bg="light" variant="light"> */}
         <Navbar.Brand href="/">
@@ -63,7 +82,9 @@ const TheHeader = () => {
                     <div className="col-sm-2">
                       <div className="nav-item">
                         <a href={() => {}}>
-                          <span className="notify-badge">NEW</span>
+                          {getNotification ? (
+                            <span className="notify-badge">{getNotification}</span>
+                          ) : null}
                           <img
                             src={
                               userInfo?.picture
@@ -97,7 +118,7 @@ const TheHeader = () => {
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์
                 </NavDropdown.Item>
                 {/* <NavDropdown.Item>
-                  <FontAwesomeIcon icon={faEye} /> &nbsp;แชร์ที่เคยดู
+                  <FontAwesomeIcon className="pr-2" icon={faEye} /> &nbsp;แชร์ที่เคยดู
                 </NavDropdown.Item> */}
                 <NavDropdown.Divider />
                 <NavDropdown.Item
