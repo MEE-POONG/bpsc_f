@@ -1,13 +1,14 @@
-import React, {useState, useEffect} from "react";
-import {Card, Image} from "react-bootstrap";
-
-import {Swiper, SwiperSlide} from "swiper/react";
+import React, { useState, useEffect } from "react";
+import { Card, Image } from "react-bootstrap";
+import { faEye, faHeart, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
 
-import {API_GET_SHARING, IMAGE_URL} from "../../apis";
-import {useNavigate} from "react-router-dom";
+import { API_GET_SHARING, IMAGE_URL } from "../../apis";
+import { useNavigate } from "react-router-dom";
 
 const SheetThree = () => {
   const navigate = useNavigate();
@@ -67,7 +68,7 @@ const SheetThree = () => {
                             ? IMAGE_URL + sharingPicture
                             : "https://chiccarrent.com/files/images/default-placeholder.png"
                         }
-                        style={{height: "349px"}}
+                        style={{ height: "349px" }}
                         alt={title}
                         className="card-img-top"
                       />
@@ -92,15 +93,20 @@ const SheetThree = () => {
                           {firstName} {lastName}
                         </span>
                       </div>
-                      <div>
-                        <span className="mr-1">
-                          <i className="fa fa-eye"></i> {view}
+                      <Card.Text className="mr-auto ">
+                        <span className="d-flex justify-content-between">
+                          <span style={{ color: "#26BEB4" }}>
+                            <FontAwesomeIcon icon={faEye} />
+                            {/* {view} */}
+                          </span>
+                          <span style={{ color: "#26BEB4" }}>
+                            <FontAwesomeIcon icon={faHeart} />
+                            {/* {favorite} */}
+                          </span>
                         </span>
-                        <span>
-                          <i className="fa fa-heart-o"></i> {favorite}
-                        </span>
-                      </div>
+                      </Card.Text>
                     </Card.Body>
+
                   </Card>
                 </div>
               </SwiperSlide>
