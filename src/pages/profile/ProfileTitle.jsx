@@ -5,6 +5,7 @@ import {Button, Container, Image, Form, Modal, Row, Col} from "react-bootstrap";
 import {
   API_GET_USER_INFO,
   API_GET_USER_UPDATE,
+  API_GET_USER_PWD_UPDATE,
   API_GET_USER_UPDATE_PHOTO,
   IMAGE_URL,
 } from "../../apis";
@@ -32,6 +33,10 @@ const ProfileTitle = () => {
     firstName: userInfo?.firstName,
     lastName: userInfo?.LastName,
   });
+  const [editPwdForm, setEditPwdForm] = useState({
+    password1: "",
+    password2: "",
+  });
 
   useEffect(() => {
     setEditProfileForm({
@@ -45,6 +50,23 @@ const ProfileTitle = () => {
     API_GET_USER_UPDATE(localStorage.getItem("id"), editProfileForm)
       .then(() => {
         Swal.fire("สำเร็จ!", "เปลี่ยนแปลงข้อมูลสำเร็จ!", "success").then(() => {
+          handleClose();
+          handleGetUserInfo();
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: error?.error,
+          text: error?.message,
+        });
+      });
+  };
+  const userPwdUpdate = (e) => {
+    e.preventDefault();
+    API_GET_USER_PWD_UPDATE(localStorage.getItem("id"), editPwdForm)
+      .then(() => {
+        Swal.fire("สำเร็จ!", "เปลี่ยนแปลงรหัสผ่านสำเร็จ!", "success").then(() => {
           handleClose();
           handleGetUserInfo();
         });
