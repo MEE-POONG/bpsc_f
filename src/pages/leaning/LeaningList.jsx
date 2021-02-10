@@ -24,6 +24,7 @@ import {
   API_GET_ELEARNING_BY_ID,
   API_CREATE_COMMENT,
   API_GET_USER_INFO,
+  API_fAVORITE_E_lEARNING,
   API_GET_LEARNING_COMMENT,
   API_GET_LEARNING_DOCUMENT,
   IMAGE_URL,
@@ -86,6 +87,17 @@ const LeaningList = () => {
         });
       });
   };
+
+  const handleFav = (id) => {
+    API_fAVORITE_E_lEARNING(id)
+      .then(() => {
+        API_GET_ELEARNING_BY_ID(id).then((result) => {
+          setElearning(result?.data);
+        });
+      })
+      .catch();
+  };
+
   return (
     <Container className="leaning-list">
       <Row>
@@ -113,7 +125,15 @@ const LeaningList = () => {
               {moment(elearning?.elearning?.createAt).format("LL")}
             </span>
             <span className="mr-2">
-              <FontAwesomeIcon icon={faHeart} />
+              {elearning?.elearning?.isFavorite ? (
+                <i className="fa fa fa-heart"></i>
+              ) : (
+                <i
+                  className="fa fa fa-heart-o"
+                  style={{cursor: "pointer"}}
+                  onClick={() => handleFav(id)}
+                ></i>
+              )}
             </span>
             <span className="mr-5">{elearning?.elearning?.favorite}</span>
             <span className="mr-2">

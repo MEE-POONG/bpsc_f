@@ -178,26 +178,56 @@ export const API_GET_SHARING_BY_ID = (id) => {
 
   return axios(config);
 };
-export const API_GET_ELEARNING_BY_ID = (id) => {
+export const API_GET_ELEARNING_BY_ID = async (id) => {
+  
+  let headers = {}
+  if (localStorage.getItem("refresh-token")) {
+    const reft = await REFRESH_TOKEN();
+    headers = {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    }
+  }
   var config = {
     method: "get",
     url: `/elearning/${id}`,
+    headers: headers
   };
 
   return axios(config);
 };
-export const API_GET_SHARING = (title = "", page = "", size = "", tag = "") => {
+export const API_GET_SHARING = async (title = "", page = "", size = "", tag = "") => {
+
+  let headers = {}
+  if (localStorage.getItem("refresh-token")) {
+    const reft = await REFRESH_TOKEN();
+    headers = {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    }
+  }
+
   var config = {
     method: "get",
     url: `/sharing?title=${title}&size=${size}&tag=${tag}&page=${page}`,
+    headers: headers
   };
 
   return axios(config);
 };
-export const API_GET_LEARNING = (title = "", page = "", size = "", tag = "") => {
+export const API_GET_LEARNING = async (title = "", page = "", size = "", tag = "") => {
+  let headers = {}
+  if (localStorage.getItem("refresh-token")) {
+    const reft = await REFRESH_TOKEN();
+    headers = {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    }
+  }
   var config = {
     method: "get",
     url: `/elearning?title=${title}&size=${size}&tag=${tag}&page=${page}`,
+    headers: headers
   };
 
   return axios(config);
@@ -415,6 +445,34 @@ export const API_UPDATE_SHARING_PHOTO = async (id, userData) => {
       "Content-Type": "application/json",
     },
     data,
+  };
+
+  return axios(config);
+};
+export const API_fAVORITE_E_lEARNING = async (id) => {
+  const reft = await REFRESH_TOKEN();
+
+  var config = {
+    method: "post",
+    url: `/favoriteElearning/${id}`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
+  };
+
+  return axios(config);
+};
+export const API_fAVORITE_SHARING = async (id) => {
+  const reft = await REFRESH_TOKEN();
+
+  var config = {
+    method: "post",
+    url: `/favoriteSharing/${id}`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
   };
 
   return axios(config);

@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from "react";
 import {Card, Col, Container, Image, Row} from "react-bootstrap";
 
-import {API_GET_FAVORITE_SHARING, IMAGE_URL} from "../../apis";
+import {API_GET_FAVORITE_SHARING, API_fAVORITE_E_lEARNING, IMAGE_URL} from "../../apis";
 import {useNavigate} from "react-router-dom";
+
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faEye, faHeart, faSearch, faHeartBroken} from "@fortawesome/free-solid-svg-icons";
 
 const ProfileMenuSharing = () => {
   const [favorite, setFavorite] = useState(null);
@@ -14,6 +17,15 @@ const ProfileMenuSharing = () => {
   }, []);
   const navigate = useNavigate();
 
+  const handleFav = (id) => {
+    // API_fAVORITE_E_lEARNING(id)
+    //   .then(() => {
+    //     API_GET_FAVORITE_SHARING().then((result) => {
+    //       setFavorite(result?.data);
+    //     });
+    //   })
+    //   .catch();
+  };
   return (
     <div className="profile-title-menu-my-share text-uppercase">
       <div className="profile-title-menu-my-share-bg scroll-num py-5">
@@ -32,6 +44,7 @@ const ProfileMenuSharing = () => {
                   firstName,
                   lastName,
                   userPicture,
+                  isFavorite,
                 },
                 idx
               ) => (
@@ -71,11 +84,24 @@ const ProfileMenuSharing = () => {
                         </span>
                       </div>
                       <div>
-                        <span className="mr-1">
-                          <i className="fa fa-eye"></i> {view}
-                        </span>
                         <span>
-                          <i className="fa fa-heart-o"></i> {favorite}
+                          <span style={{color: "#26BEB4"}} className="mr-5">
+                            <FontAwesomeIcon icon={faEye} /> {view}
+                          </span>
+                          <span style={{color: "#26BEB4"}}>
+                            {/* <FontAwesomeIcon
+                              icon={isFavorite ? faHeart : faHeartBroken}
+                            /> */}
+                            {isFavorite ? (
+                              <i className="fa fa fa-heart"></i>
+                            ) : (
+                              <i
+                                className="fa fa fa-heart-o"
+                                onClick={() => handleFav(id)}
+                              ></i>
+                            )}
+                            {favorite}
+                          </span>
                         </span>
                       </div>
                     </Card.Footer>

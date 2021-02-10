@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import {
   Container,
   Card,
@@ -9,10 +9,10 @@ import {
   Image,
   Pagination,
 } from "react-bootstrap";
-import { faEye, faHeart, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { API_GET_SHARING, IMAGE_URL } from "../../apis";
-import { useNavigate } from "react-router-dom";
+import {faEye, faHeart, faSearch} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {API_GET_SHARING, API_fAVORITE_SHARING, IMAGE_URL} from "../../apis";
+import {useNavigate} from "react-router-dom";
 
 const SharingDetail = () => {
   const [sharing, setSharing] = useState(null);
@@ -25,6 +25,17 @@ const SharingDetail = () => {
       setSharing(result?.data);
     });
   }, [search, page]);
+
+  const handleFav = (id) => {
+    API_fAVORITE_SHARING(id)
+      .then(() => {
+        API_GET_SHARING(search, page).then((result) => {
+          setSharing(result?.data);
+        });
+      })
+      .catch();
+  };
+
   return (
     <>
       <Container className="title mb-5">
@@ -71,20 +82,14 @@ const SharingDetail = () => {
               lastName,
               userPicture,
               content,
+              isFavorite,
             }) => (
-              <Col
-                lg="3"
-                md="4"
-                sm="6"
-                className="mb-5"
-                key={id}
-                onClick={() => navigate("/sharing/" + id)}
-              >
+              <Col lg="3" md="4" sm="6" className="mb-5" key={id}>
                 {/* <NavLink to={"/sharing/" + id}> */}
                 <Card className="box-card-shadow">
-                  <Card.Body className="image">
+                  <Card.Body className="image" onClick={() => navigate("/sharing/" + id)}>
                     <Card.Img
-                      style={{ height: "200px" }}
+                      style={{height: "200px"}}
                       src={
                         sharingPicture
                           ? IMAGE_URL + sharingPicture
@@ -116,13 +121,24 @@ const SharingDetail = () => {
                         {firstName} {lastName}
                       </span>
                     </div>
-                    <Card.Text>
+                    <Card.Text className="mr-auto ">
                       <span>
-                        <span style={{ color: "#26BEB4" }} className="mr-5">
+                        <span style={{color: "#26BEB4"}} className="mr-5">
                           <FontAwesomeIcon icon={faEye} /> {view}
                         </span>
-                        <span style={{ color: "#26BEB4" }}>
-                          <FontAwesomeIcon icon={faHeart} /> {favorite}
+                        <span style={{color: "#26BEB4"}}>
+                          {/* <FontAwesomeIcon
+                              icon={isFavorite ? faHeart : faHeartBroken}
+                            /> */}
+                          {isFavorite ? (
+                            <i className="fa fa fa-heart"></i>
+                          ) : (
+                            <i
+                              className="fa fa fa-heart-o"
+                              onClick={() => handleFav(id)}
+                            ></i>
+                          )}
+                          {favorite}
                         </span>
                       </span>
                     </Card.Text>
@@ -134,7 +150,7 @@ const SharingDetail = () => {
           )}
         </Row>
         <div>
-          <Pagination className="my-5" style={{ float: "right" }}>
+          <Pagination className="my-5" style={{float: "right"}}>
             {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
             {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
             {page > 1 && (

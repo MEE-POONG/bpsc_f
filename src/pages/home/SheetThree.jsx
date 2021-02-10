@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Card, Image } from "react-bootstrap";
-import { faEye, faHeart, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, {useState, useEffect} from "react";
+import {Card, Image} from "react-bootstrap";
+import {faEye, faHeart, faSearch} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
 
-import { API_GET_SHARING, IMAGE_URL } from "../../apis";
-import { useNavigate } from "react-router-dom";
+import {API_GET_SHARING, API_fAVORITE_SHARING, IMAGE_URL} from "../../apis";
+import {useNavigate} from "react-router-dom";
 
 const SheetThree = () => {
   const navigate = useNavigate();
@@ -19,6 +19,17 @@ const SheetThree = () => {
       setSharing(result?.data);
     });
   }, []);
+
+  const handleFav = (id) => {
+    API_fAVORITE_SHARING(id)
+      .then(() => {
+        API_GET_SHARING().then((result) => {
+          setSharing(result?.data);
+        });
+      })
+      .catch();
+  };
+
   return (
     <div className="sheet-three">
       {sharing ? (
@@ -52,16 +63,17 @@ const SheetThree = () => {
                 lastName,
                 userPicture,
                 content,
+                isFavorite,
               },
               idx
             ) => (
               <SwiperSlide>
-                <div
-                  className="mobile-padding pl-lg-5 px-md-5 py-5"
-                  onClick={() => navigate("/sharing/" + id)}
-                >
+                <div className="mobile-padding pl-lg-5 px-md-5 py-5">
                   <Card className="box-card-shadow">
-                    <Card.Body className="image">
+                    <Card.Body
+                      className="image"
+                      onClick={() => navigate("/sharing/" + id)}
+                    >
                       <Card.Img
                         src={
                           sharingPicture
@@ -93,19 +105,29 @@ const SheetThree = () => {
                         </span>
                       </div>
                       <Card.Text>
-                        <span >
-                          <span style={{ color: "#26BEB4" }} className="mr-5">
-                            <FontAwesomeIcon icon={faEye} /> 
-                             {view}
-                          </span>
-                          <span style={{ color: "#26BEB4" }}>
-                            <FontAwesomeIcon icon={faHeart} /> 
-                             {favorite}
+                        <span className="mr-5">
+                          <span>
+                            <span style={{color: "#26BEB4"}} className="mr-5">
+                              <FontAwesomeIcon icon={faEye} /> {view}
+                            </span>
+                            <span style={{color: "#26BEB4"}}>
+                              {/* <FontAwesomeIcon
+                              icon={isFavorite ? faHeart : faHeartBroken}
+                            /> */}
+                              {isFavorite ? (
+                                <i className="fa fa fa-heart"></i>
+                              ) : (
+                                <i
+                                  className="fa fa fa-heart-o"
+                                  onClick={() => handleFav(id)}
+                                ></i>
+                              )}
+                              {favorite}
+                            </span>
                           </span>
                         </span>
                       </Card.Text>
                     </Card.Body>
-
                   </Card>
                 </div>
               </SwiperSlide>

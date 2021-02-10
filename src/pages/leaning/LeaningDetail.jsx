@@ -10,10 +10,10 @@ import {
   Media,
 } from "react-bootstrap";
 import {NavLink} from "react-router-dom";
-import {faEye, faHeart, faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faEye, faHeart, faSearch, faHeartBroken} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import {API_GET_LEARNING, IMAGE_URL} from "../../apis";
+import {API_GET_LEARNING, API_fAVORITE_E_lEARNING, IMAGE_URL} from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
 
@@ -22,11 +22,22 @@ const LeaningDetail = () => {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
   const [learning, setLearning] = useState(null);
+
   useEffect(() => {
     API_GET_LEARNING(search, page).then((result) => {
       setLearning(result?.data);
     });
   }, [search, page]);
+
+  const handleFav = (id) => {
+    API_fAVORITE_E_lEARNING(id)
+      .then(() => {
+        API_GET_LEARNING(search, page).then((result) => {
+          setLearning(result?.data);
+        });
+      })
+      .catch();
+  };
 
   return (
     <div>
@@ -77,20 +88,17 @@ const LeaningDetail = () => {
                   lastName,
                   userPicture,
                   content,
+                  isFavorite,
                 },
                 idx
               ) => (
-                <Col
-                  xl="3"
-                  lg="4"
-                  md="6"
-                  xs="12"
-                  className="mobile-padding py-5"
-                  onClick={() => navigate(`/e-leaning/${id}`)}
-                >
+                <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
                   {/* <NavLink to={`/e-leaning/${id}`} className="p-0 nav-link"> */}
                   <Card>
-                    <Card.Body className="image">
+                    <Card.Body
+                      className="image"
+                      onClick={() => navigate(`/e-leaning/${id}`)}
+                    >
                       <img
                         src={
                           elearningPicture
@@ -125,13 +133,24 @@ const LeaningDetail = () => {
                       <Card.Text className="subtitle-text">{content}</Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                      <Card.Text >
+                      <Card.Text>
                         <span>
-                          <span style={{ color: "#26BEB4" }} className="mr-5">
+                          <span style={{color: "#26BEB4"}} className="mr-5">
                             <FontAwesomeIcon icon={faEye} /> {view}
                           </span>
                           <span style={{color: "#26BEB4"}}>
-                            <FontAwesomeIcon icon={faHeart} /> {favorite}
+                            {/* <FontAwesomeIcon
+                              icon={isFavorite ? faHeart : faHeartBroken}
+                            /> */}
+                            {isFavorite ? (
+                              <i className="fa fa fa-heart"></i>
+                            ) : (
+                              <i
+                                className="fa fa fa-heart-o"
+                                onClick={() => handleFav(id)}
+                              ></i>
+                            )}
+                            {favorite}
                           </span>
                         </span>
                       </Card.Text>

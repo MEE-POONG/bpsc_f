@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Card, Col, Container, Media, Row} from "react-bootstrap";
 
-import {API_GET_ELEARNING_SHARING, IMAGE_URL} from "../../apis";
+import {API_GET_ELEARNING_SHARING, API_fAVORITE_E_lEARNING, IMAGE_URL} from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
 import {faArrowRight, faHeart, faEye, faSearch} from "@fortawesome/free-solid-svg-icons";
@@ -17,6 +17,16 @@ const ProfileMenuLeaning = () => {
       setLearning(result?.data);
     });
   }, [search, page]);
+
+  const handleFav = (id) => {
+    // API_fAVORITE_E_lEARNING(id)
+    //   .then(() => {
+    //     API_GET_ELEARNING_SHARING(search, page).then((result) => {
+    //       setLearning(result?.data);
+    //     });
+    //   })
+    //   .catch();
+  };
 
   return (
     <div className="learning text-uppercase">
@@ -36,6 +46,7 @@ const ProfileMenuLeaning = () => {
                   lastName,
                   userPicture,
                   content,
+                  isFavorite,
                 },
                 idx
               ) => (
@@ -85,12 +96,23 @@ const ProfileMenuLeaning = () => {
                     </Card.Body>
                     <Card.Footer>
                       <Card.Text className="mr-auto ">
-                        <span className="d-flex justify-content-between">
-                          <span style={{color: "#26BEB4"}}>
+                        <span>
+                          <span style={{color: "#26BEB4"}} className="mr-5">
                             <FontAwesomeIcon icon={faEye} /> {view}
                           </span>
                           <span style={{color: "#26BEB4"}}>
-                            <FontAwesomeIcon icon={faHeart} /> {favorite}
+                            {/* <FontAwesomeIcon
+                              icon={isFavorite ? faHeart : faHeartBroken}
+                            /> */}
+                            {isFavorite ? (
+                              <i className="fa fa fa-heart"></i>
+                            ) : (
+                              <i
+                                className="fa fa fa-heart-o"
+                                onClick={() => handleFav(id)}
+                              ></i>
+                            )}
+                            {favorite}
                           </span>
                         </span>
                       </Card.Text>
