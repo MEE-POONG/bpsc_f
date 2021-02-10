@@ -486,21 +486,49 @@ export const API_GET_TAGS = () => {
 
   return axios(config);
 };
-// export const API_LOGIN = () => {
-//   // Add a response interceptor
-//   return axios.interceptors.response.use(
-//     function (response) {
-//       // Any status code that lie within the range of 2xx cause this function to trigger
-//       // Do something with response data
-//       console.log(response);
-//       return response;
+
+// export const API_CHECK_NOTIFICATION = async () => {
+//   const reft = await REFRESH_TOKEN();
+
+//   var config = {
+//     method: "post",
+//     url: `/checkNotification`,
+//     headers: {
+//       Authorization: "Bearer " + reft?.accessToken,
+//       "Content-Type": "application/json",
 //     },
-//     function (error) {
-//       if (error.response && error.response.status === 401) {
-//         redirect("/");
-//         return;
-//       }
-//       return Promise.reject(error);
-//     }
-//   );
+//   };
+
+//   return axios(config);
 // };
+
+export const API_CHECK_NOTIFICATION = async () => {
+  const reft = await REFRESH_TOKEN();
+
+  var config = {
+    method: "post",
+    url: `/checkNotification`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
+  };
+
+  return axios(config);
+};
+
+
+export const API_GET_NOTIFICATION = async (page = "", size = "") => {
+  const reft = await REFRESH_TOKEN();
+
+  var config = {
+    method: "get",
+    url: `/notification?size=${size}&page=${page}`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
+  };
+
+  return axios(config);
+};

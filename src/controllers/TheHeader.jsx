@@ -6,17 +6,33 @@ import Notification from "./TheNotification";
 import TheLogin from "./TheLogin";
 import {faUser, faBell, faPen, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {API_GET_USER_INFO, API_GET_USER_UPDATE, IMAGE_URL} from "../apis";
+import {
+  API_GET_USER_INFO,
+  API_GET_USER_UPDATE,
+  API_CHECK_NOTIFICATION,
+  IMAGE_URL,
+} from "../apis";
+import moment from "moment";
 
 const TheHeader = () => {
   let navigate = useNavigate();
   const [userInfo, setUserInfo] = useState(null);
-
+  const [getNotification, setGetNotification] = useState(0);
   useEffect(() => {
     API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
       setUserInfo(result?.data);
     });
-  }, []);
+  }, [localStorage.getItem("id")]);
+
+  const checkNotification = () => {
+    API_CHECK_NOTIFICATION().then((result) => {
+      setGetNotification(result?.data?.notification);
+    });
+  };
+  useEffect(() => {
+    checkNotification();
+  }, [moment().format("YYYY MM DD HH mm")]);
+
   return (
     <>
       <Navbar
@@ -63,7 +79,7 @@ const TheHeader = () => {
                     <div className="col-sm-2">
                       <div className="nav-item">
                         <a href={() => {}}>
-                          <span className="notify-badge">NEW</span>
+                          <span className="notify-badge">{getNotification}</span>
                           <img
                             src={
                               userInfo?.picture
