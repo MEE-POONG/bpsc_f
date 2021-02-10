@@ -93,8 +93,8 @@ const Abstain = () => {
                         </Card.Title>
                         {content}
                         <Card.Text className="mr-auto mt-4">
-                          <span className="d-flex justify-content-between">
-                            <span style={{ color: "#26BEB4" }}>
+                          <span>
+                            <span style={{ color: "#26BEB4" }} className="mr-5">
                               <FontAwesomeIcon icon={faEye} />
                               {/* {view} */}
                             </span>

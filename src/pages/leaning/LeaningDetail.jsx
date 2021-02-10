@@ -118,9 +118,9 @@ const LeaningDetail = () => {
                       <Card.Text className="subtitle-text">{content}</Card.Text>
                     </Card.Body>
                     <Card.Footer>
-                      <Card.Text className="mr-auto ">
-                        <span className="d-flex justify-content-between">
-                          <span style={{ color: "#26BEB4" }}>
+                      <Card.Text >
+                        <span>
+                          <span style={{ color: "#26BEB4" }} className="mr-5">
                             <FontAwesomeIcon icon={faEye} /> {view}
                           </span>
                           <span style={{ color: "#26BEB4" }}>

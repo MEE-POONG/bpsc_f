@@ -92,9 +92,9 @@ const SheetThree = () => {
                           {firstName} {lastName}
                         </span>
                       </div>
-                      <Card.Text className="mr-auto ">
-                        <span className="d-flex justify-content-between">
-                          <span style={{ color: "#26BEB4" }}>
+                      <Card.Text>
+                        <span className="mr-5">
+                          <span style={{ color: "#26BEB4" }} >
                             <FontAwesomeIcon icon={faEye} />
                             {/* {view} */}
                           </span>
