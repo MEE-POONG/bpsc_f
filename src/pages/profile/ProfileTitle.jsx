@@ -103,12 +103,12 @@ const ProfileTitle = () => {
             <Container className="text-center">
                 <div class="avatar-upload">
                   <div class="avatar-edit">
-                    {/* <input
+                    <input
                       type="file"
                       id="imageUpload"
                       accept=".png, .jpg, .jpeg"
                       onChange={(e) => userUpdatePhoto(e)}
-                    /> */}
+                    />
                     <label for="imageUpload"></label>
                   </div>
                   <div class="avatar-preview">
