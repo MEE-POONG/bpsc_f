@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {Card, Col, Container, Row, Image} from "react-bootstrap";
 
 import {API_GET_DRAFT_SHARING, IMAGE_URL} from "../../apis";
 import {useNavigate} from "react-router-dom";
@@ -17,7 +17,7 @@ const ProfileMenuFolder = () => {
   return (
     <div className="profile-title-menu-my-share text-uppercase">
       <div className="profile-title-menu-my-share-bg scroll-num py-5">
-        <Container>
+        <Container className="detail">
           <Row className="py-5">
             {draft?.data?.map(
               (
@@ -35,44 +35,58 @@ const ProfileMenuFolder = () => {
                 },
                 idx
               ) => (
-                <Card className="box-card-shadow border-radius-25 mb-5">
-                  <Card.Body className="image">
-                    <Row>
-                      <Col lg="4">
-                        <Card.Img
-                          src={
-                            sharingPicture
-                              ? IMAGE_URL + sharingPicture
-                              : "https://chiccarrent.com/files/images/default-placeholder.png"
-                          }
-                          alt={title}
-                          className="card-img-top"
-                        />
-                      </Col>
-                      <Col lg="8">
-                        <div className="float-right h4 pt-2">
-                          {moment(createAt).fromNow()}
-                        </div>
-                        <Card.Title className="pt-5 font-weight-bold">{title}</Card.Title>
-                        <Card.Text className="subtitle-text">{content}</Card.Text>
-                        <div className="pt-5 about-talk-with-us-btn-right">
-                          <button
-                            type="button"
-                            className="btn btn-danger about-talk-with-us-btn-danger "
-                          >
-                            Danger
-                          </button>
-                          <button
-                            type="button"
-                            className="btn btn-success about-talk-with-us-btn-success"
-                          >
-                            Success
-                          </button>
-                        </div>
-                      </Col>
-                    </Row>
-                  </Card.Body>
-                </Card>
+                <Col
+                  lg="3"
+                  md="4"
+                  sm="6"
+                  className="mb-5"
+                  // onClick={() => navigate("/sharing/" + id)}
+                >
+                  <Card className="box-card-shadow">
+                    <Card.Body className="image">
+                      <Card.Img
+                        src={
+                          sharingPicture
+                            ? IMAGE_URL + sharingPicture
+                            : "https://chiccarrent.com/files/images/default-placeholder.png"
+                        }
+                        alt={title}
+                        className="card-img-top"
+                      />
+                    </Card.Body>
+                    <Card.Body>
+                      <Card.Title>{title}</Card.Title>
+                      <Card.Text className="subtitle-text">{content}</Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                      <div className="user">
+                        <span className="mr-1">
+                          <Image
+                            roundedCircle
+                            src={
+                              userPicture
+                                ? IMAGE_URL + userPicture
+                                : "https://chiccarrent.com/files/images/default-placeholder.png"
+                            }
+                            alt={title}
+                            className="card-img-top"
+                          />
+                        </span>
+                        <span className="pl-1">
+                          {firstName} {lastName}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="mr-1">
+                          <i className="fa fa-eye"></i> {view}
+                        </span>
+                        <span>
+                          <i className="fa fa fa-heart-o"></i> {favorite}
+                        </span>
+                      </div>
+                    </Card.Footer>
+                  </Card>
+                </Col>
               )
             )}
           </Row>

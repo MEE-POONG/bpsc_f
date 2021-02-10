@@ -45,7 +45,7 @@ const ProfileMenuLeaning = () => {
                   md="6"
                   xs="12"
                   className="mobile-padding py-5"
-                  onClick={() => navigate("/e-leaning/" + id)}
+                  // onClick={() => navigate("/e-leaning/" + id)}
                 >
                   {/* <NavLink to={`/e-leaning/${id}`} className="p-0 nav-link"> */}
                   <Card>

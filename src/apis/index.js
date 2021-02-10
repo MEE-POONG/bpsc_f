@@ -98,6 +98,19 @@ export const API_LOGIN = (email, password) => {
 
   return axios(config);
 };
+export const API_LOGIN_FACEBOOK = (facebookToken) => {
+  var data = JSON.stringify(facebookToken);
+  var config = {
+    method: "post",
+    url: "/facebookLogin",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data,
+  };
+
+  return axios(config);
+};
 export const API_REGISTER = (formRegister) => {
   var data = JSON.stringify(formRegister);
 
@@ -247,7 +260,6 @@ export const API_GET_DOCTOR = () => {
 export const API_GET_FAVORITE_SHARING = async (page = "", size = "") => {
   const reft = await REFRESH_TOKEN();
 
-  
   var config = {
     method: "get",
     url: `/favoriteSharing?size=${size}&page=${page}`,
@@ -262,7 +274,6 @@ export const API_GET_FAVORITE_SHARING = async (page = "", size = "") => {
 export const API_GET_MY_SHARING = async () => {
   const reft = await REFRESH_TOKEN();
 
-
   var config = {
     method: "get",
     url: `/mySharing`,
@@ -276,7 +287,6 @@ export const API_GET_MY_SHARING = async () => {
 };
 export const API_GET_DRAFT_SHARING = async () => {
   const reft = await REFRESH_TOKEN();
-
 
   var config = {
     method: "get",
@@ -293,7 +303,6 @@ export const API_GET_DRAFT_SHARING = async () => {
 export const API_GET_ELEARNING_SHARING = async (page = "", size = "") => {
   const reft = await REFRESH_TOKEN();
 
-
   var config = {
     method: "get",
     url: `/favoriteElearning?size=${size}&page=${page}`,
@@ -308,7 +317,6 @@ export const API_GET_ELEARNING_SHARING = async (page = "", size = "") => {
 export const API_GET_USER_INFO = async (id) => {
   const reft = await REFRESH_TOKEN();
 
-
   var config = {
     method: "get",
     url: `/user/${id}`,
@@ -322,7 +330,6 @@ export const API_GET_USER_INFO = async (id) => {
 };
 export const API_GET_USER_UPDATE = async (id, userData) => {
   const reft = await REFRESH_TOKEN();
-
 
   var data = JSON.stringify(userData);
 
@@ -375,6 +382,26 @@ export const API_CREATE_SHARING = async (userData) => {
 
   return axios(config);
 };
+export const API_UPDATE_SHARING_PHOTO = async (id, userData) => {
+  const reft = await REFRESH_TOKEN();
+
+  var FormData = require("form-data");
+  var data = new FormData();
+  data.append("file", userData);
+
+  var config = {
+    method: "put",
+    url: `/sharingPicture/${id}`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
+    data,
+  };
+
+  return axios(config);
+};
+
 export const API_GET_TAGS = () => {
   var config = {
     method: "get",
