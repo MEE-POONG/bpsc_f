@@ -22,6 +22,8 @@ import {useParams} from "react-router-dom";
 
 import {
   API_GET_ELEARNING_BY_ID,
+  API_CREATE_COMMENT,
+  API_GET_USER_INFO,
   API_GET_LEARNING_COMMENT,
   API_GET_LEARNING_DOCUMENT,
   IMAGE_URL,
@@ -30,10 +32,14 @@ import {
 import moment from "moment";
 import {NavLink} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
+import Swal from "sweetalert2";
 
 const LeaningList = () => {
   const {id} = useParams();
+  const [userInfo, setUserInfo] = useState(null);
+
   const [elearning, setElearning] = useState(null);
+  const [createComment, setCreateComment] = useState(null);
   const [comment, setComment] = useState(null);
   const [commentSearch, setCommentSearch] = useState(3);
   const setSearch = () => setCommentSearch((e) => (e += 3));
@@ -46,6 +52,10 @@ const LeaningList = () => {
     API_GET_ELEARNING_BY_ID(id).then((result) => {
       setElearning(result?.data);
     });
+
+    API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
+      setUserInfo(result?.data);
+    });
   }, []);
   useEffect(() => {
     API_GET_LEARNING_DOCUMENT(id).then((result) => {
@@ -57,6 +67,25 @@ const LeaningList = () => {
       setComment(result?.data);
     });
   }, [commentSearch]);
+  const handleCreateComment = () => {
+    API_CREATE_COMMENT(id, {comment: createComment})
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "สำเร็จ",
+          text: "แสดงความคิดเห็นสำเร็จ",
+        }).then(() => {
+          setSearch();
+        });
+      })
+      .catch((e) => {
+        Swal.fire({
+          icon: "error",
+          title: e?.error,
+          text: e?.message,
+        });
+      });
+  };
   return (
     <Container className="leaning-list">
       <Row>
@@ -109,19 +138,37 @@ const LeaningList = () => {
               width={64}
               height={64}
               className="align-self-start mr-3"
-              src="../image/image12.png"
-              alt="Generic placeholder"
+              src={
+                userInfo?.picture
+                  ? IMAGE_URL + userInfo?.picture
+                  : "https://chiccarrent.com/files/images/default-placeholder.png"
+              }
+              alt={comment}
             />
             <Media.Body>
               <FormControl
                 bsPrefix="input-comment"
                 as="textarea"
                 placeholder="Add a Public Comment..."
+                onChange={(e) => setCreateComment(e.target.value)}
               />
             </Media.Body>
+            <div
+              style={{
+                alignSelf: "center",
+              }}
+            >
+              <button
+                type="button"
+                className="btn btn-success about-talk-with-us-btn-success"
+                onClick={() => handleCreateComment()}
+              >
+                SEND
+              </button>
+            </div>
           </Media>
         </Col>
-      </Row>{" "}
+      </Row>
       <Container fluid className="list mb-5 py-5">
         {comment?.data?.map(
           ({userPicture, comment, createAt, id, firstName, lastName}, idx) => (
