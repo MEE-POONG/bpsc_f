@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Card,
@@ -9,10 +9,10 @@ import {
   Image,
   Pagination,
 } from "react-bootstrap";
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {API_GET_SHARING, IMAGE_URL} from "../../apis";
-import {useNavigate} from "react-router-dom";
+import { faEye, faHeart, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { API_GET_SHARING, IMAGE_URL } from "../../apis";
+import { useNavigate } from "react-router-dom";
 
 const SharingDetail = () => {
   const [sharing, setSharing] = useState(null);
@@ -115,14 +115,16 @@ const SharingDetail = () => {
                         {firstName} {lastName}
                       </span>
                     </div>
-                    <div>
-                      <span className="mr-1">
-                        <i className="fa fa-eye"></i> {view}
+                    <Card.Text className="mr-auto ">
+                      <span className="d-flex justify-content-between">
+                        <span style={{ color: "#26BEB4" }}>
+                          <FontAwesomeIcon icon={faEye} /> {view}
+                        </span>
+                        <span style={{ color: "#26BEB4" }}>
+                          <FontAwesomeIcon icon={faHeart} /> {favorite}
+                        </span>
                       </span>
-                      <span>
-                        <i className="fa fa-comments-o"></i> {favorite}
-                      </span>
-                    </div>
+                    </Card.Text>
                   </Card.Footer>
                 </Card>
                 {/* </NavLink> */}
@@ -131,7 +133,7 @@ const SharingDetail = () => {
           )}
         </Row>
         <div>
-          <Pagination className="my-5" style={{float: "right"}}>
+          <Pagination className="my-5" style={{ float: "right" }}>
             {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
             {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
             {page > 1 && (

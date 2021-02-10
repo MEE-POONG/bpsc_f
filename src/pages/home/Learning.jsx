@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Card, Media} from "react-bootstrap";
-
+import { faEye, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
@@ -91,30 +92,19 @@ const Abstain = () => {
                           </Media>
                         </Card.Title>
                         {content}
-                      </Card.Body>
-                      <Card.Footer>
-                        <Card.Text className="mr-auto">
-                          <span className="d-flex justify-content-between">
-                            {/* <span
-                              style={{color: "#26BEB4"}}
-                              onClick={() => navigate("/e-leaning/" + id)}
-                            >
-                              READ MORE
-                              <i style={{fontSize: "14px"}} className="fa pl-2">
-                                &#xf061;
-                              </i>
-                            </span> */}
-                            <div>
-                              <span className="mr-1">
-                                <i className="fa fa-eye"></i> {view}
-                              </span>
-                              <span>
-                                <i className="fa fa-heart-o"></i> {favorite}
-                              </span>
-                            </div>
+                        <Card.Text className="mr-auto mt-4">
+                        <span className="d-flex justify-content-between">
+                          <span style={{ color: "#26BEB4" }}>
+                            <FontAwesomeIcon icon={faEye} />
+                            {/* {view} */}
                           </span>
-                        </Card.Text>
-                      </Card.Footer>
+                          <span style={{ color: "#26BEB4" }}>
+                            <FontAwesomeIcon icon={faHeart} />
+                            {/* {favorite} */}
+                          </span>
+                        </span>
+                      </Card.Text>
+                      </Card.Body>
                     </Card>
                   </div>
                 </SwiperSlide>
