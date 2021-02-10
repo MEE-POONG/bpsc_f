@@ -179,55 +179,53 @@ export const API_GET_SHARING_BY_ID = (id) => {
   return axios(config);
 };
 export const API_GET_ELEARNING_BY_ID = async (id) => {
-  
-  let headers = {}
+  let headers = {};
   if (localStorage.getItem("refresh-token")) {
     const reft = await REFRESH_TOKEN();
     headers = {
       Authorization: "Bearer " + reft?.accessToken,
       "Content-Type": "application/json",
-    }
+    };
   }
   var config = {
     method: "get",
     url: `/elearning/${id}`,
-    headers: headers
+    headers: headers,
   };
 
   return axios(config);
 };
 export const API_GET_SHARING = async (title = "", page = "", size = "", tag = "") => {
-
-  let headers = {}
+  let headers = {};
   if (localStorage.getItem("refresh-token")) {
     const reft = await REFRESH_TOKEN();
     headers = {
       Authorization: "Bearer " + reft?.accessToken,
       "Content-Type": "application/json",
-    }
+    };
   }
 
   var config = {
     method: "get",
     url: `/sharing?title=${title}&size=${size}&tag=${tag}&page=${page}`,
-    headers: headers
+    headers: headers,
   };
 
   return axios(config);
 };
 export const API_GET_LEARNING = async (title = "", page = "", size = "", tag = "") => {
-  let headers = {}
+  let headers = {};
   if (localStorage.getItem("refresh-token")) {
     const reft = await REFRESH_TOKEN();
     headers = {
       Authorization: "Bearer " + reft?.accessToken,
       "Content-Type": "application/json",
-    }
+    };
   }
   var config = {
     method: "get",
     url: `/elearning?title=${title}&size=${size}&tag=${tag}&page=${page}`,
-    headers: headers
+    headers: headers,
   };
 
   return axios(config);
@@ -280,10 +278,10 @@ export const API_GET_EVENT = () => {
 
   return axios(config);
 };
-export const API_GET_DOCTOR = () => {
+export const API_GET_DOCTOR = (title = "", page = "", size = "", tag = "") => {
   var config = {
     method: "get",
-    url: "/doctor",
+    url: `/doctor?title=${title}&size=${size}&tag=${tag}&page=${page}`,
   };
 
   return axios(config);
@@ -516,7 +514,6 @@ export const API_CHECK_NOTIFICATION = async () => {
 
   return axios(config);
 };
-
 
 export const API_GET_NOTIFICATION = async (page = "", size = "") => {
   const reft = await REFRESH_TOKEN();

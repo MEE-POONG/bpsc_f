@@ -4,7 +4,7 @@ import DoctorCard from "./DoctorCard";
 const Doctor = () => {
   return (
     <div className="doctor-page text-uppercase">
-      <DoctorTitle />
+      {/* <DoctorTitle /> */}
       <DoctorCard />
     </div>
   );

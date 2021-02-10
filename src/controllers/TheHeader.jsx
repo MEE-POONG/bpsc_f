@@ -113,7 +113,7 @@ const TheHeader = () => {
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์
                 </NavDropdown.Item>
                 {/* <NavDropdown.Item>
-                  <FontAwesomeIcon icon={faEye} /> &nbsp;แชร์ที่เคยดู
+                  <FontAwesomeIcon className="pr-2" icon={faEye} /> &nbsp;แชร์ที่เคยดู
                 </NavDropdown.Item> */}
                 <NavDropdown.Divider />
                 <NavDropdown.Item
