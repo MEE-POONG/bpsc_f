@@ -29,6 +29,7 @@ import {
 } from "../../apis";
 import moment from "moment";
 import {NavLink} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const LeaningList = () => {
   const {id} = useParams();
@@ -39,6 +40,8 @@ const LeaningList = () => {
   const [document, setDocument] = useState(null);
   const [documentClick, setDocumentClick] = useState(1);
   const setClick = () => setDocumentClick((e) => (e += 1));
+  const navigate = useNavigate();
+
   useEffect(() => {
     API_GET_ELEARNING_BY_ID(id).then((result) => {
       setElearning(result?.data);
@@ -58,7 +61,7 @@ const LeaningList = () => {
     <Container className="leaning-list">
       <Row>
         <Col className="text-right" xs="12" lg="12">
-          <NavLink to={"/e-leaning/"} className="p-0 nav-link">
+          <NavLink to={() => {}} className="p-0 nav-link" onClick={() => navigate(-1)}>
             <Button bsPrefix="btn-save" className="mb-5">
               BACK
             </Button>

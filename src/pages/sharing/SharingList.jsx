@@ -18,9 +18,11 @@ import {useParams} from "react-router-dom";
 
 import {API_GET_SHARING_BY_ID, IMAGE_URL} from "../../apis";
 import moment from "moment";
+import {useNavigate} from "react-router-dom";
 
 const SharingList = () => {
   const {id} = useParams();
+  const navigate = useNavigate();
   const [sharing, setSharing] = useState(null);
   useEffect(() => {
     API_GET_SHARING_BY_ID(id).then((result) => {
@@ -31,7 +33,7 @@ const SharingList = () => {
     <Container className="leaning-list">
       <Row>
         <Col className="text-right" xs="12" lg="12">
-          <NavLink to={"/sharing/"} className="p-0 nav-link">
+          <NavLink to={() => {}} className="p-0 nav-link" onClick={() => navigate(-1)}>
             <Button bsPrefix="btn-save" className="mb-5">
               BACK
             </Button>
