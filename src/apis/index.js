@@ -383,6 +383,23 @@ export const API_CREATE_SHARING = async (userData) => {
 
   return axios(config);
 };
+export const API_CREATE_COMMENT = async (id, userData) => {
+  const reft = await REFRESH_TOKEN();
+
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "post",
+    url: `/comment/${id}`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
+    data,
+  };
+
+  return axios(config);
+};
 export const API_UPDATE_SHARING_PHOTO = async (id, userData) => {
   const reft = await REFRESH_TOKEN();
 
