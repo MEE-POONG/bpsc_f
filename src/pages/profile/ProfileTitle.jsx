@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Container, Image, Form, Modal, Row, Col } from "react-bootstrap";
+import React, {useState, useEffect} from "react";
+import {faEdit} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Button, Container, Image, Form, Modal, Row, Col} from "react-bootstrap";
 import {
   API_GET_USER_INFO,
   API_GET_USER_UPDATE,
+  API_GET_USER_PWD_UPDATE,
   API_GET_USER_UPDATE_PHOTO,
   IMAGE_URL,
 } from "../../apis";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ProfileTitle = () => {
@@ -29,15 +30,43 @@ const ProfileTitle = () => {
   const navigate = useNavigate();
 
   const [editProfileForm, setEditProfileForm] = useState({
-    firstName: "",
-    lastName: "",
+    firstName: userInfo?.firstName,
+    lastName: userInfo?.LastName,
   });
+  const [editPwdForm, setEditPwdForm] = useState({
+    password1: "",
+    password2: "",
+  });
+
+  useEffect(() => {
+    setEditProfileForm({
+      firstName: userInfo?.firstName,
+      lastName: userInfo?.LastName,
+    });
+  }, [userInfo?.firstName, userInfo?.LastName]);
 
   const userUpdate = (e) => {
     e.preventDefault();
     API_GET_USER_UPDATE(localStorage.getItem("id"), editProfileForm)
       .then(() => {
         Swal.fire("สำเร็จ!", "เปลี่ยนแปลงข้อมูลสำเร็จ!", "success").then(() => {
+          handleClose();
+          handleGetUserInfo();
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: error?.error,
+          text: error?.message,
+        });
+      });
+  };
+  const userPwdUpdate = (e) => {
+    e.preventDefault();
+    API_GET_USER_PWD_UPDATE(localStorage.getItem("id"), editPwdForm)
+      .then(() => {
+        Swal.fire("สำเร็จ!", "เปลี่ยนแปลงรหัสผ่านสำเร็จ!", "success").then(() => {
           handleClose();
           handleGetUserInfo();
         });
@@ -119,41 +148,43 @@ const ProfileTitle = () => {
                         ${userInfo?.picture
                             ? IMAGE_URL + userInfo?.picture
                             : "https://chiccarrent.com/files/images/default-placeholder.png"
-                          }
+                        }
                         )`,
-                      }}
-                    ></div>
-                  </div>
+                    }}
+                  ></div>
                 </div>
+              </div>
 
               <Form className="text-left">
                 <Form.Group controlId="formBasicFirstName">
                   <Form.Label>
                     <h4>
-                      ชื่อ<span style={{ color: "red" }}>*</span>
+                      ชื่อ<span style={{color: "red"}}>*</span>
                     </h4>
                   </Form.Label>
                   <Form.Control
                     size="lg"
                     type="text"
                     placeholder="ชื่อ"
+                    value={editProfileForm.firstName}
                     onChange={(e) =>
-                      setEditProfileForm({ ...editProfileForm, firstName: e.target.value })
+                      setEditProfileForm({...editProfileForm, firstName: e.target.value})
                     }
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicLastName">
                   <Form.Label>
                     <h4>
-                      นามสกุล<span style={{ color: "red" }}>*</span>
+                      นามสกุล<span style={{color: "red"}}>*</span>
                     </h4>
                   </Form.Label>
                   <Form.Control
                     size="lg"
                     type="text"
                     placeholder="นามสกุล"
+                    value={editProfileForm.lastName}
                     onChange={(e) =>
-                      setEditProfileForm({ ...editProfileForm, lastName: e.target.value })
+                      setEditProfileForm({...editProfileForm, lastName: e.target.value})
                     }
                   />
                 </Form.Group>
