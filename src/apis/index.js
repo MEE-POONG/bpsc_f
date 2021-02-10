@@ -374,6 +374,23 @@ export const API_GET_USER_UPDATE = async (id, userData) => {
 
   return axios(config);
 };
+export const API_GET_USER_PWD_UPDATE = async (id, userData) => {
+  const reft = await REFRESH_TOKEN();
+
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/user/changePassword/${id}`,
+    headers: {
+      Authorization: "Bearer " + reft?.accessToken,
+      "Content-Type": "application/json",
+    },
+    data,
+  };
+
+  return axios(config);
+};
 export const API_GET_USER_UPDATE_PHOTO = async (id, userData) => {
   const reft = await REFRESH_TOKEN();
 

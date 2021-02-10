@@ -108,20 +108,13 @@ const ProfileTitle = () => {
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Container className="text-center">
-<<<<<<< Updated upstream
                 <div class="avatar-upload">
                   <div class="avatar-edit">
                     <input
-=======
-              <div class="avatar-upload">
-                <div class="avatar-edit">
-                  {/* <input
->>>>>>> Stashed changes
                       type="file"
                       id="imageUpload"
                       accept=".png, .jpg, .jpeg"
                       onChange={(e) => userUpdatePhoto(e)}
-<<<<<<< Updated upstream
                     />
                     <label for="imageUpload"></label>
                   </div>
@@ -131,18 +124,6 @@ const ProfileTitle = () => {
                       style={{
                         backgroundImage: `url(
                         ${userInfo?.picture
-=======
-                    /> */}
-                  <label for="imageUpload"></label>
-                </div>
-                <div class="avatar-preview">
-                  <div
-                    id="imagePreview"
-                    style={{
-                      backgroundImage: `url(
-                        ${
-                          userInfo?.picture
->>>>>>> Stashed changes
                             ? IMAGE_URL + userInfo?.picture
                             : "https://chiccarrent.com/files/images/default-placeholder.png"
                         }
