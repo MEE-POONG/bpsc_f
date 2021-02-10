@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import {
   Container,
   Card,
@@ -9,13 +9,13 @@ import {
   Pagination,
   Media,
 } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import { faEye, faHeart, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {NavLink} from "react-router-dom";
+import {faEye, faHeart, faSearch} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import { API_GET_LEARNING, IMAGE_URL } from "../../apis";
+import {API_GET_LEARNING, IMAGE_URL} from "../../apis";
 import moment from "moment";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const LeaningDetail = () => {
   const navigate = useNavigate();
@@ -80,7 +80,14 @@ const LeaningDetail = () => {
                 },
                 idx
               ) => (
-                <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
+                <Col
+                  xl="3"
+                  lg="4"
+                  md="6"
+                  xs="12"
+                  className="mobile-padding py-5"
+                  onClick={() => navigate(`/e-leaning/${id}`)}
+                >
                   {/* <NavLink to={`/e-leaning/${id}`} className="p-0 nav-link"> */}
                   <Card>
                     <Card.Body className="image">
@@ -110,7 +117,7 @@ const LeaningDetail = () => {
                           </Card>
                           <Media.Body>
                             <p>
-                              <b style={{ color: "#000" }}>{title}</b>
+                              <b style={{color: "#000"}}>{title}</b>
                             </p>
                           </Media.Body>
                         </Media>
@@ -123,7 +130,7 @@ const LeaningDetail = () => {
                           <span style={{ color: "#26BEB4" }} className="mr-5">
                             <FontAwesomeIcon icon={faEye} /> {view}
                           </span>
-                          <span style={{ color: "#26BEB4" }}>
+                          <span style={{color: "#26BEB4"}}>
                             <FontAwesomeIcon icon={faHeart} /> {favorite}
                           </span>
                         </span>
@@ -137,7 +144,7 @@ const LeaningDetail = () => {
           </Row>
         </Container>
         <div>
-          <Pagination className="my-5" style={{ float: "right" }}>
+          <Pagination className="my-5" style={{float: "right"}}>
             {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
             {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
             {page > 1 && (

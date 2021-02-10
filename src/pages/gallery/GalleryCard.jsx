@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Pagination, Card } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import { faEye, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { API_GET_GALLERY, IMAGE_URL } from "../../apis";
-import { useNavigate } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import {Container, Row, Col, Pagination, Card} from "react-bootstrap";
+import {NavLink} from "react-router-dom";
+import {faEye, faHeart} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {API_GET_GALLERY, IMAGE_URL} from "../../apis";
+import {useNavigate} from "react-router-dom";
 
 const GalleryCard = () => {
   const [gallery, setGallery] = useState(null);
@@ -20,7 +20,7 @@ const GalleryCard = () => {
   return (
     <Container className="detail">
       <Row className="py-5">
-        {gallery?.data?.map(({ id, title, content, photo }) => (
+        {gallery?.data?.map(({id, title, content, photo}) => (
           <Col lg="3" md="4" sm="6" className="mb-5">
             <NavLink to={`/gallery/${id}`} className="nav-link">
               <Card className="box-card-shadow">
@@ -39,20 +39,20 @@ const GalleryCard = () => {
                   <Card.Title>{title}</Card.Title>
                   <Card.Text className="subtitle-text">{content}</Card.Text>
                 </Card.Body>
-                <Card.Footer>
+                {/* <Card.Footer>
                   <Card.Text className="mr-auto ">
                     <span className="d-flex justify-content-between">
-                      <span style={{ color: "#26BEB4" }}>
-                        <FontAwesomeIcon icon={faEye} /> 
-                        {/* {view} */}
+                      <span style={{color: "#26BEB4"}}>
+                        <FontAwesomeIcon icon={faEye} />
+                        {view}
                       </span>
-                      <span style={{ color: "#26BEB4" }}>
-                        <FontAwesomeIcon icon={faHeart} /> 
-                        {/* {favorite} */}
+                      <span style={{color: "#26BEB4"}}>
+                        <FontAwesomeIcon icon={faHeart} />
+                        {favorite}
                       </span>
                     </span>
                   </Card.Text>
-                </Card.Footer>
+                </Card.Footer> */}
               </Card>
             </NavLink>
           </Col>
@@ -60,7 +60,7 @@ const GalleryCard = () => {
       </Row>
 
       <div>
-        <Pagination className="my-5" style={{ float: "right" }}>
+        <Pagination className="my-5" style={{float: "right"}}>
           {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
           {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
           {page > 1 && (

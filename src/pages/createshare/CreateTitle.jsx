@@ -36,13 +36,13 @@ const CreateTitle = () => {
   const createSharing = () => {
     API_CREATE_SHARING(sharingData)
       .then((e) => {
-        console.log(e);
+        // console.log(e);
         Swal.fire("สำเร็จ!", "สร้างแชร์สำเร็จ!", "success").then(() => {
-          console.log(imgData);
+          // console.log(imgData);
           if (imgData) {
             API_UPDATE_SHARING_PHOTO(e?.data?.id, imgData)
               .then((e) => {
-                console.log(e);
+                // console.log(e);
                 Swal.fire("สำเร็จ!", "บันทึกรูปแชร์สำเร็จ!", "success").then(() =>
                   navigate("/profile")
                 );
@@ -58,7 +58,7 @@ const CreateTitle = () => {
         });
       })
       .catch((e) => {
-        console.log(e);
+        // console.log(e);
         Swal.fire({
           icon: "error",
           title: e?.error,

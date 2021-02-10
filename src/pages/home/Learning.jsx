@@ -96,11 +96,11 @@ const Abstain = () => {
                           <span>
                             <span style={{ color: "#26BEB4" }} className="mr-5">
                               <FontAwesomeIcon icon={faEye} />
-                              {/* {view} */}
+                              {view}
                             </span>
                             <span style={{ color: "#26BEB4" }}>
                               <FontAwesomeIcon icon={faHeart} />
-                              {/* {favorite} */}
+                              {favorite}
                             </span>
                           </span>
                         </Card.Text>

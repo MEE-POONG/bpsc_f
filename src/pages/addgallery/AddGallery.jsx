@@ -5,13 +5,13 @@ import defaultImage from "../assets/img/default.jpg";
 import {GalleryArray} from "../pages/users/UsersData";
 
 function getUrlParam(paramName) {
-  console.log("Test", paramName);
+  // console.log("Test", paramName);
 
   // var reParam = new RegExp('(?:[\?&]|&)' + paramName + '=([^&]+)', 'i');
   var reParam = new RegExp("(?:[?&]|&)" + paramName + "=([^&]+)", "i");
   var match = window.location.href.match(reParam);
-  console.log(window.location);
-  console.log(match);
+  // console.log(window.location);
+  // console.log(match);
 
   return match && match.length > 1 ? match[1] : null;
 }
@@ -22,7 +22,7 @@ function returnFileUrl(url) {
   // console.log('this is:', this);
   var funcNum = getUrlParam("CKEditorFuncNum");
   var fileUrl = url;
-  console.log(window.opener);
+  // console.log(window.opener);
   window.opener.CKEDITOR.tools.callFunction(funcNum, fileUrl, function () {
     // --------Get the reference to a dialog window.
     var dialog = this.getDialog();
@@ -37,9 +37,9 @@ function returnFileUrl(url) {
     // and the "onSelect" function assigned to the button that called the file manager (if defined).
     // return false;
   });
-  console.log(fileUrl);
-  console.log(funcNum);
-  console.log(window.opener);
+  // console.log(fileUrl);
+  // console.log(funcNum);
+  // console.log(window.opener);
   window.close();
 }
 export default function AddGallery() {

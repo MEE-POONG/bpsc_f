@@ -96,11 +96,11 @@ const SheetThree = () => {
                         <span className="mr-5">
                           <span style={{ color: "#26BEB4" }} >
                             <FontAwesomeIcon icon={faEye} />
-                            {/* {view} */}
+                            {view}
                           </span>
                           <span style={{ color: "#26BEB4" }}>
                             <FontAwesomeIcon icon={faHeart} />
-                            {/* {favorite} */}
+                            {favorite}
                           </span>
                         </span>
                       </Card.Text>
