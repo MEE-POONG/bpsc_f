@@ -40,6 +40,7 @@
 .home-image .card .btn-success {
   background-color: #56b889;
   border-color: rgba(0, 252, 218, 0.678);
+  border-radius: 10px;
 }
 .home-image .card .btn-success:hover {
   background-color: rgb(0, 167, 145);

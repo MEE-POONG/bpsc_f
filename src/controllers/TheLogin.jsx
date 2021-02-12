@@ -244,7 +244,7 @@ const TheLogin = () => {
   );
   return (
     <>
-      <Button variant="success" className="nav-link" onClick={handleShow}>
+      <Button variant="green-set" className="nav-link" onClick={handleShow}>
         LOGIN
       </Button>
       <Modal

@@ -191,3 +191,14 @@
 .dropdown .dropdown-menu .dropdown-item:hover {
   background-color: #56b889;
 }
+.navbar .btn-green-set{
+  background-color: #6fcf97;
+  border-color: #6fcf97;
+  color: #ffffff !important;
+  border-radius: 5px;
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+.navbar .btn-green-set:hover {
+  background-color: #3fa044!important;
+}

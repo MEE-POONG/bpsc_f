@@ -39,7 +39,7 @@ const TheHeader = () => {
     <>
       <Navbar
         variant="light"
-        className="container-xl py-5"
+        className="container-xl py-3"
         style={{boxShadow: "none"}}
         expand="lg"
         onMouseOver={handleHover}
@@ -49,9 +49,9 @@ const TheHeader = () => {
           <Image
             alt="BPSC LOGO"
             src="/image/header/Logo.png"
-            width="100"
-            className="d-inline-block align-tops"
-            style={{objectFit: "contain"}}
+            // width="100"
+            // className="d-inline-block align-tops"
+            style={{objectFit: "cover",width:"80%"}}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

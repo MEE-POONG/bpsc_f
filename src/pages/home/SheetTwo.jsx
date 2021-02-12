@@ -26,44 +26,6 @@ const SheetTwo = () => {
 
   return (
     <div className="sheet-two">
-      <div className="scroll-num my-5">
-        <Container>
-          <Row className="text-center">
-            <Col xs="6" md="3" lg="3">
-              <Card className="sharing">
-                <Card.Body>
-                  <Card.Title>{runningOne}+</Card.Title>
-                  <Card.Subtitle>โรงพยาบาลสร้างระบบ BPSC สำเร็จ</Card.Subtitle>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs="6" md="3" lg="3">
-              <Card className="sharing">
-                <Card.Body>
-                  <Card.Title>{runningTwo}+</Card.Title>
-                  <Card.Subtitle>เกิดเป็นโรงพยาบาลต้นแบบขยายผล</Card.Subtitle>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs="6" md="3" lg="3">
-              <Card className="sharing">
-                <Card.Body>
-                  <Card.Title>{runningTree}+</Card.Title>
-                  <Card.Subtitle>บุคคลกรว่ามีความสุข</Card.Subtitle>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs="6" md="3" lg="3">
-              <Card className="sharing">
-                <Card.Body>
-                  <Card.Title>{runningFour}+</Card.Title>
-                  <Card.Subtitle>ผู้ได้รับการรักษามีคุณภาพชีวิตที่ดีขึ้น</Card.Subtitle>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </div>
       <Container fluid className="p-0">
         <Card className="sharing">
           <Card.Body>
