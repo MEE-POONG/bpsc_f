@@ -94,7 +94,12 @@ const TeamMember = () => {
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
           <Row>
-            <Col lg="6">
+            <Col
+              lg="6"
+              style={{
+                textAlign: "center",
+              }}
+            >
               <img
                 className="view-img"
                 src={
@@ -107,14 +112,28 @@ const TeamMember = () => {
             </Col>
             <Col lg="6">
               {/* <Card> */}
-                <Card.Body>
-                  <Card.Title><h1>{doctor?.data[showData].firstName} {doctor?.data[showData].lastName}</h1></Card.Title>
-                  {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
-                  <Card.Text><h4>{doctor?.data[showData].content}</h4></Card.Text>
-                  <Card.Text><h4>{doctor?.data[showData].phone && 'TEL'} {doctor?.data[showData].phone}</h4></Card.Text>
-                  <Card.Text><h4>{doctor?.data[showData].email}</h4></Card.Text>
-                  <Card.Text><h4>{doctor?.data[showData].hospital}</h4></Card.Text>
-                </Card.Body>
+              <Card.Body>
+                <Card.Title>
+                  <h1>
+                    {doctor?.data[showData].firstName} {doctor?.data[showData].lastName}
+                  </h1>
+                </Card.Title>
+                {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
+                <Card.Text>
+                  <h4>{doctor?.data[showData].content}</h4>
+                </Card.Text>
+                <Card.Text>
+                  <h4>
+                    {doctor?.data[showData].phone && "TEL"} {doctor?.data[showData].phone}
+                  </h4>
+                </Card.Text>
+                <Card.Text>
+                  <h4>{doctor?.data[showData].email}</h4>
+                </Card.Text>
+                <Card.Text>
+                  <h4>{doctor?.data[showData].hospital}</h4>
+                </Card.Text>
+              </Card.Body>
               {/* </Card> */}
             </Col>
           </Row>

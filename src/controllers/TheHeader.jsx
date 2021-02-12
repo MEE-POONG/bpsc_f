@@ -24,7 +24,7 @@ const TheHeader = () => {
     API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
       setUserInfo(result?.data);
     });
-  }, [localStorage.getItem("id")]);
+  }, [localStorage.getItem("id"), readHover]);
 
   const checkNotification = () => {
     API_CHECK_NOTIFICATION().then((result) => {
