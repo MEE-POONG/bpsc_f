@@ -48,6 +48,10 @@
         font-size: 1.75rem;
     }
 
+    .btn {
+        height: 55px;
+    }
+
     .btn-singin,
     .btn-repass {
         border-radius: 8px;
@@ -81,7 +85,7 @@
     .btn-google,
     .btn-facebook {
         width: 100%;
-        border-radius: 5rem;
+        // border-radius: 5rem;
         color: #ffffff;
         font-weight: bold;
         padding: 1rem;
@@ -108,11 +112,32 @@
     }
 }
 
+.box-login {
+    .modal-dialog {
+        .modal-header {
+            border: unset;
+        }
+
+        .modal-content {
+            padding: 24px;
+            position: relative;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 0;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+            pointer-events: auto;
+        }
+    }
+}
+
 @media (min-width: 576px) {
     .box-login {
         .modal-dialog {
             max-width: 500px !important;
             margin: 3rem auto !important;
+
             img {
                 height: auto;
                 object-fit: contain;
