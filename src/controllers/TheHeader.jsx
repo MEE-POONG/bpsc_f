@@ -24,7 +24,7 @@ const TheHeader = () => {
     API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
       setUserInfo(result?.data);
     });
-  }, [localStorage.getItem("id")]);
+  }, [localStorage.getItem("id"), readHover]);
 
   const checkNotification = () => {
     API_CHECK_NOTIFICATION().then((result) => {
@@ -112,7 +112,8 @@ const TheHeader = () => {
                   <FontAwesomeIcon icon={faUser} /> &nbsp; โปรไฟล์ของฉัน
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <FontAwesomeIcon icon={faBell} /> &nbsp; <Notification />
+                  {/* <FontAwesomeIcon icon={faBell} /> &nbsp;  */}
+                  <Notification />
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={() => navigate("create-share")}>
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์
