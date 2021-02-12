@@ -99,11 +99,11 @@
   color: #ffffff;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  width: 15rem;
+  width: 20rem;
   border: unset;
   padding: 0.75rem;
   background: #8be0b7;
-  border-radius: 12px 12px 0 0;
+  border-radius: 100px 100px 0 0;
   font-size: 12px;
 }
 .sheet-one .trapezoid.back {

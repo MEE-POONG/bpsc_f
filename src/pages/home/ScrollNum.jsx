@@ -21,7 +21,8 @@ const ScrollNum = () => {
   });
 
   useScrollPosition(({prevPos, currPos}) => {
-    currPos.y <= -1006 && setSetStart(true);
+    console.log(currPos);
+    currPos.y <= -134 && setSetStart(true);
   });
 
   return (
