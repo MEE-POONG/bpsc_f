@@ -21,8 +21,8 @@ class Home extends Component {
         <SheetTwo />
         <Abstain />
         <TeamMember />
-        <EventBox />
         <Ksstext/>
+        <EventBox />
         <Frequently />
       </div>
     );
