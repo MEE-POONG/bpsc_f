@@ -74,7 +74,7 @@
             bottom: 70px;
             font-size: 30px;
             color: #000000;
-            font-weight: bold;  
+            font-weight: bold;
             transition: all linear 0.25s;
         }
 
@@ -152,6 +152,7 @@
 
     .modal-dialog {
         max-width: 80%;
+        align-self: center;
 
         img {
             // width: 100%;
