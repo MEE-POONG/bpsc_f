@@ -12,18 +12,18 @@ const ScrollNum = () => {
   const [runningTree, setRunningTree] = useState(0);
   const [runningFour, setRunningFour] = useState(0);
   useEffect(() => {
-    if (setStart) {
+    // if (setStart) {
       runningOne < 500 && setRunningOne((e) => (e += 1));
       runningTwo < 260 && setRunningTwo((e) => (e += 1));
       runningTree < 816 && setRunningTree((e) => (e += 1));
       runningFour < 240 && setRunningFour((e) => (e += 1));
-    }
+    // }
   });
 
-  useScrollPosition(({prevPos, currPos}) => {
-    console.log(currPos);
-    currPos.y <= -134 && setSetStart(true);
-  });
+  // useScrollPosition(({prevPos, currPos}) => {
+  //   console.log(prevPos);
+  //   currPos.y <= 0 && setSetStart(true);
+  // });
 
   return (
     <div className="sheet-two">

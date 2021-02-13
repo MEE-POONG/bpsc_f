@@ -475,7 +475,7 @@
   height: 30px;
 }
 .sheet-three span {
-  font-size: 12px;
+  font-size: 20px;
 }
 .sheet-three .card-footer {
   font-size: 12px;
@@ -562,7 +562,7 @@
   color: #000 !important;
 }
 .learning .card .card-text {
-  font-size: 15px !important;
+  font-size: 24px;
   color: #747373 !important;
 }
 /* learning */
