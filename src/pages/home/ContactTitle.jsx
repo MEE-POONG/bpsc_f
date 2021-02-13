@@ -7,7 +7,7 @@ const ContactTitle = () => {
     <div style={{ lineHeight: "0" }}>
       <Container className="home-image text-uppercase py-5">
         <div className="row" style={{ alignContent: "center" }}>
-          <div className="col-md-6 px-0" style={{ alignSelf: "center" }}>
+          <div className="col-md-6 px-0 position-relative" style={{ alignSelf: "center" }}>
             <Image className="slide-img" src="image/home/home1.png" />
           </div>
           <div className="col-md-6 px-0">
@@ -19,7 +19,7 @@ const ContactTitle = () => {
                 </Card.Text>
                 <br />
                 <br />
-                <Card.Text>
+                <Card.Text className="text-justify">
                   BPSC คือการดูแลแบบบูรณาการ
                   ที่มุ่งเน้นการสื่อสารเพื่อสร้างสัมพันธภาพอันดี
                   ระหว่างผู้ป่วยและบุคลากรทางการแพทย์ เพื่อให้ผู้ป่วยเปิดใจรับคำแนะนำ

@@ -33,6 +33,25 @@
 .home-image .slide-img {
   width: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1;
+  border-radius: 10px;
+  -webkit-animation: a-seven 10s linear infinite;
+  animation: a-seven 10s linear infinite;
+}
+.home-image .slide-img::after {
+  bottom: -10px;
+  right: -10px;
+  -webkit-animation: a-two 5s linear infinite;
+  animation: a-two 5s linear infinite;
+}
+.home-image .slide-img::before {
+  position: absolute;
+    content: "";
+    width: 430px;
+    height: 375px;
+    border-radius: 10px;
+    z-index: -1;
+    background-color: #0046c0;
 }
 .home-image .card-text {
   font-size: 20px;
