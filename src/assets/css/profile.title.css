@@ -4,14 +4,21 @@
       rgba(38, 190, 180, 0.75) 23.97%,
       rgba(139, 224, 183, 0.75) 79.63%
     ),
-    radial-gradient(80.26% 166.56% at 95.83% 5.05%, rgba(38, 190, 180, 0.75) 0%, rgba(38, 190, 180, 0) 100%);
+    radial-gradient(
+      80.26% 166.56% at 95.83% 5.05%,
+      rgba(38, 190, 180, 0.75) 0%,
+      rgba(38, 190, 180, 0) 100%
+    );
 }
 .profile-popup-edit .modal-dialog {
   max-width: 100%;
   width: 350px;
+
+  align-self: center;
 }
 @media (min-width: 320px) {
   .modal-dialog {
+    align-self: center;
     max-width: unset;
     margin: 1.75rem auto;
   }

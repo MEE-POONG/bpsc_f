@@ -19,7 +19,7 @@ const TheHeader = () => {
   const [userInfo, setUserInfo] = useState(null);
   const [getNotification, setGetNotification] = useState(0);
   const [readHover, setReadHover] = useState(0);
-  const handleHover = () => setReadHover((e) => (e += 1));
+  // const handleHover = () => setReadHover((e) => (e += 1));
   useEffect(() => {
     API_GET_USER_INFO(localStorage.getItem("id")).then((result) => {
       setUserInfo(result?.data);
@@ -42,7 +42,7 @@ const TheHeader = () => {
         className="container-xl py-3"
         style={{boxShadow: "none"}}
         expand="lg"
-        onMouseOver={handleHover}
+        // onMouseOver={handleHover}
       >
         {/* <Navbar bg="light" variant="light"> */}
         <Navbar.Brand href="/" >
