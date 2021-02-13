@@ -946,3 +946,13 @@
 .height-293 {
   height: 293px;
 }
+.ksstext{
+  background-color: #a4cdc1;
+  color: #ffffff;
+}
+.ksstext .card-title{
+  font-size: 22px;
+}
+.ksstext .card-subtitle{
+  font-size: 20px;
+}

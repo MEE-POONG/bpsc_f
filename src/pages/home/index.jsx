@@ -8,6 +8,7 @@ import EventBox from "./EventBox";
 import Frequently from "./Frequently";
 import ScrollNum from "./ScrollNum";
 import ContactTitle from "./ContactTitle";
+import Ksstext from "./Ksstext";
 
 class Home extends Component {
   render() {
@@ -21,6 +22,7 @@ class Home extends Component {
         <Abstain />
         <TeamMember />
         <EventBox />
+        <Ksstext/>
         <Frequently />
       </div>
     );
