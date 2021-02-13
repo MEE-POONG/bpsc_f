@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Card, Col, Container, Media, Row} from "react-bootstrap";
+import {Card, Col, Container, Media, Pagination, Row} from "react-bootstrap";
 
 import {API_GET_ELEARNING_SHARING, API_fAVORITE_E_lEARNING, IMAGE_URL} from "../../apis";
 import moment from "moment";
@@ -31,7 +31,7 @@ const ProfileMenuLeaning = () => {
   return (
     <div className="learning text-uppercase">
       <div className="profile-title-menu-my-share-bg scroll-num py-5">
-        <Container fluid>
+        <Container>
           <Row>
             {learning?.data?.map(
               (
@@ -50,14 +50,7 @@ const ProfileMenuLeaning = () => {
                 },
                 idx
               ) => (
-                <Col
-                  xl="3"
-                  lg="4"
-                  md="6"
-                  xs="12"
-                  className="mobile-padding py-5"
-                  // onClick={() => navigate("/e-leaning/" + id)}
-                >
+                <Col lg="3" md="4" sm="6" className="mb-5">
                   {/* <NavLink to={`/e-leaning/${id}`} className="p-0 nav-link"> */}
                   <Card>
                     <Card.Body className="image">
@@ -123,6 +116,29 @@ const ProfileMenuLeaning = () => {
               )
             )}
           </Row>
+          <div className="detail">
+            <Pagination className="my-5" style={{float: "right"}}>
+              {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+              {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+              {page > 1 && (
+                <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+                  {page - 1}
+                </Pagination.Item>
+              )}
+              {<Pagination.Item active>{page}</Pagination.Item>}
+              {page < learning?.totalPage && (
+                <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+                  {page + 1}
+                </Pagination.Item>
+              )}
+              {page < learning?.totalPage && (
+                <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+              )}
+              {page < learning?.totalPage && (
+                <Pagination.Last onClick={() => setPage(learning?.totalPage)} />
+              )}
+            </Pagination>
+          </div>
         </Container>
       </div>
     </div>

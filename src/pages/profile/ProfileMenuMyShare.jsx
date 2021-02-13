@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Card, Col, Container, Image, Row} from "react-bootstrap";
+import {Card, Col, Container, Image, Pagination, Row} from "react-bootstrap";
 
 import {API_GET_MY_SHARING, API_fAVORITE_E_lEARNING, IMAGE_URL} from "../../apis";
 import {useNavigate} from "react-router-dom";
@@ -10,11 +10,14 @@ import {faEye, faHeart, faSearch, faHeartBroken} from "@fortawesome/free-solid-s
 const ProfileMenuMyShare = () => {
   const [favorite, setFavorite] = useState(null);
 
+  const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
+
   useEffect(() => {
-    API_GET_MY_SHARING().then((result) => {
+    API_GET_MY_SHARING(search, page).then((result) => {
       setFavorite(result?.data);
     });
-  }, []);
+  }, [search, page]);
   const navigate = useNavigate();
 
   const handleFav = (id) => {
@@ -117,6 +120,29 @@ const ProfileMenuMyShare = () => {
               )
             )}
           </Row>
+          <div>
+            <Pagination className="my-5" style={{float: "right"}}>
+              {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+              {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+              {page > 1 && (
+                <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+                  {page - 1}
+                </Pagination.Item>
+              )}
+              {<Pagination.Item active>{page}</Pagination.Item>}
+              {page < favorite?.totalPage && (
+                <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+                  {page + 1}
+                </Pagination.Item>
+              )}
+              {page < favorite?.totalPage && (
+                <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+              )}
+              {page < favorite?.totalPage && (
+                <Pagination.Last onClick={() => setPage(favorite?.totalPage)} />
+              )}
+            </Pagination>
+          </div>
         </Container>
       </div>
     </div>

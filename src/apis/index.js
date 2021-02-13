@@ -41,6 +41,17 @@ const API_CONFIG = async (config) => {
   }
   try {
     config.headers = headers;
+    const res = await axios(config);
+    if (res.status === 401) {
+      const reft = await REFRESH_TOKEN();
+      headers = {
+        Authorization: "Bearer " + reft?.accessToken,
+        "Content-Type": "application/json",
+      };
+      config.headers = headers;
+      console.log("re");
+      return axios(config);
+    }
     return axios(config);
   } catch (error) {
     const reft = await REFRESH_TOKEN();
@@ -229,7 +240,7 @@ export const API_GET_DOCTOR = (title = "", page = "", size = "", tag = "") => {
   return API_CONFIG(config);
 };
 
-export const API_GET_FAVORITE_SHARING = async (page = "", size = "") => {
+export const API_GET_FAVORITE_SHARING = async (title = "", page = "", size = 12) => {
   var config = {
     method: "get",
     url: `/favoriteSharing?size=${size}&page=${page}`,
@@ -238,25 +249,25 @@ export const API_GET_FAVORITE_SHARING = async (page = "", size = "") => {
   return API_CONFIG(config);
 };
 
-export const API_GET_MY_SHARING = async () => {
+export const API_GET_MY_SHARING = async (title = "", page = "", size = 12) => {
   var config = {
     method: "get",
-    url: `/mySharing`,
+    url: `/mySharing?size=${size}&page=${page}`,
   };
 
   return API_CONFIG(config);
 };
 
-export const API_GET_DRAFT_SHARING = async () => {
+export const API_GET_DRAFT_SHARING = async (title = "", page = "", size = 12) => {
   var config = {
     method: "get",
-    url: `/draftSharing`,
+    url: `/draftSharing?size=${size}&page=${page}`,
   };
 
   return API_CONFIG(config);
 };
 
-export const API_GET_ELEARNING_SHARING = async (page = "", size = "") => {
+export const API_GET_ELEARNING_SHARING = async (title = "", page = "", size = 12) => {
   var config = {
     method: "get",
     url: `/favoriteElearning?size=${size}&page=${page}`,
@@ -358,10 +369,27 @@ export const API_fAVORITE_E_lEARNING = async (id) => {
 
   return API_CONFIG(config);
 };
+export const API_UN_fAVORITE_E_lEARNING = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/favoriteElearning/${id}`,
+  };
+
+  return API_CONFIG(config);
+};
 
 export const API_fAVORITE_SHARING = async (id) => {
   var config = {
     method: "post",
+    url: `/favoriteSharing/${id}`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_UN_fAVORITE_SHARING = async (id) => {
+  var config = {
+    method: "delete",
     url: `/favoriteSharing/${id}`,
   };
 

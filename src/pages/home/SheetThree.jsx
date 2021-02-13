@@ -7,7 +7,12 @@ import {Swiper, SwiperSlide} from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.scss";
 
-import {API_GET_SHARING, API_fAVORITE_SHARING, IMAGE_URL} from "../../apis";
+import {
+  API_GET_SHARING,
+  API_fAVORITE_SHARING,
+  API_UN_fAVORITE_SHARING,
+  IMAGE_URL,
+} from "../../apis";
 import {useNavigate} from "react-router-dom";
 
 const SheetThree = () => {
@@ -30,6 +35,15 @@ const SheetThree = () => {
       .catch();
   };
 
+  const handleUnFav = (id) => {
+    API_UN_fAVORITE_SHARING(id)
+      .then(() => {
+        API_GET_SHARING().then((result) => {
+          setSharing(result?.data);
+        });
+      })
+      .catch();
+  };
   return (
     <div className="sheet-three">
       {sharing ? (
@@ -115,7 +129,10 @@ const SheetThree = () => {
                               icon={isFavorite ? faHeart : faHeartBroken}
                             /> */}
                               {isFavorite ? (
-                                <i className="fa fa fa-heart pr-2"></i>
+                                <i
+                                  className="fa fa fa-heart pr-2"
+                                  onClick={() => handleUnFav(id)}
+                                ></i>
                               ) : (
                                 <i
                                   className="fa fa fa-heart-o pr-2"

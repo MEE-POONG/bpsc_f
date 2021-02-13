@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Card, Col, Container, Row, Image} from "react-bootstrap";
+import {Card, Col, Container, Row, Pagination, Image} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {API_GET_DRAFT_SHARING, API_fAVORITE_E_lEARNING, IMAGE_URL} from "../../apis";
@@ -10,11 +10,14 @@ import {faEye, faHeart, faSearch, faHeartBroken} from "@fortawesome/free-solid-s
 const ProfileMenuFolder = () => {
   const [draft, setDraft] = useState(null);
 
+  const [page, setPage] = useState(1);
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
-    API_GET_DRAFT_SHARING().then((result) => {
+    API_GET_DRAFT_SHARING(search, page).then((result) => {
       setDraft(result?.data);
     });
-  }, []);
+  }, [search, page]);
   const navigate = useNavigate();
 
   const handleFav = (id) => {
@@ -117,6 +120,29 @@ const ProfileMenuFolder = () => {
               )
             )}
           </Row>
+          <div>
+            <Pagination className="my-5" style={{float: "right"}}>
+              {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+              {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+              {page > 1 && (
+                <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+                  {page - 1}
+                </Pagination.Item>
+              )}
+              {<Pagination.Item active>{page}</Pagination.Item>}
+              {page < draft?.totalPage && (
+                <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+                  {page + 1}
+                </Pagination.Item>
+              )}
+              {page < draft?.totalPage && (
+                <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+              )}
+              {page < draft?.totalPage && (
+                <Pagination.Last onClick={() => setPage(draft?.totalPage)} />
+              )}
+            </Pagination>
+          </div>
         </Container>
       </div>
     </div>

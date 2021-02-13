@@ -25,6 +25,7 @@ import {
   API_CREATE_COMMENT,
   API_GET_USER_INFO,
   API_fAVORITE_E_lEARNING,
+  API_UN_fAVORITE_E_lEARNING,
   API_GET_LEARNING_COMMENT,
   API_GET_LEARNING_DOCUMENT,
   IMAGE_URL,
@@ -97,6 +98,15 @@ const LeaningList = () => {
       })
       .catch();
   };
+  const handleUnFav = (id) => {
+    API_UN_fAVORITE_E_lEARNING(id)
+      .then(() => {
+        API_GET_ELEARNING_BY_ID(id).then((result) => {
+          setElearning(result?.data);
+        });
+      })
+      .catch();
+  };
 
   return (
     <Container className="leaning-list">
@@ -126,7 +136,7 @@ const LeaningList = () => {
             </span>
             <span className="mr-2">
               {elearning?.elearning?.isFavorite ? (
-                <i className="fa fa fa-heart pr-2"></i>
+                <i className="fa fa fa-heart pr-2" onClick={() => handleUnFav(id)}></i>
               ) : (
                 <i
                   className="fa fa fa-heart-o pr-2"
@@ -170,7 +180,11 @@ const LeaningList = () => {
               <FormControl
                 bsPrefix="input-comment"
                 as="textarea"
-                placeholder={`${localStorage.getItem("token") ? 'Add a Public Comment...' : 'กรุณาเข้าสู่ระบบเพื่อแสดงความคิดเห็น'}`}
+                placeholder={`${
+                  localStorage.getItem("token")
+                    ? "Add a Public Comment..."
+                    : "กรุณาเข้าสู่ระบบเพื่อแสดงความคิดเห็น"
+                }`}
                 onChange={(e) => setCreateComment(e.target.value)}
                 disabled={!localStorage.getItem("token")}
               />
@@ -191,7 +205,6 @@ const LeaningList = () => {
             </div>
           </Media>
         </Col>
-      
       </Row>
       <Container fluid className="list mb-5 py-5">
         {comment?.data?.map(

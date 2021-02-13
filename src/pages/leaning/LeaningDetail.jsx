@@ -13,7 +13,12 @@ import {NavLink} from "react-router-dom";
 import {faEye, faHeart, faSearch, faHeartBroken} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import {API_GET_LEARNING, API_fAVORITE_E_lEARNING, IMAGE_URL} from "../../apis";
+import {
+  API_GET_LEARNING,
+  API_fAVORITE_E_lEARNING,
+  API_UN_fAVORITE_E_lEARNING,
+  IMAGE_URL,
+} from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
 
@@ -31,6 +36,15 @@ const LeaningDetail = () => {
 
   const handleFav = (id) => {
     API_fAVORITE_E_lEARNING(id)
+      .then(() => {
+        API_GET_LEARNING(search, page).then((result) => {
+          setLearning(result?.data);
+        });
+      })
+      .catch();
+  };
+  const handleUnFav = (id) => {
+    API_UN_fAVORITE_E_lEARNING(id)
       .then(() => {
         API_GET_LEARNING(search, page).then((result) => {
           setLearning(result?.data);
@@ -143,7 +157,10 @@ const LeaningDetail = () => {
                               icon={isFavorite ? faHeart : faHeartBroken}
                             /> */}
                             {isFavorite ? (
-                              <i className="fa fa fa-heart pr-2"></i>
+                              <i
+                                className="fa fa fa-heart pr-2"
+                                onClick={() => handleUnFav(id)}
+                              ></i>
                             ) : (
                               <i
                                 className="fa fa fa-heart-o pr-2"

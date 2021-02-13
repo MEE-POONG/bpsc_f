@@ -11,7 +11,12 @@ import {
 } from "react-bootstrap";
 import {faEye, faHeart, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {API_GET_SHARING, API_fAVORITE_SHARING, IMAGE_URL} from "../../apis";
+import {
+  API_GET_SHARING,
+  API_fAVORITE_SHARING,
+  API_UN_fAVORITE_SHARING,
+  IMAGE_URL,
+} from "../../apis";
 import {useNavigate} from "react-router-dom";
 
 const SharingDetail = () => {
@@ -36,6 +41,15 @@ const SharingDetail = () => {
       .catch();
   };
 
+  const handleUnFav = (id) => {
+    API_UN_fAVORITE_SHARING(id)
+      .then(() => {
+        API_GET_SHARING(search, page).then((result) => {
+          setSharing(result?.data);
+        });
+      })
+      .catch();
+  };
   return (
     <>
       <Container className="title mb-5">
@@ -131,7 +145,10 @@ const SharingDetail = () => {
                               icon={isFavorite ? faHeart : faHeartBroken}
                             /> */}
                           {isFavorite ? (
-                            <i className="fa fa fa-heart pr-2"></i>
+                            <i
+                              className="fa fa fa-heart pr-2"
+                              onClick={() => handleUnFav(id)}
+                            ></i>
                           ) : (
                             <i
                               className="fa fa fa-heart-o pr-2"
