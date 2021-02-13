@@ -91,30 +91,33 @@ const GalleryAlbum = () => {
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Row>
-              <Col style={{placeSelf: "center"}}>
+              <Col style={{placeSelf: "center"}} xs="1">
                 {galleryPhotoID < 1 ? null : (
                   <FontAwesomeIcon
                     onClick={setPhotoLeftID}
-                    style={{fontSize: "xxx-large"}}
+                    style={{fontSize: "xxx-large", cursor: "pointer"}}
                     icon={faChevronLeft}
                   />
                 )}
               </Col>
-              <Col>
+              <Col style={{textAlign: "center"}}>
                 <Image
                   src={
                     galleryPhoto?.data[galleryPhotoID]?.photo
                       ? IMAGE_URL + galleryPhoto?.data[galleryPhotoID]?.photo
                       : "https://chiccarrent.com/files/images/default-placeholder.png"
                   }
+                  style={{
+                    maxWidth: "inherit",
+                  }}
                   alt={galleryPhoto?.data[galleryPhotoID]?.title}
                 />
               </Col>
-              <Col style={{placeSelf: "center"}}>
+              <Col style={{placeSelf: "center"}} xs="1">
                 {galleryPhotoID >= galleryPhoto?.data.length - 1 ? null : (
                   <FontAwesomeIcon
                     onClick={setPhotoRightID}
-                    style={{fontSize: "xxx-large"}}
+                    style={{fontSize: "xxx-large", cursor: "pointer"}}
                     icon={faChevronRight}
                   />
                 )}
