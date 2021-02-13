@@ -166,9 +166,18 @@ export const API_DEL_ELEARNING_BY_ID = async (id) => {
     method: "delete",
     url: `/elearning/${id}`,
   };
-  return API_CONFIG(config);
+  return API_CONFIG(config)
+    .then(() => {
+      return Swal.fire("สำเร็จ!", "ลบสำเร็จ!", "success");
+    })
+    .catch((e) => {
+      return Swal.fire({
+        icon: "error",
+        title: e?.error,
+        text: e?.message,
+      });
+    });
 };
-
 
 export const API_GET_SHARING = async (title = "", page = "", size = "", tag = "") => {
   var config = {
