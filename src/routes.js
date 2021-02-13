@@ -11,6 +11,7 @@ const ContactDoctor = React.lazy(() => import("./pages/doctor/ContactDoctor"));
 const Gallery = React.lazy(() => import("./pages/gallery"));
 const GalleryAlbum = React.lazy(() => import("./pages/gallery/GalleryAlbum"));
 const CreateShare = React.lazy(() => import("./pages/createshare"));
+const CreateGallery = React.lazy(() => import("./pages/creategallery"));
 const Login = React.lazy(() => import("./pages/login"));
 const Profile = React.lazy(() => import("./pages/profile"));
 const Verify = React.lazy(() => import("./pages/verify"));
@@ -48,6 +49,7 @@ const routes = [
   {path: "/login", name: "LOGIN", component: Login},
   {path: "/profile", name: "PROFILE", component: Profile},
   {path: "/create-share", name: "CREATE SHARE", component: CreateShare},
+  {path: "/create-gallery", name: "CREATE Gallery", component: CreateGallery},
   {path: "/verify", name: "VERIFY", component: Verify},
   {path: "/changeForgetPassword", name: "RE PASSWORD", component: RePassword},
 

@@ -119,6 +119,9 @@ const TheHeader = () => {
                 <NavDropdown.Item onClick={() => navigate("create-share")}>
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์
                 </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => navigate("create-gallery")}>
+                  <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแกลเลอรี่
+                </NavDropdown.Item>
                 {/* <NavDropdown.Item>
                   <FontAwesomeIcon className="pr-2" icon={faEye} /> &nbsp;แชร์ที่เคยดู
                 </NavDropdown.Item> */}
