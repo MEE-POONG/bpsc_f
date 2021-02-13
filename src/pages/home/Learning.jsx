@@ -75,12 +75,12 @@ const Abstain = () => {
                         onClick={() => navigate(`/e-leaning/${id}`)}
                       >
                         <img
-                          // src={
-                          //   elearningPicture
-                          //     ? IMAGE_URL + elearningPicture
-                          //     : "https://chiccarrent.com/files/images/default-placeholder.png"
-                          // }
-                          src="/image/home/card-date-1.jpg"
+                          src={
+                            elearningPicture
+                              ? IMAGE_URL + elearningPicture
+                              : "https://chiccarrent.com/files/images/default-placeholder.png"
+                          }
+                          // src="/image/home/card-date-1.jpg"
                           style={{height: "359px", objectFit: "cover"}}
                           alt={title}
                           className="card-img-top"
