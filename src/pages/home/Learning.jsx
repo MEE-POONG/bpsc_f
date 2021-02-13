@@ -41,12 +41,12 @@ const Abstain = () => {
               // when window width is >= 640px
               640: {
                 width: 640,
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
               // when window width is >= 768px
               768: {
                 width: 768,
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
             }}
           >
@@ -75,11 +75,12 @@ const Abstain = () => {
                         onClick={() => navigate(`/e-leaning/${id}`)}
                       >
                         <img
-                          src={
-                            elearningPicture
-                              ? IMAGE_URL + elearningPicture
-                              : "https://chiccarrent.com/files/images/default-placeholder.png"
-                          }
+                          // src={
+                          //   elearningPicture
+                          //     ? IMAGE_URL + elearningPicture
+                          //     : "https://chiccarrent.com/files/images/default-placeholder.png"
+                          // }
+                          src="/image/home/card-date-1.jpg"
                           style={{height: "359px", objectFit: "cover"}}
                           alt={title}
                           className="card-img-top"

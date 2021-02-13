@@ -99,7 +99,7 @@ const SheetOne = () => {
       <div className="file-green">
         <div className="row m-0">
           <button className={`trapezoid ${chkInnovation && "back"}`} onClick={setIn}>
-            <span>OUR VALUE</span>
+            <span>OUR MISSION</span>
           </button>
           <button className={`trapezoid ${!chkInnovation && "back"}`} onClick={setOur}>
             <span>OUR INNOVATION</span>
