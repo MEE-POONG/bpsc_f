@@ -153,6 +153,17 @@ export const API_GET_SHARING_BY_ID = (id) => {
   return API_CONFIG(config);
 };
 
+export const API_CRETE_ELEARNING = async (userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "get",
+    url: `/elearning/`,
+    data,
+  };
+  return API_CONFIG(config);
+};
+
 export const API_GET_ELEARNING_BY_ID = async (id) => {
   var config = {
     method: "get",
@@ -474,6 +485,46 @@ export const API_GET_NOTIFICATION = async (page = "", size = "") => {
   var config = {
     method: "get",
     url: `/notification?size=${size}&page=${page}`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_CREATE_GALLERY = async (userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "post",
+    url: `/gallery/`,
+    data,
+  };
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_GALLERY_COVER = async (id, userData) => {
+  var FormData = require("form-data");
+  var data = new FormData();
+  data.append("file", userData);
+
+  var config = {
+    method: "put",
+    url: `/galleryCover/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_CREATE_GALLERY_PHOTO = async (id, userData) => {
+  var FormData = require("form-data");
+  var data = new FormData();
+  Array.from(userData).map((e) => {
+    data.append("multi-files", e);
+  });
+  var config = {
+    method: "post",
+    url: `/galleryPhoto/${id}`,
+    data,
   };
 
   return API_CONFIG(config);

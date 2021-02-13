@@ -1,51 +1,59 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { Container, Image, Form, Row, Col, Badge } from "react-bootstrap";
+import React, {useEffect} from "react";
+import {useState} from "react";
+import {Container, Image, Form, Row, Col, Badge} from "react-bootstrap";
 import CKEditor from "ckeditor4-react";
 
 import {
-  API_CREATE_SHARING,
-  API_GET_TAGS,
-  API_UPDATE_SHARING_PHOTO,
+  API_CREATE_GALLERY,
+  API_UPDATE_GALLERY_COVER,
+  API_CREATE_GALLERY_PHOTO,
   IMAGE_URL,
 } from "../../apis";
 
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
-import { Typeahead } from "react-bootstrap-typeahead";
+import {Typeahead} from "react-bootstrap-typeahead";
 import "react-bootstrap-typeahead/css/Typeahead.css";
 
 const CreateTitle = () => {
-  const [sharingData, setSharingData] = useState({
+  const [contentData, setContentData] = useState({
     title: "",
     content: "",
-    isDraft: "true",
-    tags: [{ id: 1 }],
   });
-  const [tagData, setTagData] = useState(null);
   const [imgData, setImgData] = useState(null);
+  const [imgMulData, setImgMulData] = useState(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    API_GET_TAGS()
-      .then((e) => {
-        setTagData(e?.data);
-      })
-      .catch();
-  }, []);
-  const createSharing = () => {
-    API_CREATE_SHARING(sharingData)
+  const createGallery = () => {
+    API_CREATE_GALLERY(contentData)
       .then((e) => {
         // console.log(e);
-        Swal.fire("สำเร็จ!", "สร้างแชร์สำเร็จ!", "success").then(() => {
+        Swal.fire("สำเร็จ!", "สร้างแกลเลอรี่สำเร็จ!", "success").then(() => {
           // console.log(imgData);
           if (imgData) {
-            API_UPDATE_SHARING_PHOTO(e?.data?.id, imgData)
+            API_UPDATE_GALLERY_COVER(e?.data?.id, imgData)
               .then((e) => {
                 // console.log(e);
-                Swal.fire("สำเร็จ!", "บันทึกรูปแชร์สำเร็จ!", "success").then(() =>
-                  navigate("/profile")
-                );
+                // Swal.fire("สำเร็จ!", "บันทึกรูปแกลเลอรี่สำเร็จ!", "success").then(() =>
+                //   navigate("/gallery")
+                // );
+              })
+              .catch(() =>
+                Swal.fire({
+                  icon: "error",
+                  title: e?.error,
+                  text: e?.message,
+                })
+              );
+          }
+          if (imgMulData) {
+            API_CREATE_GALLERY_PHOTO(e?.data?.id, imgMulData)
+              .then((e) => {
+                console.log(imgMulData);
+                console.log(e);
+                // Swal.fire("สำเร็จ!", "บันทึกรูปแกลเลอรี่สำเร็จ!", "success").then(() =>
+                //   navigate("/gallery")
+                // );
               })
               .catch(() =>
                 Swal.fire({
@@ -72,19 +80,10 @@ const CreateTitle = () => {
         <Container>
           <div className="d-flex justify-content-end">
             <div
-              className="save"
-              onMouseOver={() => setSharingData({ ...sharingData, isDraft: "true" })}
-              onClick={() => {
-                createSharing();
-              }}
-            >
-              บันทึกแบบร่าง
-            </div>
-            <div
               className="share"
-              onMouseOver={() => setSharingData({ ...sharingData, isDraft: "false" })}
+              onMouseOver={() => setContentData({...contentData})}
               onClick={async () => {
-                createSharing();
+                createGallery();
               }}
             >
               เผยแพร่
@@ -102,8 +101,7 @@ const CreateTitle = () => {
           <Col md="12">
             <div className="up-img">
               <div className="text-up">ภาพปก</div>
-              <form
-              >
+              <form>
                 <input
                   id="file"
                   type="file"
@@ -117,7 +115,7 @@ const CreateTitle = () => {
                     aria-controls="filename"
                   >
                     เลือกไฟล์
-                    </span>
+                  </span>
                 </label>
               </form>
             </div>
@@ -145,79 +143,48 @@ const CreateTitle = () => {
 
       <Container className="px-0">
         <div className="box-sheare detail d-block">
-          <Row >
+          <Row>
             <Col lg="12">
               <div className="header">
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>ชื่อแชร์(0/50)</Form.Label>
+                  <Form.Label>ชื่อแกลเลอรี่(0/50)</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="Enter email"
                     onChange={(e) => {
-                      setSharingData({ ...sharingData, title: e.target.value });
+                      setContentData({...contentData, title: e.target.value});
                     }}
                   />
                 </Form.Group>
-                {/* <Form.Group controlId="formBasicEmail">
-                  <Form.Label>รายละเอียดย่อของแชร์ (0/300)</Form.Label>
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label>รายละเอียดย่อของแกลเลอรี่ (0/300)</Form.Label>
                   <Form.Control
                     type="text"
                     as="textarea"
                     onChange={(e) => {
-                      setSharingData({...sharingData, content: e.target.value});
+                      setContentData({...contentData, content: e.target.value});
                     }}
                   />
-                </Form.Group> */}
+                </Form.Group>
               </div>
             </Col>
-            <Col lg="12">
+            {/* <Col lg="12">
               <CKEditor
                 onChange={(evt) => {
-                  setSharingData({ ...sharingData, content: evt.editor.getData() });
+                  setContentData({...contentData, content: evt.editor.getData()});
                 }}
-              // onChange={(evt) => console.log(evt.editor.getData())}
-              // data={this.state.events_detail_th}
-              // onChange={this.onEditorTHChange}
-              // config={{
-              //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
-              // }}
+                // onChange={(evt) => console.log(evt.editor.getData())}
+                // data={this.state.events_detail_th}
+                // onChange={this.onEditorTHChange}
+                // config={{
+                //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
+                // }}
               />
-            </Col>
+            </Col> */}
           </Row>
         </div>
       </Container>
 
-      <div className="tag">
-        <Container>
-          <div>
-            <h1>ติด Tag ให้แชร์</h1>
-          </div>
-        </Container>
-        <Container className="input-tag">
-          {/* <Badge pill variant="primary">
-            Primary
-          </Badge> */}
-          {/* <Form> */}
-          {/* <Form.Group controlId="formBasicEmail"> */}
-          {/* <Form.Label>รายละเอียดย่อของแชร์ (0/300)</Form.Label> */}
-          {/* <Form.Control type="text" as="textarea" /> */}
-          {/* </Form.Group> */}
-          {/* </Form> */}
-          <Form.Group style={{ marginTop: "20px" }}>
-            {/* <Form.Label>รายละเอียดย่อของแชร์</Form.Label> */}
-            <Typeahead
-              id="basic-typeahead-multiple"
-              labelKey="name"
-              multiple
-              onChange={(e) => setSharingData({ ...sharingData, tags: e })}
-              options={tagData?.data}
-              labelKey="title"
-              placeholder="เลือก TAG"
-              selected={sharingData.tag}
-            />
-          </Form.Group>
-        </Container>
-      </div>
       <div className="tag">
         <Container>
           <div>
@@ -226,15 +193,15 @@ const CreateTitle = () => {
         </Container>
         <Container className="box-sheare">
           <div className="up-img text-center d-block w-100">
-            <div className="text-up">ภาพปก</div>
-            <form
-            >
+            <div className="text-up">ภาพแกลเลอรี่</div>
+            <form>
               <input
-                id="file"
+                id="file2"
                 type="file"
-                onChange={(e) => setImgData(e.target.files[0])}
+                onChange={(e) => setImgMulData(e.target.files)}
+                multiple
               />
-              <label htmlFor="file">
+              <label htmlFor="file2">
                 <span
                   tabIndex="20"
                   className="btn-img"
@@ -242,27 +209,47 @@ const CreateTitle = () => {
                   aria-controls="filename"
                 >
                   เลือกไฟล์
-                    </span>
+                </span>
               </label>
             </form>
-            <Row>
-              <Col>
-                <div>
-                  <Image
-                    src={
-                      imgData
-                        ? URL.createObjectURL(imgData)
-                        : "https://chiccarrent.com/files/images/default-placeholder.png"
-                    }
-                    style={{
-                      maxWidth: "150px",
-                    }}
-                  />
-                </div>
-              </Col>
-            </Row>
+            {imgMulData ? (
+              <Row>
+                {Array.from(imgMulData)?.map((e) => (
+                  <Col>
+                    <div>
+                      <Image
+                        src={
+                          e
+                            ? URL.createObjectURL(e)
+                            : "https://chiccarrent.com/files/images/default-placeholder.png"
+                        }
+                        style={{
+                          maxWidth: "150px",
+                        }}
+                      />
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            ) : (
+              <Row>
+                <Col>
+                  <div>
+                    <Image
+                      src={
+                        imgData
+                          ? URL.createObjectURL(imgData)
+                          : "https://chiccarrent.com/files/images/default-placeholder.png"
+                      }
+                      style={{
+                        maxWidth: "150px",
+                      }}
+                    />
+                  </div>
+                </Col>
+              </Row>
+            )}
           </div>
-
         </Container>
       </div>
     </div>
