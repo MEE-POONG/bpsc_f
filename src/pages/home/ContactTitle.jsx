@@ -7,8 +7,10 @@ const ContactTitle = () => {
     <div style={{ lineHeight: "0" }}>
       <Container className="home-image text-uppercase py-5">
         <div className="row" style={{ alignContent: "center" }}>
-          <div className="col-md-6 px-0 position-relative" style={{ alignSelf: "center" }}>
-            <Image className="slide-img" src="image/home/home1.png" />
+          <div className="col-md-6 pr-0 pl-2">
+            <div className="img-animation">
+              <Image className="slide-img" src="image/home/home1.png" />
+            </div>
           </div>
           <div className="col-md-6 px-0">
             <Card style={{ lineHeight: "1.5" }}>
@@ -30,8 +32,7 @@ const ContactTitle = () => {
                 </Card.Text>
                 <div className="btn-home-img">
                   <Button variant="success" onClick={() => navigate("/about/")}>
-                    <div>MORE</div>
-                    <div>ABOUT BPCS</div>
+                    MORE ABOUT BPCS
                   </Button>
                 </div>
               </Card.Body>
