@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Card,
@@ -9,9 +9,9 @@ import {
   Pagination,
   Media,
 } from "react-bootstrap";
-import {NavLink} from "react-router-dom";
-import {faEye, faHeart, faSearch, faHeartBroken} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { NavLink } from "react-router-dom";
+import { faEye, faHeart, faSearch, faHeartBroken } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   API_GET_LEARNING,
@@ -20,7 +20,7 @@ import {
   IMAGE_URL,
 } from "../../apis";
 import moment from "moment";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const LeaningDetail = () => {
   const navigate = useNavigate();
@@ -106,28 +106,20 @@ const LeaningDetail = () => {
                 },
                 idx
               ) => (
-                <Col xl="3" lg="4" md="6" xs="12" className="mobile-padding py-5">
-                  {/* <NavLink to={`/e-leaning/${id}`} className="p-0 nav-link"> */}
-                  <Card>
-                    <Card.Body
-                      className="image"
-                      onClick={() => navigate(`/e-leaning/${id}`)}
-                    >
-                      <img
-                        src={
-                          elearningPicture
-                            ? IMAGE_URL + elearningPicture
-                            : "https://chiccarrent.com/files/images/default-placeholder.png"
-                        }
-                        // style={{height: "359px"}}
-                        alt={title}
-                        className="card-img-top"
-                      />
-                    </Card.Body>
+                <Col xl="4" lg="4" md="6" xs="12" className="mobile-padding py-5">
+                  <Card onClick={() => navigate(`/e-leaning/${id}`)}>
+                    <Card.Img
+                      src={
+                        elearningPicture
+                          ? IMAGE_URL + elearningPicture
+                          : "https://chiccarrent.com/files/images/default-placeholder.png"
+                      }
+                      alt={title}
+                    />
                     <Card.Body onClick={() => navigate(`/e-leaning/${id}`)}>
                       <Card.Title>
                         <Media>
-                          <Card className="date absolute">
+                          <Card bsPrefix="date" className="absolute">
                             <Card.Title>{moment(createAt).format("DD")}</Card.Title>
                             <Card.Subtitle>
                               {moment(createAt).format("MMM")}
@@ -139,7 +131,7 @@ const LeaningDetail = () => {
                           </Card>
                           <Media.Body>
                             <p>
-                              <b style={{color: "#000"}}>{title}</b>
+                              <b style={{ color: "#000" }}>{title}</b>
                             </p>
                           </Media.Body>
                         </Media>
@@ -149,10 +141,10 @@ const LeaningDetail = () => {
                     <Card.Footer>
                       <Card.Text>
                         <span>
-                          <span style={{color: "#26BEB4"}} className="mr-5">
+                          <span style={{ color: "#26BEB4" }} className="mr-5">
                             <FontAwesomeIcon className="pr-2" icon={faEye} /> {view}
                           </span>
-                          <span style={{color: "#26BEB4"}}>
+                          <span style={{ color: "#26BEB4" }}>
                             {/* <FontAwesomeIcon
                               icon={isFavorite ? faHeart : faHeartBroken}
                             /> */}
@@ -162,11 +154,11 @@ const LeaningDetail = () => {
                                 onClick={() => handleUnFav(id)}
                               ></i>
                             ) : (
-                              <i
-                                className="fa fa fa-heart-o pr-2"
-                                onClick={() => handleFav(id)}
-                              ></i>
-                            )}
+                                <i
+                                  className="fa fa fa-heart-o pr-2"
+                                  onClick={() => handleFav(id)}
+                                ></i>
+                              )}
                             {favorite}
                           </span>
                         </span>
@@ -180,7 +172,7 @@ const LeaningDetail = () => {
           </Row>
         </Container>
         <div>
-          <Pagination className="my-5" style={{float: "right"}}>
+          <Pagination className="my-5" style={{ float: "right" }}>
             {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
             {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
             {page > 1 && (

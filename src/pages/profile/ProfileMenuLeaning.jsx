@@ -54,36 +54,34 @@ const ProfileMenuLeaning = () => {
                   {/* <NavLink to={`/e-leaning/${id}`} className="p-0 nav-link"> */}
                   <Card>
                     <Card.Body className="image">
-                      <img
-                        src={
-                          elearningPicture
-                            ? IMAGE_URL + elearningPicture
-                            : "https://chiccarrent.com/files/images/default-placeholder.png"
-                        }
-                        // style={{height: "359px"}}
-                        alt={title}
-                        className="card-img-top"
-                      />
-                    </Card.Body>
-                    <Card.Body>
-                      <Card.Title>
-                        <Media>
-                          <Card className="date absolute">
-                            <Card.Title>{moment(createAt).format("DD")}</Card.Title>
-                            <Card.Subtitle>
-                              {moment(createAt).format("MMM")}
-                            </Card.Subtitle>
-                          </Card>
-                          <Card className="date">
-                            <Card.Title></Card.Title>
-                            <Card.Subtitle></Card.Subtitle>
-                          </Card>
-                          <Media.Body>
-                            <p>
-                              <b style={{color: "#000"}}>{title}</b>
-                            </p>
-                          </Media.Body>
-                        </Media>
+                    <Card.Img
+                          src={
+                            elearningPicture
+                              ? IMAGE_URL + elearningPicture
+                              : "https://chiccarrent.com/files/images/default-placeholder.png"
+                          }
+                          alt={title}
+                        />
+                      </Card.Body>
+                      <Card.Body onClick={() => navigate(`/e-leaning/${id}`)}>
+                        <Card.Title>
+                          <Media>
+                            <Card bsPrefix="date" className="absolute">
+                              <Card.Title>{moment(createAt).format("DD")}</Card.Title>
+                              <Card.Subtitle>
+                                {moment(createAt).format("MMM")}
+                              </Card.Subtitle>
+                            </Card>
+                            <Card className="date">
+                              <Card.Title></Card.Title>
+                              <Card.Subtitle></Card.Subtitle>
+                            </Card>
+                            <Media.Body>
+                              <p>
+                                <b style={{ color: "#000" }}>{title}</b>
+                              </p>
+                            </Media.Body>
+                          </Media>
                       </Card.Title>
                       <Card.Text className="subtitle-text">{content}</Card.Text>
                     </Card.Body>
