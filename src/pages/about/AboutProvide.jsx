@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, Row, Media } from "react-bootstrap";
+import {Col, Container, Image, Row, Media} from "react-bootstrap";
 
 const AboutProvide = () => {
   return (
@@ -22,7 +22,10 @@ const AboutProvide = () => {
                 />
                 <Media.Body className="text">
                   <h3>เข้าร่วม BPSC แล้วได้อะไร?</h3>
-                  <p>- สร้างรูปแบบการให้บริการทางพฤติกรรม ที่ตอบสนองความต้องการของผู้บริการ แบบไม่แยกส่วน</p>
+                  <p>
+                    - สร้างรูปแบบการให้บริการทางพฤติกรรม ที่ตอบสนองความต้องการของผู้บริการ
+                    แบบไม่แยกส่วน
+                  </p>
                   <p>- นวัตกรรมที่มีประสิทธิภาพ</p>
                   <p>- มีการฝึกอบรมและระบบรับรองบุคลากรทุก ระดับ</p>
                   <p>- จัดบริการได้อย่างมีคุณภาพ</p>
@@ -48,11 +51,9 @@ const AboutProvide = () => {
             </Col>
           </Row>
           <div className="provide-title">
+            <h1>BPSC</h1>
             <h1>
-              PBSC
-            </h1>
-            <h1>
-              พร้อมที่จะนำพาโรงพยาบาลก้าวไปสู่การรักษาที่ดี่ยิ่งกว่าด้วยระบบพัฒนาที่มีศักยะภาพ
+              พร้อมที่จะนำพาโรงพยาบาลก้าวไปสู่การรักษาที่ดียิ่งกว่าด้วยระบบพัฒนาที่มีศักยภาพ
             </h1>
             <hr />
             <img
@@ -62,8 +63,8 @@ const AboutProvide = () => {
             />
           </div>
           <div className="Innovation">
-              <img className="Innovation-img-left" src="image/about/provide-1.png" />
-              <img className="Innovation-img-right" src="image/about/provide-2.png" />
+            <img className="Innovation-img-left" src="image/about/provide-1.png" />
+            <img className="Innovation-img-right" src="image/about/provide-2.png" />
           </div>
         </Container>
       </div>

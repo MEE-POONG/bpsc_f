@@ -47,7 +47,7 @@ const CreateTitle = () => {
                   navigate("/profile")
                 );
               })
-              .catch(() =>
+              .catch((e) =>
                 Swal.fire({
                   icon: "error",
                   title: e?.error,

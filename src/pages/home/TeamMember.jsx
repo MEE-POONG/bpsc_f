@@ -27,21 +27,19 @@ const TeamMember = () => {
     <div className="team">
       <Container fluid className="py-5">
         <Card className="text-center ">
-          <Card.Body className="text-uppercase">
-            <Card.Subtitle className="text-uppercase">our team members</Card.Subtitle>
-            <Card.Title className="">we have quality complete expert</Card.Title>
-            <Card.Title className="team-subtitle">reviews in our program</Card.Title>
-            <Card.Text className="team-subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore ...
-            </Card.Text>
+          <Card.Body className="">
+            <Card.Title className="text-uppercase">teamwork</Card.Title>
+            <Card.Text className="team-subtitle">makes the dream work.</Card.Text>
           </Card.Body>
         </Card>
       </Container>
       <Container fluid>
         {doctor ? (
           <Swiper
+            autoplay={1000}
+            slidesPerView={"auto"}
             spaceBetween={50}
+            loop={true}
             breakpoints={{
               // when window width is >= 640px
               640: {
@@ -90,80 +88,77 @@ const TeamMember = () => {
           <Button>MORE DOCTORS</Button>
         </div>
       </Container>
-        <Modal
-          show={show}
-          onHide={handleClose}
-          backdrop="static"
-          keyboard={false}
-          className="d-flex justify-content-center doctor-page"
-        >
-          <Modal.Header closeButton></Modal.Header>
-          <Modal.Body>
-            <Row>
-              <Col
-                lg="6"
+      <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+        className="d-flex justify-content-center doctor-page"
+      >
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body>
+          <Row>
+            <Col
+              lg="6"
+              style={{
+                textAlign: "center",
+              }}
+            >
+              <img
+                className="view-img"
+                src={
+                  doctor?.data[showData].picture
+                    ? IMAGE_URL + doctor?.data[showData].picture
+                    : "https://chiccarrent.com/files/images/default-placeholder.png"
+                }
+                alt={showData + 1}
+              />
+            </Col>
+            <Col lg="6">
+              {/* <Card> */}
+              <Card.Body>
+                <Card.Title>
+                  <h1>
+                    {doctor?.data[showData].firstName} {doctor?.data[showData].lastName}
+                  </h1>
+                </Card.Title>
+                {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
+                <Card.Text>
+                  <h4>{doctor?.data[showData].content}</h4>
+                </Card.Text>
+                <Card.Text>
+                  <h4>
+                    {doctor?.data[showData].phone && "TEL"} {doctor?.data[showData].phone}
+                  </h4>
+                </Card.Text>
+                <Card.Text>
+                  <h4>{doctor?.data[showData].email}</h4>
+                </Card.Text>
+                <Card.Text>
+                  <h4>{doctor?.data[showData].hospital}</h4>
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer
                 style={{
                   textAlign: "center",
+                  cursor: "pointer",
+                  backgroundColor: "white",
                 }}
               >
-                <img
-                  className="view-img"
-                  src={
-                    doctor?.data[showData].picture
-                      ? IMAGE_URL + doctor?.data[showData].picture
-                      : "https://chiccarrent.com/files/images/default-placeholder.png"
-                  }
-                  alt={showData + 1}
-                />
-              </Col>
-              <Col lg="6">
-                {/* <Card> */}
-                <Card.Body>
-                  <Card.Title>
-                    <h1>
-                      {doctor?.data[showData].firstName} {doctor?.data[showData].lastName}
-                    </h1>
-                  </Card.Title>
-                  {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
-                  <Card.Text>
-                    <h4>{doctor?.data[showData].content}</h4>
-                  </Card.Text>
-                  <Card.Text>
-                    <h4>
-                      {doctor?.data[showData].phone && "TEL"}{" "}
-                      {doctor?.data[showData].phone}
-                    </h4>
-                  </Card.Text>
-                  <Card.Text>
-                    <h4>{doctor?.data[showData].email}</h4>
-                  </Card.Text>
-                  <Card.Text>
-                    <h4>{doctor?.data[showData].hospital}</h4>
-                  </Card.Text>
-                </Card.Body>
-                <Card.Footer
-                  style={{
-                    textAlign: "center",
-                    cursor: "pointer",
-                    backgroundColor: "white",
-                  }}
+                <button
+                  type="button"
+                  className="btn btn-success about-talk-with-us-btn-success"
+                  onClick={() => navigate("/ContactDoctor/" + doctor?.data[showData].id)}
                 >
-                  <button
-                    type="button"
-                    className="btn btn-success about-talk-with-us-btn-success"
-                    onClick={() =>
-                      navigate("/ContactDoctor/" + doctor?.data[showData].id)
-                    }
-                  >
-                    CONTACT DOCTOR
-                  </button>
-                </Card.Footer>
-                {/* </Card> */}
-              </Col>
-            </Row>
-          </Modal.Body>
-        </Modal>
-      </div>
+                  CONTACT DOCTOR
+                </button>
+              </Card.Footer>
+              {/* </Card> */}
+            </Col>
+          </Row>
+        </Modal.Body>
+      </Modal>
+    </div>
   );
 };
 

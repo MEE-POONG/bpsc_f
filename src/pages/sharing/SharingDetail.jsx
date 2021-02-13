@@ -15,6 +15,7 @@ import {
   API_GET_SHARING,
   API_fAVORITE_SHARING,
   API_UN_fAVORITE_SHARING,
+  API_DELETE_SHARING,
   IMAGE_URL,
 } from "../../apis";
 import {useNavigate} from "react-router-dom";
@@ -50,6 +51,21 @@ const SharingDetail = () => {
       })
       .catch();
   };
+
+  const handleDel = (id) => {
+    API_DELETE_SHARING(id)
+      .then(() => {
+        API_GET_SHARING(search, page).then((result) => {
+          setSharing(result?.data);
+        });
+      })
+      .catch(() => {
+        API_GET_SHARING(search, page).then((result) => {
+          setSharing(result?.data);
+        });
+      });
+  };
+
   return (
     <>
       <Container className="title mb-5">
@@ -97,10 +113,17 @@ const SharingDetail = () => {
               userPicture,
               content,
               isFavorite,
+              userId,
             }) => (
               <Col lg="3" md="4" sm="6" className="mb-5" key={id}>
                 {/* <NavLink to={"/sharing/" + id}> */}
                 <Card className="box-card-shadow">
+                  {+localStorage.getItem("id") === userId ||
+                  +localStorage.getItem("isAdmin") === 1 ? (
+                    <div className="btn-cancel-card" onClick={() => handleDel(id)}>
+                      <i class="fa fa-times-circle"></i>
+                    </div>
+                  ) : null}
                   <Card.Body className="image" onClick={() => navigate("/sharing/" + id)}>
                     <Card.Img
                       style={{height: "200px"}}

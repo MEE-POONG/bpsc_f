@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Card, Media } from "react-bootstrap";
-import { faEye, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, {useState, useEffect} from "react";
+import {Card, Media} from "react-bootstrap";
+import {faEye, faHeart} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
@@ -14,7 +14,7 @@ import {
   IMAGE_URL,
 } from "../../apis";
 import moment from "moment";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const Abstain = () => {
   const navigate = useNavigate();
@@ -51,7 +51,10 @@ const Abstain = () => {
       <div>
         {learning ? (
           <Swiper
+            autoplay={1000}
+            slidesPerView={"auto"}
             spaceBetween={50}
+            loop={true}
             breakpoints={{
               // when window width is >= 640px
               640: {
@@ -61,7 +64,7 @@ const Abstain = () => {
               // when window width is >= 768px
               768: {
                 width: 768,
-                slidesPerView: 3,
+                slidesPerView: 2,
               },
             }}
           >
@@ -84,15 +87,15 @@ const Abstain = () => {
               ) => (
                 <SwiperSlide>
                   <div className="mobile-padding py-5">
-                    <Card   onClick={() => navigate(`/e-leaning/${id}`)}>
-                        <Card.Img
-                          src={
-                            elearningPicture
-                              ? IMAGE_URL + elearningPicture
-                              : "https://chiccarrent.com/files/images/default-placeholder.png"
-                          }
-                          alt={title}
-                        />
+                    <Card onClick={() => navigate(`/e-leaning/${id}`)}>
+                      <Card.Img
+                        src={
+                          elearningPicture
+                            ? IMAGE_URL + elearningPicture
+                            : "https://chiccarrent.com/files/images/default-placeholder.png"
+                        }
+                        alt={title}
+                      />
                       <Card.Body onClick={() => navigate(`/e-leaning/${id}`)}>
                         <Card.Title>
                           <Media>
@@ -108,7 +111,7 @@ const Abstain = () => {
                             </Card>
                             <Media.Body>
                               <p>
-                                <b style={{ color: "#000" }}>{title}</b>
+                                <b style={{color: "#000"}}>{title}</b>
                               </p>
                             </Media.Body>
                           </Media>
@@ -118,10 +121,10 @@ const Abstain = () => {
                       <Card.Footer>
                         <Card.Text className="mr-auto mt-4">
                           <span>
-                            <span style={{ color: "#26BEB4" }} className="mr-5">
+                            <span style={{color: "#26BEB4"}} className="mr-5">
                               <FontAwesomeIcon className="pr-2" icon={faEye} /> {view}
                             </span>
-                            <span style={{ color: "#26BEB4" }}>
+                            <span style={{color: "#26BEB4"}}>
                               {/* <FontAwesomeIcon
                               icon={isFavorite ? faHeart : faHeartBroken}
                             /> */}
@@ -131,11 +134,11 @@ const Abstain = () => {
                                   onClick={() => handleUnFav(id)}
                                 ></i>
                               ) : (
-                                  <i
-                                    className="fa fa fa-heart-o pr-2"
-                                    onClick={() => handleFav(id)}
-                                  ></i>
-                                )}
+                                <i
+                                  className="fa fa fa-heart-o pr-2"
+                                  onClick={() => handleFav(id)}
+                                ></i>
+                              )}
                               {favorite}
                             </span>
                           </span>
