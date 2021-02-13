@@ -51,7 +51,7 @@ const TheHeader = () => {
             src="/image/header/Logo.png"
             // width="100"
             // className="d-inline-block align-tops"
-            style={{objectFit: "contain",height:"80px"}}
+            style={{objectFit: "contain",height:"60px"}}
             
           />
         </Navbar.Brand>
@@ -121,6 +121,9 @@ const TheHeader = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Item onClick={() => navigate("create-gallery")}>
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแกลเลอรี่
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => navigate("create-leaning")}>
+                  <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างบทเรียน
                 </NavDropdown.Item>
                 {/* <NavDropdown.Item>
                   <FontAwesomeIcon className="pr-2" icon={faEye} /> &nbsp;แชร์ที่เคยดู
