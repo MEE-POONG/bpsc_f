@@ -102,22 +102,22 @@
   vertical-align: middle;
   z-index: 1;
   border-radius: 10px;
-  -webkit-animation: a-seven 10s linear infinite;
-  animation: a-seven 10s linear infinite;
+  -webkit-animation: a-seven 6s linear infinite;
+  animation: a-seven 6s linear infinite;
   animation-direction: alternate-reverse;
   animation-iteration-count: infinite;
 }
 .home-image .img-animation:before {
-  top: 7%;
-  left: 10%;
-  -webkit-animation: a-one 5s linear infinite;
-  animation: a-one 5s linear infinite;
+  top: 40px;
+  left: 40px;
+  -webkit-animation: a-one 3s linear infinite;
+  animation: a-one 3s linear infinite;
 }
 .home-image .img-animation:after {
-  bottom: 7%;
-  right: 10%;
-  -webkit-animation: a-two 5s linear infinite;
-  animation: a-two 5s linear infinite;
+  top: 260px;
+  left: 260px;
+  -webkit-animation: a-two 3s linear infinite;
+  animation: a-two 3s linear infinite;
 }
 @keyframes a-seven {
   0% {

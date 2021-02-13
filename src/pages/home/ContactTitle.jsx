@@ -7,7 +7,7 @@ const ContactTitle = () => {
     <div style={{ lineHeight: "0" }}>
       <Container className="home-image text-uppercase py-5">
         <div className="row" style={{ alignContent: "center" }}>
-          <div className="col-md-6 pr-0 pl-2">
+          <div className="col-md-6 pr-lg-0 pl-lg-2 p-md-0 p-sm-0 p-xs-0 p-0">
             <div className="img-animation">
               <Image className="slide-img" src="image/home/home1.png" />
             </div>

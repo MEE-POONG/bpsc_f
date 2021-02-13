@@ -1,3 +1,25 @@
+@media only screen and (max-width: 991px) {
+  .home-image .img-animation img {
+    width: 300px;
+    height: 300px;
+  }
+  .home-image .img-animation:after {
+    top: 130px;
+    left: 130px;
+  }
+  .home-image .card-title {
+    font-size: 3rem !important;
+  }
+  .home-image .card .card-text {
+    font-size: 1.75rem !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .home-image .img-animation {
+    padding: 0%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .home .card-title {
     font-size: 2.2rem !important;
@@ -55,13 +77,27 @@
     font-size: 5rem !important;
     font-weight: bold !important;
   }
-  .btn-home-img{
+  .btn-home-img {
     text-align: center;
   }
-
+}
+@media only screen and (max-width: 375px) {
+  .home-image .img-animation img {
+    width: 250px;
+    height: 250px;
+  }
+  .home-image .img-animation:after {
+    top: 100px;
+    left: 100px;
+  }
+  .home-image .img-animation:before {
+    top: 0px;
+    left: 10px;
+    animation: a-one 3s linear infinite;
+  }
 }
 @media only screen and (max-width: 325px) {
-  .home-image h1.card-title{
+  .home-image h1.card-title {
     font-size: 2rem !important;
     font-weight: bold;
   }
