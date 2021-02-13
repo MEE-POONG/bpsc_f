@@ -14,9 +14,18 @@
     font-size: 1.75rem !important;
   }
 }
+@media only screen and (min-width: 768px) {
+  .home .ksstext .img{
+    text-align: right;
+  }
+}
 @media only screen and (max-width: 767px) {
   .home-image .img-animation {
     padding: 0%;
+    margin-bottom: 3rem;
+  }
+  .home .ksstext{
+    text-align: center !important;
   }
 }
 
@@ -81,25 +90,46 @@
     text-align: center;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 425px) {
   .home-image .img-animation img {
     width: 250px;
     height: 250px;
   }
   .home-image .img-animation:after {
-    top: 100px;
-    left: 100px;
+    top: 60px;
+    left: 150px;
   }
   .home-image .img-animation:before {
-    top: 0px;
-    left: 10px;
-    animation: a-one 3s linear infinite;
+    top: -10px;
+    left: 80px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .home-image .img-animation img {
+    width: 250px;
+    height: 250px;
+  }
+  .home-image .img-animation:after {
+    top: 60px;
+    left: 120px;
+  }
+  .home-image .img-animation:before {
+    top: -10px;
+    left: 50px;
   }
 }
 @media only screen and (max-width: 325px) {
   .home-image h1.card-title {
     font-size: 2rem !important;
     font-weight: bold;
+  }
+  .home-image .img-animation:after {
+    top: 60px;
+    left: 120px;
+  }
+  .home-image .img-animation:before {
+    top: -10px;
+    left: 28px;
   }
 }
 
