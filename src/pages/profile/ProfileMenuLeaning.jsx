@@ -50,14 +50,7 @@ const ProfileMenuLeaning = () => {
                 },
                 idx
               ) => (
-                <Col
-                  xl="3"
-                  lg="4"
-                  md="6"
-                  xs="12"
-                  className="mobile-padding py-5"
-                  // onClick={() => navigate("/e-leaning/" + id)}
-                >
+                <Col lg="3" md="4" sm="6" className="mb-5">
                   {/* <NavLink to={`/e-leaning/${id}`} className="p-0 nav-link"> */}
                   <Card>
                     <Card.Body className="image">

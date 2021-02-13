@@ -16,7 +16,7 @@ import {NavLink} from "react-router-dom";
 
 import {useParams} from "react-router-dom";
 
-import {API_GET_SHARING_BY_ID, IMAGE_URL} from "../../apis";
+import {API_GET_SHARING_BY_ID, IMAGE_URL, API_fAVORITE_SHARING, API_UN_fAVORITE_SHARING} from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
 
@@ -29,6 +29,24 @@ const SharingList = () => {
       setSharing(result?.data);
     });
   }, []);
+  const handleFav = (id) => {
+    API_fAVORITE_SHARING(id)
+      .then(() => {
+        API_GET_SHARING_BY_ID(id).then((result) => {
+          setSharing(result?.data);
+        });
+      })
+      .catch();
+  };
+  const handleUnFav = (id) => {
+    API_UN_fAVORITE_SHARING(id)
+      .then(() => {
+        API_GET_SHARING_BY_ID(id).then((result) => {
+          setSharing(result?.data);
+        });
+      })
+      .catch();
+  };
   return (
     <Container className="leaning-list">
       <Row>
@@ -66,7 +84,11 @@ const SharingList = () => {
               {moment(sharing?.sharing?.createAt).format("LL")}
             </span>
             <span className="mr-2">
-              <FontAwesomeIcon icon={faHeart} />
+              {sharing?.sharing?.isFavorite ? (
+                <i className="fa fa fa-heart pr-2" onClick={() => handleUnFav(id)}></i>
+              ) : (
+                <i className="fa fa fa-heart-o pr-2" onClick={() => handleFav(id)}></i>
+              )}
             </span>
             <span className="mr-5">{sharing?.sharing?.favorite}</span>
             <span className="mr-2">
@@ -86,7 +108,7 @@ const SharingList = () => {
           </div>
         </Col>
       </Row>
-      <div className="py-5"/>
+      <div className="py-5" />
     </Container>
   );
 };
