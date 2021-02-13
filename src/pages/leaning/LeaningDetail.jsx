@@ -126,7 +126,7 @@ const LeaningDetail = () => {
                             </Card.Subtitle>
                           </Card>
                           <Card className="date">
-                            <Card.Title></Card.Title>
+                            <Card.Title>xx</Card.Title>
                             <Card.Subtitle></Card.Subtitle>
                           </Card>
                           <Media.Body>

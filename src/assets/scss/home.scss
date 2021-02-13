@@ -1,7 +1,5 @@
 .doctor-page {
-   
     .modal-dialog {
-
         align-self: center;
         max-width: 80%;
 
@@ -18,22 +16,20 @@
         }
     }
 }
-.leaning-page{
-    .card{
-        width: 350px;
-        .card-img{
+.leaning-page {
+    .card {
+        // width: 350px;
+        .card-img {
             width: 100%;
-            height: 200px;
+            height: 125px;
             object-fit: contain;
         }
-        .date{
+        .date {
             width: max-content;
         }
     }
 }
 .home {
-
-
     .sheet-one {
         color: white;
 
@@ -58,7 +54,6 @@
                 font-size: 2rem;
                 border-bottom: 2px solid #000000;
             }
-
         }
     }
 
@@ -132,4 +127,10 @@
             }
         }
     }
+}
+.bg-abstain.card:hover::before,
+.bg-abstain.card:hover::after,
+.bg-abstain.card:focus::before,
+.bg-abstain.card:focus::after {
+    transform: scale3d(0, 0, 0);
 }

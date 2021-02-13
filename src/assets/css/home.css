@@ -592,12 +592,12 @@
 }
 /* learning */
 .learning .card {
-  width: 350px;
+  /* width: 350px; */
   padding: 0rem;
 }
 .learning .card-img {
   width: 100%;
-  height: 200px;
+  height: 125px;
   object-fit: contain;
 }
 .learning .card {
@@ -653,7 +653,7 @@
 .card:hover::after,
 .card:focus::before,
 .card:focus::after {
-  transform: scale3d(1, 1, 1);
+  /* transform: scale3d(1, 1, 1); */
 }
 .learning .card-footer {
   padding: 0.25rem 0.5rem;
