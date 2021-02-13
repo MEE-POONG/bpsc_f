@@ -3,7 +3,7 @@ import {Container, Row, Col, Pagination, Card} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 import {faEye, faHeart} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {API_GET_GALLERY, IMAGE_URL} from "../../apis";
+import {API_GET_GALLERY, API_DELETE_GALLERY, IMAGE_URL} from "../../apis";
 import {useNavigate} from "react-router-dom";
 
 const GalleryCard = () => {
@@ -17,13 +17,32 @@ const GalleryCard = () => {
     });
   }, [page]);
 
+  const handleDel = (id) => {
+    API_DELETE_GALLERY(id)
+      .then(() => {
+        API_GET_GALLERY(page).then((result) => {
+          setGallery(result?.data);
+        });
+      })
+      .catch(() => {
+        API_GET_GALLERY(page).then((result) => {
+          setGallery(result?.data);
+        });
+      });
+  };
+
   return (
     <Container className="detail">
       <Row className="py-5">
         {gallery?.data?.map(({id, title, content, photo}) => (
           <Col lg="3" md="4" sm="6" className="mb-5">
-            <NavLink to={`/gallery/${id}`} className="nav-link">
-              <Card className="box-card-shadow">
+            <Card className="box-card-shadow">
+              {+localStorage.getItem("isAdmin") === 1 ? (
+                <div className="btn-cancel-card" onClick={() => handleDel(id)}>
+                  <i class="fa fa-times-circle"></i>
+                </div>
+              ) : null}
+              <NavLink to={`/gallery/${id}`} className="nav-link p-0">
                 <Card.Body className="image">
                   <Card.Img
                     src={
@@ -53,8 +72,8 @@ const GalleryCard = () => {
                     </span>
                   </Card.Text>
                 </Card.Footer> */}
-              </Card>
-            </NavLink>
+              </NavLink>
+            </Card>
           </Col>
         ))}
       </Row>

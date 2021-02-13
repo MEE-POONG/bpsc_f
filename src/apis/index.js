@@ -501,6 +501,17 @@ export const API_CREATE_GALLERY = async (userData) => {
   return API_CONFIG(config);
 };
 
+export const API_DELETE_GALLERY = async (id) => {
+  let data = "";
+
+  var config = {
+    method: "delete",
+    url: `/gallery/${id}`,
+    data: data,
+  };
+  return API_CONFIG(config);
+};
+
 export const API_UPDATE_GALLERY_COVER = async (id, userData) => {
   var FormData = require("form-data");
   var data = new FormData();
