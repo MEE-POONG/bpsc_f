@@ -114,6 +114,8 @@
 
 .box-login {
     .modal-dialog {
+
+        align-self: center;
         .modal-header {
             border: unset;
         }
@@ -135,6 +137,7 @@
 @media (min-width: 576px) {
     .box-login {
         .modal-dialog {
+            align-self: center;
             max-width: 500px !important;
             margin: 3rem auto !important;
 
