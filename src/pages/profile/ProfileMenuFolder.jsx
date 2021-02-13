@@ -2,7 +2,13 @@ import React, {useState, useEffect} from "react";
 import {Card, Col, Container, Row, Pagination, Image} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import {API_GET_DRAFT_SHARING, API_fAVORITE_E_lEARNING, IMAGE_URL} from "../../apis";
+import {
+  API_GET_DRAFT_SHARING,
+  API_fAVORITE_SHARING,
+  API_UN_fAVORITE_SHARING,
+  API_DELETE_SHARING,
+  IMAGE_URL,
+} from "../../apis";
 import {useNavigate} from "react-router-dom";
 import moment from "moment";
 import {faEye, faHeart, faSearch, faHeartBroken} from "@fortawesome/free-solid-svg-icons";
@@ -21,13 +27,37 @@ const ProfileMenuFolder = () => {
   const navigate = useNavigate();
 
   const handleFav = (id) => {
-    // API_fAVORITE_E_lEARNING(id)
-    //   .then(() => {
-    //     API_GET_DRAFT_SHARING().then((result) => {
-    //       setDraft(result?.data);
-    //     });
-    //   })
-    //   .catch();
+    API_fAVORITE_SHARING(id)
+      .then(() => {
+        API_GET_DRAFT_SHARING(search, page).then((result) => {
+          setDraft(result?.data);
+        });
+      })
+      .catch();
+  };
+
+  const handleUnFav = (id) => {
+    API_UN_fAVORITE_SHARING(id)
+      .then(() => {
+        API_GET_DRAFT_SHARING(search, page).then((result) => {
+          setDraft(result?.data);
+        });
+      })
+      .catch();
+  };
+
+  const handleDel = (id) => {
+    API_DELETE_SHARING(id)
+      .then(() => {
+        API_GET_DRAFT_SHARING(search, page).then((result) => {
+          setDraft(result?.data);
+        });
+      })
+      .catch(() => {
+        API_GET_DRAFT_SHARING(search, page).then((result) => {
+          setDraft(result?.data);
+        });
+      });
   };
 
   return (
@@ -49,6 +79,7 @@ const ProfileMenuFolder = () => {
                   lastName,
                   userPicture,
                   isFavorite,
+                  userId,
                 },
                 idx
               ) => (
@@ -60,6 +91,12 @@ const ProfileMenuFolder = () => {
                   // onClick={() => navigate("/sharing/" + id)}
                 >
                   <Card className="box-card-shadow">
+                    {+localStorage.getItem("id") === userId ||
+                    +localStorage.getItem("isAdmin") === 1 ? (
+                      <div className="btn-cancel-card" onClick={() => handleDel(id)}>
+                        <i class="fa fa-times-circle"></i>
+                      </div>
+                    ) : null}
                     <Card.Body className="image">
                       <Card.Img
                         src={
@@ -103,7 +140,10 @@ const ProfileMenuFolder = () => {
                               icon={isFavorite ? faHeart : faHeartBroken}
                             /> */}
                             {isFavorite ? (
-                              <i className="fa fa fa-heart pr-2"></i>
+                              <i
+                                className="fa fa fa-heart pr-2"
+                                onClick={() => handleUnFav(id)}
+                              ></i>
                             ) : (
                               <i
                                 className="fa fa fa-heart-o pr-2"

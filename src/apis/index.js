@@ -3,6 +3,7 @@ axios.defaults.baseURL = "https://api.thaibpsc.com";
 
 export const IMAGE_URL = "https://api.thaibpsc.com/image/";
 export const DOWNLOAD_URL = "https://api.thaibpsc.com/documentDownload/";
+import Swal from "sweetalert2";
 
 const REFRESH_TOKEN = async () => {
   const token = localStorage.getItem("refresh-token");
@@ -49,10 +50,9 @@ const API_CONFIG = async (config) => {
         "Content-Type": "application/json",
       };
       config.headers = headers;
-      console.log("re");
       return axios(config);
     }
-    return axios(config);
+    return res;
   } catch (error) {
     const reft = await REFRESH_TOKEN();
     headers = {
@@ -359,6 +359,44 @@ export const API_UPDATE_SHARING_PHOTO = async (id, userData) => {
   };
 
   return API_CONFIG(config);
+};
+
+export const API_DELETE_SHARING_PHOTO = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/sharingPicture/${id}`,
+  };
+
+  return API_CONFIG(config)
+    .then(() => {
+      return Swal.fire("สำเร็จ!", "ลบสำเร็จ!", "success");
+    })
+    .catch((e) => {
+      return Swal.fire({
+        icon: "error",
+        title: e?.error,
+        text: e?.message,
+      });
+    });
+};
+
+export const API_DELETE_SHARING = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/sharing/${id}`,
+  };
+
+  return API_CONFIG(config)
+    .then(() => {
+      return Swal.fire("สำเร็จ!", "ลบสำเร็จ!", "success");
+    })
+    .catch((e) => {
+      return Swal.fire({
+        icon: "error",
+        title: e?.error,
+        text: e?.message,
+      });
+    });
 };
 
 export const API_fAVORITE_E_lEARNING = async (id) => {

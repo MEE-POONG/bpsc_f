@@ -1,6 +1,6 @@
 import React from "react";
 import SharingDetail from "./SharingDetail";
-import SharingTitle from "./SharingTitle";
+// import SharingTitle from "./SharingTitle";
 const Sharing = () => {
   return (
     <div className="sharing-page text-uppercase">

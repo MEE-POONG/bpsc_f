@@ -73,3 +73,14 @@ body {
 .btn {
   font-size: initial !important;
 }
+
+.btn-cancel-card {
+  position: absolute;
+  z-index: 99;
+  right: 10px;
+  font-size: 24px;
+  color: red;
+  background-color: white;
+  width: 30px;
+  text-align: center;
+}
