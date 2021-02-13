@@ -1,7 +1,13 @@
 import React, {useState, useEffect} from "react";
 import {Card, Col, Container, Media, Pagination, Row} from "react-bootstrap";
 
-import {API_GET_ELEARNING_SHARING, API_fAVORITE_E_lEARNING, IMAGE_URL} from "../../apis";
+import {
+  API_GET_ELEARNING_SHARING,
+  API_fAVORITE_E_lEARNING,
+  API_UN_fAVORITE_E_lEARNING,
+  API_DEL_ELEARNING_BY_ID,
+  IMAGE_URL,
+} from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
 import {faArrowRight, faHeart, faEye, faSearch} from "@fortawesome/free-solid-svg-icons";
@@ -19,13 +25,36 @@ const ProfileMenuLeaning = () => {
   }, [search, page]);
 
   const handleFav = (id) => {
-    // API_fAVORITE_E_lEARNING(id)
-    //   .then(() => {
-    //     API_GET_ELEARNING_SHARING(search, page).then((result) => {
-    //       setLearning(result?.data);
-    //     });
-    //   })
-    //   .catch();
+    API_fAVORITE_E_lEARNING(id)
+      .then(() => {
+        API_GET_ELEARNING_SHARING(search, page).then((result) => {
+          setLearning(result?.data);
+        });
+      })
+      .catch();
+  };
+  const handleUnFav = (id) => {
+    API_UN_fAVORITE_E_lEARNING(id)
+      .then(() => {
+        API_GET_ELEARNING_SHARING(search, page).then((result) => {
+          setLearning(result?.data);
+        });
+      })
+      .catch();
+  };
+
+  const handleDel = (id) => {
+    API_DEL_ELEARNING_BY_ID(id)
+      .then(() => {
+        API_GET_ELEARNING_SHARING(search, page).then((result) => {
+          setLearning(result?.data);
+        });
+      })
+      .catch(() => {
+        API_GET_ELEARNING_SHARING(search, page).then((result) => {
+          setLearning(result?.data);
+        });
+      });
   };
 
   return (
@@ -47,14 +76,22 @@ const ProfileMenuLeaning = () => {
                   userPicture,
                   content,
                   isFavorite,
+                  userId,
                 },
                 idx
               ) => (
                 <Col lg="3" md="4" sm="6" className="mb-5">
                   {/* <NavLink to={`/e-leaning/${id}`} className="p-0 nav-link"> */}
                   <Card>
-                    <Card.Body className="image">
-                    <Card.Img
+                    {+localStorage.getItem("id") === userId ||
+                    +localStorage.getItem("isAdmin") === 1 ? (
+                      <div className="btn-cancel-card" onClick={() => handleDel(id)}>
+                        <i class="fa fa-times-circle"></i>
+                      </div>
+                    ) : null}
+                    <div onClick={() => navigate(`/e-leaning/${id}`)}>
+                      <Card.Body className="image">
+                        <Card.Img
                           src={
                             elearningPicture
                               ? IMAGE_URL + elearningPicture
@@ -63,7 +100,7 @@ const ProfileMenuLeaning = () => {
                           alt={title}
                         />
                       </Card.Body>
-                      <Card.Body onClick={() => navigate(`/e-leaning/${id}`)}>
+                      <Card.Body>
                         <Card.Title>
                           <Media>
                             <Card bsPrefix="date" className="absolute">
@@ -78,13 +115,14 @@ const ProfileMenuLeaning = () => {
                             </Card>
                             <Media.Body>
                               <p>
-                                <b style={{ color: "#000" }}>{title}</b>
+                                <b style={{color: "#000"}}>{title}</b>
                               </p>
                             </Media.Body>
                           </Media>
-                      </Card.Title>
-                      <Card.Text className="subtitle-text">{content}</Card.Text>
-                    </Card.Body>
+                        </Card.Title>
+                        <Card.Text className="subtitle-text">{content}</Card.Text>
+                      </Card.Body>
+                    </div>
                     <Card.Footer>
                       <Card.Text className="mr-auto ">
                         <span>
@@ -92,17 +130,10 @@ const ProfileMenuLeaning = () => {
                             <FontAwesomeIcon className="pr-2" icon={faEye} /> {view}
                           </span>
                           <span style={{color: "#26BEB4"}}>
-                            {/* <FontAwesomeIcon
-                              icon={isFavorite ? faHeart : faHeartBroken}
-                            /> */}
-                            {isFavorite ? (
-                              <i className="fa fa fa-heart pr-2"></i>
-                            ) : (
-                              <i
-                                className="fa fa fa-heart-o pr-2"
-                                onClick={() => handleFav(id)}
-                              ></i>
-                            )}
+                            <i
+                              className="fa fa fa-heart pr-2"
+                              onClick={() => handleUnFav(id)}
+                            ></i>
                             {favorite}
                           </span>
                         </span>

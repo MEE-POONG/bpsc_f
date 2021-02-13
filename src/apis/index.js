@@ -161,6 +161,15 @@ export const API_GET_ELEARNING_BY_ID = async (id) => {
   return API_CONFIG(config);
 };
 
+export const API_DEL_ELEARNING_BY_ID = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/elearning/${id}`,
+  };
+  return API_CONFIG(config);
+};
+
+
 export const API_GET_SHARING = async (title = "", page = "", size = "", tag = "") => {
   var config = {
     method: "get",
