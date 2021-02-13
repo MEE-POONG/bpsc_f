@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Modal, Button, Image, Card, Form} from "react-bootstrap";
+import {Modal, Button, Image, Card, Form, Col, Row} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
 
 import firebase from "firebase/app";
@@ -177,7 +177,7 @@ const TheLogin = () => {
         ? "BPSC อยากรู้จักคุณ"
         : signUpForm === "FORGET"
         ? "ลืมรหัสผ่าน"
-        : "ลงชื่อเข้าใช้งาน BPSC"}
+        : "ลงชื่อเข้าใช้งาน"}
     </h1>
   );
   const contentCardLogin = (
@@ -255,16 +255,28 @@ const TheLogin = () => {
         keyboard={false}
         className="box-login p-0"
       >
-        <Modal.Header closeButton>{titleCardLogin}</Modal.Header>
+        {/* <Modal.Header closeButton>{titleCardLogin}</Modal.Header> */}
         <Modal.Body>
-          <div className="text-center">
-            <Image
-              alt=""
-              src="image/header/Logo.png"
-              className="d-inline-block align-tops"
-              style={{objectFit: "contain", maxWidth: "-webkit-fill-available"}}
-            />
-          </div>
+          <Col xs="12">
+            <Row>
+              <h1
+                style={{
+                  alignSelf: "center",
+                  marginTop: "14px",
+                }}
+              >
+                {titleCardLogin}
+              </h1>
+              <Image
+                alt="LOGO BPSC"
+                src="/image/header/Logo.png"
+                className="d-inline-block align-tops ml-3"
+                style={{objectFit: "contain", maxWidth: "140px"}}
+              />
+            </Row>
+          </Col>
+          {/* <div className="text-center">
+          </div> */}
           {signUpForm === "SING UP" ? (
             <>
               <TheRegister />

@@ -134,6 +134,21 @@ const TeamMember = () => {
                   <h4>{doctor?.data[showData].hospital}</h4>
                 </Card.Text>
               </Card.Body>
+              <Card.Footer
+                style={{
+                  textAlign: "center",
+                  cursor: "pointer",
+                  backgroundColor: "white",
+                }}
+              >
+                <button
+                  type="button"
+                  className="btn btn-success about-talk-with-us-btn-success"
+                  onClick={() => navigate("/ContactDoctor/" + doctor?.data[showData].id)}
+                >
+                  CONTACT DOCTOR
+                </button>
+              </Card.Footer>
               {/* </Card> */}
             </Col>
           </Row>
