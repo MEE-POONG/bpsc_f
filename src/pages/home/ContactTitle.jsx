@@ -12,7 +12,8 @@ const ContactTitle = () => {
               <Image className="slide-img" src="image/home/home1.png" />
             </div>
           </div>
-          <div className="col-md-6 px-0">
+          <div className="col-md-6 px-0 position-relative">
+            <Image className="bg-fly" src="/image/home/home-image.jpg"/>
             <Card style={{ lineHeight: "1.5" }}>
               <Card.Body>
                 <Card.Title as="h1">เรารักษา "คนทั้งคน"</Card.Title>

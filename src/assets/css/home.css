@@ -54,8 +54,26 @@
     z-index: -1;
     background-color: #0046c0;
 } */
-.hone-image{
-  
+.home-image .bg-fly{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  opacity: 0.2;
+  -webkit-animation: a-three 5s linear infinite;
+  animation: a-three 5s linear infinite;
+}
+@keyframes a-three {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(35px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 .home-image .img-animation {
   position: relative;

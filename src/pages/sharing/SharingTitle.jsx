@@ -8,7 +8,7 @@ const SharingSubTitle = () => {
       <Row>
         <Col lg="8">
           <Card.Title>Hope Sharing</Card.Title>
-          <Card.Subtitle>แบ่งปันประสบการณ์</Card.Subtitle>
+          {/* <Card.Subtitle>แบ่งปันประสบการณ์</Card.Subtitle> */}
         </Col>
         <Col lg="4" className="align-self-center">
           <InputGroup>

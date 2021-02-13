@@ -22,3 +22,6 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    width: 80%;
+}

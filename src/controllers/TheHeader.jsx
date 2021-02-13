@@ -45,13 +45,14 @@ const TheHeader = () => {
         onMouseOver={handleHover}
       >
         {/* <Navbar bg="light" variant="light"> */}
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/" >
           <Image
             alt="BPSC LOGO"
             src="/image/header/Logo.png"
             // width="100"
             // className="d-inline-block align-tops"
-            style={{objectFit: "cover",width:"80%"}}
+            style={{objectFit: "contain",height:"80px"}}
+            
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
