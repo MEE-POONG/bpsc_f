@@ -45,14 +45,13 @@ const TheHeader = () => {
         // onMouseOver={handleHover}
       >
         {/* <Navbar bg="light" variant="light"> */}
-        <Navbar.Brand href="/" >
+        <Navbar.Brand href="/">
           <Image
             alt="BPSC LOGO"
             src="/image/header/Logo.png"
             // width="100"
             // className="d-inline-block align-tops"
-            style={{objectFit: "contain",height:"60px"}}
-            
+            style={{objectFit: "contain", height: "60px"}}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -119,12 +118,16 @@ const TheHeader = () => {
                 <NavDropdown.Item onClick={() => navigate("create-share")}>
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => navigate("create-gallery")}>
-                  <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแกลเลอรี่
-                </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => navigate("create-leaning")}>
-                  <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างบทเรียน
-                </NavDropdown.Item>
+                {+localStorage.getItem("isAdmin") === 1 && (
+                  <NavDropdown.Item onClick={() => navigate("create-gallery")}>
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแกลเลอรี่
+                  </NavDropdown.Item>
+                )}
+                {+localStorage.getItem("isAdmin") === 1 && (
+                  <NavDropdown.Item onClick={() => navigate("create-leaning")}>
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างบทเรียน
+                  </NavDropdown.Item>
+                )}
                 {/* <NavDropdown.Item>
                   <FontAwesomeIcon className="pr-2" icon={faEye} /> &nbsp;แชร์ที่เคยดู
                 </NavDropdown.Item> */}
