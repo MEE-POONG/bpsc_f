@@ -22,7 +22,7 @@
         .card-img {
             width: 100%;
             height: 125px;
-            object-fit: contain;
+            object-fit: cover;
         }
         .date {
             width: max-content;
@@ -79,7 +79,7 @@
     @media only screen and (min-width: 1400px) {
         .sheet-one {
             .card-title {
-                font-size: 4rem !important;
+                font-size: 3rem !important;
             }
 
             .subtitle {
@@ -100,7 +100,7 @@
 
         .scroll-num .card {
             .card-title {
-                font-size: 4rem !important;
+                font-size: 3rem !important;
             }
 
             .card-subtitle {
@@ -126,6 +126,27 @@
                 }
             }
         }
+    }
+}
+.home-event {
+    .card.view {
+        border-radius: 10px;
+        padding: 1.25rem;
+            .start,
+            .end {
+                text-align: center;
+                font-weight: bold;
+                color: #ffffff;
+                width: max-content;
+                border-radius: 10px;
+                background-color: #5694cd;
+                padding: 0.75rem;
+                .card-title{
+                }
+                .card-subtitle{
+
+                }
+            }
     }
 }
 .bg-abstain.card:hover::before,

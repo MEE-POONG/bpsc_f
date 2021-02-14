@@ -1,13 +1,13 @@
 import moment from "moment";
-import React, {useState, useEffect} from "react";
-import {Container, Card, Modal} from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container, Card, Modal, Row, Col } from "react-bootstrap";
 
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
 
-import {API_GET_EVENT} from "../../apis";
+import { API_GET_EVENT } from "../../apis";
 
 const EventBox = () => {
   const [show, setShow] = useState(false);
@@ -24,7 +24,7 @@ const EventBox = () => {
   }, []);
 
   return (
-    <div className="event text-uppercase">
+    <div className="home-event text-uppercase">
       <Container>
         <div className="text-left text-uppercase">
           <Card.Title>Up coming events</Card.Title>
@@ -47,7 +47,7 @@ const EventBox = () => {
               }}
             >
               {event?.data?.map(
-                ({id, title, content, location, time, eventStart, eventEnd}, idx) => (
+                ({ id, title, content, location, time, eventStart, eventEnd }, idx) => (
                   <SwiperSlide>
                     <div>
                       <Card
@@ -75,24 +75,79 @@ const EventBox = () => {
             </Swiper>
           ) : null}
         </div>
+        <Row>
+          <Col lg="6" md="6" sm="6" xs="12">
+            <Card.Title>Up coming events</Card.Title>
+          </Col>
+          <Col lg="6" md="6" sm="6" xs="12">
+            {/* เว้นไว้ */}
+          </Col>
+          <Col lg="6" md="6" sm="6" xs="12">
+            {/* เว้นไว้ */}
+          </Col>
+          <Col lg="6" md="6" sm="6" xs="12" style={{ position: "relative" }}>
+            <Card.Subtitle style={{
+              position: "absolute",
+              right: "2rem",
+              bottom: "100%"
+            }}>View all Events</Card.Subtitle>
+            <Card className="view">
+              <Row>
+                <Col className="date">
+                  <div className="start">
+                    <Card.Title>
+                      19
+                    </Card.Title>
+                    <Card.Subtitle>
+                      FEB
+                    </Card.Subtitle>
+                  </div>
+                  <div className="end d-none">
+                    <Card.Title>
+                      2
+                    </Card.Title>
+                    <Card.Subtitle>
+                      MAR
+                    </Card.Subtitle>
+                  </div>
+                </Col>
+                <Col></Col>
+                <Col></Col>
+              </Row>
+            </Card>
+            <Card className="view">
+              <Row>
+                <Col className="date">
+                  <div className="start">
+                    <Card.Title>
+                      19
+                    </Card.Title>
+                    <Card.Subtitle>
+                      FEB
+                    </Card.Subtitle>
+                  </div>
+                  <div className="end">
+                    <Card.Title>
+                      2
+                    </Card.Title>
+                    <Card.Subtitle>
+                      MAR
+                    </Card.Subtitle>
+                  </div>
+                </Col>
+                <Col></Col>
+                <Col></Col>
+              </Row>
+            </Card>
+          </Col>
+        </Row>
       </Container>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          {/* <img className="view-img"
-                src={
-                  doctor?.data[showData].picture
-                    ? IMAGE_URL + doctor?.data[showData].picture
-                    : "https://chiccarrent.com/files/images/default-placeholder.png"
-                }
-                alt={showData + 1}
-              /> */}
           <Card.Body>
             <Card.Title><h2>{event?.data[showData].title}</h2></Card.Title>
             <Card.Subtitle><h3>{event?.data[showData].content}</h3></Card.Subtitle>
-            {/* <Card.Text>{event?.data[showData].content}</Card.Text>
-                  <Card.Text>TEL {event?.data[showData].phone}</Card.Text>
-                  <Card.Text>{event?.data[showData].email}</Card.Text> */}
           </Card.Body>
         </Modal.Body>
       </Modal>
