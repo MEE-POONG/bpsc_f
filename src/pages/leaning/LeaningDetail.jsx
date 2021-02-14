@@ -165,7 +165,7 @@ const LeaningDetail = () => {
                     <Card.Footer>
                       <Card.Text>
                         <span>
-                          <span style={{color: "#26BEB4"}} className="mr-5">
+                          <span style={{color: "#26BEB4"}} className="mr-3">
                             <FontAwesomeIcon className="pr-2" icon={faEye} /> {view}
                           </span>
                           <span style={{color: "#26BEB4"}}>

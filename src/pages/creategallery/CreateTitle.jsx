@@ -150,7 +150,7 @@ const CreateTitle = () => {
                   <Form.Label>ชื่อแกลเลอรี่(0/50)</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Enter email"
+                    placeholder="ชื่อแกลเลอรี่"
                     onChange={(e) => {
                       setContentData({...contentData, title: e.target.value});
                     }}

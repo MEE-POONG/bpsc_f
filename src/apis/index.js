@@ -178,7 +178,7 @@ export const API_DEL_ELEARNING_BY_ID = async (id) => {
     url: `/elearning/${id}`,
   };
   return API_CONFIG(config)
-    .then(() => {
+    .then((e) => {
       return Swal.fire("สำเร็จ!", "ลบสำเร็จ!", "success");
     })
     .catch((e) => {
@@ -535,6 +535,39 @@ export const API_CREATE_GALLERY_PHOTO = async (id, userData) => {
   var config = {
     method: "post",
     url: `/galleryPhoto/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_CREATE_LEANING = async (userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "post",
+    url: `/elearning/`,
+    data,
+  };
+  return API_CONFIG(config);
+};
+
+export const API_DELETE_LEANING = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/elearning/${id}`,
+  };
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_LEANING_COVER = async (id, userData) => {
+  var FormData = require("form-data");
+  var data = new FormData();
+  data.append("file", userData);
+
+  var config = {
+    method: "put",
+    url: `/elearningPicture/${id}`,
     data,
   };
 

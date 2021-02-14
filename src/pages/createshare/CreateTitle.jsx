@@ -173,7 +173,7 @@ const CreateTitle = () => {
                   <Form.Label>ชื่อแชร์(0/50)</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Enter email"
+                    placeholder="ชื่อแชร์"
                     onChange={(e) => {
                       setSharingData({...sharingData, title: e.target.value});
                     }}
