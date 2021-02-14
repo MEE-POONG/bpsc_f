@@ -16,7 +16,12 @@ import {NavLink} from "react-router-dom";
 
 import {useParams} from "react-router-dom";
 
-import {API_GET_SHARING_BY_ID, IMAGE_URL, API_fAVORITE_SHARING, API_UN_fAVORITE_SHARING} from "../../apis";
+import {
+  API_GET_SHARING_BY_ID,
+  IMAGE_URL,
+  API_fAVORITE_SHARING,
+  API_UN_fAVORITE_SHARING,
+} from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
 
@@ -51,17 +56,34 @@ const SharingList = () => {
     <Container className="leaning-list">
       <Row>
         <Col className="text-right" xs="12" lg="12">
-          <NavLink to={() => {}} className="p-0 nav-link" onClick={() => navigate(-1)}>
-            <Button bsPrefix="btn-save" className="mb-5">
-              BACK
-            </Button>
-          </NavLink>
+          <Row
+            className="text-right"
+            style={{
+              float: "right",
+            }}
+          >
+            {+localStorage.getItem("isAdmin") === 1 ? (
+              <NavLink to={`/edit-share/${id}`} className="p-0 nav-link">
+                <Button bsPrefix="btn-save" className="mb-5">
+                  EDIT
+                </Button>
+              </NavLink>
+            ) : null}
+            <NavLink to={() => {}} className="p-0 nav-link" onClick={() => navigate(-1)}>
+              <Button bsPrefix="btn-save" className="mb-5" onClick={() => navigate(-1)}>
+                BACK
+              </Button>
+            </NavLink>
+          </Row>
         </Col>
         <Col className="text-center mb-5" xs="12" lg="12">
           {sharing?.sharing?.sharingPicture && (
             <Image
               src={IMAGE_URL + sharing?.sharing?.sharingPicture}
               alt={sharing?.sharing?.title}
+              style={{
+                maxWidth: "inherit",
+              }}
             />
           )}
         </Col>

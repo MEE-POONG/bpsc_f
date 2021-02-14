@@ -4,9 +4,10 @@ import {Container, Image, Form, Row, Col, Badge} from "react-bootstrap";
 import CKEditor from "ckeditor4-react";
 
 import {
-  API_CREATE_SHARING,
+  API_UPDATE_SHARING,
   API_GET_TAGS,
   API_UPDATE_SHARING_PHOTO,
+  API_GET_SHARING_BY_ID,
   IMAGE_URL,
 } from "../../apis";
 
@@ -14,8 +15,10 @@ import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 import {Typeahead} from "react-bootstrap-typeahead";
 import "react-bootstrap-typeahead/css/Typeahead.css";
+import {useParams} from "react-router-dom";
 
 const CreateTitle = () => {
+  const {id} = useParams();
   const [sharingData, setSharingData] = useState({
     title: "",
     content: "",
@@ -24,6 +27,19 @@ const CreateTitle = () => {
   });
   const [tagData, setTagData] = useState(null);
   const [imgData, setImgData] = useState(null);
+  const [imgDataURL, setImgDataURL] = useState(null);
+  useEffect(() => {
+    API_GET_SHARING_BY_ID(id).then((result) => {
+      setSharingData({
+        title: result?.data?.sharing?.title,
+        content: result?.data?.sharing?.content,
+        isDraft: "true",
+        tags: result?.data?.tags,
+      });
+      setImgDataURL(IMAGE_URL + result?.data?.sharing?.sharingPicture);
+      setTagData(result?.data?.tags);
+    });
+  }, []);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,7 +50,7 @@ const CreateTitle = () => {
       .catch();
   }, []);
   const createSharing = () => {
-    API_CREATE_SHARING(sharingData)
+    API_UPDATE_SHARING(id, sharingData)
       .then((e) => {
         // console.log(e);
         Swal.fire("สำเร็จ!", "สร้างแชร์สำเร็จ!", "success").then(() => {
@@ -54,6 +70,8 @@ const CreateTitle = () => {
                   text: e?.message,
                 })
               );
+          } else {
+            navigate("/profile");
           }
         });
       })
@@ -149,11 +167,7 @@ const CreateTitle = () => {
                 }}
               >
                 <Image
-                  src={
-                    imgData
-                      ? URL.createObjectURL(imgData)
-                      : "https://chiccarrent.com/files/images/default-placeholder.png"
-                  }
+                  src={imgData ? URL.createObjectURL(imgData) : imgDataURL}
                   style={{
                     maxWidth: "500px",
                   }}
@@ -174,6 +188,7 @@ const CreateTitle = () => {
                   <Form.Control
                     type="text"
                     placeholder="ชื่อแชร์"
+                    value={sharingData.title}
                     onChange={(e) => {
                       setSharingData({...sharingData, title: e.target.value});
                     }}
@@ -192,17 +207,20 @@ const CreateTitle = () => {
               </div>
             </Col>
             <Col xs="12">
-              <CKEditor
-                onChange={(evt) => {
-                  setSharingData({...sharingData, content: evt.editor.getData()});
-                }}
-                // onChange={(evt) => console.log(evt.editor.getData())}
-                // data={this.state.events_detail_th}
-                // onChange={this.onEditorTHChange}
-                // config={{
-                //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
-                // }}
-              />
+              {sharingData.content ? (
+                <CKEditor
+                  value={sharingData.content}
+                  onChange={(evt) => {
+                    setSharingData({...sharingData, content: evt.editor.getData()});
+                  }}
+                  // onChange={(evt) => console.log(evt.editor.getData())}
+                  data={sharingData.content}
+                  // onChange={this.onEditorTHChange}
+                  // config={{
+                  //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
+                  // }}
+                />
+              ) : null}
             </Col>
           </Row>
         </div>
@@ -235,6 +253,7 @@ const CreateTitle = () => {
               labelKey="title"
               placeholder="เลือก TAG"
               selected={sharingData.tag}
+              // defaultSelected={tagData?.data?.slice(0, 4)}
             />
           </Form.Group>
         </Container>

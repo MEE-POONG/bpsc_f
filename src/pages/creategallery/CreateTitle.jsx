@@ -12,8 +12,6 @@ import {
 
 import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
-import {Typeahead} from "react-bootstrap-typeahead";
-import "react-bootstrap-typeahead/css/Typeahead.css";
 
 const CreateTitle = () => {
   const [contentData, setContentData] = useState({
@@ -150,7 +148,7 @@ const CreateTitle = () => {
                   <Form.Label>ชื่อแกลเลอรี่(0/50)</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Enter email"
+                    placeholder="ชื่อแกลเลอรี่"
                     onChange={(e) => {
                       setContentData({...contentData, title: e.target.value});
                     }}
