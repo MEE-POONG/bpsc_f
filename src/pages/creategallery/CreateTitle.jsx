@@ -12,8 +12,6 @@ import {
 
 import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
-import {Typeahead} from "react-bootstrap-typeahead";
-import "../editshare/node_modules/react-bootstrap-typeahead/css/Typeahead.css";
 
 const CreateTitle = () => {
   const [contentData, setContentData] = useState({

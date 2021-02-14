@@ -364,6 +364,18 @@ export const API_CREATE_SHARING = async (userData) => {
   return API_CONFIG(config);
 };
 
+export const API_UPDATE_SHARING = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/sharing/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
 export const API_CREATE_COMMENT = async (id, userData) => {
   var data = JSON.stringify(userData);
 
