@@ -16,7 +16,12 @@ import {NavLink} from "react-router-dom";
 
 import {useParams} from "react-router-dom";
 
-import {API_GET_SHARING_BY_ID, IMAGE_URL, API_fAVORITE_SHARING, API_UN_fAVORITE_SHARING} from "../../apis";
+import {
+  API_GET_SHARING_BY_ID,
+  IMAGE_URL,
+  API_fAVORITE_SHARING,
+  API_UN_fAVORITE_SHARING,
+} from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
 
@@ -62,6 +67,9 @@ const SharingList = () => {
             <Image
               src={IMAGE_URL + sharing?.sharing?.sharingPicture}
               alt={sharing?.sharing?.title}
+              style={{
+                maxWidth: "inherit",
+              }}
             />
           )}
         </Col>

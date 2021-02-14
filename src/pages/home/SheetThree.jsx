@@ -125,9 +125,7 @@ const SheetThree = () => {
                               <FontAwesomeIcon className="pr-2" icon={faEye} /> {view}
                             </span>
                             <span style={{color: "#26BEB4"}}>
-                              {/* <FontAwesomeIcon
-                              icon={isFavorite ? faHeart : faHeartBroken}
-                            /> */}
+                              
                               {isFavorite ? (
                                 <i
                                   className="fa fa fa-heart pr-2"
