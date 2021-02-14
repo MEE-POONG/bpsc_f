@@ -13,7 +13,7 @@ import {
 import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 import {Typeahead} from "react-bootstrap-typeahead";
-import "react-bootstrap-typeahead/css/Typeahead.css";
+import "../editshare/node_modules/react-bootstrap-typeahead/css/Typeahead.css";
 
 const CreateTitle = () => {
   const [sharingData, setSharingData] = useState({
