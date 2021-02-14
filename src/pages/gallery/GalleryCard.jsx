@@ -37,11 +37,11 @@ const GalleryCard = () => {
         {gallery?.data?.map(({id, title, content, photo}) => (
           <Col lg="3" md="4" sm="6" className="mb-5">
             <Card className="box-card-shadow">
-              {+localStorage.getItem("isAdmin") === 1 ? (
+              {/* {+localStorage.getItem("isAdmin") === 1 ? (
                 <div className="btn-cancel-card" onClick={() => handleDel(id)}>
                   <i class="fa fa-times-circle"></i>
                 </div>
-              ) : null}
+              ) : null} */}
               <NavLink to={`/gallery/${id}`} className="nav-link p-0">
                 <Card.Body className="image">
                   <Card.Img

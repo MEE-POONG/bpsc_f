@@ -28,6 +28,7 @@ import {
   API_UN_fAVORITE_E_lEARNING,
   API_GET_LEARNING_COMMENT,
   API_GET_LEARNING_DOCUMENT,
+  API_DEL_ELEARNING_BY_ID,
   IMAGE_URL,
   DOWNLOAD_URL,
 } from "../../apis";
@@ -49,6 +50,8 @@ const LeaningList = () => {
   const [documentClick, setDocumentClick] = useState(1);
   const setClick = () => setDocumentClick((e) => (e += 1));
   const navigate = useNavigate();
+  const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+  const regex = new RegExp(expression);
 
   useEffect(() => {
     API_GET_ELEARNING_BY_ID(id).then((result) => {
@@ -108,6 +111,14 @@ const LeaningList = () => {
       .catch();
   };
 
+  const handleDel = (id) => {
+    Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
+      if (result.isConfirmed) {
+        API_DEL_ELEARNING_BY_ID(id).then(() => navigate("/e-leaning/"));
+      }
+    });
+  };
+
   return (
     <Container className="leaning-list">
       <Row>
@@ -118,14 +129,17 @@ const LeaningList = () => {
             </Button>
           </NavLink>
         </Col>
+
         <Col className="text-center mb-5" xs="12" lg="12">
-          <iframe
-            title="This is a unique title"
-            src={elearning?.elearning?.videoLink}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+          {elearning?.elearning?.videoLink?.match(regex) ? (
+            <iframe
+              title="This is a unique title"
+              src={elearning?.elearning?.videoLink}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          ) : null}
         </Col>
         <Col xs="12" lg="12">
           <h1>{elearning?.elearning?.title}</h1>
@@ -161,6 +175,34 @@ const LeaningList = () => {
               <p>{tag}</p>
             ))}
           </div>
+        </Col>
+
+        <Col className="text-right" xs="12" lg="12">
+          <Row
+            className="text-right"
+            style={{
+              float: "right",
+            }}
+          >
+            {+localStorage.getItem("isAdmin") === 1 ? (
+              <NavLink to={`/edit-leaning/${id}`} className="pl-2 nav-link">
+                <Button bsPrefix="btn-save" className="mb-5">
+                  EDIT
+                </Button>
+              </NavLink>
+            ) : null}
+            {+localStorage.getItem("isAdmin") === 1 ? (
+              <NavLink
+                to={() => {}}
+                className="pl-2 nav-link"
+                onClick={() => handleDel(id)}
+              >
+                <Button bsPrefix="btn-save btn-danger" className="mb-5">
+                  DELETE
+                </Button>
+              </NavLink>
+            ) : null}
+          </Row>
         </Col>
 
         <Col xs="12" lg="12" className="mt-5 comment align-items-center">

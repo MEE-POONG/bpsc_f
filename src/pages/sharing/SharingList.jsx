@@ -13,6 +13,7 @@ import {
 import {faChevronDown, faEye, faHeart} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {NavLink} from "react-router-dom";
+import Swal from "sweetalert2";
 
 import {useParams} from "react-router-dom";
 
@@ -21,6 +22,7 @@ import {
   IMAGE_URL,
   API_fAVORITE_SHARING,
   API_UN_fAVORITE_SHARING,
+  API_DELETE_SHARING,
 } from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
@@ -52,29 +54,24 @@ const SharingList = () => {
       })
       .catch();
   };
+
+  const handleDel = (id) => {
+    Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
+      if (result.isConfirmed) {
+        API_DELETE_SHARING(id).then(() => navigate("/sharing/"));
+      }
+    });
+  };
+
   return (
     <Container className="leaning-list">
       <Row>
         <Col className="text-right" xs="12" lg="12">
-          <Row
-            className="text-right"
-            style={{
-              float: "right",
-            }}
-          >
-            {+localStorage.getItem("isAdmin") === 1 ? (
-              <NavLink to={`/edit-share/${id}`} className="p-0 nav-link">
-                <Button bsPrefix="btn-save" className="mb-5">
-                  EDIT
-                </Button>
-              </NavLink>
-            ) : null}
-            <NavLink to={() => {}} className="p-0 nav-link" onClick={() => navigate(-1)}>
-              <Button bsPrefix="btn-save" className="mb-5" onClick={() => navigate(-1)}>
-                BACK
-              </Button>
-            </NavLink>
-          </Row>
+          <NavLink to={() => {}} className="p-0 nav-link" onClick={() => navigate(-1)}>
+            <Button bsPrefix="btn-save" className="mb-5" onClick={() => navigate(-1)}>
+              BACK
+            </Button>
+          </NavLink>
         </Col>
         <Col className="text-center mb-5" xs="12" lg="12">
           {sharing?.sharing?.sharingPicture && (
@@ -128,6 +125,36 @@ const SharingList = () => {
               <p>{tag}</p>
             ))}
           </div>
+        </Col>
+
+        <Col className="text-right" xs="12" lg="12">
+          <Row
+            className="text-right"
+            style={{
+              float: "right",
+            }}
+          >
+            {+localStorage.getItem("id") === sharing?.sharing?.userId ||
+            +localStorage.getItem("isAdmin") === 1 ? (
+              <NavLink to={`/edit-share/${id}`} className="pl-2 nav-link">
+                <Button bsPrefix="btn-save" className="mb-5">
+                  EDIT
+                </Button>
+              </NavLink>
+            ) : null}
+            {+localStorage.getItem("id") === sharing?.sharing?.userId ||
+            +localStorage.getItem("isAdmin") === 1 ? (
+              <NavLink
+                to={() => {}}
+                className="pl-2 nav-link"
+                onClick={() => handleDel(id)}
+              >
+                <Button bsPrefix="btn-save btn-danger" className="mb-5">
+                  DELETE
+                </Button>
+              </NavLink>
+            ) : null}
+          </Row>
         </Col>
       </Row>
       <div className="py-5" />

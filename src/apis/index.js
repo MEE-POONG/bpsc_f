@@ -564,6 +564,17 @@ export const API_CREATE_LEANING = async (userData) => {
   return API_CONFIG(config);
 };
 
+export const API_UPDATE_LEANING = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/elearning/${id}`,
+    data,
+  };
+  return API_CONFIG(config);
+};
+
 export const API_DELETE_LEANING = async (id) => {
   var config = {
     method: "delete",

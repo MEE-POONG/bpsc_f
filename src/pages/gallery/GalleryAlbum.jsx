@@ -10,12 +10,19 @@ import {
   Pagination,
 } from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 import {useParams} from "react-router-dom";
 
-import {API_GET_GALLERY_BY_ID, API_GET_GALLERY_PHOTO_BY_ID, IMAGE_URL} from "../../apis";
+import {
+  API_GET_GALLERY_BY_ID,
+  API_GET_GALLERY_PHOTO_BY_ID,
+  API_DELETE_GALLERY,
+  IMAGE_URL,
+} from "../../apis";
 import moment from "moment";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Swal from "sweetalert2";
 
 import {
   faArrowRight,
@@ -51,9 +58,46 @@ const GalleryAlbum = () => {
     });
   }, [page]);
 
+  const handleDel = (id) => {
+    Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
+      if (result.isConfirmed) {
+        API_DELETE_GALLERY(id).then(() => navigate("/gallery/"));
+      }
+    });
+  };
+
   return (
     <Container className="detail">
       <div className="gallery-page text-uppercase">
+        <Row>
+          <Col className="text-right" xs="12" lg="12">
+            <Row
+              className="text-right"
+              style={{
+                float: "right",
+              }}
+            >
+              {+localStorage.getItem("isAdmin") === 1 ? (
+                <NavLink to={`/edit-gallery/${id}`} className="pl-2 nav-link">
+                  <Button bsPrefix="btn-save" className="mb-5">
+                    EDIT
+                  </Button>
+                </NavLink>
+              ) : null}
+              {+localStorage.getItem("isAdmin") === 1 ? (
+                <NavLink
+                  to={() => {}}
+                  className="pl-2 nav-link"
+                  onClick={() => handleDel(id)}
+                >
+                  <Button bsPrefix="btn-save btn-danger" className="mb-5">
+                    DELETE
+                  </Button>
+                </NavLink>
+              ) : null}
+            </Row>
+          </Col>
+        </Row>
         <Container className="title-album ">
           <Card.Body className="text-center">
             <Card.Title>{gallery?.gallery?.title}</Card.Title>
@@ -64,7 +108,7 @@ const GalleryAlbum = () => {
           </Card.Body>
           <Row>
             {galleryPhoto?.data?.map(({id, title, description, photo}, idx) => (
-              <Col lg="3" className="pt-4">
+              <Col lg="3" className="pt-4" style={{cursor: "pointer"}}>
                 <Image
                   src={
                     photo
@@ -113,7 +157,7 @@ const GalleryAlbum = () => {
                   alt={galleryPhoto?.data[galleryPhotoID]?.title}
                 />
               </Col>
-              <Col style={{placeSelf: "center"}} xs="1">
+              <Col style={{placeSelf: "center"}} xs="1" className="p-0">
                 {galleryPhotoID >= galleryPhoto?.data.length - 1 ? null : (
                   <FontAwesomeIcon
                     onClick={setPhotoRightID}
@@ -125,7 +169,6 @@ const GalleryAlbum = () => {
             </Row>
           </Modal.Body>
         </Modal>
-
         <div className="detail">
           <Pagination className="my-5" style={{float: "right"}}>
             {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
