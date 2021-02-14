@@ -1,7 +1,8 @@
 import moment from "moment";
 import React, { useState, useEffect } from "react";
-import { Container, Card, Modal, Row, Col } from "react-bootstrap";
-
+import { Container, Card, Modal, Row, Col, Media } from "react-bootstrap";
+import { faClock, faEye, faMapMarkerAlt, faLocationArrow, faMapMarked } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -25,56 +26,7 @@ const EventBox = () => {
 
   return (
     <div className="home-event text-uppercase">
-      <Container>
-        <div className="text-left text-uppercase">
-          <Card.Title>Up coming events</Card.Title>
-        </div>
-        <div className="m-0 my-5 card-day">
-          {event ? (
-            <Swiper
-              spaceBetween={50}
-              breakpoints={{
-                // when window width is >= 640px
-                640: {
-                  width: 640,
-                  slidesPerView: 2,
-                },
-                // when window width is >= 768px
-                768: {
-                  width: 768,
-                  slidesPerView: 2,
-                },
-              }}
-            >
-              {event?.data?.map(
-                ({ id, title, content, location, time, eventStart, eventEnd }, idx) => (
-                  <SwiperSlide>
-                    <div>
-                      <Card
-                        className={`bg-${idx > 3 ? 4 : idx + 1} height-293`}
-                        onClick={() => {
-                          handleShow();
-                          handleShowData(idx);
-                        }}
-                      >
-                        <Card.Body>
-                          <Card.Title>{moment(eventStart).format("DD")}</Card.Title>
-                          <Card.Subtitle>
-                            {moment(eventStart).format("MMM")}
-                          </Card.Subtitle>
-                          <Card.Text className="text-overflow-5">
-                            <Card.Title>{title}</Card.Title>
-                            <Card.Subtitle>{content}</Card.Subtitle>
-                          </Card.Text>
-                        </Card.Body>
-                      </Card>
-                    </div>
-                  </SwiperSlide>
-                )
-              )}
-            </Swiper>
-          ) : null}
-        </div>
+      <Container className="pt-5">
         <Row>
           <Col lg="6" md="6" sm="6" xs="12">
             <Card.Title>Up coming events</Card.Title>
@@ -86,15 +38,15 @@ const EventBox = () => {
             {/* เว้นไว้ */}
           </Col>
           <Col lg="6" md="6" sm="6" xs="12" style={{ position: "relative" }}>
-            <Card.Subtitle style={{
+            <Card.Subtitle bsPrefix="view-all" style={{
               position: "absolute",
               right: "2rem",
               bottom: "100%"
             }}>View all Events</Card.Subtitle>
-            <Card className="view">
-              <Row>
-                <Col className="date">
-                  <div className="start">
+            <Card className="view my-3">
+              <Row className="m-0">
+                <Col xs="auto" lg="auto" className="date p-0">
+                  <div className="start alone">
                     <Card.Title>
                       19
                     </Card.Title>
@@ -111,13 +63,40 @@ const EventBox = () => {
                     </Card.Subtitle>
                   </div>
                 </Col>
-                <Col></Col>
-                <Col></Col>
+                <Col>
+                  <Row>
+                    <Col lg="6" className="d-flex">
+                      <Media className="location align-self-center">
+                        <FontAwesomeIcon className="mr-2 align-self-center" icon={faMapMarkerAlt} />
+                        <Media.Body>
+                          <span> building name</span>
+                        </Media.Body>
+                      </Media>
+                    </Col>
+                    <Col lg="6" >
+                      <Media className="date-time align-self-center">
+                        <FontAwesomeIcon className="mr-2 align-self-center" icon={faClock} />
+                        <Media.Body>
+                          <span>10.30 AM - 12.00 PM</span>
+                          <span>2.00 PM - 3.30 PM</span>
+                        </Media.Body>
+                      </Media>
+                    </Col>
+                    <Col lg="12" xs="12" className="detail">
+                      <Card.Title>
+                        ProgrAm NAME
+                      </Card.Title>
+                      <Card.Subtitle>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  ...
+                      </Card.Subtitle>
+                    </Col>
+                  </Row>
+                </Col>
               </Row>
             </Card>
-            <Card className="view">
-              <Row>
-                <Col className="date">
+            <Card className="view my-3">
+              <Row className="m-0">
+                <Col xs="auto" lg="auto" className="date p-0">
                   <div className="start">
                     <Card.Title>
                       19
@@ -135,8 +114,35 @@ const EventBox = () => {
                     </Card.Subtitle>
                   </div>
                 </Col>
-                <Col></Col>
-                <Col></Col>
+                <Col>
+                  <Row>
+                    <Col lg="6" className="d-flex">
+                      <Media className="location align-self-center">
+                        <FontAwesomeIcon className="mr-2 align-self-center" icon={faMapMarkerAlt} />
+                        <Media.Body>
+                          <span> building name</span>
+                        </Media.Body>
+                      </Media>
+                    </Col>
+                    <Col lg="6" >
+                      <Media className="date-time align-self-center">
+                        <FontAwesomeIcon className="mr-2 align-self-center" icon={faClock} />
+                        <Media.Body>
+                          <span>10.30 AM - 12.00 PM</span>
+                          <span></span>
+                        </Media.Body>
+                      </Media>
+                    </Col>
+                    <Col lg="12" xs="12" className="detail">
+                      <Card.Title>
+                        ProgrAm NAME
+                      </Card.Title>
+                      <Card.Subtitle>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  ...
+                      </Card.Subtitle>
+                    </Col>
+                  </Row>
+                </Col>
               </Row>
             </Card>
           </Col>
