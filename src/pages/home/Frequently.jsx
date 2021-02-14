@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
-import {Container, ListGroup, Button, Card} from "react-bootstrap";
-import {API_GET_FAQ} from "../../apis";
+import React, { useState, useEffect } from "react";
+import { Container, ListGroup, Button, Card, Image } from "react-bootstrap";
+import { API_GET_FAQ } from "../../apis";
 const Frequently = () => {
   const [faqData, setFaqData] = useState(null);
   useEffect(() => {
@@ -11,19 +11,19 @@ const Frequently = () => {
   return (
     <div className="frequently text-uppercase">
       <Container fluid className="m-0 p-0">
-        <ListGroup horizontal>
+        <ListGroup horizontal >
           <ListGroup.Item
             className="start hide-short-desc"
-            style={{
-              backgroundImage: "url('/image/frequently-doctor.svg')",
-            }}
-          ></ListGroup.Item>
-          <ListGroup.Item className="end">
+            style={{ width: "50%" ,position:"relative"}}
+          >
+            <Image src="/image/home/Frequently.png" style={{position:"absolute",bottom:"0",objectFit:"contain",width:"100%"}} />
+          </ListGroup.Item>
+          <ListGroup.Item className="end" style={{ width: "50%",position:"relative" }}>
             <Card>
               <Card.Body>
                 <Card.Title>FREQUENTLY ASKED QUESTIONS</Card.Title>
                 <br />
-                {faqData?.data?.map(({id, question, answer}) => (
+                {faqData?.data?.map(({ id, question, answer }) => (
                   <div key={id}>
                     <Card.Subtitle id="faqquestion">{question}</Card.Subtitle>
                     <Card.Text className="p-3">{answer}</Card.Text>

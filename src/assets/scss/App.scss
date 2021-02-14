@@ -8,29 +8,28 @@
 @import "./profile.scss";
 @import "./create.scss";
 
-.btn-save {
+.btn-save,
+.btn-kss {
     font-size: 2rem;
-    background-color: #56B889;
-    border-radius: 12px;
+    background-color: #56b889;
+    border-radius: 10px;
     color: #ffffff;
     border: unset;
     padding: 0.5rem 1rem;
 }
-.f-gradient{
-	text-transform: uppercase;
-	background: linear-gradient(to right, #26BEB4 0%, #5694CD 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+.btn-kss:hover {
+    background-color: #00e25b !important;
 }
-.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+.f-gradient {
+    text-transform: uppercase;
+    background: linear-gradient(to right, #26beb4 0%, #5694cd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
     width: 80%;
 }
-.kss{
-    color: #18faa6;
-    background-color: #e6e6e6;
-    font-size: 1.5rem;
-    border-radius: 20px;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
-    border: 0px;
+.frequently{
+    margin-top: 15rem;
 }

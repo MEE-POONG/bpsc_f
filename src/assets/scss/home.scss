@@ -79,7 +79,7 @@
     @media only screen and (min-width: 1400px) {
         .sheet-one {
             .card-title {
-                font-size: 4rem !important;
+                font-size: 3rem !important;
             }
 
             .subtitle {
@@ -100,7 +100,7 @@
 
         .scroll-num .card {
             .card-title {
-                font-size: 4rem !important;
+                font-size: 3rem !important;
             }
 
             .card-subtitle {
@@ -128,9 +128,57 @@
         }
     }
 }
-.bg-abstain.card:hover::before,
-.bg-abstain.card:hover::after,
-.bg-abstain.card:focus::before,
-.bg-abstain.card:focus::after {
-    transform: scale3d(0, 0, 0);
+.home-event {
+    .view-all{
+        position: absolute;
+        right: 2rem;
+        bottom: 100%;
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+    .card.view {
+        border-radius: 10px;
+        padding: 1.25rem;
+        .date {
+            display: flex;
+            .start,
+            .end {
+                width: 80px;
+                text-align: center;
+                font-weight: bold;
+                color: #ffffff;
+                border-radius: 10px;
+                background-color: #5694cd;
+                padding: 0.75rem;
+                .card-title {
+                    font-size: 6rem !important;
+                }
+                .card-subtitle {
+                    font-size: 2rem !important;
+                }
+            }
+            .start.alone {
+                width: 170px;
+            }
+            .end {
+                margin-left: 10px;
+            }
+        }
+        .date-time,
+        .location {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .detail{
+            border-top: 3px solid #5694cd;
+            margin-top: 1rem;
+            .card-title {
+                font-size: 2rem !important;
+                font-weight: bold;
+            }
+            .card-subtitle {
+                font-size: 1.25rem !important;
+            }
+        }
+    }
 }

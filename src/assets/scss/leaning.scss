@@ -121,7 +121,6 @@
             right: 0;
             bottom: 0;
             left: 0;
-            transform: scale3d(0, 0, 1);
             transition: transform 0.3s ease-out 0s;
             background: rgba(255, 255, 255, 0.1);
             content: "";
@@ -132,12 +131,6 @@
         }
         .card::after {
             transform-origin: right bottom;
-        }
-        .card:hover::before,
-        .card:hover::after,
-        .card:focus::before,
-        .card:focus::after {
-            transform: scale3d(1, 1, 1);
         }
         span img {
             width: 30px;
@@ -355,6 +348,6 @@
 }
 @media only screen and (max-width: 600px) {
     .leaning-page .title .card-title {
-        font-size: 4rem !important;
+        font-size: 3rem !important;
     }
 }
