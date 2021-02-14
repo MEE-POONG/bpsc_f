@@ -388,6 +388,30 @@ export const API_CREATE_COMMENT = async (id, userData) => {
   return API_CONFIG(config);
 };
 
+export const API_PUT_COMMENT = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/comment/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_DELETE_COMMENT = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "delete",
+    url: `/comment/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
 export const API_UPDATE_SHARING_PHOTO = async (id, userData) => {
   var FormData = require("form-data");
   var data = new FormData();

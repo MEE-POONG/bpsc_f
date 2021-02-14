@@ -130,7 +130,7 @@ const GalleryAlbum = () => {
           onHide={handleClose}
           backdrop="static"
           keyboard={false}
-          className="d-flex justify-content-center"
+          className="d-flex justify-content-center gallery-page"
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>

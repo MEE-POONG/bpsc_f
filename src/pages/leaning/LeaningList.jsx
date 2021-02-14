@@ -29,6 +29,8 @@ import {
   API_GET_LEARNING_COMMENT,
   API_GET_LEARNING_DOCUMENT,
   API_DEL_ELEARNING_BY_ID,
+  API_DELETE_COMMENT,
+  API_PUT_COMMENT,
   IMAGE_URL,
   DOWNLOAD_URL,
 } from "../../apis";
@@ -38,9 +40,10 @@ import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 
 const LeaningList = () => {
+  const defComment = {id: null, comment: null};
   const {id} = useParams();
   const [userInfo, setUserInfo] = useState(null);
-
+  const [editMode, setEditMode] = useState(defComment);
   const [elearning, setElearning] = useState(null);
   const [createComment, setCreateComment] = useState(null);
   const [comment, setComment] = useState(null);
@@ -92,6 +95,27 @@ const LeaningList = () => {
       });
   };
 
+  const handlePutComment = () => {
+    API_PUT_COMMENT(editMode.id, {comment: editMode.comment})
+      .then(() => {
+        Swal.fire({
+          icon: "success",
+          title: "สำเร็จ",
+          text: "แก้ไขความคิดเห็นสำเร็จ",
+        }).then(() => {
+          setEditMode(defComment)
+          setSearch();
+        });
+      })
+      .catch((e) => {
+        Swal.fire({
+          icon: "error",
+          title: e?.error,
+          text: e?.message,
+        });
+      });
+  };
+
   const handleFav = (id) => {
     API_fAVORITE_E_lEARNING(id)
       .then(() => {
@@ -115,6 +139,13 @@ const LeaningList = () => {
     Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
       if (result.isConfirmed) {
         API_DEL_ELEARNING_BY_ID(id).then(() => navigate("/e-leaning/"));
+      }
+    });
+  };
+  const handleDelComment = (id) => {
+    Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
+      if (result.isConfirmed) {
+        API_DELETE_COMMENT(id).then(() => setSearch());
       }
     });
   };
@@ -250,7 +281,10 @@ const LeaningList = () => {
       </Row>
       <Container fluid className="list mb-5 py-5">
         {comment?.data?.map(
-          ({userPicture, comment, createAt, id, firstName, lastName}, idx) => (
+          (
+            {userPicture, comment, createAt, id, firstName, lastName, userId, isEdit},
+            idx
+          ) => (
             <Media>
               <Image
                 src={
@@ -263,6 +297,72 @@ const LeaningList = () => {
               <Media.Body className="detail">
                 <p className="date">{moment(createAt).format("LL")}</p>
                 <p className="text">{comment}</p>
+                {+editMode?.id === +id ? (
+                  <Row>
+                    <Col xs="12" lg="12" className="mt-5 comment align-items-center">
+                      <Media>
+                        <img
+                          width={64}
+                          height={64}
+                          className="align-self-start mr-3"
+                          src={
+                            userInfo?.picture
+                              ? IMAGE_URL + userInfo?.picture
+                              : "https://chiccarrent.com/files/images/default-placeholder.png"
+                          }
+                          alt={comment}
+                        />
+                        <Media.Body>
+                          <FormControl
+                            bsPrefix="input-comment"
+                            as="textarea"
+                            placeholder={`${
+                              localStorage.getItem("token")
+                                ? "Add a Public Comment..."
+                                : "กรุณาเข้าสู่ระบบเพื่อแสดงความคิดเห็น"
+                            }`}
+                            onChange={(e) =>
+                              setEditMode({...editMode, comment: e.target.value})
+                            }
+                            disabled={!localStorage.getItem("token")}
+                            value={editMode.comment}
+                          />
+                        </Media.Body>
+                        <div
+                          style={{
+                            alignSelf: "center",
+                          }}
+                        >
+                          <button
+                            type="button"
+                            className="btn btn-success about-talk-with-us-btn-success"
+                            onClick={() => handlePutComment()}
+                            disabled={!localStorage.getItem("token")}
+                          >
+                            SEND
+                          </button>
+                        </div>
+                      </Media>
+                    </Col>
+                  </Row>
+                ) : null}
+                {+localStorage.getItem("id") === userId ||
+                +localStorage.getItem("isAdmin") === 1 ? (
+                  <p className="text">
+                    {+editMode?.id === +id ? (
+                      <span className="cursor" onClick={() => setEditMode(defComment)}>
+                        ยกเลิก
+                      </span>
+                    ) : (
+                      <span className="cursor" onClick={() => setEditMode({id, comment})}>
+                        แก้ไข
+                      </span>
+                    )}
+                    <span className="pl-2 cursor" onClick={() => handleDelComment(id)}>
+                      ลบ
+                    </span>
+                  </p>
+                ) : null}
               </Media.Body>
             </Media>
           )

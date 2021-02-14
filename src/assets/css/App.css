@@ -94,3 +94,12 @@ body {
 .dropdown-menu {
   left: -25px !important;
 }
+
+.gallery-page.modal.show .modal-dialog {
+  /* width: 80%; */
+  max-width: unset !important;
+}
+
+.cursor {
+  cursor: pointer;
+}
