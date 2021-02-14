@@ -35,14 +35,14 @@ const GalleryCard = () => {
     <Container className="detail">
       <Row className="py-5">
         {gallery?.data?.map(({id, title, content, photo}) => (
-          <Col lg="3" md="4" sm="6" className="mb-5">
+          <Col lg="3" md="4" sm="6" className="mb-5" onClick={()=> navigate(`/gallery/${id}`)}  >
             <Card className="box-card-shadow">
               {/* {+localStorage.getItem("isAdmin") === 1 ? (
                 <div className="btn-cancel-card" onClick={() => handleDel(id)}>
                   <i class="fa fa-times-circle"></i>
                 </div>
               ) : null} */}
-              <NavLink to={`/gallery/${id}`} className="nav-link p-0">
+              {/* <NavLink to={`/gallery/${id}`} className="nav-link p-0"> */}
                 <Card.Body className="image">
                   <Card.Img
                     src={
@@ -72,7 +72,7 @@ const GalleryCard = () => {
                     </span>
                   </Card.Text>
                 </Card.Footer> */}
-              </NavLink>
+              {/* </NavLink> */}
             </Card>
           </Col>
         ))}

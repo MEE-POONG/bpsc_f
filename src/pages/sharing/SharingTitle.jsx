@@ -4,7 +4,12 @@ import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 const SharingSubTitle = () => {
   return (
-    <Container className="title mb-5">
+    <Container
+      className="title mb-5"
+      style={{
+        alignSelf: "center",
+      }}
+    >
       <Row>
         <Col lg="8">
           <Card.Title>Hope Sharing</Card.Title>

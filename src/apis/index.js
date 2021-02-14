@@ -513,6 +513,17 @@ export const API_CREATE_GALLERY = async (userData) => {
   return API_CONFIG(config);
 };
 
+export const API_PUT_GALLERY = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/gallery/${id}`,
+    data,
+  };
+  return API_CONFIG(config);
+};
+
 export const API_DELETE_GALLERY = async (id) => {
   let data = "";
 

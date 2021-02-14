@@ -84,3 +84,13 @@ body {
   width: 30px;
   text-align: center;
 }
+
+.dropdown-header {
+  font-size: large !important;
+}
+.navbar .dropdown-menu a {
+  font-size: initial;
+}
+.dropdown-menu {
+  left: -25px !important;
+}
