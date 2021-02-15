@@ -128,12 +128,12 @@
         }
     }
 }
-.home-event {
-    .view-all{
+.home-event,.home-event-list {
+    .view-all {
         position: absolute;
         right: 2rem;
         bottom: 100%;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         font-weight: bold;
     }
     .card.view {
@@ -164,14 +164,20 @@
                 margin-left: 10px;
             }
         }
+        .fas {
+            font-size: 1.75rem;
+            color: #5694cd;
+        }
         .date-time,
         .location {
             font-size: 12px;
             font-weight: bold;
         }
-        .detail{
+        .detail,
+        .f-detail {
             border-top: 3px solid #5694cd;
             margin-top: 1rem;
+            padding-top: 1rem;
             .card-title {
                 font-size: 2rem !important;
                 font-weight: bold;
@@ -181,4 +187,73 @@
             }
         }
     }
+    .card.view.end {
+        margin-top: 2rem;
+    }
+    .card.view.frist {
+        height: 100%;
+        .f-detail {
+            border-top: 0px solid #5694cd;
+        }
+    }
+    .modal-open {
+        .event-list-view {
+            .modal-title {
+                font-size: 5rem;
+            }
+        }
+    }
+}
+.home-event-list {
+    .modal.show .modal-dialog {
+        height: 94%;
+    }
+    .modal-dialog {
+        max-width: 100%;
+        width: 80%;
+        height: 90%;
+        .modal-content {
+            height: 100%;
+        }
+    }
+    .f-gradient {
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    .card.view{
+        padding: 0rem;
+        border-radius: 0;
+        .f-detail{
+            border-top: 3px solid #ffffff;
+        }
+        .fas{
+            color: white;
+        }
+        .detail{
+            border-top: 0px solid #5694cd;
+        }
+        .date {
+            display: flex;
+            .start,
+            .end {
+                color: #5694cd;
+                background-color: #ffffff;
+                // .card-title {
+                //     color: #ffffff;
+                // }
+                // .card-subtitle {
+                //     color: #ffffff;
+                // }
+            }
+        }
+    }
+    .meat-blue{
+        background-color: #5694cd;
+        padding: 1.25rem;
+        color: #ffffff;
+    }
+    .set-margin{
+        margin: 1.25rem;
+    }
+
 }

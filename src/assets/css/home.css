@@ -446,7 +446,7 @@
 }
 
 .sheet-three .card::before,
-.card::after {
+.sheet-three .card::after {
   position: absolute;
   top: 0;
   right: 0;
