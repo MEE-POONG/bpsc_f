@@ -216,6 +216,9 @@
             height: 100%;
         }
     }
+    .modal-body{
+        overflow-y: scroll;
+    }
     .f-gradient {
         font-size: 5rem;
         font-weight: bold;
@@ -223,6 +226,7 @@
     .card.view{
         padding: 0rem;
         border-radius: 0;
+        margin-bottom: 2rem;
         .f-detail{
             border-top: 3px solid #ffffff;
         }
