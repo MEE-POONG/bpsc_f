@@ -124,12 +124,12 @@ const LeaningDetail = () => {
               ) => (
                 <Col xl="4" lg="4" md="6" xs="12" className="mobile-padding py-5">
                   <Card>
-                    {+localStorage.getItem("id") === userId ||
+                    {/* {/* {+localStorage.getItem("id") === userId ||
                     +localStorage.getItem("isAdmin") === 1 ? (
                       <div className="btn-cancel-card" onClick={() => handleDel(id)}>
                         <i class="fa fa-times-circle"></i>
                       </div>
-                    ) : null}
+                    ) : null} */}
                     <div onClick={() => navigate(`/e-leaning/${id}`)}>
                       <Card.Img
                         src={

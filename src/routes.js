@@ -12,6 +12,8 @@ const Gallery = React.lazy(() => import("./pages/gallery"));
 const GalleryAlbum = React.lazy(() => import("./pages/gallery/GalleryAlbum"));
 const CreateShare = React.lazy(() => import("./pages/createshare"));
 const EditShare = React.lazy(() => import("./pages/editshare"));
+const EditLeaning = React.lazy(() => import("./pages/editleaning"));
+const EditGallery = React.lazy(() => import("./pages/editgallery"));
 const CreateGallery = React.lazy(() => import("./pages/creategallery"));
 const CreateLeaning = React.lazy(() => import("./pages/createleaning"));
 const Login = React.lazy(() => import("./pages/login"));
@@ -53,7 +55,9 @@ const routes = [
   {path: "/create-share", name: "CREATE SHARE", component: CreateShare},
   {path: "/edit-share/:id", name: "EDIT SHARE", component: EditShare},
   {path: "/create-leaning", name: "CREATE LEANING", component: CreateLeaning},
+  {path: "/edit-leaning/:id", name: "EDIT LEANING", component: EditLeaning},
   {path: "/create-gallery", name: "CREATE Gallery", component: CreateGallery},
+  {path: "/edit-gallery/:id", name: "EDIT Gallery", component: EditGallery},
   {path: "/verify", name: "VERIFY", component: Verify},
   {path: "/changeForgetPassword", name: "RE PASSWORD", component: RePassword},
 

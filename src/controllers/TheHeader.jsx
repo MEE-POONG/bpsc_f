@@ -105,7 +105,7 @@ const TheHeader = () => {
                 className="dropdown-menu-login"
               >
                 <NavDropdown.Header className="dropdown-title-username">
-                  Username
+                  {userInfo?.firstName}
                 </NavDropdown.Header>
                 <NavDropdown.Divider />
                 <NavDropdown.Item onClick={() => navigate("profile")}>

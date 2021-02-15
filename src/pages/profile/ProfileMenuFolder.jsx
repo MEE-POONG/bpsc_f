@@ -91,12 +91,12 @@ const ProfileMenuFolder = () => {
                   // onClick={() => navigate("/sharing/" + id)}
                 >
                   <Card className="box-card-shadow">
-                    {+localStorage.getItem("id") === userId ||
+                    {/* {+localStorage.getItem("id") === userId ||
                     +localStorage.getItem("isAdmin") === 1 ? (
                       <div className="btn-cancel-card" onClick={() => handleDel(id)}>
                         <i class="fa fa-times-circle"></i>
                       </div>
-                    ) : null}
+                    ) : null} */}
                     <Card.Body
                       className="image"
                       onClick={() => navigate("/sharing/" + id)}

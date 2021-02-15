@@ -27,7 +27,7 @@ const ScrollNum = () => {
 
   return (
     <div className="sheet-two">
-      <div className="scroll-num my-5">
+      <div className="scroll-num py-5">
         <Container>
           <Row className="text-center">
             <Col xs="6" md="3" lg="3">

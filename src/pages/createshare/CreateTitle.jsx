@@ -20,7 +20,7 @@ const CreateTitle = () => {
     title: "",
     content: "",
     isDraft: "true",
-    tags: [{id: 1}],
+    tags: [],
   });
   const [tagData, setTagData] = useState(null);
   const [imgData, setImgData] = useState(null);
@@ -54,6 +54,8 @@ const CreateTitle = () => {
                   text: e?.message,
                 })
               );
+          } else {
+            navigate("/profile");
           }
         });
       })

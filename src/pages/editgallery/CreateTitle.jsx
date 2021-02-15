@@ -1,29 +1,49 @@
 import React, {useEffect} from "react";
 import {useState} from "react";
 import {Container, Image, Form, Row, Col, Badge} from "react-bootstrap";
-import CKEditor from "ckeditor4-react";
 
 import {
-  API_CREATE_GALLERY,
+  API_PUT_GALLERY,
   API_UPDATE_GALLERY_COVER,
   API_CREATE_GALLERY_PHOTO,
+  API_GET_GALLERY_BY_ID,
+  API_GET_GALLERY_PHOTO_BY_ID,
   IMAGE_URL,
 } from "../../apis";
 
 import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
+import {useParams} from "react-router-dom";
 
 const CreateTitle = () => {
+  const {id} = useParams();
+
   const [contentData, setContentData] = useState({
     title: "",
     content: "",
   });
   const [imgData, setImgData] = useState(null);
   const [imgMulData, setImgMulData] = useState(null);
+  const [imgDataURL, setImgDataURL] = useState(null);
+  const [imgMulDataURL, setImgMulDataURL] = useState(null);
+  const [galleryPhoto, setGalleryPhoto] = useState(null);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    API_GET_GALLERY_BY_ID(id).then((result) => {
+      console.log(result);
+      setContentData({
+        title: result?.data?.gallery?.title,
+        content: result?.data?.gallery?.content,
+      });
+      setImgDataURL(IMAGE_URL + result?.data?.gallery?.photo);
+    });
+    API_GET_GALLERY_PHOTO_BY_ID(id, 1, 1000).then((result) => {
+      setGalleryPhoto(result?.data);
+    });
+  }, []);
   const createGallery = () => {
-    API_CREATE_GALLERY(contentData)
+    API_PUT_GALLERY(id, contentData)
       .then((e) => {
         // console.log(e);
         Swal.fire("สำเร็จ!", "สร้างแกลเลอรี่สำเร็จ!", "success").then(() => {
@@ -75,6 +95,7 @@ const CreateTitle = () => {
         });
       });
   };
+
   return (
     <div>
       <div className="tab-btn mb-5">
@@ -128,11 +149,7 @@ const CreateTitle = () => {
               }}
             >
               <Image
-                src={
-                  imgData
-                    ? URL.createObjectURL(imgData)
-                    : "https://chiccarrent.com/files/images/default-placeholder.png"
-                }
+                src={imgData ? URL.createObjectURL(imgData) : imgDataURL}
                 style={{
                   maxWidth: "500px",
                 }}
@@ -152,6 +169,7 @@ const CreateTitle = () => {
                   <Form.Control
                     type="text"
                     placeholder="ชื่อแกลเลอรี่"
+                    value={contentData.title}
                     onChange={(e) => {
                       setContentData({...contentData, title: e.target.value});
                     }}
@@ -162,6 +180,7 @@ const CreateTitle = () => {
                   <Form.Control
                     type="text"
                     as="textarea"
+                    value={contentData.content}
                     onChange={(e) => {
                       setContentData({...contentData, content: e.target.value});
                     }}
@@ -234,16 +253,22 @@ const CreateTitle = () => {
               </Row>
             ) : (
               <Row>
-                <Col>
-                  <div>
-                    <Image
-                      src={"https://chiccarrent.com/files/images/default-placeholder.png"}
-                      style={{
-                        maxWidth: "150px",
-                      }}
-                    />
-                  </div>
-                </Col>
+                {galleryPhoto?.data?.map(({id, title, description, photo}, idx) => (
+                  <Col>
+                    <div>
+                      <Image
+                        src={
+                          photo
+                            ? IMAGE_URL + photo
+                            : "https://chiccarrent.com/files/images/default-placeholder.png"
+                        }
+                        style={{
+                          maxWidth: "150px",
+                        }}
+                      />
+                    </div>
+                  </Col>
+                ))}
               </Row>
             )}
           </div>

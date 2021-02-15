@@ -30,16 +30,14 @@ const SheetTwo = () => {
         <Card className="sharing">
           <Card.Body>
             <Row className="m-lg-0">
-              <Col lg="6" className="text-center py-5">
+              <Col lg="6" className="text-center py-5" style={{alignSelf: "center"}}>
                 <Card.Title>Hope Sharing</Card.Title>
-                <Card.Subtitle>แบ่งปันประสบการณ์</Card.Subtitle>
                 <div>
                   <Card.Text>
-                    “สนทนาสุขใจ ลดเสี่ยง เลี่ยง NCD”<br></br>
-                    เพราะโรคไม่ติดต่อเรื้อรัง (Non-Communicable Disease, NCD)
-                    คือภัยเงียบทำลายสังคมและเศรษฐกิจ
                     นอกจากการแลกเปลี่ยนความรู้ในกลุ่มบุคลากร (CoPs)
-                    เพื่อพัฒนาทักษะการสื่อสารแล้ว ความคิดเห็นจากคุณจะเป็นกุญแจสำคัญที่นำเราไปสู่การพัฒนา เพื่อดูแลผู้ป่วยอย่างยั่งยืน
+                    เพื่อพัฒนาทักษะการสื่อสารแล้ว
+                    ความคิดเห็นจากคุณจะเป็นกุญแจสำคัญที่นำเราไปสู่การพัฒนา
+                    เพื่อดูแลผู้ป่วยอย่างยั่งยืน
                   </Card.Text>
                   <Button variant="green" onClick={() => navigate("/sharing/")}>
                     Discover more {"-->"}

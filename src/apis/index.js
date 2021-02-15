@@ -388,6 +388,30 @@ export const API_CREATE_COMMENT = async (id, userData) => {
   return API_CONFIG(config);
 };
 
+export const API_PUT_COMMENT = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/comment/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_DELETE_COMMENT = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "delete",
+    url: `/comment/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
 export const API_UPDATE_SHARING_PHOTO = async (id, userData) => {
   var FormData = require("form-data");
   var data = new FormData();
@@ -513,6 +537,17 @@ export const API_CREATE_GALLERY = async (userData) => {
   return API_CONFIG(config);
 };
 
+export const API_PUT_GALLERY = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/gallery/${id}`,
+    data,
+  };
+  return API_CONFIG(config);
+};
+
 export const API_DELETE_GALLERY = async (id) => {
   let data = "";
 
@@ -559,6 +594,17 @@ export const API_CREATE_LEANING = async (userData) => {
   var config = {
     method: "post",
     url: `/elearning/`,
+    data,
+  };
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_LEANING = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/elearning/${id}`,
     data,
   };
   return API_CONFIG(config);

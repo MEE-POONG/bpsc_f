@@ -179,7 +179,7 @@ const CreateTitle = () => {
       </Container>
 
       <Container className="px-0">
-        <div className="box-sheare detail">
+        <div className="box-sheare detail d-block">
           <Row>
             <Col md="12">
               <div className="header">
