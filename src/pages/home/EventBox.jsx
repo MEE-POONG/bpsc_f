@@ -12,13 +12,15 @@ const EventBox = () => {
     <div className="home-event text-uppercase">
       <Container className="py-5">
         <Row>
-          <Col lg="6" md="6" sm="6" xs="12">
+          <Col lg="6" md="6" sm="12" xs="12">
             <Card.Title>Up coming events</Card.Title>
+            <Card.Title bsPrefix="view-all-2" onClick={handleShow} style={{
+            }}>View all Events</Card.Title>
           </Col>
           <Col lg="6" md="6" sm="6" xs="12">
             {/* เว้นไว้ */}
           </Col>
-          <Col lg="6" md="6" sm="6" xs="12">
+          <Col lg="6" md="6" sm="12" xs="12">
             <Card className="view frist">
               <Row className="m-0">
                 <Col xs="auto" lg="auto" className="date p-0">
@@ -71,7 +73,7 @@ const EventBox = () => {
               </Row>
             </Card>
           </Col>
-          <Col lg="6" md="6" sm="6" xs="12" style={{ position: "relative" }}>
+          <Col lg="6" md="6" sm="6" xs="12" style={{ position: "relative" }} className="d-md-block d-sm-none d-xs-none">
             <Card.Subtitle bsPrefix="view-all" onClick={handleShow} style={{
               position: "absolute",
               right: "2rem",
