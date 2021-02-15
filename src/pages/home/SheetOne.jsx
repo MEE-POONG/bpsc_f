@@ -10,32 +10,47 @@ const SheetOne = () => {
   const setOur = () => setChkInnovation(true);
   const ourValue = (
     <Row className="m-0">
-      <Col style={{alignSelf: "center"}}>
-        <Card.Text style={{fontSize: "20px"}}>
-          “ชมเป็น ถามเป็น แนะเป็น”<br></br>
-          หนึ่งในนวัตกรรมหลักของ BPSC
-        </Card.Text>
-        <Card.Text style={{fontSize: "15px"}}>
+      <Col lg="6" style={{alignSelf: "center"}}>
+        <Card.Title>MISSION</Card.Title>
+        <Card.Text style={{fontSize: "18px"}}>
           <br/>
-          เพราะเราเชื่อว่า “การสื่อสารสองทาง”
-          จะช่วยสร้างสัมพันธภาพอันดีระหว่างผู้ป่วยและบุคลากรทางการแพทย์
-          เพื่อให้ผู้ป่วยกล้าเปิดใจเล่าปัญหา ที่ทำให้ผลการรักษาไม่เป็นไปตามที่คาดหวัง
+          เราสร้าง BPSC ซึ่งเป็นนวัตกรรมการดูแลผู้ป่วยแบบใหม่ ที่จะทำให้เกิดความร่วมมือในการแก้ปัญหา นำไปสู่ทางออก เป็นการรักษาผู้ป่วยทั้งกายและใจ โดยเน้นผู้ป่วยกลุ่มโรคไม่ติดต่อเรื้อรัง, มีปัญหาสุขภาพจิต และติดสารเสพติด 
+ผ่านการสร้าง 4 ระบบหลัก 
         </Card.Text>
-        <Card.Text style={{fontSize: "15px"}}>
-          <br/>
-          เราจึงสร้าง BPSC ซึ่งเป็นนวัตกรรมการดูแลผู้ป่วยแบบใหม่
-          ที่จะทำให้เกิดความร่วมมือในการแก้ปัญหา นำไปสู่ทางออก
-          เป็นการรักษาผู้ป่วยทั้งกายและใจ โดยเน้นผู้ป่วยกลุ่มโรคไม่ติดต่อเรื้อรัง
-          (Non-Communicable Disease, NCD), มีปัญหาสุขภาพจิต และติดสารเสพติด ผ่านทาง 4
-          นวัตกรรมหลัก
-        </Card.Text>
+      </Col>
+      <Col lg="6" className="pt-3">
+            <Card style={{marginBottom: "1rem"}}>
+              <center className="align-self-center p-1">
+                 <Card.Text>1. การคัดกรองและสร้างแรงจูงใจ</Card.Text>
+              </center>
+            </Card>
+            <Card style={{marginBottom: "1rem"}}>
+              <center className="align-self-center p-1">
+                 <Card.Text>2. การช่วยเหลือกลุ่มเสี่ยง</Card.Text>
+              </center>
+            </Card>
+            <Card style={{marginBottom: "1rem"}}>
+              <center className="align-self-center p-1">
+                 <Card.Text>3. การดูแลสังคม จิตใจ</Card.Text>
+              </center>
+            </Card>
+            <Card>
+              <center className="align-self-center p-1">
+                 <Card.Text>4. การจัดการระบบในชุมชน</Card.Text>
+              </center>
+            </Card>
       </Col>
     </Row>
   );
   const ourInnovation = (
     <Row className="m-0">
       <Col lg="6" style={{alignSelf: "center"}}>
-        <Card.Title>OUR INNOVATION</Card.Title>
+        <Card.Title>INNOVATION</Card.Title>
+        <Card.Text style={{fontSize: "18px"}}>
+          <br></br>
+          “ชมเป็น ถามเป็น แนะเป็น”<br></br>
+          หนึ่งในนวัตกรรมหลักของ BPSC”
+        </Card.Text>
         <Card.Text style={{fontSize: "15px"}}>
           <br></br>
           1. การให้คำแนะนำแบบสั้น (Brief Advice, BA)<br></br>
@@ -99,10 +114,10 @@ const SheetOne = () => {
       <div className="file-green">
         <div className="row m-0">
           <button className={`trapezoid ${chkInnovation && "back"}`} onClick={setIn}>
-            <span>OUR MISSION</span>
+            <span>MISSION</span>
           </button>
           <button className={`trapezoid ${!chkInnovation && "back"}`} onClick={setOur}>
-            <span>OUR INNOVATION</span>
+            <span>INNOVATION</span>
           </button>
         </div>
       </div>

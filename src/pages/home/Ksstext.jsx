@@ -5,10 +5,10 @@ const Ksstext = () => {
     <div className="ksstext">
       <Container className="py-5">
         <Row>
-          <Col md="6" className="img">
-            <Image src="/image/home/kss.png" />
+          <Col md="4" className="img">
+            <Image src="/image/home/kss.png" style={{maxHeight: "20rem"}} />
           </Col>
-          <Col md="6">
+          <Col md="8">
             <Card.Title>
               สุขด้วยสติ..ทั้งองค์กรอย่างยั่งยืน ( MIO )
             </Card.Title>
@@ -18,7 +18,7 @@ const Ksstext = () => {
               เพื่อให้เกิด  “องค์กรแห่งสติ”
             </Card.Subtitle>
             <a href="http://www.thaimio.com/" target="_blank">
-              <Button bsPrefix="btn-kss">ไปเว็บ กสศ กันเลย!</Button>
+              <Button bsPrefix="btn-kss">ไปเว็บ THAIMIO กันเลย!</Button>
             </a>
           </Col>
         </Row>

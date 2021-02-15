@@ -51,7 +51,7 @@ const TheHeader = () => {
             src="/image/header/Logo.png"
             // width="100"
             // className="d-inline-block align-tops"
-            style={{ objectFit: "contain", height: "60px" }}
+            style={{objectFit: "contain", height: "30px"}}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

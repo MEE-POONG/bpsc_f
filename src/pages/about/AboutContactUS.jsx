@@ -1,7 +1,7 @@
-import { faMapMarked, faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faMapMarked, faPhoneAlt, faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 
 const AboutContactUS = () => {
   return (
@@ -14,7 +14,7 @@ const AboutContactUS = () => {
               <FontAwesomeIcon icon={faPhoneAlt} />
             </Col>
             <Col xs="10" className="text-left">
-              <span className="contact-mobile">+6699-999-9999</span>
+              <span className="contact-mobile">WAITING</span>
             </Col>
           </Row>
           <Row className="py-3 my-3">
@@ -22,9 +22,7 @@ const AboutContactUS = () => {
               <FontAwesomeIcon icon={faMapMarked} />
             </Col>
             <Col xs="10" className="text-left">
-              <span className="contact-mobile">
-                #room Soi road province city, Zip code
-                    </span>
+              <span className="contact-mobile">WAITING</span>
             </Col>
           </Row>
           <Row className="py-3 my-3">
@@ -32,7 +30,7 @@ const AboutContactUS = () => {
               <FontAwesomeIcon icon={faEnvelope} />
             </Col>
             <Col xs="10" className="text-left">
-              <span className="contact-mobile">BPSC.official@BPSC.com</span>
+              <span className="contact-mobile">WAITING</span>
             </Col>
           </Row>
         </p>
