@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
-import {Navbar, Nav, Image, NavDropdown} from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Navbar, Nav, Image, NavDropdown } from "react-bootstrap";
 // import routes from '../routes'
-import {NavLink, useNavigate} from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Notification from "./TheNotification";
 import TheLogin from "./TheLogin";
-import {faUser, faBell, faPen, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faUser, faBell, faPen, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   API_GET_USER_INFO,
   API_GET_USER_UPDATE,
@@ -40,9 +40,9 @@ const TheHeader = () => {
       <Navbar
         variant="light"
         className="container-xl py-3"
-        style={{boxShadow: "none"}}
+        style={{ boxShadow: "none" }}
         expand="lg"
-        // onMouseOver={handleHover}
+      // onMouseOver={handleHover}
       >
         {/* <Navbar bg="light" variant="light"> */}
         <Navbar.Brand href="/">
@@ -51,7 +51,7 @@ const TheHeader = () => {
             src="/image/header/Logo.png"
             // width="100"
             // className="d-inline-block align-tops"
-            style={{objectFit: "contain", height: "60px"}}
+            style={{ objectFit: "contain", height: "60px" }}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -81,7 +81,7 @@ const TheHeader = () => {
                   <div className="row">
                     <div className="col-sm-2">
                       <div className="nav-item">
-                        <a href={() => {}}>
+                        <a href={() => { }}>
                           {getNotification ? (
                             <span className="notify-badge">{getNotification}</span>
                           ) : null}
@@ -94,7 +94,7 @@ const TheHeader = () => {
                             alt={userInfo?.firstName + " " + userInfo?.LastName}
                             width="50px"
                             height="50px"
-                            style={{borderRadius: "50%"}}
+                            style={{ borderRadius: "50%" }}
                           />
                         </a>
                       </div>
@@ -128,6 +128,11 @@ const TheHeader = () => {
                     <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างบทเรียน
                   </NavDropdown.Item>
                 )}
+                {+localStorage.getItem("isAdmin") === 1 && (
+                  <NavDropdown.Item onClick={() => navigate("create-event")}>
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างกิจกกรรม
+                  </NavDropdown.Item>
+                )}
                 {/* <NavDropdown.Item>
                   <FontAwesomeIcon className="pr-2" icon={faEye} /> &nbsp;แชร์ที่เคยดู
                 </NavDropdown.Item> */}
@@ -143,8 +148,8 @@ const TheHeader = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <TheLogin />
-            )}
+                <TheLogin />
+              )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
