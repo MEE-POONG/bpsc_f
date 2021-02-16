@@ -44,7 +44,7 @@ const CreateTitle = () => {
               .then((e) => {
                 // console.log(e);
                 Swal.fire("สำเร็จ!", "บันทึกรูปบทเรียนสำเร็จ!", "success").then(() =>
-                  navigate("/e-leaning")
+                  navigate(-1)
                 );
               })
               .catch(() =>
@@ -55,7 +55,7 @@ const CreateTitle = () => {
                 })
               );
           } else {
-            navigate("/e-leaning");
+            navigate(-1);
           }
         });
       })

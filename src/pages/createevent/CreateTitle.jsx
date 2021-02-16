@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { Container, Image, Form, Row, Col, Badge } from "react-bootstrap";
+import React, {useEffect} from "react";
+import {useState} from "react";
+import {Container, Image, Form, Row, Col, Badge} from "react-bootstrap";
 import CKEditor from "ckeditor4-react";
 
 import {
@@ -10,9 +10,9 @@ import {
   IMAGE_URL,
 } from "../../apis";
 
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
-import { Typeahead } from "react-bootstrap-typeahead";
+import {Typeahead} from "react-bootstrap-typeahead";
 import "react-bootstrap-typeahead/css/Typeahead.css";
 
 const CreateTitle = () => {
@@ -44,7 +44,7 @@ const CreateTitle = () => {
               .then((e) => {
                 // console.log(e);
                 Swal.fire("สำเร็จ!", "บันทึกรูปแชร์สำเร็จ!", "success").then(() =>
-                  navigate("/profile")
+                  navigate(-1)
                 );
               })
               .catch((e) =>
@@ -55,7 +55,7 @@ const CreateTitle = () => {
                 })
               );
           } else {
-            navigate("/profile");
+            navigate(-1);
           }
         });
       })
@@ -75,7 +75,7 @@ const CreateTitle = () => {
           <div className="d-flex justify-content-end">
             <div
               className="save"
-              onMouseOver={() => setSharingData({ ...sharingData, isDraft: "true" })}
+              onMouseOver={() => setSharingData({...sharingData, isDraft: "true"})}
               onClick={() => {
                 createSharing();
               }}
@@ -84,7 +84,7 @@ const CreateTitle = () => {
             </div>
             <div
               className="share"
-              onMouseOver={() => setSharingData({ ...sharingData, isDraft: "false" })}
+              onMouseOver={() => setSharingData({...sharingData, isDraft: "false"})}
               onClick={async () => {
                 createSharing();
               }}
@@ -165,7 +165,7 @@ const CreateTitle = () => {
                     type="text"
                     placeholder="ชื่อแชร์"
                     onChange={(e) => {
-                      setSharingData({ ...sharingData, title: e.target.value });
+                      setSharingData({...sharingData, title: e.target.value});
                     }}
                   />
                 </Form.Group>
@@ -179,7 +179,7 @@ const CreateTitle = () => {
                     type="text"
                     placeholder="ระบุพิกักสถานที่"
                     onChange={(e) => {
-                      setSharingData({ ...sharingData, title: e.target.value });
+                      setSharingData({...sharingData, title: e.target.value});
                     }}
                   />
                 </Form.Group>
@@ -193,7 +193,7 @@ const CreateTitle = () => {
                     type="text"
                     placeholder="เวลาที่เริ่มกรรม"
                     onChange={(e) => {
-                      setSharingData({ ...sharingData, title: e.target.value });
+                      setSharingData({...sharingData, title: e.target.value});
                     }}
                   />
                 </Form.Group>
@@ -207,7 +207,7 @@ const CreateTitle = () => {
                     type="text"
                     placeholder="เวลาสิ้นสุดกิจจกรรม"
                     onChange={(e) => {
-                      setSharingData({ ...sharingData, title: e.target.value });
+                      setSharingData({...sharingData, title: e.target.value});
                     }}
                   />
                 </Form.Group>
@@ -216,7 +216,7 @@ const CreateTitle = () => {
             <Col xs="12">
               <CKEditor
                 onChange={(evt) => {
-                  setSharingData({ ...sharingData, content: evt.editor.getData() });
+                  setSharingData({...sharingData, content: evt.editor.getData()});
                 }}
               />
             </Col>
@@ -240,13 +240,13 @@ const CreateTitle = () => {
           {/* <Form.Control type="text" as="textarea" /> */}
           {/* </Form.Group> */}
           {/* </Form> */}
-          <Form.Group style={{ marginTop: "20px" }}>
+          <Form.Group style={{marginTop: "20px"}}>
             {/* <Form.Label>รายละเอียดย่อของแชร์</Form.Label> */}
             <Typeahead
               id="basic-typeahead-multiple"
               labelKey="name"
               multiple
-              onChange={(e) => setSharingData({ ...sharingData, tags: e })}
+              onChange={(e) => setSharingData({...sharingData, tags: e})}
               options={tagData?.data}
               labelKey="title"
               placeholder="เลือก TAG"

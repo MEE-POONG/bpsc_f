@@ -28,7 +28,7 @@ const CreateTitle = () => {
         // console.log(e);
         Swal.fire("สำเร็จ!", "สร้างแกลเลอรี่สำเร็จ!", "success").then(() => {
           if (!imgData && !imgMulData) {
-            navigate("/gallery");
+            navigate(-1);
           }
           // console.log(imgData);
           if (imgData) {
@@ -36,7 +36,7 @@ const CreateTitle = () => {
               .then((e) => {
                 // console.log(e);
                 Swal.fire("สำเร็จ!", "บันทึกรูปแกลเลอรี่สำเร็จ!", "success").then(() =>
-                  navigate("/gallery")
+                  navigate(-1)
                 );
               })
               .catch(() =>
@@ -53,7 +53,7 @@ const CreateTitle = () => {
                 console.log(imgMulData);
                 console.log(e);
                 Swal.fire("สำเร็จ!", "บันทึกรูปแกลเลอรี่สำเร็จ!", "success").then(() =>
-                  navigate("/gallery")
+                  navigate(-1)
                 );
               })
               .catch(() =>
