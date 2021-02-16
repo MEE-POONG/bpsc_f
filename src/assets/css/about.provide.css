@@ -34,6 +34,7 @@
 .about-provide .provide-icon {
   margin: 1rem 0.5rem 0;
   height: 100px;
+  width: 100px;
 }
 .about-provide .img-provide {
   width: 100%;
@@ -44,7 +45,10 @@
   margin-left: 1rem;
 }
 .about-provide .detail .text.media-body p {
-  font-size: 1.25rem;
+  font-size: 15px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  /* font-size: 1.25rem; */
 }
 .about-provide .Innovation {
   margin-top: 5rem;
