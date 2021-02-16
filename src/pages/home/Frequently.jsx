@@ -41,52 +41,28 @@ const Frequently = () => {
           >
             <Card.Title className="f-gradient">FAQ</Card.Title>
             <Accordion defaultActiveKey="0">
-              <Card>
-                <Card.Header className="d-flex">
-                  <Card.Title bsPrefix="title">hOW DO WE TREAT OUR MEDICINES?</Card.Title>
-                  <Accordion.Toggle
-                    bsPrefix="btn-faq"
-                    as={Button}
-                    variant="link"
-                    eventKey="0"
-                    onClick={() => toggleActive("0")}
-                  >
-                    <FontAwesomeIcon
-                      className=""
-                      icon={activeId === "0" ? faMinus : faPlus}
-                    />
-                  </Accordion.Toggle>
-                </Card.Header>
-                <Accordion.Collapse eventKey="0">
-                  <Card.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore ...
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Card>
-              <Card>
-                <Card.Header className="d-flex">
-                  <Card.Title bsPrefix="title">hOW DO WE TREAT OUR MEDICINES?</Card.Title>
-                  <Accordion.Toggle
-                    bsPrefix="btn-faq"
-                    as={Button}
-                    variant="link"
-                    eventKey="1"
-                    onClick={() => toggleActive("1")}
-                  >
-                    <FontAwesomeIcon
-                      className=""
-                      icon={activeId === "1" ? faMinus : faPlus}
-                    />
-                  </Accordion.Toggle>
-                </Card.Header>
-                <Accordion.Collapse eventKey="1">
-                  <Card.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore ...
-                  </Card.Body>
-                </Accordion.Collapse>
-              </Card>
+              {faqData?.data.map((e, idx) => (
+                <Card>
+                  <Card.Header className="d-flex">
+                    <Card.Title bsPrefix="title">{e?.question}</Card.Title>
+                    <Accordion.Toggle
+                      bsPrefix="btn-faq"
+                      as={Button}
+                      variant="link"
+                      eventKey={idx.toString()}
+                      onClick={() => toggleActive(idx.toString())}
+                    >
+                      <FontAwesomeIcon
+                        className=""
+                        icon={activeId === idx.toString() ? faMinus : faPlus}
+                      />
+                    </Accordion.Toggle>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey={idx.toString()}>
+                    <Card.Body>{e?.answer}</Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              ))}
             </Accordion>
           </ListGroup.Item>
         </ListGroup>
