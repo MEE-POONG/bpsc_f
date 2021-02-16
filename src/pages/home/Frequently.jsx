@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Accordion, Container, ListGroup, Button, Card, Image} from "react-bootstrap";
 import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {API_GET_FAQ} from "../../apis";
+import {API_GET_FAQ, BASE_URL} from "../../apis";
 const Frequently = () => {
   const [faqData, setFaqData] = useState(null);
 
@@ -31,7 +31,7 @@ const Frequently = () => {
             style={{width: "50%", position: "relative"}}
           >
             <Image
-              src="/image/home/Frequently.png"
+              src={`${BASE_URL}galleryPhotoHome`}
               style={{objectFit: "contain", width: "100%"}}
             />
           </ListGroup.Item>

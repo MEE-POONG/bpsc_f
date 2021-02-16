@@ -1,6 +1,7 @@
 import axios from "axios";
 axios.defaults.baseURL = "https://api.thaibpsc.com";
 
+export const BASE_URL = "https://api.thaibpsc.com/";
 export const IMAGE_URL = "https://api.thaibpsc.com/image/";
 export const DOWNLOAD_URL = "https://api.thaibpsc.com/documentDownload/";
 import Swal from "sweetalert2";
