@@ -251,15 +251,6 @@ export const API_GET_GALLERY_PHOTO_BY_ID = (id, page = "", size = "") => {
   return API_CONFIG(config);
 };
 
-export const API_GET_EVENT = () => {
-  var config = {
-    method: "get",
-    url: "/event",
-  };
-
-  return API_CONFIG(config);
-};
-
 export const API_GET_DOCTOR = (title = "", page = "", size = "", tag = "") => {
   var config = {
     method: "get",
@@ -630,4 +621,47 @@ export const API_UPDATE_LEANING_COVER = async (id, userData) => {
   };
 
   return API_CONFIG(config);
+};
+
+export const API_GET_EVENT = (page = "", size = "") => {
+  var config = {
+    method: "get",
+    url: `/event?size=${size}&page=${page}`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_CREATE_DOCUMENT = async (id, userData) => {
+  var FormData = require("form-data");
+  var data = new FormData();
+  Array.from(userData).map((e) => {
+    data.append("multi-files", e);
+  });
+  var config = {
+    method: "post",
+    url: `/document/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_DELETE_DOCUMENT = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/document/${id}`,
+  };
+
+  return API_CONFIG(config)
+    .then((e) => {
+      return Swal.fire("สำเร็จ!", "ลบสำเร็จ!", "success");
+    })
+    .catch((e) => {
+      return Swal.fire({
+        icon: "error",
+        title: e?.error,
+        text: e?.message,
+      });
+    });
 };

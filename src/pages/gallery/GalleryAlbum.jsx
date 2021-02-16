@@ -170,27 +170,29 @@ const GalleryAlbum = () => {
           </Modal.Body>
         </Modal>
         <div className="detail">
-          <Pagination className="my-5" style={{float: "right"}}>
-            {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
-            {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
-            {page > 1 && (
-              <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
-                {page - 1}
-              </Pagination.Item>
-            )}
-            {<Pagination.Item active>{page}</Pagination.Item>}
-            {page < galleryPhoto?.totalPage && (
-              <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
-                {page + 1}
-              </Pagination.Item>
-            )}
-            {page < galleryPhoto?.totalPage && (
-              <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
-            )}
-            {page < galleryPhoto?.totalPage && (
-              <Pagination.Last onClick={() => setPage(galleryPhoto?.totalPage)} />
-            )}
-          </Pagination>
+          {page > 1 ? (
+            <Pagination className="my-5" style={{float: "right"}}>
+              {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+              {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+              {page > 1 && (
+                <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+                  {page - 1}
+                </Pagination.Item>
+              )}
+              {<Pagination.Item active>{page}</Pagination.Item>}
+              {page < galleryPhoto?.totalPage && (
+                <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+                  {page + 1}
+                </Pagination.Item>
+              )}
+              {page < galleryPhoto?.totalPage && (
+                <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+              )}
+              {page < galleryPhoto?.totalPage && (
+                <Pagination.Last onClick={() => setPage(galleryPhoto?.totalPage)} />
+              )}
+            </Pagination>
+          ) : null}
         </div>
       </div>
     </Container>

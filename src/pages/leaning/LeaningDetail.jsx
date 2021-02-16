@@ -169,7 +169,6 @@ const LeaningDetail = () => {
                             <FontAwesomeIcon className="pr-2" icon={faEye} /> {view}
                           </span>
                           <span style={{color: "#26BEB4"}}>
-                            
                             {isFavorite ? (
                               <i
                                 className="fa fa fa-heart pr-2"
@@ -194,27 +193,29 @@ const LeaningDetail = () => {
           </Row>
         </Container>
         <div>
-          <Pagination className="my-5" style={{float: "right"}}>
-            {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
-            {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
-            {page > 1 && (
-              <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
-                {page - 1}
-              </Pagination.Item>
-            )}
-            {<Pagination.Item active>{page}</Pagination.Item>}
-            {page < learning?.totalPage && (
-              <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
-                {page + 1}
-              </Pagination.Item>
-            )}
-            {page < learning?.totalPage && (
-              <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
-            )}
-            {page < learning?.totalPage && (
-              <Pagination.Last onClick={() => setPage(learning?.totalPage)} />
-            )}
-          </Pagination>
+          {page > 1 ? (
+            <Pagination className="my-5" style={{float: "right"}}>
+              {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+              {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+              {page > 1 && (
+                <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+                  {page - 1}
+                </Pagination.Item>
+              )}
+              {<Pagination.Item active>{page}</Pagination.Item>}
+              {page < learning?.totalPage && (
+                <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+                  {page + 1}
+                </Pagination.Item>
+              )}
+              {page < learning?.totalPage && (
+                <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+              )}
+              {page < learning?.totalPage && (
+                <Pagination.Last onClick={() => setPage(learning?.totalPage)} />
+              )}
+            </Pagination>
+          ) : null}
         </div>
       </Container>
     </div>

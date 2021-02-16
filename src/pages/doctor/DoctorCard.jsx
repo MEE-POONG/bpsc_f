@@ -89,27 +89,29 @@ const DoctorCard = () => {
           )}
         </Row>
         <div>
-          <Pagination className="my-5" style={{float: "right"}}>
-            {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
-            {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
-            {page > 1 && (
-              <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
-                {page - 1}
-              </Pagination.Item>
-            )}
-            {<Pagination.Item active>{page}</Pagination.Item>}
-            {page < doctor?.totalPage && (
-              <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
-                {page + 1}
-              </Pagination.Item>
-            )}
-            {page < doctor?.totalPage && (
-              <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
-            )}
-            {page < doctor?.totalPage && (
-              <Pagination.Last onClick={() => setPage(doctor?.totalPage)} />
-            )}
-          </Pagination>
+          {page > 1 ? (
+            <Pagination className="my-5" style={{float: "right"}}>
+              {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+              {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+              {page > 1 && (
+                <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+                  {page - 1}
+                </Pagination.Item>
+              )}
+              {<Pagination.Item active>{page}</Pagination.Item>}
+              {page < doctor?.totalPage && (
+                <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+                  {page + 1}
+                </Pagination.Item>
+              )}
+              {page < doctor?.totalPage && (
+                <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+              )}
+              {page < doctor?.totalPage && (
+                <Pagination.Last onClick={() => setPage(doctor?.totalPage)} />
+              )}
+            </Pagination>
+          ) : null}
         </div>
         <Modal
           show={show}

@@ -31,6 +31,8 @@ import {
   API_DEL_ELEARNING_BY_ID,
   API_DELETE_COMMENT,
   API_PUT_COMMENT,
+  API_CREATE_DOCUMENT,
+  API_DELETE_DOCUMENT,
   IMAGE_URL,
   DOWNLOAD_URL,
 } from "../../apis";
@@ -103,7 +105,7 @@ const LeaningList = () => {
           title: "สำเร็จ",
           text: "แก้ไขความคิดเห็นสำเร็จ",
         }).then(() => {
-          setEditMode(defComment)
+          setEditMode(defComment);
           setSearch();
         });
       })
@@ -150,6 +152,28 @@ const LeaningList = () => {
     });
   };
 
+  const createDoc = (e) => {
+    API_CREATE_DOCUMENT(id, e).then(() => {
+      Swal.fire("สำเร็จ!", "เพิ่มเอกสารที่เกี่ยวข้องสำเร็จ!", "success").then(() => {
+        API_GET_LEARNING_DOCUMENT(id).then((result) => {
+          setDocument(result?.data);
+        });
+      });
+    });
+  };
+
+  const handleDelDoc = (idDoc) => {
+    Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
+      if (result.isConfirmed) {
+        API_DELETE_DOCUMENT(idDoc).then(() =>
+          API_GET_LEARNING_DOCUMENT(id).then((result) => {
+            setDocument(result?.data);
+          })
+        );
+      }
+    });
+  };
+
   return (
     <Container className="leaning-list">
       <Row>
@@ -170,7 +194,17 @@ const LeaningList = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
-          ) : null}
+          ) : (
+            elearning?.elearning?.elearningPicture && (
+              <Image
+                src={IMAGE_URL + elearning?.elearning?.elearningPicture}
+                alt={elearning?.elearning?.title}
+                style={{
+                  maxWidth: "inherit",
+                }}
+              />
+            )
+          )}
         </Col>
         <Col xs="12" lg="12">
           <h1>{elearning?.elearning?.title}</h1>
@@ -346,8 +380,8 @@ const LeaningList = () => {
                     </Col>
                   </Row>
                 ) : null}
-                {+localStorage.getItem("id") === userId ||
-                +localStorage.getItem("isAdmin") === 1 ? (
+                {/* || +localStorage.getItem("isAdmin") === 1  */}
+                {+localStorage.getItem("id") === userId ? (
                   <p className="text">
                     {+editMode?.id === +id ? (
                       <span className="cursor" onClick={() => setEditMode(defComment)}>
@@ -373,6 +407,33 @@ const LeaningList = () => {
           </Button>
         ) : null}
       </Container>
+      {+localStorage.getItem("isAdmin") === 1 ? (
+        <div className="create-page">
+          <Container className="box-sheare m-0 pb-0">
+            <div className="up-img text-center d-block w-100">
+              <div className="text-up">เพิ่มเอกสารที่เกี่ยวข้อง</div>
+              <form>
+                <input
+                  id="file2"
+                  type="file"
+                  onChange={(e) => createDoc(e.target.files)}
+                  multiple
+                />
+                <label htmlFor="file2">
+                  <span
+                    tabIndex="20"
+                    className="btn-img"
+                    role="button"
+                    aria-controls="filename"
+                  >
+                    เลือกไฟล์
+                  </span>
+                </label>
+              </form>
+            </div>
+          </Container>
+        </div>
+      ) : null}
       <Container className="sheet p-lg-5 p-md-5 mb-5">
         <Table responsive="sm">
           <tr style={{background: "#26beb4"}}>
@@ -394,7 +455,15 @@ const LeaningList = () => {
                   <a href={DOWNLOAD_URL + id} onClick={setClick} target="_blank">
                     <Button bsPrefix="download mb3">Download</Button>
                   </a>
-                  {/* <Button bsPrefix="preview">Preview</Button> */}
+                  {/* <Button bsPrefix="preview" className="btn-save btn-danger">DELETE</Button> */}
+                  {+localStorage.getItem("isAdmin") === 1 ? (
+                    <Button
+                      bsPrefix="btn-save btn-danger"
+                      onClick={() => handleDelDoc(id)}
+                    >
+                      DELETE
+                    </Button>
+                  ) : null}
                 </td>
               </tr>
             ))}
