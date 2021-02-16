@@ -61,7 +61,7 @@ const CreateTitle = () => {
               .then((e) => {
                 // console.log(e);
                 Swal.fire("สำเร็จ!", "บันทึกรูปบทเรียนสำเร็จ!", "success").then(() =>
-                  navigate("/profile")
+                  navigate(-1)
                 );
               })
               .catch((e) =>
@@ -72,7 +72,7 @@ const CreateTitle = () => {
                 })
               );
           } else {
-            navigate("/profile");
+            navigate(-1);
           }
         });
       })
