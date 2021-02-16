@@ -60,9 +60,6 @@ const TheHeader = () => {
             <NavLink to="/" className="nav-link">
               HOME
             </NavLink>
-            <NavLink to="/about" className="nav-link">
-              ABOUT US
-            </NavLink>
             <NavLink to="/sharing" className="nav-link">
               SHARING
             </NavLink>
@@ -74,6 +71,9 @@ const TheHeader = () => {
             </NavLink>
             <NavLink to="/doctor" className="nav-link">
               DOCTORS
+            </NavLink>
+            <NavLink to="/about" className="nav-link">
+              ABOUT US
             </NavLink>
             {sessionStorage.getItem("BPSC_USER_LOGIN") === "true" ? (
               <NavDropdown

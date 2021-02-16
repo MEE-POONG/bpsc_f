@@ -42,7 +42,7 @@ const ScrollNum = () => {
               <Card className="sharing">
                 <Card.Body>
                   <Card.Title>{runningTwo}+</Card.Title>
-                  <Card.Subtitle>เกิดเป็นโรงพยาบาลต้นแบบขยายผล</Card.Subtitle>
+                  <Card.Subtitle>เกิดเป็นโรงพยาบาลต้นแบบ</Card.Subtitle>
                 </Card.Body>
               </Card>
             </Col>
@@ -50,7 +50,7 @@ const ScrollNum = () => {
               <Card className="sharing">
                 <Card.Body>
                   <Card.Title>{runningTree}+</Card.Title>
-                  <Card.Subtitle>บุคคลกรว่ามีความสุข</Card.Subtitle>
+                  <Card.Subtitle>บุคคลกรมีความสุข</Card.Subtitle>
                 </Card.Body>
               </Card>
             </Col>

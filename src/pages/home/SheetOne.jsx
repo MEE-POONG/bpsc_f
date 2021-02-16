@@ -53,10 +53,10 @@ const SheetOne = () => {
         </Card.Text>
         <Card.Text style={{fontSize: "15px"}}>
           <br></br>
-          1. การให้คำแนะนำแบบสั้น (Brief Advice, BA)<br></br>
-          2. การให้คำแนะนำเพื่อประเมินผู้ป่วย (Brief Intervention, BI)<br></br>
-          3. การฝึกสติแบบสั้น (Mindfulness Based Brief Intervention, MBBI)<br></br>
-          4. การฝึกสติบำบัด (Mindfulness Based Therapy Counseling, MBTC)<br></br>
+          1. การให้คำแนะนำแบบสั้น ชม ถาม แนะนำ เป็น (Brief Advice)<br></br>
+          2. การให้คำแนะนำเพื่อประเมินผู้ป่วย ประเมิน ปรึกษา เป็น (Brief Intervention)<br></br>
+          3. การฝึกสติแบบสั้น (Mindfulness Based Brief Intervention)<br></br>
+          4. การฝึกสติบำบัด (Mindfulness Based Therapy Counseling)<br></br>
         </Card.Text>
       </Col>
       <Col lg="6" className="box-set" style={{color: "black"}}>

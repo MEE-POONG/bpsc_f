@@ -10,7 +10,7 @@ const AboutTeam = () => {
           <div class="col-6">
             <Container className="text-center">
               <Image src="/image/image45.png" className="about-team-circle" />
-              <p className="h4 font-weight-bold pt-3 text-center">Name Surname Admin</p>
+              <p className="h2 font-weight-bold pt-3 text-center">นายแพทย์ยงยุทธ วงศ์ภิรมย์ศานติ์</p>
             </Container>
           </div>
           <div class="col-6 center" style={{alignSelf: "center"}}>

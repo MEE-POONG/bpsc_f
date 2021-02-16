@@ -251,7 +251,7 @@ const TheLogin = () => {
         size="md"
         show={show}
         onHide={handleClose}
-        backdrop="static"
+        // backdrop="static"
         keyboard={false}
         className="box-login p-0"
       >
@@ -259,20 +259,21 @@ const TheLogin = () => {
         <Modal.Body>
           <Col xs="12">
             <Row>
-              <h1
-                style={{
-                  alignSelf: "center",
-                  marginTop: "14px",
-                }}
-              >
-                {titleCardLogin}
-              </h1>
               <Image
                 alt="LOGO BPSC"
                 src="/image/header/Logo.png"
                 className="d-inline-block align-tops ml-3"
                 style={{objectFit: "contain", maxWidth: "140px"}}
               />
+              <h1
+                style={{
+                  alignSelf: "right",
+                  marginTop: "14px",
+                  paddingRight: "12.5px"
+                }}
+              >
+                {titleCardLogin}
+              </h1>
             </Row>
           </Col>
           {/* <div className="text-center">

@@ -26,8 +26,10 @@ const AboutInnovation = () => {
                 <Card.Img src="image/about/innovation-4.png" />
             </Col>
           </Row>
-          <div className="f-gradient">
-            “ เพราะเราไม่ได้ทำเพียงรักษาโรค เพราะเรารักษาคนทั้งคน ให้เขากลับไปเป็นกำลังสำคัญของคนในครอบครัว ”
+        </Container>
+        <Container>
+        <div className="f-gradient" style={{textAlign: "center", width: "75%"}}>
+            “ เราไม่ได้ทำเพียงรักษาโรค<br></br>เรารักษาคนทั้งคน ให้เขากลับไปเป็นกำลังสำคัญของคนในครอบครัว ”
           </div>
         </Container>
       </div>
