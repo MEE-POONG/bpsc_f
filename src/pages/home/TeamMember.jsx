@@ -36,10 +36,10 @@ const TeamMember = () => {
       <Container fluid>
         {doctor ? (
           <Swiper
-            autoplay={1000}
-            slidesPerView={"auto"}
+            // autoplay={1000}
+            // slidesPerView={"auto"}
+            // loop={true}
             spaceBetween={50}
-            loop={true}
             breakpoints={{
               // when window width is >= 640px
               640: {
