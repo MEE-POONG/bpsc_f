@@ -155,7 +155,7 @@ const ProfileMenuSharing = () => {
             )}
           </Row>
           <div>
-            {page > 1 ? (
+            {favorite?.totalPage > 1 ? (
               <Pagination className="my-5" style={{float: "right"}}>
                 {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
                 {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
