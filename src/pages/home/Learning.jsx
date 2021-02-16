@@ -111,12 +111,16 @@ const Abstain = () => {
                             </Card>
                             <Media.Body>
                               <p>
-                                <b className="text-overflow-1" style={{color: "#000"}}>{title}</b>
+                                <b className="text-overflow-1" style={{color: "#000"}}>
+                                  {title}
+                                </b>
                               </p>
                             </Media.Body>
                           </Media>
                         </Card.Title>
-                        {content}
+                        <Card.Subtitle className="text-overflow-4">
+                          {content}
+                        </Card.Subtitle>
                       </Card.Body>
                       <Card.Footer>
                         <Card.Text className="mr-auto mt-4">
@@ -125,7 +129,6 @@ const Abstain = () => {
                               <FontAwesomeIcon className="pr-2" icon={faEye} /> {view}
                             </span>
                             <span style={{color: "#26BEB4"}}>
-                              
                               {isFavorite ? (
                                 <i
                                   className="fa fa fa-heart pr-2"

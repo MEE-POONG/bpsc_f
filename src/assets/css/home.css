@@ -569,6 +569,7 @@
 /* learning */
 .learning .card {
   /* width: 350px; */
+  height: 400px;
   padding: 0rem;
 }
 .learning .card-img {
