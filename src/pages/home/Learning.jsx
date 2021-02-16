@@ -111,7 +111,7 @@ const Abstain = () => {
                             </Card>
                             <Media.Body>
                               <p>
-                                <b style={{color: "#000"}}>{title}</b>
+                                <b className="text-overflow-1" style={{color: "#000"}}>{title}</b>
                               </p>
                             </Media.Body>
                           </Media>
