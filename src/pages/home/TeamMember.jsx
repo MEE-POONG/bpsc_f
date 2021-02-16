@@ -18,7 +18,7 @@ const TeamMember = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    API_GET_DOCTOR().then((result) => {
+    API_GET_DOCTOR("", 1, 10).then((result) => {
       setDoctor(result?.data);
     });
   }, []);
