@@ -136,10 +136,19 @@ export const API_RE_VERIFICATION = (email) => {
   return axios(config);
 };
 
-export const API_GET_FAQ = () => {
+export const API_GET_FAQ = (page = "", size = "") => {
   var config = {
     method: "get",
-    url: "/faq",
+    url: `/faq?size=${size}&page=${page}`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_PHOTO_HOME = (page = "", size = "") => {
+  var config = {
+    method: "get",
+    url: `/galleryPhotoHome?size=${size}&page=${page}`,
   };
 
   return API_CONFIG(config);
