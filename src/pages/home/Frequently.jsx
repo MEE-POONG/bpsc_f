@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from "react";
-import {Accordion, Container, ListGroup, Button, Card, Image} from "react-bootstrap";
-import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {API_GET_FAQ, BASE_URL} from "../../apis";
+import React, { useState, useEffect } from "react";
+import { Accordion, Container, ListGroup, Button, Card, Image, Pagination } from "react-bootstrap";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { API_GET_FAQ, BASE_URL } from "../../apis";
 const Frequently = () => {
   const [faqData, setFaqData] = useState(null);
 
@@ -28,16 +28,16 @@ const Frequently = () => {
         <ListGroup horizontal>
           <ListGroup.Item
             className="start hide-short-desc"
-            style={{width: "50%", position: "relative"}}
+            style={{ width: "50%", position: "relative" }}
           >
             <Image
               src={`${BASE_URL}galleryPhotoHome`}
-              style={{objectFit: "contain", width: "100%"}}
+              style={{ objectFit: "contain", width: "100%" }}
             />
           </ListGroup.Item>
           <ListGroup.Item
             className="end col-lg-6 col-md-6 col-sm-12"
-            style={{position: "relative"}}
+            style={{ position: "relative" }}
           >
             <Card.Title className="f-gradient">FAQ</Card.Title>
             <Accordion defaultActiveKey="0">
@@ -66,6 +66,15 @@ const Frequently = () => {
             </Accordion>
           </ListGroup.Item>
         </ListGroup>
+        <div className="faq">
+          <Pagination >
+            <Pagination.First />
+            <Pagination.Item>{1}</Pagination.Item>
+            <Pagination.Item active>{2}</Pagination.Item>
+            <Pagination.Item>{3}</Pagination.Item>
+            <Pagination.Last />
+          </Pagination>
+        </div>
       </Container>
     </div>
   );
