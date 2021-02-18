@@ -184,7 +184,7 @@ const CreateTitle = () => {
             <Col md="12">
               <div className="header">
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>ชื่อแชร์(0/50)</Form.Label>
+                  <Form.Label>ชื่อแชร์({sharingData.title.length}/50)</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="ชื่อแชร์"

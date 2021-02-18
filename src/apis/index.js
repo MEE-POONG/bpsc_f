@@ -675,3 +675,48 @@ export const API_DELETE_DOCUMENT = async (id) => {
       });
     });
 };
+
+export const API_CREATE_EVENT = async (userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "post",
+    url: `/event/`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_EVENT_BY_ID = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "get",
+    url: `/event/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_EVENT = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/event/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_DELETE_EVENT = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/event/${id}`,
+  };
+
+  return API_CONFIG(config);
+};

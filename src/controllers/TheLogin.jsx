@@ -69,7 +69,7 @@ const TheLogin = () => {
               localStorage.setItem("firstName", decoded.firstName);
               localStorage.setItem("lastName", decoded.lastName);
               localStorage.setItem("loginMethod", decoded.loginMethod);
-              sessionStorage.setItem("BPSC_USER_LOGIN", true);
+              localStorage.setItem("BPSC_USER_LOGIN", true);
               navigate("/");
             })
             .catch((error) => {
@@ -125,7 +125,7 @@ const TheLogin = () => {
         localStorage.setItem("firstName", decoded.firstName);
         localStorage.setItem("lastName", decoded.lastName);
         localStorage.setItem("loginMethod", decoded.loginMethod);
-        sessionStorage.setItem("BPSC_USER_LOGIN", true);
+        localStorage.setItem("BPSC_USER_LOGIN", true);
         navigate("/");
       })
       .catch((error) => {

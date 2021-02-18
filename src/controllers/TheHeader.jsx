@@ -75,7 +75,7 @@ const TheHeader = () => {
             <NavLink to="/about" className="nav-link">
               ABOUT US
             </NavLink>
-            {sessionStorage.getItem("BPSC_USER_LOGIN") === "true" ? (
+            {localStorage.getItem("BPSC_USER_LOGIN") === "true" ? (
               <NavDropdown
                 title={
                   <div className="row">
@@ -139,7 +139,7 @@ const TheHeader = () => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item
                   onClick={() => {
-                    sessionStorage.clear();
+                    localStorage.clear();
                     localStorage.clear();
                     navigate("/");
                   }}

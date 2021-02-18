@@ -3,14 +3,22 @@ import {useState} from "react";
 import {Container, Image, Form, Row, Col, Badge} from "react-bootstrap";
 import CKEditor from "ckeditor4-react";
 
-import {API_CREATE_EVENT, IMAGE_URL} from "../../apis";
+import {
+  API_UPDATE_EVENT,
+  API_GET_EVENT_BY_ID,
+  API_DELETE_EVENT,
+  IMAGE_URL,
+} from "../../apis";
 
 import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 import {Typeahead} from "react-bootstrap-typeahead";
 import "react-bootstrap-typeahead/css/Typeahead.css";
+import {useParams} from "react-router-dom";
+import moment from "moment";
 
 const CreateTitle = () => {
+  const {id} = useParams();
   const [contentData, setContentData] = useState({
     title: "",
     content: "",
@@ -19,10 +27,24 @@ const CreateTitle = () => {
     eventStart: "",
     eventEnd: "",
   });
+
+  useEffect(() => {
+    API_GET_EVENT_BY_ID(id).then((result) => {
+      console.log(result?.data);
+      setContentData({
+        title: result?.data?.title,
+        content: result?.data?.content,
+        location: result?.data?.location,
+        time: result?.data?.time,
+        eventStart: result?.data?.eventStart,
+        eventEnd: result?.data?.eventEnd,
+      });
+    });
+  }, []);
   const navigate = useNavigate();
 
   const createContent = () => {
-    API_CREATE_EVENT(contentData)
+    API_UPDATE_EVENT(id, contentData)
       .then((e) => {
         Swal.fire("สำเร็จ!", "สร้างกิจกรรมสำเร็จ!", "success").then(() => {
           navigate(-1);
@@ -36,11 +58,38 @@ const CreateTitle = () => {
         });
       });
   };
+  const deleteContent = () => {
+    Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
+      if (result.isConfirmed) {
+        API_DELETE_EVENT(id)
+          .then((e) => {
+            Swal.fire("สำเร็จ!", "ลบกิจกรรมสำเร็จ!", "success").then(() => {
+              navigate(-1);
+            });
+          })
+          .catch((e) => {
+            Swal.fire({
+              icon: "error",
+              title: e?.error,
+              text: e?.message,
+            });
+          });
+      }
+    });
+  };
   return (
     <div>
       <div className="tab-btn mb-5">
         <Container>
           <div className="d-flex justify-content-end">
+            <div
+              className="save"
+              onClick={async () => {
+                deleteContent();
+              }}
+            >
+              DELETE
+            </div>
             <div
               className="share"
               onMouseOver={() => setContentData({...contentData, isDraft: "false"})}
@@ -69,6 +118,7 @@ const CreateTitle = () => {
                   <Form.Control
                     type="text"
                     placeholder="ชื่อกิจกรรม"
+                    value={contentData.title}
                     onChange={(e) => {
                       setContentData({...contentData, title: e.target.value});
                     }}
@@ -83,6 +133,7 @@ const CreateTitle = () => {
                   <Form.Control
                     type="text"
                     placeholder="ระบุพิกัดสถานที่"
+                    value={contentData.location}
                     onChange={(e) => {
                       setContentData({...contentData, location: e.target.value});
                     }}
@@ -97,6 +148,7 @@ const CreateTitle = () => {
                   <Form.Control
                     type="date"
                     placeholder="วันที่เริ่มกิจกรรม"
+                    value={moment(contentData.eventStart).format("YYYY-MM-DD")}
                     onChange={(e) => {
                       setContentData({...contentData, eventStart: e.target.value});
                     }}
@@ -111,6 +163,7 @@ const CreateTitle = () => {
                   <Form.Control
                     type="date"
                     placeholder="วันที่สิ้นสุดกิจกรรม"
+                    value={moment(contentData.eventEnd).format("YYYY-MM-DD")}
                     onChange={(e) => {
                       setContentData({...contentData, eventEnd: e.target.value});
                     }}
@@ -125,6 +178,7 @@ const CreateTitle = () => {
                   <Form.Control
                     type="text"
                     placeholder="เวลา"
+                    value={contentData.time}
                     onChange={(e) => {
                       setContentData({...contentData, time: e.target.value});
                     }}
@@ -141,6 +195,7 @@ const CreateTitle = () => {
                     id="content"
                     as="textarea"
                     rows="10"
+                    value={contentData.content}
                     onChange={(e) => {
                       setContentData({...contentData, content: e.target.value});
                     }}
