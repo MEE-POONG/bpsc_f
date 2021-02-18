@@ -51,7 +51,7 @@ const TheHeader = () => {
             src="/image/header/Logo.png"
             // width="100"
             // className="d-inline-block align-tops"
-            style={{objectFit: "contain", height: "30px"}}
+            style={{ objectFit: "contain", height: "30px" }}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -133,6 +133,11 @@ const TheHeader = () => {
                     <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างกิจกกรรม
                   </NavDropdown.Item>
                 )}
+                {/* {+localStorage.getItem("isAdmin") === 1 && ( */}
+                  <NavDropdown.Item onClick={() => navigate("create-event")}>
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างกิจกกรรม
+                  </NavDropdown.Item>
+                {/* )} */}
                 {/* <NavDropdown.Item>
                   <FontAwesomeIcon className="pr-2" icon={faEye} /> &nbsp;แชร์ที่เคยดู
                 </NavDropdown.Item> */}

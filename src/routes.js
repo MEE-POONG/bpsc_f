@@ -11,6 +11,7 @@ const ContactDoctor = React.lazy(() => import("./pages/doctor/ContactDoctor"));
 const Gallery = React.lazy(() => import("./pages/gallery"));
 const GalleryAlbum = React.lazy(() => import("./pages/gallery/GalleryAlbum"));
 const CreateShare = React.lazy(() => import("./pages/createshare"));
+const CreateDoctor = React.lazy(() => import("./pages/createdoctor"));
 const EditShare = React.lazy(() => import("./pages/editshare"));
 const EditLeaning = React.lazy(() => import("./pages/editleaning"));
 const EditGallery = React.lazy(() => import("./pages/editgallery"));
@@ -56,6 +57,7 @@ const routes = [
   {path: "/profile", name: "PROFILE", component: Profile},
   {path: "/create-share", name: "CREATE SHARE", component: CreateShare},
   {path: "/edit-share/:id", name: "EDIT SHARE", component: EditShare},
+  {path: "/create-doctor", name: "CREATE Doctor", component: CreateDoctor},
   {path: "/create-leaning", name: "CREATE LEANING", component: CreateLeaning},
   {path: "/edit-leaning/:id", name: "EDIT LEANING", component: EditLeaning},
   {path: "/create-gallery", name: "CREATE Gallery", component: CreateGallery},
