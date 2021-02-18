@@ -11,7 +11,7 @@ import {
 import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {API_GET_FAQ, BASE_URL, IMAGE_URL, API_GET_PHOTO_HOME} from "../../apis";
-import {Slide} from "react-slideshow-image";
+import {Zoom} from "react-slideshow-image";
 
 const Frequently = () => {
   const [faqData, setFaqData] = useState(null);
@@ -30,7 +30,6 @@ const Frequently = () => {
 
   useEffect(() => {
     API_GET_PHOTO_HOME().then((result) => {
-      console.log(result?.data);
       setPhotoData(result?.data);
     });
   }, []);
@@ -50,15 +49,15 @@ const Frequently = () => {
             style={{width: "50%", position: "relative"}}
           >
             {photoData?.length > 0 ? (
-              <Slide autoplay={true}>
+              <Zoom scale={0.4} autoplay={true}>
                 {photoData?.map(({path}) => (
                   <Image
                     src={IMAGE_URL + path}
-                    style={{objectFit: "cover", width: "100%", height: "auto"}}
+                    style={{objectFit: "cover", width: "100%", maxHeight: "700px"}}
                     alt={path}
                   />
                 ))}
-              </Slide>
+              </Zoom>
             ) : null}
           </ListGroup.Item>
           <ListGroup.Item

@@ -446,7 +446,11 @@ const LeaningList = () => {
               <tr>
                 <td className="text-start">
                   <Media>
-                    <Image src="https://sites.google.com/site/gansugsa/_/rsrc/1454402804802/google-doc/unnamed.png?height=200&width=200" />
+                    <Image
+                      src="https://sites.google.com/site/gansugsa/_/rsrc/1454402804802/google-doc/unnamed.png?height=200&width=200"
+                      width="100px"
+                      alt={filename}
+                    />
                     <Media.Body>{filename}</Media.Body>
                   </Media>
                 </td>

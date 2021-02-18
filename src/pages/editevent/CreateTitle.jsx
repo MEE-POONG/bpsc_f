@@ -30,7 +30,6 @@ const CreateTitle = () => {
 
   useEffect(() => {
     API_GET_EVENT_BY_ID(id).then((result) => {
-      console.log(result?.data);
       setContentData({
         title: result?.data?.title,
         content: result?.data?.content,
