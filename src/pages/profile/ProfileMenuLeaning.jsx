@@ -80,7 +80,7 @@ const ProfileMenuLeaning = () => {
                 },
                 idx
               ) => (
-                <Col lg="3" md="4" sm="6" className="mb-5">
+                <Col lg="4" md="4" sm="6" className="mb-5">
                   {/* <NavLink to={`/e-leaning/${id}`} className="p-0 nav-link"> */}
                   <Card>
                     {/* {+localStorage.getItem("id") === userId ||
