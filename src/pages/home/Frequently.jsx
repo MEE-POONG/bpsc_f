@@ -30,7 +30,6 @@ const Frequently = () => {
 
   useEffect(() => {
     API_GET_PHOTO_HOME().then((result) => {
-      console.log(result?.data);
       setPhotoData(result?.data);
     });
   }, []);

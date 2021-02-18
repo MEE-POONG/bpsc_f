@@ -18,7 +18,6 @@ const GalleryPhoto = () => {
   const [photoData, setPhotoData] = useState([]);
   useEffect(() => {
     API_GET_PHOTO_HOME().then((result) => {
-      console.log(result?.data);
       setPhotoData(result?.data);
     });
   }, []);

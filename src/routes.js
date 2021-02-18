@@ -18,6 +18,8 @@ const CreateGallery = React.lazy(() => import("./pages/creategallery"));
 const CreateLeaning = React.lazy(() => import("./pages/createleaning"));
 const CreateEvent = React.lazy(() => import("./pages/createevent"));
 const EditEvent = React.lazy(() => import("./pages/editevent"));
+const CreateTAG = React.lazy(() => import("./pages/createtag"));
+const EditTAG = React.lazy(() => import("./pages/edittag"));
 const Login = React.lazy(() => import("./pages/login"));
 const Profile = React.lazy(() => import("./pages/profile"));
 const Verify = React.lazy(() => import("./pages/verify"));
@@ -62,6 +64,8 @@ const routes = [
   {path: "/edit-gallery/:id", name: "EDIT Gallery", component: EditGallery},
   {path: "/create-event", name: "CREATE EVENT", component: CreateEvent},
   {path: "/edit-event/:id", name: "EDIT EVENT", component: EditEvent},
+  {path: "/create-tag", name: "CREATE TAG", component: CreateTAG},
+  {path: "/edit-tag/:id", name: "EDIT TAG", component: EditTAG},
   {path: "/verify", name: "VERIFY", component: Verify},
   {path: "/changeForgetPassword", name: "RE PASSWORD", component: RePassword},
 
