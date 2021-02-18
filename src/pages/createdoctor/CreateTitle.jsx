@@ -313,19 +313,6 @@
                   </Form.Group> */}
                 </div>
               </Col>
-              <Col xs="12">
-                <CKEditor
-                  onChange={(evt) => {
-                    setSharingData({...sharingData, content: evt.editor.getData()});
-                  }}
-                  // onChange={(evt) => console.log(evt.editor.getData())}
-                  // data={this.state.events_detail_th}
-                  // onChange={this.onEditorTHChange}
-                  // config={{
-                  //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
-                  // }}
-                />
-              </Col>
             </Row>
           </div>
         </Container>
