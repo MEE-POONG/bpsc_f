@@ -5,8 +5,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import {API_GET_EVENT} from "../../apis";
 import moment from "moment";
+import {useNavigate} from "react-router-dom";
 
 const EventBox = () => {
+  const navigate = useNavigate();
+
   const [showEventAll, setShowEventAll] = useState(false);
   const handleClose = () => setShowEventAll(false);
   const handleShow = () => setShowEventAll(true);
@@ -276,7 +279,15 @@ const EventBox = () => {
         <Modal.Body>
           <Row className="mx-2">
             {data?.data?.map((e) => (
-              <Col xs="12" lg="6">
+              <Col
+                xs="12"
+                lg="6"
+                onClick={() =>
+                  +localStorage.getItem("isAdmin") === 1
+                    ? navigate(`edit-event/${e?.id}`)
+                    : null
+                }
+              >
                 <Card className="view start">
                   <Row className="m-0 meat-blue">
                     <Col xs="auto" lg="auto" className="date p-0">

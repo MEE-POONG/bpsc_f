@@ -1,12 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { Accordion, Container, ListGroup, Button, Card, Image, Pagination } from "react-bootstrap";
-import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { API_GET_FAQ, BASE_URL } from "../../apis";
+import React, {useState, useEffect} from "react";
+import {
+  Accordion,
+  Container,
+  ListGroup,
+  Button,
+  Card,
+  Image,
+  Pagination,
+} from "react-bootstrap";
+import {faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {API_GET_FAQ, BASE_URL, IMAGE_URL, API_GET_PHOTO_HOME} from "../../apis";
+import {Slide} from "react-slideshow-image";
+
 const Frequently = () => {
   const [faqData, setFaqData] = useState(null);
+  const [photoData, setPhotoData] = useState([]);
 
   const [activeId, setActiveId] = useState("0");
+  const [page, setPage] = useState(1);
 
   function toggleActive(id) {
     if (activeId === id) {
@@ -17,10 +29,17 @@ const Frequently = () => {
   }
 
   useEffect(() => {
-    API_GET_FAQ().then((result) => {
-      setFaqData(result?.data);
+    API_GET_PHOTO_HOME().then((result) => {
+      console.log(result?.data);
+      setPhotoData(result?.data);
     });
   }, []);
+
+  useEffect(() => {
+    API_GET_FAQ(page).then((result) => {
+      setFaqData(result?.data);
+    });
+  }, [page]);
 
   return (
     <div className="home-faq text-uppercase">
@@ -28,16 +47,23 @@ const Frequently = () => {
         <ListGroup horizontal>
           <ListGroup.Item
             className="start hide-short-desc"
-            style={{ width: "50%", position: "relative" }}
+            style={{width: "50%", position: "relative"}}
           >
-            <Image
-              src={`${BASE_URL}galleryPhotoHome`}
-              style={{ objectFit: "contain", width: "100%" }}
-            />
+            {photoData?.length > 0 ? (
+              <Slide autoplay={true}>
+                {photoData?.map(({path}) => (
+                  <Image
+                    src={IMAGE_URL + path}
+                    style={{objectFit: "cover", width: "100%", height: "auto"}}
+                    alt={path}
+                  />
+                ))}
+              </Slide>
+            ) : null}
           </ListGroup.Item>
           <ListGroup.Item
             className="end col-lg-6 col-md-6 col-sm-12"
-            style={{ position: "relative" }}
+            style={{position: "relative"}}
           >
             <Card.Title className="f-gradient">FAQ</Card.Title>
             <Accordion defaultActiveKey="0">
@@ -67,13 +93,29 @@ const Frequently = () => {
           </ListGroup.Item>
         </ListGroup>
         <div className="faq">
-          <Pagination >
-            <Pagination.First />
-            <Pagination.Item>{1}</Pagination.Item>
-            <Pagination.Item active>{2}</Pagination.Item>
-            <Pagination.Item>{3}</Pagination.Item>
-            <Pagination.Last />
-          </Pagination>
+          {faqData?.totalPage > 1 ? (
+            <Pagination>
+              {page > 1 && <Pagination.First onClick={() => setPage(1)} />}
+              {page > 1 && <Pagination.Prev onClick={() => setPage((e) => (e -= 1))} />}
+              {page > 1 && (
+                <Pagination.Item onClick={() => setPage((e) => (e -= 1))}>
+                  {page - 1}
+                </Pagination.Item>
+              )}
+              {<Pagination.Item active>{page}</Pagination.Item>}
+              {page < faqData?.totalPage && (
+                <Pagination.Item onClick={() => setPage((e) => (e += 1))}>
+                  {page + 1}
+                </Pagination.Item>
+              )}
+              {page < faqData?.totalPage && (
+                <Pagination.Next onClick={() => setPage((e) => (e += 1))} />
+              )}
+              {page < faqData?.totalPage && (
+                <Pagination.Last onClick={() => setPage(faqData?.totalPage)} />
+              )}
+            </Pagination>
+          ) : null}
         </div>
       </Container>
     </div>

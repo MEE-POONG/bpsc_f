@@ -1,3 +1,5 @@
+@import "react-slideshow-image/dist/styles.css";
+
 .home > .home-image {
   padding-right: 0;
   padding-left: 0;

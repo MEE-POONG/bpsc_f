@@ -165,7 +165,7 @@ const CreateTitle = () => {
             <Col lg="12">
               <div className="header">
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>ชื่อแกลเลอรี่(0/50)</Form.Label>
+                  <Form.Label>ชื่อแกลเลอรี่({contentData.title.length}/50)</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="ชื่อแกลเลอรี่"
