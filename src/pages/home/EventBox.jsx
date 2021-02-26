@@ -27,7 +27,7 @@ const EventBox = () => {
       <Container className="py-5">
         <Row>
           <Col lg="6" md="6" sm="12" xs="12">
-            <Card.Title>Up coming events</Card.Title>
+            <Card.Title>Upcoming events</Card.Title>
             <Card.Title
               bsPrefix="view-all-2"
               onClick={handleShow}

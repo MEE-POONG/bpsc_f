@@ -11,7 +11,7 @@ const Abstain = () => {
       <Container fluid>
         <Card className="bg-abstain">
           <Card.Body className="p-sm-3">
-            <Card.Title style={{color: "#000"}}>E - LEARNING</Card.Title>
+            <Card.Title style={{color: "#000"}}>SELF - LEARNING</Card.Title>
             <Container>
               <Card.Text style={{color: "#000", textAlign: "center"}}>
                 สำหรับท่านที่อยากรู้จักระบบ BPSC มากขึ้น<br></br>

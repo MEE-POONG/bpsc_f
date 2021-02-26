@@ -6,7 +6,7 @@ const AboutInnovation = () => {
     <div className="about-innovation">
       <div className="scroll-num py-5 header">
         <Container className="text-center">
-          <p className="title">นวัตกรรม PBSC</p>
+          <p className="title">นวัตกรรม BPSC</p>
           <p className="title">สร้างความเปลี่ยนแปลงในระบบการรักษา</p>
         </Container>
       </div>
