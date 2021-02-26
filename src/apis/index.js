@@ -29,6 +29,7 @@ const REFRESH_TOKEN = async () => {
     localStorage.setItem("refresh-token", response.data.refreshToken);
     return response.data;
   } catch (error) {
+    error.response.data.error.code === 'REFRESH_TOKEN_INVALID' && localStorage.clear()
     return;
   }
 };
@@ -194,8 +195,8 @@ export const API_DEL_ELEARNING_BY_ID = async (id) => {
     .catch((e) => {
       return Swal.fire({
         icon: "error",
-        title: e?.error,
-        text: e?.message,
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
       });
     });
 };
@@ -440,8 +441,8 @@ export const API_DELETE_SHARING_PHOTO = async (id) => {
     .catch((e) => {
       return Swal.fire({
         icon: "error",
-        title: e?.error,
-        text: e?.message,
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
       });
     });
 };
@@ -459,8 +460,8 @@ export const API_DELETE_SHARING = async (id) => {
     .catch((e) => {
       return Swal.fire({
         icon: "error",
-        title: e?.error,
-        text: e?.message,
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
       });
     });
 };
@@ -670,8 +671,8 @@ export const API_DELETE_DOCUMENT = async (id) => {
     .catch((e) => {
       return Swal.fire({
         icon: "error",
-        title: e?.error,
-        text: e?.message,
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
       });
     });
 };
@@ -825,8 +826,17 @@ export const API_DEL_DOCTOR_BY_ID = async (id) => {
     .catch((e) => {
       return Swal.fire({
         icon: "error",
-        title: e?.error,
-        text: e?.message,
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
       });
     });
+};
+
+export const API_GET_HOSPITAL = async () => {
+  var config = {
+    method: "get",
+    url: `/hospital/`,
+  };
+
+  return API_CONFIG(config);
 };

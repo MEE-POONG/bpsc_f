@@ -37,8 +37,8 @@ const CreateTitle = () => {
       .catch((e) => {
         Swal.fire({
           icon: "error",
-          title: e?.error,
-          text: e?.message,
+          title: e?.response?.data?.error,
+          text: e?.response?.data?.message,
         });
       });
   };
@@ -54,8 +54,8 @@ const CreateTitle = () => {
           .catch((e) => {
             Swal.fire({
               icon: "error",
-              title: e?.error,
-              text: e?.message,
+              title: e?.response?.data?.error,
+              text: e?.response?.data?.message,
             });
           });
       }
