@@ -107,6 +107,19 @@ body {
 .cursor {
   cursor: pointer;
 }
-.fw-bold{
+.fw-bold {
   font-weight: bold;
+}
+
+.floating-login {
+  position: fixed;
+  bottom: 10px;
+  z-index: 999;
+  right: 10px;
+}
+.green-set {
+  background-color: #6fcf97 !important;
+  border-color: #6fcf97 !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
 }
