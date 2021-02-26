@@ -103,3 +103,6 @@ body {
 .cursor {
   cursor: pointer;
 }
+.fw-bold{
+  font-weight: bold;
+}
