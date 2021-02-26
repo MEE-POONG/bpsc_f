@@ -181,7 +181,7 @@ const TheHeader = () => {
                   onClick={() => {
                     localStorage.clear();
                     localStorage.clear();
-                    navigate("/");
+                    navigate(0);
                   }}
                 >
                   <FontAwesomeIcon icon={faSignOutAlt} /> &nbsp;ออกจากระบบ

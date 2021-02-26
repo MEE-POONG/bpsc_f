@@ -35,9 +35,13 @@ export default function App() {
               })}
             </Routes>
           </Suspense>
-          <div className="floating-login">
-            <TheLoginFloating />
-          </div>
+          {localStorage.getItem("BPSC_USER_LOGIN") !== "true" ? (
+            <div className="floating-login">
+              <TheLoginFloating />
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </Router>
