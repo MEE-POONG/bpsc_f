@@ -5,6 +5,10 @@ const Ksstext = () => {
     <div className="ksstext">
       <Container className="py-5">
         <Row>
+        <Image
+              src="/image/home/mio.png"
+              style={{position: "absolute",right: "30px",width:"60px"}}
+            />
           <Col md="4" className="img">
             <Image
               src="/image/home/kss.png"
