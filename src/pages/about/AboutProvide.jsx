@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Image, Row, Media } from "react-bootstrap";
+import {Col, Container, Image, Row, Media} from "react-bootstrap";
 
 const AboutProvide = () => {
   return (
@@ -22,29 +22,33 @@ const AboutProvide = () => {
             </Col>
             <Col lg="6" md="6" sm="6" xs="12">
               <img
-
                 className="img-provide"
                 src="image/about/co-join.png"
                 alt="Generic placeholder"
               />
             </Col>
-            <Col lg="3" md="3" sm="3" xs="12">
-
-            </Col>
-            <Col lg="3" md="3" sm="3" xs="12">
-
-            </Col>
+            <Col lg="3" md="3" sm="3" xs="12"></Col>
+            <Col lg="3" md="3" sm="3" xs="12"></Col>
           </Row>
           <Row>
-
-            <Col lg="6" md="6" sm="6" xs={{ span: 12, order: 'last' }}>
+            <Col
+              lg={{span: 6, order: "first", offset: 3}}
+              md={{span: 6, order: "first", offset: 3}}
+              sm={{span: 6, order: "first", offset: 3}}
+              xs={{span: 12, order: "last"}}
+            >
               <img
                 className="img-provide"
                 src="image/about/co-create.png"
                 alt="Generic placeholder"
               />
             </Col>
-            <Col lg="3" md="3" sm="3" xs={{ span: 12, order: 'first' }}>
+            <Col
+              lg={{span: 3, order: "last"}}
+              md={{span: 3, order: "last"}}
+              sm={{span: 3, order: "last"}}
+              xs={{span: 12, order: "first"}}
+            >
               <img
                 className="provide-icon"
                 src="image/about/hospital-1.png"
