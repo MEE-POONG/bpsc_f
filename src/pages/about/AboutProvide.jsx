@@ -1,5 +1,5 @@
 import React from "react";
-import {Col, Container, Image, Row, Media} from "react-bootstrap";
+import { Col, Container, Image, Row, Media } from "react-bootstrap";
 
 const AboutProvide = () => {
   return (
@@ -13,41 +13,39 @@ const AboutProvide = () => {
       <div className="mt-5 detail">
         <Container className="text-center">
           <Row>
-            <Col lg="6">
-              <Media>
-                <img
-                  className="provide-icon"
-                  src="image/about/medical-mask-2.png"
-                  alt="Generic placeholder"
-                />
-                <Media.Body className="text">
-                  <h3>เข้าร่วม BPSC แล้วได้อะไร?</h3>
-                  <p>
-                    - สร้างรูปแบบการให้บริการทางพฤติกรรม ที่ตอบสนองความต้องการของผู้บริการ
-                    แบบไม่แยกส่วน
-                  </p>
-                  <p>- นวัตกรรมที่มีประสิทธิภาพ</p>
-                  <p>- มีการฝึกอบรมและระบบรับรองบุคลากรทุก ระดับ</p>
-                  <p>- จัดบริการได้อย่างมีคุณภาพ</p>
-                  <p>- มีระบบข้อมูลมาใช้ในการสร้างองค์ความรู้ และต่อยอดได้</p>
-                </Media.Body>
-              </Media>
+            <Col lg="3" md="3" sm="3">
+              <img
+                className="provide-icon"
+                src="image/about/medical-mask-2.png"
+                alt="Generic placeholder"
+              />
             </Col>
-            <Col lg="6">
-              <Media>
-                <img
-                  className="provide-icon"
-                  src="image/about/hospital-1.png"
-                  alt="Generic placeholder"
-                />
-                <Media.Body className="text">
-                  <h3>ร่วมสร้างการเปลี่ยนแปลงไปกับเรา</h3>
-                  <h4>BPSC เปิดรับโรงพยาบาลทุกระดับ</h4>
-                  <p>- โรงพยาบาลชุมชลรวมทั้งเครือข่าย</p>
-                  <p>- โรงพยาบาลทั่วไปและโรงพลาบาลศูนย์</p>
-                  <p>- โรงพยาบาลเฉพาะทาง</p>
-                </Media.Body>
-              </Media>
+            <Col lg="6" md="6" sm="6">
+              <img
+                className="img-provide"
+                src="image/about/co-create.png"
+                alt="Generic placeholder"
+              />
+            </Col>
+            <Col lg="3" md="3" sm="3">
+
+            </Col>
+            <Col lg="3" md="3" sm="3">
+
+            </Col>
+            <Col lg="6" md="6" sm="6">
+              <img
+                className="img-provide"
+                src="image/about/co-join.png"
+                alt="Generic placeholder"
+              />
+            </Col>
+            <Col lg="3" md="3" sm="3">
+              <img
+                className="provide-icon"
+                src="image/about/hospital-1.png"
+                alt="Generic placeholder"
+              />
             </Col>
           </Row>
           <div className="provide-title">
