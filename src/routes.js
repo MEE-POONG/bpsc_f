@@ -54,6 +54,12 @@ const routes = [
     name: "Eleaning ID",
     component: LeaningList,
   },
+  {
+    path: "/leaning-type/:type",
+    exact: true,
+    name: "Eleaning TYPE",
+    component: Leaning,
+  },
   {path: "/doctor", name: "DOCTOR", component: Doctor},
   {path: "/ContactDoctor/:id", name: "CONTACT DOCTOR", component: ContactDoctor},
   {path: "/gallery", name: "GALLERY", component: Gallery},

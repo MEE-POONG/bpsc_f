@@ -212,7 +212,7 @@ export const API_GET_SHARING = async (title = "", page = "", size = "", tag = ""
 export const API_GET_LEARNING = async (title = "", page = "", size = "", tag = "", type = "") => {
   var config = {
     method: "get",
-    url: `/elearning?title=${title}&size=${size}&tag=${tag}&page=${page}$type=${type}`,
+    url: `/elearning?title=${title}&size=${size}&tag=${tag}&page=${page}&type=${type}`,
   };
 
   return API_CONFIG(config);

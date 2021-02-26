@@ -129,14 +129,14 @@ const TheHeader = () => {
                   className="dropdown-h-item"
                   onClick={() => nextPage("/leaning-type/1")}
                 >
-                  BPST TALK
+                  BPSC TALK
                 </a>
                 <a
                   href={() => {}}
                   className="dropdown-h-item"
                   onClick={() => nextPage("/leaning-type/2")}
                 >
-                  สร้าง รพ BPST
+                  สร้าง รพ BPSC
                 </a>
                 <a
                   href={() => {}}
@@ -158,16 +158,17 @@ const TheHeader = () => {
             <NavLink to="/gallery" className="nav-link">
               GALLERY
             </NavLink>
-            <NavLink to="/doctor" className="nav-link">
-              DOCTORS
-            </NavLink>
             <NavLink to="/about" className="nav-link dropdown-hover">
               ABOUT US
               <div class="dropdown-content" title="COURSE">
                 <a href="#action/3.1" className="dropdown-h-item">
                   ประวัติโครางการ
                 </a>
-                <a href="#action/3.2" className="dropdown-h-item">
+                <a
+                  href={() => {}}
+                  className="dropdown-h-item"
+                  onClick={() => nextPage("/doctor")}
+                >
                   เครือข่ายพันธมิตร
                 </a>
                 <a href="#action/3.3" className="dropdown-h-item">

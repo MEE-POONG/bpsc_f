@@ -22,23 +22,25 @@ import {
 } from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 const LeaningDetail = () => {
+  const {type} = useParams();
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
   const [learning, setLearning] = useState(null);
 
   useEffect(() => {
-    API_GET_LEARNING(search, page).then((result) => {
+    API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
       setLearning(result?.data);
     });
-  }, [search, page]);
+  }, [search, page, type]);
 
   const handleFav = (id) => {
     API_fAVORITE_E_lEARNING(id)
       .then(() => {
-        API_GET_LEARNING(search, page).then((result) => {
+        API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
           setLearning(result?.data);
         });
       })
@@ -47,7 +49,7 @@ const LeaningDetail = () => {
   const handleUnFav = (id) => {
     API_UN_fAVORITE_E_lEARNING(id)
       .then(() => {
-        API_GET_LEARNING(search, page).then((result) => {
+        API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
           setLearning(result?.data);
         });
       })
@@ -57,12 +59,12 @@ const LeaningDetail = () => {
   const handleDel = (id) => {
     API_DEL_ELEARNING_BY_ID(id)
       .then(() => {
-        API_GET_LEARNING(search, page).then((result) => {
+        API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
           setLearning(result?.data);
         });
       })
       .catch(() => {
-        API_GET_LEARNING(search, page).then((result) => {
+        API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
           setLearning(result?.data);
         });
       });
