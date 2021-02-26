@@ -46,7 +46,7 @@ const EventBox = () => {
                   <Col xs="auto" lg="auto" className="date p-0">
                     <div
                       className={`start ${
-                        data?.data[0]?.eventStart === data?.data[0]?.eventEnd
+                        data?.data[0]?.eventStart !== data?.data[0]?.eventEnd
                           ? ""
                           : "alone"
                       }`}
@@ -60,7 +60,7 @@ const EventBox = () => {
                     </div>
                     <div
                       className={`end ${
-                        data?.data[0]?.eventStart === data?.data[0]?.eventEnd
+                        data?.data[0]?.eventStart !== data?.data[0]?.eventEnd
                           ? ""
                           : "d-none"
                       }`}
@@ -134,7 +134,7 @@ const EventBox = () => {
                   <Col xs="auto" lg="auto" className="date p-0">
                     <div
                       className={`start ${
-                        data?.data[1]?.eventStart === data?.data[1]?.eventEnd
+                        data?.data[1]?.eventStart !== data?.data[1]?.eventEnd
                           ? ""
                           : "alone"
                       }`}
@@ -148,7 +148,7 @@ const EventBox = () => {
                     </div>
                     <div
                       className={`end ${
-                        data?.data[1]?.eventStart === data?.data[1]?.eventEnd
+                        data?.data[1]?.eventStart !== data?.data[1]?.eventEnd
                           ? ""
                           : "d-none"
                       }`}
@@ -200,7 +200,7 @@ const EventBox = () => {
                   <Col xs="auto" lg="auto" className="date p-0">
                     <div
                       className={`start ${
-                        data?.data[2]?.eventStart === data?.data[2]?.eventEnd
+                        data?.data[2]?.eventStart !== data?.data[2]?.eventEnd
                           ? ""
                           : "alone"
                       }`}
@@ -214,8 +214,7 @@ const EventBox = () => {
                     </div>
                     <div
                       className={`end ${
-                        data?.data[2]?.eventEnd ||
-                        data?.data[2]?.eventStart === data?.data[2]?.eventEnd
+                        data?.data[2]?.eventStart !== data?.data[2]?.eventEnd
                           ? ""
                           : "d-none"
                       }`}
@@ -293,7 +292,7 @@ const EventBox = () => {
                     <Col xs="auto" lg="auto" className="date p-0">
                       <div
                         className={`start ${
-                          e?.eventStart === e?.eventEnd ? "" : "alone"
+                          e?.eventStart !== e?.eventEnd ? "" : "alone"
                         }`}
                       >
                         <Card.Title>{moment(e?.eventStart).format("D")}</Card.Title>
@@ -302,7 +301,7 @@ const EventBox = () => {
                         </Card.Subtitle>
                       </div>
                       <div
-                        className={`end ${e?.eventStart == e?.eventEnd ? "" : "d-none"}`}
+                        className={`end ${e?.eventStart !== e?.eventEnd ? "" : "d-none"}`}
                       >
                         <Card.Title>{moment(e?.eventEnd).format("D")}</Card.Title>
                         <Card.Subtitle>{moment(e?.eventEnd).format("MMM")}</Card.Subtitle>
