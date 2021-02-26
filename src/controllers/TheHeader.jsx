@@ -73,19 +73,19 @@ const TheHeader = () => {
             <NavLink to="/sharing" className="nav-link dropdown-hover">
               SHARING
                 <div class="dropdown-content">
-                <a className="dropdown-item">คําแนะนําแบบสั้น ( BA )</a>
-                <a className="dropdown-item">ประเมินแบบสั้น ( BI )</a>
-                <a className="dropdown-item">ฝึกสติแบบสั้น ( MBBI )</a>
-                <a className="dropdown-item">สติบําบัด ( MBTC )</a>
+                <a className="dropdown-h-item">คําแนะนําแบบสั้น ( BA )</a>
+                <a className="dropdown-h-item">ประเมินแบบสั้น ( BI )</a>
+                <a className="dropdown-h-item">ฝึกสติแบบสั้น ( MBBI )</a>
+                <a className="dropdown-h-item">สติบําบัด ( MBTC )</a>
               </div>
             </NavLink>
             <NavLink to="/e-leaning" className="nav-link dropdown-hover">
               E-LEARNING
               <div class="dropdown-content">
-                <a href="#action/3.1" className="dropdown-item">BPST TALK</a>
-                <a href="#action/3.2" className="dropdown-item">สร้าง รพ BPST</a>
-                <a href="#action/3.3" className="dropdown-item">E-LEARNING</a>
-                <a href="#action/3.4" className="dropdown-item">Event</a>
+                <a href="#action/3.1" className="dropdown-h-item">BPST TALK</a>
+                <a href="#action/3.2" className="dropdown-h-item">สร้าง รพ BPST</a>
+                <a href="#action/3.3" className="dropdown-h-item">E-LEARNING</a>
+                <a href="#action/3.4" className="dropdown-h-item">Event</a>
               </div>
             </NavLink>
 
@@ -99,9 +99,9 @@ const TheHeader = () => {
             <NavLink to="/about" className="nav-link dropdown-hover">
               ABOUT US
               <div class="dropdown-content" title="COURSE">
-                <a href="#action/3.1" className="dropdown-item">ประวัติโครางการ</a>
-                <a href="#action/3.2" className="dropdown-item">เครือข่ายพันธมิตร</a>
-                <a href="#action/3.3" className="dropdown-item">การสนับสนุน</a>
+                <a href="#action/3.1" className="dropdown-h-item">ประวัติโครางการ</a>
+                <a href="#action/3.2" className="dropdown-h-item">เครือข่ายพันธมิตร</a>
+                <a href="#action/3.3" className="dropdown-h-item">การสนับสนุน</a>
               </div>
             </NavLink>
 
@@ -138,35 +138,35 @@ const TheHeader = () => {
                   {userInfo?.firstName}
                 </NavDropdown.Header>
                 <NavDropdown.Divider />
-                <a onClick={() => navigate("profile")}>
+                <NavDropdown.Item onClick={() => navigate("profile")}>
                   <FontAwesomeIcon icon={faUser} /> &nbsp; โปรไฟล์ของฉัน
-                </a>
-                <a>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
                   {/* <FontAwesomeIcon icon={faBell} /> &nbsp;  */}
                   <Notification />
-                </a>
-                <a onClick={() => navigate("create-share")}>
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => navigate("create-share")}>
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์
-                </a>
+                </NavDropdown.Item>
                 {+localStorage.getItem("isAdmin") === 1 && (
-                  <a onClick={() => navigate("create-gallery")}>
+                  <NavDropdown.Item onClick={() => navigate("create-gallery")}>
                     <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแกลเลอรี่
-                  </a>
+                  </NavDropdown.Item>
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
-                  <a onClick={() => navigate("create-leaning")}>
+                  <NavDropdown.Item onClick={() => navigate("create-leaning")}>
                     <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างบทเรียน
-                  </a>
+                  </NavDropdown.Item>
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
-                  <a onClick={() => navigate("create-event")}>
+                  <NavDropdown.Item onClick={() => navigate("create-event")}>
                     <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างกิจกกรรม
-                  </a>
+                  </NavDropdown.Item>
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
-                  <a onClick={() => navigate("create-tag")}>
+                  <NavDropdown.Item onClick={() => navigate("create-tag")}>
                     <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแท็ก
-                  </a>
+                  </NavDropdown.Item>
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
                   <NavDropdown.Item onClick={() => navigate("create-doctor")}>
@@ -175,9 +175,9 @@ const TheHeader = () => {
                 )}
                 {/* <NavDropdown.Item>
                   <FontAwesomeIcon className="pr-2" icon={faEye} /> &nbsp;แชร์ที่เคยดู
-                </a> */}
+                </NavDropdown.Item> */}
                 <NavDropdown.Divider />
-                <a
+                <NavDropdown.Item
                   onClick={() => {
                     localStorage.clear();
                     localStorage.clear();
@@ -185,7 +185,7 @@ const TheHeader = () => {
                   }}
                 >
                   <FontAwesomeIcon icon={faSignOutAlt} /> &nbsp;ออกจากระบบ
-                </a>
+                </NavDropdown.Item>
               </NavDropdown>
             ) : (
                 <TheLogin />

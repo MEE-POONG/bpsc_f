@@ -54,7 +54,8 @@
   .dropdown-hover:hover .dropdown-content {
     display: block;
   }
-  .dropdown-content .dropdown-item{
+  .dropdown-content .dropdown-h-item{
+    float: left;
     padding: 10px 15px;
     clear: both;
     font-weight: 400;
@@ -64,9 +65,9 @@
     background-color: transparent;
     border: 0;
   }
-  .dropdown-content a.dropdown-item:active,
-  .dropdown-content a.dropdown-item:focus,
-  .dropdown-content a.dropdown-item:hover {
+  .dropdown-content a.dropdown-h-item:active,
+  .dropdown-content a.dropdown-h-item:focus,
+  .dropdown-content a.dropdown-h-item:hover {
   background-color: #56b889;
   color: rgb(255, 255, 255);
   text-decoration: none;
