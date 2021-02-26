@@ -28,8 +28,8 @@ const TeamMember = () => {
       <Container fluid className="py-5">
         <Card className="text-center ">
           <Card.Body className="">
-            <Card.Title className="text-uppercase">teamwork</Card.Title>
-            <Card.Text className="team-subtitle">makes the dream work.</Card.Text>
+            <Card.Title className="text-uppercase fw-bold">INFLUENCER</Card.Title>
+            <Card.Text className="team-subtitle fw-bold">Teamwork makes dream work</Card.Text>
           </Card.Body>
         </Card>
       </Container>
