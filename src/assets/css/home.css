@@ -61,7 +61,7 @@
   height: 100%;
   object-fit: contain;
   position: absolute;
-  opacity: 0.2;
+  opacity: 0.1;
   -webkit-animation: a-three 5s linear infinite;
   animation: a-three 5s linear infinite;
 }
