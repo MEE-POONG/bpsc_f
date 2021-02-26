@@ -137,7 +137,7 @@ export const API_RE_VERIFICATION = (email) => {
   return axios(config);
 };
 
-export const API_GET_FAQ = (page = "", size = "") => {
+export const API_GET_FAQ = (page = "", size = "10") => {
   var config = {
     method: "get",
     url: `/faq?size=${size}&page=${page}`,
@@ -894,4 +894,52 @@ export const API_DEL_GALLERY_PHOTO_BY_ID = async (id) => {
         text: e?.response?.data?.message,
       });
     });
+};
+
+
+
+
+export const API_CREATE_FAQ = async (userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "post",
+    url: `/faq/`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_FAQ_BY_ID = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "get",
+    url: `/faq/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_FAQ = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/faq/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_DELETE_FAQ = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/faq/${id}`,
+  };
+
+  return API_CONFIG(config);
 };

@@ -241,6 +241,11 @@ const TheHeader = () => {
                   </NavDropdown.Item>
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
+                  <NavDropdown.Item onClick={() => navigate("create-faq")}>
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;สร้าง FAQ
+                  </NavDropdown.Item>
+                )}
+                {+localStorage.getItem("isAdmin") === 1 && (
                   <NavDropdown.Item onClick={() => navigate("create-doctor")}>
                     <FontAwesomeIcon icon={faPen} /> &nbsp;เพิ่ม Doctor
                   </NavDropdown.Item>
