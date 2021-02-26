@@ -8,7 +8,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/swiper.scss";
 
 import {
-  API_GET_SHARING,
+  API_GET_SHARING_FAV_ORDER,
   API_fAVORITE_SHARING,
   API_UN_fAVORITE_SHARING,
   IMAGE_URL,
@@ -20,7 +20,7 @@ const SheetThree = () => {
 
   const [sharing, setSharing] = useState(null);
   useEffect(() => {
-    API_GET_SHARING().then((result) => {
+    API_GET_SHARING_FAV_ORDER().then((result) => {
       setSharing(result?.data);
     });
   }, []);
@@ -28,7 +28,7 @@ const SheetThree = () => {
   const handleFav = (id) => {
     API_fAVORITE_SHARING(id)
       .then(() => {
-        API_GET_SHARING().then((result) => {
+        API_GET_SHARING_FAV_ORDER().then((result) => {
           setSharing(result?.data);
         });
       })
@@ -38,7 +38,7 @@ const SheetThree = () => {
   const handleUnFav = (id) => {
     API_UN_fAVORITE_SHARING(id)
       .then(() => {
-        API_GET_SHARING().then((result) => {
+        API_GET_SHARING_FAV_ORDER().then((result) => {
           setSharing(result?.data);
         });
       })
