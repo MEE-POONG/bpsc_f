@@ -41,6 +41,12 @@ const routes = [
     name: "SHARING ID",
     component: SharingList,
   },
+  {
+    path: "/sharing-tag/:tag",
+    exact: true,
+    name: "SHARING TAG",
+    component: Sharing,
+  },
   {path: "/e-leaning", name: "LEANING", component: Leaning},
   {
     path: "/e-leaning/:id",
