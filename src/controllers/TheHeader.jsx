@@ -168,7 +168,12 @@ const TheHeader = () => {
                     <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแท็ก
                   </a>
                 )}
-                {/* <a>
+                {+localStorage.getItem("isAdmin") === 1 && (
+                  <NavDropdown.Item onClick={() => navigate("create-doctor")}>
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;เพิ่ม Doctor
+                  </NavDropdown.Item>
+                )}
+                {/* <NavDropdown.Item>
                   <FontAwesomeIcon className="pr-2" icon={faEye} /> &nbsp;แชร์ที่เคยดู
                 </a> */}
                 <NavDropdown.Divider />

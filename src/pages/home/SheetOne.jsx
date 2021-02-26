@@ -13,32 +13,34 @@ const SheetOne = () => {
       <Col lg="6" style={{alignSelf: "center"}}>
         <Card.Title>MISSION</Card.Title>
         <Card.Text style={{fontSize: "18px"}}>
-          <br/>
-          เราสร้าง BPSC ซึ่งเป็นนวัตกรรมการดูแลผู้ป่วยแบบใหม่ ที่จะทำให้เกิดความร่วมมือในการแก้ปัญหา นำไปสู่ทางออก เป็นการรักษาผู้ป่วยทั้งกายและใจ โดยเน้นผู้ป่วยกลุ่มโรคไม่ติดต่อเรื้อรัง, มีปัญหาสุขภาพจิต และติดสารเสพติด 
-ผ่านการสร้าง 4 ระบบหลัก 
+          <br />
+          เราสร้าง BPSC ซึ่งเป็นนวัตกรรมการดูแลผู้ป่วยแบบใหม่
+          ที่จะทำให้เกิดความร่วมมือในการแก้ปัญหา นำไปสู่ทางออก
+          เป็นการรักษาผู้ป่วยทั้งกายและใจ โดยเน้นผู้ป่วยกลุ่มโรคไม่ติดต่อเรื้อรัง
+          มีปัญหาสุขภาพจิต และติดสารเสพติด ผ่านการสร้าง 4 ระบบหลัก
         </Card.Text>
       </Col>
       <Col lg="6" className="pt-3">
-            <Card style={{marginBottom: "1rem"}}>
-              <center className="align-self-center p-1">
-                 <Card.Text>1. การคัดกรองและสร้างแรงจูงใจ</Card.Text>
-              </center>
-            </Card>
-            <Card style={{marginBottom: "1rem"}}>
-              <center className="align-self-center p-1">
-                 <Card.Text>2. การช่วยเหลือกลุ่มเสี่ยง</Card.Text>
-              </center>
-            </Card>
-            <Card style={{marginBottom: "1rem"}}>
-              <center className="align-self-center p-1">
-                 <Card.Text>3. การดูแลสังคม จิตใจ</Card.Text>
-              </center>
-            </Card>
-            <Card>
-              <center className="align-self-center p-1">
-                 <Card.Text>4. การจัดการระบบในชุมชน</Card.Text>
-              </center>
-            </Card>
+        <Card style={{marginBottom: "1rem"}}>
+          <center className="align-self-center p-1">
+            <Card.Text>1. การคัดกรองและสร้างแรงจูงใจ</Card.Text>
+          </center>
+        </Card>
+        <Card style={{marginBottom: "1rem"}}>
+          <center className="align-self-center p-1">
+            <Card.Text>2. การช่วยเหลือกลุ่มเสี่ยง</Card.Text>
+          </center>
+        </Card>
+        <Card style={{marginBottom: "1rem"}}>
+          <center className="align-self-center p-1">
+            <Card.Text>3. การดูแลสังคมจิตใจ</Card.Text>
+          </center>
+        </Card>
+        <Card>
+          <center className="align-self-center p-1">
+            <Card.Text>4. การจัดการระบบในชุมชน</Card.Text>
+          </center>
+        </Card>
       </Col>
     </Row>
   );
@@ -49,14 +51,15 @@ const SheetOne = () => {
         <Card.Text style={{fontSize: "18px"}}>
           <br></br>
           “ชมเป็น ถามเป็น แนะเป็น”<br></br>
-          หนึ่งในนวัตกรรมหลักของ BPSC”
+          หนึ่งในนวัตกรรมหลักของ BPSC
         </Card.Text>
         <Card.Text style={{fontSize: "15px"}}>
           <br></br>
-          1. การให้คำแนะนำแบบสั้น ชม ถาม แนะนำ เป็น (Brief Advice)<br></br>
-          2. การให้คำแนะนำเพื่อประเมินผู้ป่วย ประเมิน ปรึกษา เป็น (Brief Intervention)<br></br>
-          3. การฝึกสติแบบสั้น (Mindfulness Based Brief Intervention)<br></br>
-          4. การฝึกสติบำบัด (Mindfulness Based Therapy Counseling)<br></br>
+          1. การให้คำแนะนำแบบสั้น ชม ถาม แนะนำ เป็น (Brief Advice: BA)<br></br>
+          2. การให้คำปรึกษาแบบสั้น ประเมิน ปรึกษา เป็น (Brief Intervention: BI)<br></br>
+          3. การฝึกสติแบบสั้น ชม ถาม แนะนำ (Mindfulness Based Brief Intervention: MBBI)
+          <br></br>
+          4. การฝึกสติบำบัด (Mindfulness Based Therapy and Counseling: MBTC)<br></br>
         </Card.Text>
       </Col>
       <Col lg="6" className="box-set" style={{color: "black"}}>

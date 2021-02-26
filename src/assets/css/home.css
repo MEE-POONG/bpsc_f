@@ -61,7 +61,7 @@
   height: 100%;
   object-fit: contain;
   position: absolute;
-  opacity: 0.2;
+  opacity: 0.1;
   -webkit-animation: a-three 5s linear infinite;
   animation: a-three 5s linear infinite;
 }
@@ -228,7 +228,7 @@
   padding: 0.75rem;
   background: #8be0b7;
   border-radius: 100px 100px 0 0;
-  font-size: 12px;
+  font-size: 1.4rem;
 }
 .sheet-one .trapezoid.back {
   /* border-bottom: 40px solid #; */
@@ -280,13 +280,13 @@
   background-color: white;
 }
 .home .card-title {
-  font-size: 3rem !important;
+  font-size: 4rem !important;
 }
 .home .card .card-text {
   font-size: 2.2rem !important;
 }
 .sheet-one .card-title {
-  font-size: 2.2rem !important;
+  font-size: 2.5rem !important;
   line-height: 1;
 }
 .sheet-one .card img {

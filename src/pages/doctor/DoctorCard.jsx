@@ -9,11 +9,14 @@ import {
   FormControl,
   Modal,
   Card,
+  Button,
 } from "react-bootstrap";
-import {API_GET_DOCTOR, IMAGE_URL} from "../../apis";
+import {API_GET_DOCTOR, API_DEL_DOCTOR_BY_ID, IMAGE_URL} from "../../apis";
 import {useNavigate} from "react-router-dom";
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {NavLink} from "react-router-dom";
+import Swal from "sweetalert2";
 
 const DoctorCard = () => {
   const [show, setShow] = useState(false);
@@ -34,6 +37,13 @@ const DoctorCard = () => {
     console.log(search, page);
   }, [search, page]);
 
+  const handleDel = (id) => {
+    Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
+      if (result.isConfirmed) {
+        API_DEL_DOCTOR_BY_ID(id).then(() => navigate(0));
+      }
+    });
+  };
   return (
     <div>
       <Container className="title mb-5">
@@ -180,6 +190,29 @@ const DoctorCard = () => {
                   >
                     CONTACT DOCTOR
                   </button>
+                  <Row style={{justifyContent: "center"}}>
+                    {+localStorage.getItem("isAdmin") === 1 ? (
+                      <NavLink
+                        to={`/edit-doctor/${doctor?.data[showData].id}`}
+                        className="pl-2 nav-link"
+                      >
+                        <Button bsPrefix="btn-save" className="mb-5">
+                          EDIT
+                        </Button>
+                      </NavLink>
+                    ) : null}
+                    {+localStorage.getItem("isAdmin") === 1 ? (
+                      <NavLink
+                        to={() => {}}
+                        className="pl-2 nav-link"
+                        onClick={() => handleDel(doctor?.data[showData].id)}
+                      >
+                        <Button bsPrefix="btn-save btn-danger" className="mb-5">
+                          DELETE
+                        </Button>
+                      </NavLink>
+                    ) : null}
+                  </Row>
                 </Card.Footer>
                 {/* </Card> */}
               </Col>

@@ -8,7 +8,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/swiper.scss";
 
 import {
-  API_GET_LEARNING,
+  API_GET_ELEARNING_FAV_ORDER,
   API_fAVORITE_E_lEARNING,
   API_UN_fAVORITE_E_lEARNING,
   IMAGE_URL,
@@ -21,7 +21,7 @@ const Abstain = () => {
 
   const [learning, setLearning] = useState(null);
   useEffect(() => {
-    API_GET_LEARNING().then((result) => {
+    API_GET_ELEARNING_FAV_ORDER().then((result) => {
       setLearning(result?.data);
     });
   }, []);
@@ -29,7 +29,7 @@ const Abstain = () => {
   const handleFav = (id) => {
     API_fAVORITE_E_lEARNING(id)
       .then(() => {
-        API_GET_LEARNING().then((result) => {
+        API_GET_ELEARNING_FAV_ORDER().then((result) => {
           setLearning(result?.data);
         });
       })
@@ -39,7 +39,7 @@ const Abstain = () => {
   const handleUnFav = (id) => {
     API_UN_fAVORITE_E_lEARNING(id)
       .then(() => {
-        API_GET_LEARNING().then((result) => {
+        API_GET_ELEARNING_FAV_ORDER().then((result) => {
           setLearning(result?.data);
         });
       })

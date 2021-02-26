@@ -9,9 +9,6 @@ const AboutTitle = () => {
           <p className="h1 font-weight-bold f-gradient">about BPSC</p>
           <Card.Body className="text-center">
             <p className="text-sub">ไม่ใช่แค่การรักษา แต่คือการมองชีวิต</p>
-            <p className="text-detail">
-              โครงการศูนย์จัดการความรู้การดูแลทางสังคมจิตใจในระบบสาธารณสุข
-          </p>
           </Card.Body>
         </Container>
       </div>

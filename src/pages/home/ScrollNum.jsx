@@ -4,6 +4,8 @@ import SheetThree from "./SheetThree";
 import {useScrollPosition} from "@n8tb1t/use-scroll-position";
 import {useNavigate} from "react-router-dom";
 
+import {API_GET_HOSPITAL} from "../../apis";
+
 const ScrollNum = () => {
   const navigate = useNavigate();
   const [setStart, setSetStart] = useState(false);
@@ -11,12 +13,25 @@ const ScrollNum = () => {
   const [runningTwo, setRunningTwo] = useState(0);
   const [runningTree, setRunningTree] = useState(0);
   const [runningFour, setRunningFour] = useState(0);
+  const [data, setData] = useState({
+    hospital: 0,
+    prototype: 0,
+    happy: 0,
+    better: 0,
+  });
+
+  useEffect(() => {
+    API_GET_HOSPITAL().then((result) => {
+      setData(result?.data);
+    });
+  }, []);
+
   useEffect(() => {
     // if (setStart) {
-      runningOne < 500 && setRunningOne((e) => (e += 1));
-      runningTwo < 260 && setRunningTwo((e) => (e += 1));
-      runningTree < 816 && setRunningTree((e) => (e += 1));
-      runningFour < 240 && setRunningFour((e) => (e += 1));
+    runningOne < data.hospital && setRunningOne((e) => (e += 1));
+    runningTwo < data.prototype && setRunningTwo((e) => (e += 1));
+    runningTree < data.happy && setRunningTree((e) => (e += 1));
+    runningFour < data.better && setRunningFour((e) => (e += 1));
     // }
   });
 

@@ -29,6 +29,7 @@ const REFRESH_TOKEN = async () => {
     localStorage.setItem("refresh-token", response.data.refreshToken);
     return response.data;
   } catch (error) {
+    error.response.data.error.code === 'REFRESH_TOKEN_INVALID' && localStorage.clear()
     return;
   }
 };
@@ -194,8 +195,8 @@ export const API_DEL_ELEARNING_BY_ID = async (id) => {
     .catch((e) => {
       return Swal.fire({
         icon: "error",
-        title: e?.error,
-        text: e?.message,
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
       });
     });
 };
@@ -440,8 +441,8 @@ export const API_DELETE_SHARING_PHOTO = async (id) => {
     .catch((e) => {
       return Swal.fire({
         icon: "error",
-        title: e?.error,
-        text: e?.message,
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
       });
     });
 };
@@ -459,8 +460,8 @@ export const API_DELETE_SHARING = async (id) => {
     .catch((e) => {
       return Swal.fire({
         icon: "error",
-        title: e?.error,
-        text: e?.message,
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
       });
     });
 };
@@ -670,8 +671,8 @@ export const API_DELETE_DOCUMENT = async (id) => {
     .catch((e) => {
       return Swal.fire({
         icon: "error",
-        title: e?.error,
-        text: e?.message,
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
       });
     });
 };
@@ -761,6 +762,106 @@ export const API_DELETE_TAG = async (id) => {
   var config = {
     method: "delete",
     url: `/tag/${id}`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_CREATE_DOCTOR = async (userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "post",
+    url: `/doctor/`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_DOCTOR_COVER = async (id, userData) => {
+  var FormData = require("form-data");
+  var data = new FormData();
+  data.append("file", userData);
+
+  var config = {
+    method: "put",
+    url: `/doctorPicture/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_DOCTOR_BY_ID = async (id) => {
+  var config = {
+    method: "get",
+    url: `/doctor/${id}`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_DOCTOR = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/doctor/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_DEL_DOCTOR_BY_ID = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/doctor/${id}`,
+  };
+  return API_CONFIG(config)
+    .then((e) => {
+      return Swal.fire("สำเร็จ!", "ลบสำเร็จ!", "success");
+    })
+    .catch((e) => {
+      return Swal.fire({
+        icon: "error",
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
+      });
+    });
+};
+
+export const API_GET_HOSPITAL = async () => {
+  var config = {
+    method: "get",
+    url: `/hospital/`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_SHARING_FAV = async () => {
+  var config = {
+    method: "get",
+    url: `/sharing?order=favorite`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_SHARING_FAV_ORDER = async () => {
+  var config = {
+    method: "get",
+    url: `/sharing?order=favorite`,
+  };
+
+  return API_CONFIG(config);
+};
+export const API_GET_ELEARNING_FAV_ORDER = async () => {
+  var config = {
+    method: "get",
+    url: `/elearning?order=favorite`,
   };
 
   return API_CONFIG(config);

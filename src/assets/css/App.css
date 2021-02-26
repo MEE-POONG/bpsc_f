@@ -89,10 +89,14 @@ body {
   font-size: large !important;
 }
 .navbar .dropdown-menu a {
-  font-size: initial;
+  font-size: initial !important;
 }
 .dropdown-menu {
-  left: -25px !important;
+  font-size: initial !important;
+  /* left: -25px !important; */
+}
+.form-control {
+  font-size: initial !important;
 }
 
 .gallery-page.modal.show .modal-dialog {
