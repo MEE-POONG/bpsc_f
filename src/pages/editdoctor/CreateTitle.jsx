@@ -4,8 +4,8 @@ import {Container, Image, Form, Row, Col, Badge} from "react-bootstrap";
 import CKEditor from "ckeditor4-react";
 
 import {
-  API_CREATE_DOCTOR,
-  API_GET_TAGS,
+  API_UPDATE_DOCTOR,
+  API_GET_DOCTOR_BY_ID,
   API_UPDATE_DOCTOR_COVER,
   IMAGE_URL,
 } from "../../apis";
@@ -14,8 +14,12 @@ import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 import {Typeahead} from "react-bootstrap-typeahead";
 import "react-bootstrap-typeahead/css/Typeahead.css";
+import {useParams} from "react-router-dom";
 
 const CreateTitle = () => {
+  const {id} = useParams();
+
+  const [imgDataURL, setImgDataURL] = useState(null);
   const [sharingData, setSharingData] = useState({
     firstName: "",
     lastName: "",
@@ -27,11 +31,26 @@ const CreateTitle = () => {
   const [imgData, setImgData] = useState(null);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    API_GET_DOCTOR_BY_ID(id).then((result) => {
+      setSharingData({
+        firstName: result?.data?.firstName|| "",
+        lastName: result?.data?.lastName|| "",
+        email: result?.data?.email || "",
+        phone: result?.data?.phone|| "",
+        content: result?.data?.content|| "",
+        hospital: result?.data?.hospital|| "",
+        picture: result?.data?.picture|| "",
+      });
+      setImgDataURL(IMAGE_URL + result?.data?.picture);
+    });
+  }, []);
+
   const createSharing = () => {
-    API_CREATE_DOCTOR(sharingData)
+    API_UPDATE_DOCTOR(id, sharingData)
       .then((e) => {
         // console.log(e);
-        Swal.fire("สำเร็จ!", "เพิ่มหมอสำเร็จ!", "success").then(() => {
+        Swal.fire("สำเร็จ!", "แก้ไขข้อมูลหมอสำเร็จ!", "success").then(() => {
           // console.log(imgData);
           if (imgData) {
             API_UPDATE_DOCTOR_COVER(e?.data?.id, imgData)
@@ -135,11 +154,7 @@ const CreateTitle = () => {
                 }}
               >
                 <Image
-                  src={
-                    imgData
-                      ? URL.createObjectURL(imgData)
-                      : "https://chiccarrent.com/files/images/default-placeholder.png"
-                  }
+                  src={imgData ? URL.createObjectURL(imgData) : imgDataURL}
                   style={{
                     maxWidth: "500px",
                   }}
@@ -159,7 +174,7 @@ const CreateTitle = () => {
                   <Form.Label>ชื่อจริง({sharingData.firstName.length})</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
+                    value={sharingData.firstName}
                     onChange={(e) => {
                       setSharingData({...sharingData, firstName: e.target.value});
                     }}
@@ -183,7 +198,7 @@ const CreateTitle = () => {
                   <Form.Label>นามสกุล({sharingData.lastName.length})</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
+                    value={sharingData.lastName}
                     onChange={(e) => {
                       setSharingData({...sharingData, lastName: e.target.value});
                     }}
@@ -207,7 +222,7 @@ const CreateTitle = () => {
                   <Form.Label>E mail({sharingData.email.length})</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
+                    value={sharingData.email}
                     onChange={(e) => {
                       setSharingData({...sharingData, email: e.target.value});
                     }}
@@ -231,7 +246,7 @@ const CreateTitle = () => {
                   <Form.Label>Phone({sharingData.phone.length})</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
+                    value={sharingData.phone}
                     onChange={(e) => {
                       setSharingData({...sharingData, phone: e.target.value});
                     }}
@@ -255,7 +270,7 @@ const CreateTitle = () => {
                   <Form.Label>content({sharingData.content.length})</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
+                    value={sharingData.content}
                     onChange={(e) => {
                       setSharingData({...sharingData, content: e.target.value});
                     }}
@@ -279,7 +294,7 @@ const CreateTitle = () => {
                   <Form.Label>hospital({sharingData.hospital.length})</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
+                    value={sharingData.hospital}
                     onChange={(e) => {
                       setSharingData({...sharingData, hospital: e.target.value});
                     }}

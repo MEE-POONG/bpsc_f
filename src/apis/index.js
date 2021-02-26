@@ -765,3 +765,68 @@ export const API_DELETE_TAG = async (id) => {
 
   return API_CONFIG(config);
 };
+
+export const API_CREATE_DOCTOR = async (userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "post",
+    url: `/doctor/`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_DOCTOR_COVER = async (id, userData) => {
+  var FormData = require("form-data");
+  var data = new FormData();
+  data.append("file", userData);
+
+  var config = {
+    method: "put",
+    url: `/doctorPicture/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_DOCTOR_BY_ID = async (id) => {
+  var config = {
+    method: "get",
+    url: `/doctor/${id}`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_DOCTOR = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/doctor/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_DEL_DOCTOR_BY_ID = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/doctor/${id}`,
+  };
+  return API_CONFIG(config)
+    .then((e) => {
+      return Swal.fire("สำเร็จ!", "ลบสำเร็จ!", "success");
+    })
+    .catch((e) => {
+      return Swal.fire({
+        icon: "error",
+        title: e?.error,
+        text: e?.message,
+      });
+    });
+};
