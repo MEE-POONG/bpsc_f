@@ -13,34 +13,38 @@ const AboutProvide = () => {
       <div className="mt-5 detail">
         <Container className="text-center">
           <Row>
-            <Col lg="3" md="3" sm="3">
+            <Col lg="3" md="3" sm="3" xs="12">
               <img
                 className="provide-icon"
                 src="image/about/medical-mask-2.png"
                 alt="Generic placeholder"
               />
             </Col>
-            <Col lg="6" md="6" sm="6">
+            <Col lg="6" md="6" sm="6" xs="12">
+              <img
+
+                className="img-provide"
+                src="image/about/co-join.png"
+                alt="Generic placeholder"
+              />
+            </Col>
+            <Col lg="3" md="3" sm="3" xs="12">
+
+            </Col>
+            <Col lg="3" md="3" sm="3" xs="12">
+
+            </Col>
+          </Row>
+          <Row>
+
+            <Col lg="6" md="6" sm="6" xs={{ span: 12, order: 'last' }}>
               <img
                 className="img-provide"
                 src="image/about/co-create.png"
                 alt="Generic placeholder"
               />
             </Col>
-            <Col lg="3" md="3" sm="3">
-
-            </Col>
-            <Col lg="3" md="3" sm="3">
-
-            </Col>
-            <Col lg="6" md="6" sm="6">
-              <img
-                className="img-provide"
-                src="image/about/co-join.png"
-                alt="Generic placeholder"
-              />
-            </Col>
-            <Col lg="3" md="3" sm="3">
+            <Col lg="3" md="3" sm="3" xs={{ span: 12, order: 'first' }}>
               <img
                 className="provide-icon"
                 src="image/about/hospital-1.png"
