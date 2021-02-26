@@ -19,23 +19,26 @@ import {
   IMAGE_URL,
 } from "../../apis";
 import {useNavigate} from "react-router-dom";
+import {useParams} from "react-router-dom";
 
 const SharingDetail = () => {
+  const {type} = useParams();
+
   const [sharing, setSharing] = useState(null);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
 
   useEffect(() => {
-    API_GET_SHARING(search, page).then((result) => {
+    API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
       setSharing(result?.data);
     });
-  }, [search, page]);
+  }, [search, page, type]);
 
   const handleFav = (id) => {
     API_fAVORITE_SHARING(id)
       .then(() => {
-        API_GET_SHARING(search, page).then((result) => {
+        API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
           setSharing(result?.data);
         });
       })
@@ -45,7 +48,7 @@ const SharingDetail = () => {
   const handleUnFav = (id) => {
     API_UN_fAVORITE_SHARING(id)
       .then(() => {
-        API_GET_SHARING(search, page).then((result) => {
+        API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
           setSharing(result?.data);
         });
       })
@@ -55,12 +58,12 @@ const SharingDetail = () => {
   const handleDel = (id) => {
     API_DELETE_SHARING(id)
       .then(() => {
-        API_GET_SHARING(search, page).then((result) => {
+        API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
           setSharing(result?.data);
         });
       })
       .catch(() => {
-        API_GET_SHARING(search, page).then((result) => {
+        API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
           setSharing(result?.data);
         });
       });
