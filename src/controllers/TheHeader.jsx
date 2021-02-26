@@ -51,6 +51,11 @@ const TheHeader = () => {
     checkNotification();
   }, [moment().format("YYYY MM DD HH mm"), userInfo, readHover]);
 
+  const nextPage = (e) => {
+    setTimeout(() => {
+      navigate(e);
+    }, 0);
+  };
   return (
     <>
       <Navbar
@@ -61,7 +66,7 @@ const TheHeader = () => {
         // onMouseOver={handleHover}
       >
         {/* <Navbar bg="light" variant="light"> */}
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/" style={{alignSelf: "center"}}>
           <Image
             alt="BPSC LOGO"
             src="/image/header/Logo.png"
@@ -81,65 +86,69 @@ const TheHeader = () => {
             </NavLink> */}
             <NavLink
               to={() => {}}
-              onDoubleClick={() => navigate("/sharing/")}
+              onClick={() => navigate("/sharing/")}
               className="nav-link dropdown-hover"
             >
               SHARING
               <div class="dropdown-content">
-                <a className="dropdown-h-item" onClick={() => navigate("/sharing")}>
-                  SHARING
-                </a>
-                <a className="dropdown-h-item" onClick={() => navigate("/sharing-tag/1")}>
+                <a
+                  className="dropdown-h-item"
+                  onClick={() => nextPage("/sharing-type/1")}
+                >
                   คําแนะนําแบบสั้น ( BA )
                 </a>
-                <a className="dropdown-h-item" onClick={() => navigate("/sharing-tag/2")}>
+                <a
+                  className="dropdown-h-item"
+                  onClick={() => nextPage("/sharing-type/2")}
+                >
                   ประเมินแบบสั้น ( BI )
                 </a>
-                <a className="dropdown-h-item" onClick={() => navigate("/sharing-tag/3")}>
+                <a
+                  className="dropdown-h-item"
+                  onClick={() => nextPage("/sharing-type/3")}
+                >
                   ฝึกสติแบบสั้น ( MBBI )
                 </a>
-                <a className="dropdown-h-item" onClick={() => navigate("/sharing-tag/4")}>
+                <a
+                  className="dropdown-h-item"
+                  onClick={() => nextPage("/sharing-type/4")}
+                >
                   สติบําบัด ( MBTC )
                 </a>
               </div>
             </NavLink>
-            <NavLink 
+            <NavLink
               to={() => {}}
-              onDoubleClick={() => navigate("/e-leaning/")} className="nav-link dropdown-hover">
+              onClick={() => navigate("/e-leaning/")}
+              className="nav-link dropdown-hover"
+            >
               SELF-LEARNING
               <div class="dropdown-content">
                 <a
                   href={() => {}}
                   className="dropdown-h-item"
-                  onClick={() => navigate("/e-leaning")}
-                >
-                  SELF-LEARNING
-                </a>
-                <a
-                  href={() => {}}
-                  className="dropdown-h-item"
-                  onClick={() => navigate("/leaning-tag/1")}
+                  onClick={() => nextPage("/leaning-type/1")}
                 >
                   BPST TALK
                 </a>
                 <a
                   href={() => {}}
                   className="dropdown-h-item"
-                  onClick={() => navigate("/leaning-tag/2")}
+                  onClick={() => nextPage("/leaning-type/2")}
                 >
                   สร้าง รพ BPST
                 </a>
                 <a
                   href={() => {}}
                   className="dropdown-h-item"
-                  onClick={() => navigate("/leaning-tag/3")}
+                  onClick={() => nextPage("/leaning-type/3")}
                 >
                   E-LEARNING
                 </a>
                 <a
                   href={() => {}}
                   className="dropdown-h-item"
-                  onClick={() => navigate("/leaning-tag/4")}
+                  onClick={() => nextPage("/leaning-type/4")}
                 >
                   Event
                 </a>

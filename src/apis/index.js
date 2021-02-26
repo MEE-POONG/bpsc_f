@@ -201,18 +201,18 @@ export const API_DEL_ELEARNING_BY_ID = async (id) => {
     });
 };
 
-export const API_GET_SHARING = async (title = "", page = "", size = "", tag = "") => {
+export const API_GET_SHARING = async (title = "", page = "", size = "", tag = "", type = "") => {
   var config = {
     method: "get",
-    url: `/sharing?title=${title}&size=${size}&tag=${tag}&page=${page}`,
+    url: `/sharing?title=${title}&size=${size}&tag=${tag}&page=${page}&type=${type}`,
   };
 
   return API_CONFIG(config);
 };
-export const API_GET_LEARNING = async (title = "", page = "", size = "", tag = "") => {
+export const API_GET_LEARNING = async (title = "", page = "", size = "", tag = "", type = "") => {
   var config = {
     method: "get",
-    url: `/elearning?title=${title}&size=${size}&tag=${tag}&page=${page}`,
+    url: `/elearning?title=${title}&size=${size}&tag=${tag}&page=${page}$type=${type}`,
   };
 
   return API_CONFIG(config);
