@@ -866,3 +866,32 @@ export const API_GET_ELEARNING_FAV_ORDER = async () => {
 
   return API_CONFIG(config);
 };
+export const API_UPDATE_GALLERY_PHOTO = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/galleryPhoto/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_DEL_GALLERY_PHOTO_BY_ID = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/galleryPhoto/${id}`,
+  };
+  return API_CONFIG(config)
+    .then((e) => {
+      return Swal.fire("สำเร็จ!", "ลบสำเร็จ!", "success");
+    })
+    .catch((e) => {
+      return Swal.fire({
+        icon: "error",
+        title: e?.response?.data?.error,
+        text: e?.response?.data?.message,
+      });
+    });
+};

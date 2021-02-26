@@ -15,7 +15,7 @@ export default function App() {
     <Router>
       <div className="wrapper">
         <TheHeader />
-        <div className="body">
+        <div className="body pt-3">
           <Suspense fallback={loading}>
             <Routes>
               {routes.map((route, idx) => {

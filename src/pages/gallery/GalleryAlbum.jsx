@@ -7,7 +7,10 @@ import {
   Modal,
   Card,
   Button,
+  Media,
+  FormControl,
   Pagination,
+  Form,
 } from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
 import {NavLink} from "react-router-dom";
@@ -18,6 +21,8 @@ import {
   API_GET_GALLERY_BY_ID,
   API_GET_GALLERY_PHOTO_BY_ID,
   API_DELETE_GALLERY,
+  API_DEL_GALLERY_PHOTO_BY_ID,
+  API_UPDATE_GALLERY_PHOTO,
   IMAGE_URL,
 } from "../../apis";
 import moment from "moment";
@@ -38,6 +43,10 @@ const GalleryAlbum = () => {
   const handleShow = () => setShow(true);
   const navigate = useNavigate();
 
+  const [sharingData, setSharingData] = useState({
+    title: "",
+    description: "",
+  });
   const [page, setPage] = useState(1);
   const {id} = useParams();
   const [gallery, setGallery] = useState(null);
@@ -65,7 +74,28 @@ const GalleryAlbum = () => {
       }
     });
   };
+  const handleEditPhoto = (id) => {
+    console.log(id, sharingData);
+    API_UPDATE_GALLERY_PHOTO(id, sharingData)
+      .then((e) => {
+        navigate(0);
+      })
+      .catch((e) => {
+        Swal.fire({
+          icon: "error",
+          title: e?.response?.data?.error,
+          text: e?.response?.data?.message,
+        });
+      });
+  };
 
+  const handleDelPhoto = (id) => {
+    Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
+      if (result.isConfirmed) {
+        API_DEL_GALLERY_PHOTO_BY_ID(id).then(() => navigate(0));
+      }
+    });
+  };
   return (
     <Container className="detail">
       <div className="gallery-page text-uppercase">
@@ -107,7 +137,7 @@ const GalleryAlbum = () => {
             </div>
           </Card.Body>
           <Row>
-            {galleryPhoto?.data?.map(({id, title, description, photo}, idx) => (
+            {galleryPhoto?.data?.map(({id, title, description, photo, content}, idx) => (
               <Col lg="3" className="pt-4" style={{cursor: "pointer"}}>
                 <Image
                   src={
@@ -135,7 +165,7 @@ const GalleryAlbum = () => {
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Row>
-              <Col style={{placeSelf: "center"}} xs="1">
+              <Col style={{placeSelf: "center", textAlignLast: "center"}} xs="1">
                 {galleryPhotoID < 1 ? null : (
                   <FontAwesomeIcon
                     onClick={setPhotoLeftID}
@@ -156,8 +186,105 @@ const GalleryAlbum = () => {
                   }}
                   alt={galleryPhoto?.data[galleryPhotoID]?.title}
                 />
+                {+localStorage.getItem("isAdmin") === 1 ? (
+                  <div className="leaning-list">
+                    <div className="detail">
+                      <Row>
+                        <Col xs="12" lg="12" className="mt-5 comment align-items-center">
+                          <Media>
+                            <Media.Body>
+                              <Container className="px-0">
+                                <div className="box-sheare detail">
+                                  <Row>
+                                    <Col md="5">
+                                      <div className="header">
+                                        <Form.Group controlId="formBasictitle">
+                                          <Form.Label>title</Form.Label>
+                                          <Form.Control
+                                            type="text"
+                                            onChange={(e) => {
+                                              setSharingData({
+                                                ...sharingData,
+                                                title: e.target.value,
+                                              });
+                                            }}
+                                            defaultValue={
+                                              galleryPhoto?.data[galleryPhotoID]?.title
+                                            }
+                                          />
+                                        </Form.Group>
+                                      </div>
+                                    </Col>
+                                    <Col md="5">
+                                      <div className="header">
+                                        <Form.Group controlId="formBasicdescription">
+                                          <Form.Label>description</Form.Label>
+                                          <Form.Control
+                                            type="text"
+                                            onChange={(e) => {
+                                              setSharingData({
+                                                ...sharingData,
+                                                description: e.target.value,
+                                              });
+                                            }}
+                                            defaultValue={
+                                              galleryPhoto?.data[galleryPhotoID]
+                                                ?.description
+                                            }
+                                          />
+                                        </Form.Group>
+                                      </div>
+                                    </Col>
+                                    <Col md="2">
+                                      <div className="header">
+                                        <div
+                                          style={{
+                                            alignSelf: "center",
+                                          }}
+                                        >
+                                          <button
+                                            type="button"
+                                            className="btn btn-success about-talk-with-us-btn-success"
+                                            onClick={() =>
+                                              handleEditPhoto(
+                                                galleryPhoto?.data[galleryPhotoID]?.id
+                                              )
+                                            }
+                                          >
+                                            แก้ไข
+                                          </button>
+                                          <button
+                                            type="button"
+                                            className="btn btn-danger"
+                                            onClick={() =>
+                                              handleDelPhoto(
+                                                galleryPhoto?.data[galleryPhotoID]?.id
+                                              )
+                                            }
+                                          >
+                                            ลบ
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </Col>
+                                  </Row>
+                                </div>
+                              </Container>
+                            </Media.Body>
+                          </Media>
+                        </Col>
+                      </Row>
+                    </div>
+                  </div>
+                ) : (
+                  <h1>{galleryPhoto?.data[galleryPhotoID]?.description}</h1>
+                )}
               </Col>
-              <Col style={{placeSelf: "center"}} xs="1" className="p-0">
+              <Col
+                style={{placeSelf: "center", textAlignLast: "center"}}
+                xs="1"
+                className="p-0"
+              >
                 {galleryPhotoID >= galleryPhoto?.data.length - 1 ? null : (
                   <FontAwesomeIcon
                     onClick={setPhotoRightID}
