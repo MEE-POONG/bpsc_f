@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { Navbar, Nav, Image, NavDropdown, ButtonGroup, Button, DropdownButton, Dropdown } from "react-bootstrap";
+import React, {useState, useEffect} from "react";
+import {
+  Navbar,
+  Nav,
+  Image,
+  NavDropdown,
+  ButtonGroup,
+  Button,
+  DropdownButton,
+  Dropdown,
+} from "react-bootstrap";
 // import routes from '../routes'
-import { NavLink, useNavigate } from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import Notification from "./TheNotification";
 import TheLogin from "./TheLogin";
-import { faUser, faBell, faPen, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faUser, faBell, faPen, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
   API_GET_USER_INFO,
   API_GET_USER_UPDATE,
@@ -47,9 +56,9 @@ const TheHeader = () => {
       <Navbar
         variant="light"
         className="container-xl py-3"
-        style={{ boxShadow: "none" }}
+        style={{boxShadow: "none"}}
         expand="lg"
-      // onMouseOver={handleHover}
+        // onMouseOver={handleHover}
       >
         {/* <Navbar bg="light" variant="light"> */}
         <Navbar.Brand href="/">
@@ -58,7 +67,7 @@ const TheHeader = () => {
             src="/image/header/Logo.png"
             // width="100"
             // className="d-inline-block align-tops"
-            style={{ objectFit: "contain", height: "30px" }}
+            style={{objectFit: "contain", height: "30px"}}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -70,25 +79,72 @@ const TheHeader = () => {
             {/* <NavLink to="/sharing" className="nav-link dropdown-hover">
               SHARING
             </NavLink> */}
-            <NavLink to="/sharing" className="nav-link dropdown-hover">
+            <NavLink
+              to={() => {}}
+              onDoubleClick={() => navigate("/sharing/")}
+              className="nav-link dropdown-hover"
+            >
               SHARING
-                <div class="dropdown-content">
-                <a className="dropdown-h-item">คําแนะนําแบบสั้น ( BA )</a>
-                <a className="dropdown-h-item">ประเมินแบบสั้น ( BI )</a>
-                <a className="dropdown-h-item">ฝึกสติแบบสั้น ( MBBI )</a>
-                <a className="dropdown-h-item">สติบําบัด ( MBTC )</a>
-              </div>
-            </NavLink>
-            <NavLink to="/e-leaning" className="nav-link dropdown-hover">
-              E-LEARNING
               <div class="dropdown-content">
-                <a href="#action/3.1" className="dropdown-h-item">BPST TALK</a>
-                <a href="#action/3.2" className="dropdown-h-item">สร้าง รพ BPST</a>
-                <a href="#action/3.3" className="dropdown-h-item">E-LEARNING</a>
-                <a href="#action/3.4" className="dropdown-h-item">Event</a>
+                <a className="dropdown-h-item" onClick={() => navigate("/sharing")}>
+                  SHARING
+                </a>
+                <a className="dropdown-h-item" onClick={() => navigate("/sharing-tag/1")}>
+                  คําแนะนําแบบสั้น ( BA )
+                </a>
+                <a className="dropdown-h-item" onClick={() => navigate("/sharing-tag/2")}>
+                  ประเมินแบบสั้น ( BI )
+                </a>
+                <a className="dropdown-h-item" onClick={() => navigate("/sharing-tag/3")}>
+                  ฝึกสติแบบสั้น ( MBBI )
+                </a>
+                <a className="dropdown-h-item" onClick={() => navigate("/sharing-tag/4")}>
+                  สติบําบัด ( MBTC )
+                </a>
               </div>
             </NavLink>
-
+            <NavLink 
+              to={() => {}}
+              onDoubleClick={() => navigate("/e-leaning/")} className="nav-link dropdown-hover">
+              SELF-LEARNING
+              <div class="dropdown-content">
+                <a
+                  href={() => {}}
+                  className="dropdown-h-item"
+                  onClick={() => navigate("/e-leaning")}
+                >
+                  SELF-LEARNING
+                </a>
+                <a
+                  href={() => {}}
+                  className="dropdown-h-item"
+                  onClick={() => navigate("/leaning-tag/1")}
+                >
+                  BPST TALK
+                </a>
+                <a
+                  href={() => {}}
+                  className="dropdown-h-item"
+                  onClick={() => navigate("/leaning-tag/2")}
+                >
+                  สร้าง รพ BPST
+                </a>
+                <a
+                  href={() => {}}
+                  className="dropdown-h-item"
+                  onClick={() => navigate("/leaning-tag/3")}
+                >
+                  E-LEARNING
+                </a>
+                <a
+                  href={() => {}}
+                  className="dropdown-h-item"
+                  onClick={() => navigate("/leaning-tag/4")}
+                >
+                  Event
+                </a>
+              </div>
+            </NavLink>
 
             <NavLink to="/gallery" className="nav-link">
               GALLERY
@@ -99,9 +155,15 @@ const TheHeader = () => {
             <NavLink to="/about" className="nav-link dropdown-hover">
               ABOUT US
               <div class="dropdown-content" title="COURSE">
-                <a href="#action/3.1" className="dropdown-h-item">ประวัติโครางการ</a>
-                <a href="#action/3.2" className="dropdown-h-item">เครือข่ายพันธมิตร</a>
-                <a href="#action/3.3" className="dropdown-h-item">การสนับสนุน</a>
+                <a href="#action/3.1" className="dropdown-h-item">
+                  ประวัติโครางการ
+                </a>
+                <a href="#action/3.2" className="dropdown-h-item">
+                  เครือข่ายพันธมิตร
+                </a>
+                <a href="#action/3.3" className="dropdown-h-item">
+                  การสนับสนุน
+                </a>
               </div>
             </NavLink>
 
@@ -111,7 +173,7 @@ const TheHeader = () => {
                   <div className="row">
                     <div className="col-sm-2">
                       <div className="nav-item">
-                        <a href={() => { }}>
+                        <a href={() => {}}>
                           {getNotification ? (
                             <span className="notify-badge">{getNotification}</span>
                           ) : null}
@@ -124,7 +186,7 @@ const TheHeader = () => {
                             alt={userInfo?.firstName + " " + userInfo?.LastName}
                             width="50px"
                             height="50px"
-                            style={{ borderRadius: "50%" }}
+                            style={{borderRadius: "50%"}}
                           />
                         </a>
                       </div>
@@ -188,8 +250,8 @@ const TheHeader = () => {
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-                <TheLogin />
-              )}
+              <TheLogin />
+            )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
