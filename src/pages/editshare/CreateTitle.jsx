@@ -296,7 +296,7 @@ const CreateTitle = () => {
               options={typeData?.data}
               labelKey="title"
               placeholder="เลือก TYPE"
-              selected={sharingData?.type?.id || sharingData?.type}
+              selected={sharingData?.type?.id}
             />
           </Form.Group>
         </Container>
