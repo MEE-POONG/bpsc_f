@@ -252,7 +252,8 @@ const CreateTitle = () => {
                 ))}
               </Row>
             ) : (
-              {/* <Row>
+              <div>
+                {/* <Row>
                 {galleryPhoto?.data?.map(({id, title, description, photo}, idx) => (
                   <Col>
                     <div>
@@ -270,6 +271,7 @@ const CreateTitle = () => {
                   </Col>
                 ))}
               </Row> */}
+              </div>
             )}
           </div>
         </Container>
