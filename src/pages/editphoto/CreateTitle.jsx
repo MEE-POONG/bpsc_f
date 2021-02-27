@@ -72,7 +72,7 @@ const CreateTitle = () => {
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasictitle">
-                  <Form.Label>ชื่อจริง({sharingData.title.length})</Form.Label>
+                  <Form.Label>ชื่อจริง</Form.Label>
                   <Form.Control
                     type="text"
                     value={sharingData.title}
@@ -96,7 +96,7 @@ const CreateTitle = () => {
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicdescription">
-                  <Form.Label>นามสกุล({sharingData.description.length})</Form.Label>
+                  <Form.Label>นามสกุล</Form.Label>
                   <Form.Control
                     type="text"
                     value={sharingData.description}

@@ -176,7 +176,7 @@ const CreateTitle = () => {
             <Col md="12">
               <div className="header">
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>ชื่อบทเรียน({learningData.title.length}/50)</Form.Label>
+                  <Form.Label>ชื่อบทเรียน</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="ชื่อบทเรียน"
@@ -198,7 +198,7 @@ const CreateTitle = () => {
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>รายละเอียดย่อของบทเรียน (0/300)</Form.Label>
+                  <Form.Label>รายละเอียดย่อของบทเรียน</Form.Label>
                   <Form.Control
                     type="text"
                     id="content"

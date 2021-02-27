@@ -156,145 +156,79 @@ const CreateTitle = () => {
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicFirstName">
-                  <Form.Label>ชื่อจริง({sharingData.firstName.length})</Form.Label>
+                  <Form.Label>ชื่อจริง</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
                     onChange={(e) => {
                       setSharingData({...sharingData, firstName: e.target.value});
                     }}
                   />
                 </Form.Group>
-                {/* <Form.Group controlId="formBasicEmail">
-                    <Form.Label>รายละเอียดย่อของหมอ (0/300)</Form.Label>
-                    <Form.Control
-                      type="text"
-                      as="textarea"
-                      onChange={(e) => {
-                        setSharingData({...sharingData, content: e.target.value});
-                      }}
-                    />
-                  </Form.Group> */}
               </div>
             </Col>
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicLastName">
-                  <Form.Label>นามสกุล({sharingData.lastName.length})</Form.Label>
+                  <Form.Label>นามสกุล</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
                     onChange={(e) => {
                       setSharingData({...sharingData, lastName: e.target.value});
                     }}
                   />
                 </Form.Group>
-                {/* <Form.Group controlId="formBasicEmail">
-                    <Form.Label>รายละเอียดย่อของหมอ (0/300)</Form.Label>
-                    <Form.Control
-                      type="text"
-                      as="textarea"
-                      onChange={(e) => {
-                        setSharingData({...sharingData, content: e.target.value});
-                      }}
-                    />
-                  </Form.Group> */}
               </div>
             </Col>
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>E mail({sharingData.email.length})</Form.Label>
+                  <Form.Label>E mail</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
                     onChange={(e) => {
                       setSharingData({...sharingData, email: e.target.value});
                     }}
                   />
                 </Form.Group>
-                {/* <Form.Group controlId="formBasicEmail">
-                    <Form.Label>รายละเอียดย่อของหมอ (0/300)</Form.Label>
-                    <Form.Control
-                      type="text"
-                      as="textarea"
-                      onChange={(e) => {
-                        setSharingData({...sharingData, content: e.target.value});
-                      }}
-                    />
-                  </Form.Group> */}
               </div>
             </Col>
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicTel">
-                  <Form.Label>Phone({sharingData.phone.length})</Form.Label>
+                  <Form.Label>Phone</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
                     onChange={(e) => {
                       setSharingData({...sharingData, phone: e.target.value});
                     }}
                   />
                 </Form.Group>
-                {/* <Form.Group controlId="formBasicEmail">
-                    <Form.Label>รายละเอียดย่อของหมอ (0/300)</Form.Label>
-                    <Form.Control
-                      type="text"
-                      as="textarea"
-                      onChange={(e) => {
-                        setSharingData({...sharingData, content: e.target.value});
-                      }}
-                    />
-                  </Form.Group> */}
               </div>
             </Col>
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicContent">
-                  <Form.Label>content({sharingData.content.length})</Form.Label>
+                  <Form.Label>content</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
                     onChange={(e) => {
                       setSharingData({...sharingData, content: e.target.value});
                     }}
                   />
                 </Form.Group>
-                {/* <Form.Group controlId="formBasicEmail">
-                    <Form.Label>รายละเอียดย่อของหมอ (0/300)</Form.Label>
-                    <Form.Control
-                      type="text"
-                      as="textarea"
-                      onChange={(e) => {
-                        setSharingData({...sharingData, content: e.target.value});
-                      }}
-                    />
-                  </Form.Group> */}
               </div>
             </Col>
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicHospital">
-                  <Form.Label>hospital({sharingData.hospital.length})</Form.Label>
+                  <Form.Label>hospital</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="ชื่อหมอ"
                     onChange={(e) => {
                       setSharingData({...sharingData, hospital: e.target.value});
                     }}
                   />
                 </Form.Group>
-                {/* <Form.Group controlId="formBasicEmail">
-                    <Form.Label>รายละเอียดย่อของหมอ (0/300)</Form.Label>
-                    <Form.Control
-                      type="text"
-                      as="textarea"
-                      onChange={(e) => {
-                        setSharingData({...sharingData, content: e.target.value});
-                      }}
-                    />
-                  </Form.Group> */}
               </div>
             </Col>
           </Row>

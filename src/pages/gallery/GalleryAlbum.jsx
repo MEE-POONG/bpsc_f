@@ -187,97 +187,89 @@ const GalleryAlbum = () => {
                   alt={galleryPhoto?.data[galleryPhotoID]?.title}
                 />
                 {+localStorage.getItem("isAdmin") === 1 ? (
-                  <div className="leaning-list">
-                    <div className="detail">
-                      <Row>
-                        <Col xs="12" lg="12" className="mt-5 comment align-items-center">
-                          <Media>
-                            <Media.Body>
-                              <Container className="px-0">
-                                <div className="box-sheare detail">
-                                  <Row>
-                                    <Col md="5">
-                                      <div className="header">
-                                        <Form.Group controlId="formBasictitle">
-                                          <Form.Label>title</Form.Label>
-                                          <Form.Control
-                                            type="text"
-                                            onChange={(e) => {
-                                              setSharingData({
-                                                ...sharingData,
-                                                title: e.target.value,
-                                              });
-                                            }}
-                                            defaultValue={
-                                              galleryPhoto?.data[galleryPhotoID]?.title
-                                            }
-                                          />
-                                        </Form.Group>
-                                      </div>
-                                    </Col>
-                                    <Col md="5">
-                                      <div className="header">
-                                        <Form.Group controlId="formBasicdescription">
-                                          <Form.Label>description</Form.Label>
-                                          <Form.Control
-                                            type="text"
-                                            onChange={(e) => {
-                                              setSharingData({
-                                                ...sharingData,
-                                                description: e.target.value,
-                                              });
-                                            }}
-                                            defaultValue={
-                                              galleryPhoto?.data[galleryPhotoID]
-                                                ?.description
-                                            }
-                                          />
-                                        </Form.Group>
-                                      </div>
-                                    </Col>
-                                    <Col md="2">
-                                      <div className="header">
-                                        <div
-                                          style={{
-                                            alignSelf: "center",
-                                          }}
-                                        >
-                                          <button
-                                            type="button"
-                                            className="btn btn-success about-talk-with-us-btn-success"
-                                            onClick={() =>
-                                              handleEditPhoto(
-                                                galleryPhoto?.data[galleryPhotoID]?.id
-                                              )
-                                            }
-                                          >
-                                            แก้ไข
-                                          </button>
-                                          <button
-                                            type="button"
-                                            className="btn btn-danger"
-                                            onClick={() =>
-                                              handleDelPhoto(
-                                                galleryPhoto?.data[galleryPhotoID]?.id
-                                              )
-                                            }
-                                          >
-                                            ลบ
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </Col>
-                                  </Row>
+                  <div className="create-page">
+                    <div className="tab-btn mb-5">
+                      <Container className="px-0">
+                        <div className="box-sheare detail">
+                          <Col xs="12">
+                            <Row>
+                              <Col md="12">
+                                <div className="header">
+                                  <Form.Group controlId="formBasicEmail">
+                                    <Form.Label>ชื่อ</Form.Label>
+                                    <Form.Control
+                                      type="text"
+                                      defaultValue={
+                                        galleryPhoto?.data[galleryPhotoID]?.title
+                                      }
+                                      onChange={(e) => {
+                                        setSharingData({
+                                          ...sharingData,
+                                          title: e.target.value,
+                                        });
+                                      }}
+                                    />
+                                  </Form.Group>
+                                  <Form.Group controlId="formBasicEmail">
+                                    <Form.Label>รายละเอียด</Form.Label>
+                                    <Form.Control
+                                      type="text"
+                                      as="textarea"
+                                      onChange={(e) => {
+                                        setSharingData({
+                                          ...sharingData,
+                                          description: e.target.value,
+                                        });
+                                      }}
+                                      defaultValue={
+                                        galleryPhoto?.data[galleryPhotoID]?.description
+                                      }
+                                    />
+                                  </Form.Group>
                                 </div>
-                              </Container>
-                            </Media.Body>
-                          </Media>
-                        </Col>
-                      </Row>
+                              </Col>
+                              <Col md="12">
+                                <div className="header">
+                                  <div
+                                    style={{
+                                      alignSelf: "center",
+                                    }}
+                                  >
+                                    <button
+                                      type="button"
+                                      className="btn btn-success about-talk-with-us-btn-success"
+                                      onClick={() =>
+                                        handleEditPhoto(
+                                          galleryPhoto?.data[galleryPhotoID]?.id
+                                        )
+                                      }
+                                    >
+                                      แก้ไข
+                                    </button>
+                                    <button
+                                      type="button"
+                                      className="btn btn-danger"
+                                      onClick={() =>
+                                        handleDelPhoto(
+                                          galleryPhoto?.data[galleryPhotoID]?.id
+                                        )
+                                      }
+                                    >
+                                      ลบ
+                                    </button>
+                                  </div>
+                                </div>
+                              </Col>
+                            </Row>
+                          </Col>
+                        </div>
+                      </Container>
                     </div>
                   </div>
                 ) : (
-                  <h1>{galleryPhoto?.data[galleryPhotoID]?.description}</h1>
+                  <div className="float-left py-5">
+                    <h2>{galleryPhoto?.data[galleryPhotoID]?.description}</h2>
+                  </div>
                 )}
               </Col>
               <Col

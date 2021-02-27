@@ -171,7 +171,7 @@ const CreateTitle = () => {
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicFirstName">
-                  <Form.Label>ชื่อจริง({sharingData.firstName.length})</Form.Label>
+                  <Form.Label>ชื่อจริง</Form.Label>
                   <Form.Control
                     type="text"
                     value={sharingData.firstName}
@@ -195,7 +195,7 @@ const CreateTitle = () => {
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicLastName">
-                  <Form.Label>นามสกุล({sharingData.lastName.length})</Form.Label>
+                  <Form.Label>นามสกุล</Form.Label>
                   <Form.Control
                     type="text"
                     value={sharingData.lastName}
@@ -219,7 +219,7 @@ const CreateTitle = () => {
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>E mail({sharingData.email.length})</Form.Label>
+                  <Form.Label>E mail</Form.Label>
                   <Form.Control
                     type="text"
                     value={sharingData.email}
@@ -243,7 +243,7 @@ const CreateTitle = () => {
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicTel">
-                  <Form.Label>Phone({sharingData.phone.length})</Form.Label>
+                  <Form.Label>Phone</Form.Label>
                   <Form.Control
                     type="text"
                     value={sharingData.phone}
@@ -267,7 +267,7 @@ const CreateTitle = () => {
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicContent">
-                  <Form.Label>content({sharingData.content.length})</Form.Label>
+                  <Form.Label>content</Form.Label>
                   <Form.Control
                     type="text"
                     value={sharingData.content}
@@ -291,7 +291,7 @@ const CreateTitle = () => {
             <Col md="6">
               <div className="header">
                 <Form.Group controlId="formBasicHospital">
-                  <Form.Label>hospital({sharingData.hospital.length})</Form.Label>
+                  <Form.Label>hospital</Form.Label>
                   <Form.Control
                     type="text"
                     value={sharingData.hospital}

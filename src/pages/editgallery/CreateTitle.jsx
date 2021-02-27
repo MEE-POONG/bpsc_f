@@ -165,7 +165,7 @@ const CreateTitle = () => {
             <Col lg="12">
               <div className="header">
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>ชื่อแกลเลอรี่({contentData.title.length}/50)</Form.Label>
+                  <Form.Label>ชื่อแกลเลอรี่</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="ชื่อแกลเลอรี่"
@@ -176,7 +176,7 @@ const CreateTitle = () => {
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>รายละเอียดย่อของแกลเลอรี่ (0/300)</Form.Label>
+                  <Form.Label>รายละเอียดย่อของแกลเลอรี่</Form.Label>
                   <Form.Control
                     type="text"
                     as="textarea"
@@ -252,7 +252,7 @@ const CreateTitle = () => {
                 ))}
               </Row>
             ) : (
-              <Row>
+              {/* <Row>
                 {galleryPhoto?.data?.map(({id, title, description, photo}, idx) => (
                   <Col>
                     <div>
@@ -269,7 +269,7 @@ const CreateTitle = () => {
                     </div>
                   </Col>
                 ))}
-              </Row>
+              </Row> */}
             )}
           </div>
         </Container>

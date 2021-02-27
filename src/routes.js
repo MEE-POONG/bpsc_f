@@ -23,6 +23,7 @@ const CreateTAG = React.lazy(() => import("./pages/createtag"));
 const EditTAG = React.lazy(() => import("./pages/edittag"));
 const CreateFAQ = React.lazy(() => import("./pages/createfaq"));
 const EditFAQ = React.lazy(() => import("./pages/editfaq"));
+const EditHOSPITAL = React.lazy(() => import("./pages/edithospital"));
 const EditDOCTOR = React.lazy(() => import("./pages/editdoctor"));
 const EditPHOTO = React.lazy(() => import("./pages/editphoto"));
 const Login = React.lazy(() => import("./pages/login"));
@@ -86,6 +87,7 @@ const routes = [
   {path: "/edit-tag/:id", name: "EDIT TAG", component: EditTAG},
   {path: "/create-faq", name: "CREATE FAQ", component: CreateFAQ},
   {path: "/edit-faq/:id", name: "EDIT FAQ", component: EditFAQ},
+  {path: "/edit-hospital", name: "EDIT HOSPITAL", component: EditHOSPITAL},
   {path: "/edit-doctor/:id", name: "EDIT DOCTOR", component: EditDOCTOR},
   {path: "/gallery-photo/:id", name: "EDIT GALLERY PHOTO", component: EditPHOTO},
   {path: "/verify", name: "VERIFY", component: Verify},

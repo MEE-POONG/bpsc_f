@@ -4,8 +4,6 @@ const CreateGallery = () => {
   return (
     <div className="create-page text-uppercase">
       <CreateTitle />
-      {/* <CreateDetail /> */}
-      {/* <CreateTag /> */}
     </div>
   );
 };

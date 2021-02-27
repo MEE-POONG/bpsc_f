@@ -943,3 +943,52 @@ export const API_DELETE_FAQ = async (id) => {
 
   return API_CONFIG(config);
 };
+
+
+
+
+
+export const API_CREATE_HOSPITAL = async (userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "post",
+    url: `/hospital/`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_HOSPITAL_BY_ID = async (id, userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "get",
+    url: `/hospital/${id}`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_UPDATE_HOSPITAL = async (userData) => {
+  var data = JSON.stringify(userData);
+
+  var config = {
+    method: "put",
+    url: `/hospital`,
+    data,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_DELETE_HOSPITAL = async (id) => {
+  var config = {
+    method: "delete",
+    url: `/hospital/${id}`,
+  };
+
+  return API_CONFIG(config);
+};

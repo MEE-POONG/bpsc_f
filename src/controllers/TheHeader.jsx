@@ -125,32 +125,34 @@ const TheHeader = () => {
               SELF-LEARNING
               <div class="dropdown-content">
                 <a
-                  href={() => {}}
                   className="dropdown-h-item"
                   onClick={() => nextPage("/leaning-type/1")}
                 >
                   BPSC TALK
                 </a>
                 <a
-                  href={() => {}}
                   className="dropdown-h-item"
                   onClick={() => nextPage("/leaning-type/2")}
                 >
                   สร้าง รพ BPSC
                 </a>
                 <a
-                  href={() => {}}
                   className="dropdown-h-item"
                   onClick={() => nextPage("/leaning-type/3")}
                 >
                   E-LEARNING
                 </a>
                 <a
-                  href={() => {}}
                   className="dropdown-h-item"
                   onClick={() => nextPage("/leaning-type/4")}
                 >
                   Event
+                </a>
+                <a
+                  className="dropdown-h-item"
+                  onClick={() => nextPage("/leaning-type/5")}
+                >
+                  บทความ
                 </a>
               </div>
             </NavLink>
@@ -161,19 +163,11 @@ const TheHeader = () => {
             <NavLink to="/about" className="nav-link dropdown-hover">
               ABOUT US
               <div class="dropdown-content" title="COURSE">
-                <a href="#action/3.1" className="dropdown-h-item">
-                  ประวัติโครางการ
-                </a>
-                <a
-                  href={() => {}}
-                  className="dropdown-h-item"
-                  onClick={() => nextPage("/doctor")}
-                >
+                <a className="dropdown-h-item">ประวัติโครางการ</a>
+                <a className="dropdown-h-item" onClick={() => nextPage("/doctor")}>
                   เครือข่ายพันธมิตร
                 </a>
-                <a href="#action/3.3" className="dropdown-h-item">
-                  การสนับสนุน
-                </a>
+                <a className="dropdown-h-item">การสนับสนุน</a>
               </div>
             </NavLink>
 
@@ -183,7 +177,7 @@ const TheHeader = () => {
                   <div className="row">
                     <div className="col-sm-2">
                       <div className="nav-item">
-                        <a href={() => {}}>
+                        <a>
                           {getNotification ? (
                             <span className="notify-badge">{getNotification}</span>
                           ) : null}
@@ -243,6 +237,11 @@ const TheHeader = () => {
                 {+localStorage.getItem("isAdmin") === 1 && (
                   <NavDropdown.Item onClick={() => navigate("create-faq")}>
                     <FontAwesomeIcon icon={faPen} /> &nbsp;สร้าง FAQ
+                  </NavDropdown.Item>
+                )}
+                {+localStorage.getItem("isAdmin") === 1 && (
+                  <NavDropdown.Item onClick={() => navigate("edit-hospital")}>
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;แก้ไข HOSPITAL
                   </NavDropdown.Item>
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
