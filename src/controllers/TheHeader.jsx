@@ -163,7 +163,7 @@ const TheHeader = () => {
             <NavLink to="/about" className="nav-link dropdown-hover">
               ABOUT US
               <div class="dropdown-content" title="COURSE">
-                <a className="dropdown-h-item">ประวัติโครางการ</a>
+                <a className="dropdown-h-item">ประวัติโครงการ</a>
                 <a className="dropdown-h-item" onClick={() => nextPage("/doctor")}>
                   เครือข่ายพันธมิตร
                 </a>
