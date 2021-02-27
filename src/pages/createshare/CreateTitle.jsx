@@ -21,6 +21,16 @@ const CreateTitle = () => {
     content: "",
     isDraft: "true",
     tags: [],
+    type: "",
+  });
+
+  const [typeData] = useState({
+    data: [
+      {id: 1, title: "คําแนะนําแบบสั้น ( BA )"},
+      {id: 2, title: "ประเมินแบบสั้น ( BI )"},
+      {id: 3, title: "ฝึกสติแบบสั้น ( MBBI )"},
+      {id: 4, title: "สติบําบัด ( MBTC )"},
+    ],
   });
   const [tagData, setTagData] = useState(null);
   const [imgData, setImgData] = useState(null);
@@ -237,6 +247,37 @@ const CreateTitle = () => {
               labelKey="title"
               placeholder="เลือก TAG"
               selected={sharingData.tag}
+            />
+          </Form.Group>
+        </Container>
+      </div>
+
+      <div className="tag">
+        <Container>
+          <div>
+            <h1>ติด TYPE ให้แชร์</h1>
+          </div>
+        </Container>
+        <Container className="input-tag">
+          {/* <Badge pill variant="primary">
+            Primary
+          </Badge> */}
+          {/* <Form> */}
+          {/* <Form.Group controlId="formBasicEmail"> */}
+          {/* <Form.Label>รายละเอียดย่อของแชร์ (0/300)</Form.Label> */}
+          {/* <Form.Control type="text" as="textarea" /> */}
+          {/* </Form.Group> */}
+          {/* </Form> */}
+          <Form.Group style={{marginTop: "20px"}}>
+            {/* <Form.Label>รายละเอียดย่อของแชร์</Form.Label> */}
+            <Typeahead
+              id="basic-typeahead"
+              labelKey="name"
+              onChange={(e) => setSharingData({...sharingData, type: e[0].id})}
+              options={typeData?.data}
+              labelKey="title"
+              placeholder="เลือก TYPE"
+              selected={sharingData.type.id}
             />
           </Form.Group>
         </Container>

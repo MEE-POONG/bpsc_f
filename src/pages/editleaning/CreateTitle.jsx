@@ -24,8 +24,20 @@ const CreateTitle = () => {
     content: "",
     videoLink: "",
     tags: [],
+    type: "",
   });
   const [tagData, setTagData] = useState(null);
+
+  const [typeData] = useState({
+    data: [
+      {id: 1, title: "BPSC TALK"},
+      {id: 2, title: "สร้าง รพ BPSC"},
+      {id: 3, title: "E-LEARNING"},
+      {id: 4, title: "Event"},
+      {id: 5, title: "บทความ"},
+    ],
+  });
+
   const [imgData, setImgData] = useState(null);
   const [imgDataURL, setImgDataURL] = useState(null);
   useEffect(() => {
@@ -35,7 +47,7 @@ const CreateTitle = () => {
         content: result?.data?.elearning?.content,
         videoLink: result?.data?.elearning?.videoLink,
         tags: [],
-        // tags: result?.data?.tags,
+        type: result?.data?.elearning?.type
       });
       setImgDataURL(IMAGE_URL + result?.data?.elearning?.elearningPicture);
     });
@@ -259,6 +271,39 @@ const CreateTitle = () => {
               placeholder="เลือก TAG"
               selected={learningData.tag}
               // defaultSelected={tagData?.data?.slice(0, 4)}
+            />
+          </Form.Group>
+        </Container>
+      </div>
+
+      <div className="tag">
+        <Container>
+          <div>
+            <h1>ติด Type ให้บทเรียน</h1>
+          </div>
+        </Container>
+        <Container className="input-tag">
+          {/* <Badge pill variant="primary">
+            Primary
+          </Badge> */}
+          {/* <Form> */}
+          {/* <Form.Group controlId="formBasicEmail"> */}
+          {/* <Form.Label>รายละเอียดย่อของบทเรียน (0/300)</Form.Label> */}
+          {/* <Form.Control type="text" as="textarea" /> */}
+          {/* </Form.Group> */}
+          {/* </Form> */}
+          <Form.Group style={{marginTop: "20px"}}>
+            {/* <Form.Label>รายละเอียดย่อของบทเรียน</Form.Label> */}
+            <Typeahead
+              id="basic-typeahead"
+              labelKey="name"
+              onChange={(e) => {
+                setLearningData({...learningData, type: e[0].id});
+              }}
+              options={typeData?.data}
+              labelKey="title"
+              placeholder="เลือก TYPE"
+              selected={learningData.type.id}
             />
           </Form.Group>
         </Container>

@@ -14,6 +14,7 @@ import {useNavigate} from "react-router-dom";
 import Swal from "sweetalert2";
 import {Typeahead} from "react-bootstrap-typeahead";
 import "react-bootstrap-typeahead/css/Typeahead.css";
+import {Dropdown} from "react-bootstrap";
 
 const CreateTitle = () => {
   const [sharingData, setSharingData] = useState({
@@ -21,8 +22,18 @@ const CreateTitle = () => {
     content: "",
     videoLink: "",
     tags: [],
+    type: "",
   });
   const [tagData, setTagData] = useState(null);
+  const [typeData] = useState({
+    data: [
+      {id: 1, title: "BPSC TALK"},
+      {id: 2, title: "สร้าง รพ BPSC"},
+      {id: 3, title: "E-LEARNING"},
+      {id: 4, title: "Event"},
+      {id: 5, title: "บทความ"},
+    ],
+  });
   const [imgData, setImgData] = useState(null);
   const navigate = useNavigate();
 
@@ -34,6 +45,7 @@ const CreateTitle = () => {
       .catch();
   }, []);
   const createSharing = () => {
+    console.log(sharingData)
     API_CREATE_LEANING(sharingData)
       .then((e) => {
         // console.log(e);
@@ -219,6 +231,39 @@ const CreateTitle = () => {
               labelKey="title"
               placeholder="เลือก TAG"
               selected={sharingData.tag}
+            />
+          </Form.Group>
+        </Container>
+      </div>
+
+      <div className="tag">
+        <Container>
+          <div>
+            <h1>ติด Type ให้บทเรียน</h1>
+          </div>
+        </Container>
+        <Container className="input-tag">
+          {/* <Badge pill variant="primary">
+            Primary
+          </Badge> */}
+          {/* <Form> */}
+          {/* <Form.Group controlId="formBasicEmail"> */}
+          {/* <Form.Label>รายละเอียดย่อของบทเรียน (0/300)</Form.Label> */}
+          {/* <Form.Control type="text" as="textarea" /> */}
+          {/* </Form.Group> */}
+          {/* </Form> */}
+          <Form.Group style={{marginTop: "20px"}}>
+            {/* <Form.Label>รายละเอียดย่อของบทเรียน</Form.Label> */}
+            <Typeahead
+              id="basic-typeahead"
+              labelKey="name"
+              onChange={(e) => {
+                setSharingData({...sharingData, type: e[0].id});
+              }}
+              options={typeData?.data}
+              labelKey="title"
+              placeholder="เลือก TYPE"
+              selected={sharingData.type.id}
             />
           </Form.Group>
         </Container>
