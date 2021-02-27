@@ -292,11 +292,11 @@ const CreateTitle = () => {
             <Typeahead
               id="basic-typeahead"
               labelKey="name"
-              onChange={(e) => setSharingData({...sharingData, type: e[0].id})}
+              onChange={(e) => setSharingData({...sharingData, type: e[0]?.id})}
               options={typeData?.data}
               labelKey="title"
               placeholder="เลือก TYPE"
-              selected={sharingData.type.id}
+              selected={sharingData?.type?.id || sharingData?.type}
             />
           </Form.Group>
         </Container>

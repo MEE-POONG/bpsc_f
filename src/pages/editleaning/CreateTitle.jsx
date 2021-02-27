@@ -298,12 +298,12 @@ const CreateTitle = () => {
               id="basic-typeahead"
               labelKey="name"
               onChange={(e) => {
-                setLearningData({...learningData, type: e[0].id});
+                setLearningData({...learningData, type: e[0]?.id});
               }}
               options={typeData?.data}
               labelKey="title"
               placeholder="เลือก TYPE"
-              selected={learningData.type.id}
+              selected={learningData?.type?.id}
             />
           </Form.Group>
         </Container>

@@ -121,8 +121,8 @@ const SharingList = () => {
         </Col>
         <Col xs="12" lg="12" className="mt-5 tag-list">
           <div className="tag mr-5">
-            {sharing?.tags?.map(({tag}) => (
-              <p>{tag}</p>
+            {sharing?.tags?.map(({title}) => (
+              <p>{title}</p>
             ))}
           </div>
         </Col>

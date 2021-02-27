@@ -236,8 +236,8 @@ const LeaningList = () => {
         </Col>
         <Col xs="12" lg="12" className="mt-5 tag-list">
           <div className="tag mr-5">
-            {elearning?.tags?.map(({tag}) => (
-              <p>{tag}</p>
+            {elearning?.tags?.map(({title}) => (
+              <p>{title}</p>
             ))}
           </div>
         </Col>
