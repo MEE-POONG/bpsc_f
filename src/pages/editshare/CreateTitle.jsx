@@ -23,7 +23,7 @@ const CreateTitle = () => {
     title: "",
     content: "",
     isDraft: "true",
-    tags: [{id: 1}],
+    tags: [],
     type: "",
   });
   const [tagData, setTagData] = useState(null);
@@ -51,7 +51,6 @@ const CreateTitle = () => {
     });
   }, []);
   const navigate = useNavigate();
-
   useEffect(() => {
     API_GET_TAGS()
       .then((e) => {
@@ -262,14 +261,13 @@ const CreateTitle = () => {
               options={tagData?.data}
               labelKey="title"
               placeholder="เลือก TAG"
-              selected={sharingData.tag}
+              selected={sharingData.tags}
+              defaultSelected={sharingData.tags}
               // defaultSelected={tagData?.data?.slice(0, 4)}
             />
           </Form.Group>
         </Container>
       </div>
-
-
 
       <div className="tag">
         <Container>
@@ -297,11 +295,11 @@ const CreateTitle = () => {
               labelKey="title"
               placeholder="เลือก TYPE"
               selected={sharingData?.type?.id}
+              defaultSelected={typeData?.data?.filter(({id}) => id === 1)}
             />
           </Form.Group>
         </Container>
       </div>
-
     </div>
   );
 };

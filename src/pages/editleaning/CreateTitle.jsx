@@ -37,7 +37,6 @@ const CreateTitle = () => {
       {id: 5, title: "บทความ"},
     ],
   });
-
   const [imgData, setImgData] = useState(null);
   const [imgDataURL, setImgDataURL] = useState(null);
   useEffect(() => {
@@ -46,8 +45,8 @@ const CreateTitle = () => {
         title: result?.data?.elearning?.title,
         content: result?.data?.elearning?.content,
         videoLink: result?.data?.elearning?.videoLink,
-        tags: [],
-        type: result?.data?.elearning?.type
+        tags: result?.data?.tags,
+        type: result?.data?.elearning?.type,
       });
       setImgDataURL(IMAGE_URL + result?.data?.elearning?.elearningPicture);
     });
@@ -269,7 +268,8 @@ const CreateTitle = () => {
               options={tagData?.data}
               labelKey="title"
               placeholder="เลือก TAG"
-              selected={learningData.tag}
+              selected={learningData.tags}
+              defaultSelected={learningData.tags}
               // defaultSelected={tagData?.data?.slice(0, 4)}
             />
           </Form.Group>
@@ -304,6 +304,7 @@ const CreateTitle = () => {
               labelKey="title"
               placeholder="เลือก TYPE"
               selected={learningData?.type?.id}
+              defaultSelected={typeData?.data?.filter(({id}) => id === 1)}
             />
           </Form.Group>
         </Container>

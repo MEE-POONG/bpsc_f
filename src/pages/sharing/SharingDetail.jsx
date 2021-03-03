@@ -75,7 +75,13 @@ const SharingDetail = () => {
         <Row>
           <Col lg="8">
             <Card.Title>Hope Sharing</Card.Title>
-            <Card.Subtitle>แบ่งปันประสบการณ์</Card.Subtitle>
+            <Card.Subtitle>
+              แบ่งปันประสบการณ์
+              {type === '1' ? ' คำแนะนำแบบสั้น' : ''}
+              {type === '2' ? ' ประเมินแบบสั้น' : ''}
+              {type === '3' ? ' ฝึกสติแบบสั้น' : ''}
+              {type === '4' ? ' สติบําบัด': ''}
+            </Card.Subtitle>
           </Col>
           <Col lg="4" className="align-self-center">
             <InputGroup>
