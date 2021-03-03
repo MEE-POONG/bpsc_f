@@ -158,7 +158,6 @@ const GalleryAlbum = () => {
         <Modal
           show={show}
           onHide={handleClose}
-          backdrop="static"
           keyboard={false}
           className="d-flex justify-content-center gallery-page"
         >
