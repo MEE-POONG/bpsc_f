@@ -121,5 +121,17 @@ body {
   background-color: #6fcf97 !important;
   border-color: #6fcf97 !important;
   color: #ffffff !important;
-  border-radius: 25px !important;
+  border-radius: 50px !important;
+}
+.btn-success,
+.btn-green,
+.btn-primary {
+  color: #fff !important;
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+.btn-success:hover,
+.btn-green:hover,
+.btn-primary:hover {
+  background-color: #00e25b !important;
 }
