@@ -16,6 +16,7 @@ import {useNavigate} from "react-router-dom";
 import {NavLink} from "react-router-dom";
 
 import {useParams} from "react-router-dom";
+import CKEditor from "ckeditor4-react";
 
 import {
   API_GET_GALLERY_BY_ID,
@@ -194,7 +195,7 @@ const GalleryAlbum = () => {
                             <Row>
                               <Col md="12">
                                 <div className="header">
-                                  <Form.Group controlId="formBasicEmail">
+                                  {/* <Form.Group controlId="formBasicEmail">
                                     <Form.Label>ชื่อ</Form.Label>
                                     <Form.Control
                                       type="text"
@@ -208,10 +209,10 @@ const GalleryAlbum = () => {
                                         });
                                       }}
                                     />
-                                  </Form.Group>
+                                  </Form.Group> */}
                                   <Form.Group controlId="formBasicEmail">
                                     <Form.Label>รายละเอียด</Form.Label>
-                                    <Form.Control
+                                    {/* <Form.Control
                                       type="text"
                                       as="textarea"
                                       onChange={(e) => {
@@ -223,8 +224,33 @@ const GalleryAlbum = () => {
                                       defaultValue={
                                         galleryPhoto?.data[galleryPhotoID]?.description
                                       }
-                                    />
+                                    /> */}
                                   </Form.Group>
+                                  {galleryPhoto?.data[galleryPhotoID]?.description ? (
+                                    <CKEditor
+                                      value={galleryPhoto?.data[galleryPhotoID]?.description}
+                                      onChange={(evt) => {
+                                        setSharingData({...sharingData, description: evt.editor.getData()});
+                                      }}
+                                      // onChange={(evt) => console.log(evt.editor.getData())}
+                                      data={galleryPhoto?.data[galleryPhotoID]?.description}
+                                      // onChange={this.onEditorTHChange}
+                                      // config={{
+                                      //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
+                                      // }}
+                                    />
+                                  ) : <CKEditor
+                                      value={galleryPhoto?.data[galleryPhotoID]?.description}
+                                      onChange={(evt) => {
+                                        setSharingData({...sharingData, description: evt.editor.getData()});
+                                      }}
+                                      // onChange={(evt) => console.log(evt.editor.getData())}
+                                      data={galleryPhoto?.data[galleryPhotoID]?.description}
+                                      // onChange={this.onEditorTHChange}
+                                      // config={{
+                                      //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
+                                      // }}
+                                    />}
                                 </div>
                               </Col>
                               <Col md="12">
@@ -267,7 +293,14 @@ const GalleryAlbum = () => {
                   </div>
                 ) : (
                   <div className="float-left py-5">
-                    <h2>{galleryPhoto?.data[galleryPhotoID]?.description}</h2>
+                    {/* <h2>{galleryPhoto?.data[galleryPhotoID]?.description}</h2> */}
+
+                    <div
+                      className="h2"
+                      dangerouslySetInnerHTML={{
+                        __html: galleryPhoto?.data[galleryPhotoID]?.description,
+                      }}
+                    />
                   </div>
                 )}
               </Col>

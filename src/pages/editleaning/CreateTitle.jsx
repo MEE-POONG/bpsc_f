@@ -210,7 +210,7 @@ const CreateTitle = () => {
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>รายละเอียดย่อของบทเรียน</Form.Label>
-                  <Form.Control
+                  {/* <Form.Control
                     type="text"
                     id="content"
                     as="textarea"
@@ -218,11 +218,11 @@ const CreateTitle = () => {
                     onChange={(e) => {
                       setLearningData({...learningData, content: e.target.value});
                     }}
-                  />
+                  /> */}
                 </Form.Group>
               </div>
             </Col>
-            {/* <Col xs="12">
+            <Col xs="12">
               {learningData.content ? (
                 <CKEditor
                   value={learningData.content}
@@ -237,7 +237,7 @@ const CreateTitle = () => {
                   // }}
                 />
               ) : null}
-            </Col> */}
+            </Col>
           </Row>
         </div>
       </Container>

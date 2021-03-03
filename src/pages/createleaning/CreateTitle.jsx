@@ -176,29 +176,23 @@ const CreateTitle = () => {
                 </Form.Group>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>CONTENT</Form.Label>
-                  <Form.Control
+                  {/* <Form.Control
                     type="text"
                     id="content"
                     as="textarea"
                     onChange={(e) => {
                       setSharingData({...sharingData, content: e.target.value});
                     }}
-                  />
+                  /> */}
                 </Form.Group>
               </div>
             </Col>
             <Col lg="12">
-              {/* <CKEditor
+              <CKEditor
                 onChange={(evt) => {
                   setSharingData({...sharingData, content: evt.editor.getData()});
                 }}
-                // onChange={(evt) => console.log(evt.editor.getData())}
-                // data={this.state.events_detail_th}
-                // onChange={this.onEditorTHChange}
-                // config={{
-                //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
-                // }}
-              /> */}
+              />
             </Col>
           </Row>
         </div>

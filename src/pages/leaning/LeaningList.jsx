@@ -207,8 +207,17 @@ const LeaningList = () => {
           )}
         </Col>
         <Col xs="12" lg="12">
-          <h1>{elearning?.elearning?.title}</h1>
-          <h3>{elearning?.elearning?.content}</h3>
+          {/* <h1>{elearning?.elearning?.title}</h1>
+          <h3>{elearning?.elearning?.content}</h3> */}
+
+          <div
+            className="h1 font-weight-bold"
+            dangerouslySetInnerHTML={{__html: elearning?.elearning?.title}}
+          />
+          <div
+            className="h3"
+            dangerouslySetInnerHTML={{__html: elearning?.elearning?.content}}
+          />
           <h3 className="contact">
             <span className="mr-5">
               {moment(elearning?.elearning?.createAt).format("LL")}
