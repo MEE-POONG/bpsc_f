@@ -244,8 +244,23 @@ const TheLogin = () => {
   );
   return (
     <>
-      <Button variant="green-set" className="nav-link green-set px-5 py-3" onClick={handleShow}>
-        LOGIN
+      <Button
+        variant="green-set"
+        className="nav-link green-set px-5 py-3"
+        style={{borderRadius: "25px"}}
+        onClick={handleShow}
+      >
+        <Row>
+          {" "}
+          <Image src="/image/header/WhiteLogo.png" className="pr-3" width="55px" />{" "}
+          <h1
+            style={{
+              placeSelf: "center",
+            }}
+          >
+            LOGIN
+          </h1>{" "}
+        </Row>
       </Button>
       <Modal
         size="md"
@@ -269,7 +284,7 @@ const TheLogin = () => {
                 style={{
                   alignSelf: "right",
                   marginTop: "14px",
-                  paddingRight: "12.5px"
+                  paddingRight: "12.5px",
                 }}
               >
                 {titleCardLogin}

@@ -90,7 +90,7 @@ const SheetOne = () => {
                 <Image src="/image/love.png" />
                 <br />
                 <p style={{fontSize: "x-small", margin: "unset"}}>
-                  BASED BRIEF INTERVENTION
+                  MINDFULNESS BASED BRIEF INTERVENTION
                 </p>
                 <p style={{fontSize: "x-small", margin: "unset"}}>(MBBI)</p>
               </center>
