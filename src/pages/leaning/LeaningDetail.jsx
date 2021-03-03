@@ -75,8 +75,15 @@ const LeaningDetail = () => {
       <Container className="title mb-5">
         <Row>
           <Col lg="8">
-            <Card.Title>E - Leaning</Card.Title>
-            <Card.Subtitle>เรียนรู้ผ่านระบบออนไลน์</Card.Subtitle>
+            <Card.Title>SELF - Leaning</Card.Title>
+            <Card.Subtitle>
+              เรียนรู้ผ่านระบบออนไลน์
+              {type === "1" ? " BPSC TALK" : ""}
+              {type === "2" ? " สร้าง รพ BPSC" : ""}
+              {type === "3" ? " E-LEARNING" : ""}
+              {type === "4" ? " Event" : ""}
+              {type === "5" ? " บทความ" : ""}
+            </Card.Subtitle>
           </Col>
           <Col lg="4" className="align-self-center">
             <InputGroup>
@@ -156,7 +163,9 @@ const LeaningDetail = () => {
                             </Card>
                             <Media.Body>
                               <p>
-                                <b className="text-overflow-1" style={{color: "#000"}}>{title}</b>
+                                <b className="text-overflow-1" style={{color: "#000"}}>
+                                  {title}
+                                </b>
                               </p>
                             </Media.Body>
                           </Media>
