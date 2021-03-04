@@ -13,13 +13,14 @@ import {
 import {NavLink, useNavigate} from "react-router-dom";
 import Notification from "./TheNotification";
 import TheLogin from "./TheLogin";
-import {faUser, faBell, faPen, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
+import {faUser, faBell, faPen, faSignOutAlt, faFileDownload} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
   API_GET_USER_INFO,
   API_GET_USER_UPDATE,
   API_CHECK_NOTIFICATION,
   IMAGE_URL,
+  API_GET_MANUAL,
 } from "../apis";
 import moment from "moment";
 
@@ -214,6 +215,11 @@ const TheHeader = () => {
                 <NavDropdown.Item onClick={() => navigate("create-share")}>
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์
                 </NavDropdown.Item>
+                {+localStorage.getItem("isAdmin") === 1 && (
+                  <NavDropdown.Item onClick={API_GET_MANUAL}>
+                    <FontAwesomeIcon icon={faFileDownload} /> &nbsp;คู่มือการใช้งาน
+                  </NavDropdown.Item>
+                )}
                 {+localStorage.getItem("isAdmin") === 1 && (
                   <NavDropdown.Item onClick={() => navigate("create-gallery")}>
                     <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแกลเลอรี่

@@ -5,6 +5,7 @@ export const BASE_URL = "https://api.thaibpsc.com/";
 export const IMAGE_URL = "https://api.thaibpsc.com/image/";
 export const DOWNLOAD_URL = "https://api.thaibpsc.com/documentDownload/";
 import Swal from "sweetalert2";
+const FileDownload = require("js-file-download");
 
 const REFRESH_TOKEN = async () => {
   const token = localStorage.getItem("refresh-token");
@@ -29,7 +30,7 @@ const REFRESH_TOKEN = async () => {
     localStorage.setItem("refresh-token", response.data.refreshToken);
     return response.data;
   } catch (error) {
-    error.response.data.error.code === 'REFRESH_TOKEN_INVALID' && localStorage.clear()
+    error.response.data.error.code === "REFRESH_TOKEN_INVALID" && localStorage.clear();
     return;
   }
 };
@@ -201,7 +202,13 @@ export const API_DEL_ELEARNING_BY_ID = async (id) => {
     });
 };
 
-export const API_GET_SHARING = async (title = "", page = "", size = "", tag = "", type = "") => {
+export const API_GET_SHARING = async (
+  title = "",
+  page = "",
+  size = "",
+  tag = "",
+  type = ""
+) => {
   var config = {
     method: "get",
     url: `/sharing?title=${title}&size=${size}&tag=${tag}&page=${page}&type=${type}`,
@@ -209,7 +216,13 @@ export const API_GET_SHARING = async (title = "", page = "", size = "", tag = ""
 
   return API_CONFIG(config);
 };
-export const API_GET_LEARNING = async (title = "", page = "", size = "", tag = "", type = "") => {
+export const API_GET_LEARNING = async (
+  title = "",
+  page = "",
+  size = "",
+  tag = "",
+  type = ""
+) => {
   var config = {
     method: "get",
     url: `/elearning?title=${title}&size=${size}&tag=${tag}&page=${page}&type=${type}`,
@@ -896,9 +909,6 @@ export const API_DEL_GALLERY_PHOTO_BY_ID = async (id) => {
     });
 };
 
-
-
-
 export const API_CREATE_FAQ = async (userData) => {
   var data = JSON.stringify(userData);
 
@@ -944,10 +954,6 @@ export const API_DELETE_FAQ = async (id) => {
   return API_CONFIG(config);
 };
 
-
-
-
-
 export const API_CREATE_HOSPITAL = async (userData) => {
   var data = JSON.stringify(userData);
 
@@ -991,4 +997,24 @@ export const API_DELETE_HOSPITAL = async (id) => {
   };
 
   return API_CONFIG(config);
+};
+export const API_GET_ISFIRSTLOGIN = async () => {
+  var config = {
+    method: "get",
+    url: `/isfirstlogin`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_MANUAL = async () => {
+  var config = {
+    method: "get",
+    url: `/manual`,
+    responseType: "blob",
+  };
+
+  return API_CONFIG(config).then((response) => {
+    FileDownload(response.data, "manual.pdf");
+  });
 };
