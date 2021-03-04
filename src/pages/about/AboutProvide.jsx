@@ -1,5 +1,6 @@
 import React from "react";
 import {Col, Container, Image, Row, Media} from "react-bootstrap";
+import AboutAffiliateNetwork from "./AboutAffiliateNetwork";
 
 const AboutProvide = () => {
   return (
@@ -56,6 +57,9 @@ const AboutProvide = () => {
               />
             </Col>
           </Row>
+
+          <AboutAffiliateNetwork />
+
           <div className="provide-title">
             <h1>BPSC</h1>
             <h1>
