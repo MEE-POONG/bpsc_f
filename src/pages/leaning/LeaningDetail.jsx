@@ -8,6 +8,7 @@ import {
   Col,
   Pagination,
   Media,
+  Button,
 } from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 import {faEye, faHeart, faSearch, faHeartBroken} from "@fortawesome/free-solid-svg-icons";
@@ -19,6 +20,7 @@ import {
   API_UN_fAVORITE_E_lEARNING,
   API_DEL_ELEARNING_BY_ID,
   IMAGE_URL,
+  API_GET_RANDOMELEARNINGTAG,
 } from "../../apis";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
@@ -26,21 +28,39 @@ import {useParams} from "react-router-dom";
 
 const LeaningDetail = () => {
   const {type} = useParams();
+  const [sharingRandomTag, setSharingRandomTag] = useState("");
+  const [sharingRandom, setSharingRandom] = useState(null);
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
   const [learning, setLearning] = useState(null);
 
   useEffect(() => {
-    API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
+    API_GET_LEARNING(
+      search,
+      page,
+      "",
+      sharingRandomTag || undefined,
+      type || undefined
+    ).then((result) => {
       setLearning(result?.data);
     });
-  }, [search, page, type]);
+
+    API_GET_RANDOMELEARNINGTAG().then((result) => {
+      setSharingRandom(result?.data);
+    });
+  }, [search, page, type, sharingRandomTag]);
 
   const handleFav = (id) => {
     API_fAVORITE_E_lEARNING(id)
       .then(() => {
-        API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
+        API_GET_LEARNING(
+          search,
+          page,
+          "",
+          sharingRandomTag || undefined,
+          type || undefined
+        ).then((result) => {
           setLearning(result?.data);
         });
       })
@@ -49,7 +69,13 @@ const LeaningDetail = () => {
   const handleUnFav = (id) => {
     API_UN_fAVORITE_E_lEARNING(id)
       .then(() => {
-        API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
+        API_GET_LEARNING(
+          search,
+          page,
+          "",
+          sharingRandomTag || undefined,
+          type || undefined
+        ).then((result) => {
           setLearning(result?.data);
         });
       })
@@ -59,12 +85,24 @@ const LeaningDetail = () => {
   const handleDel = (id) => {
     API_DEL_ELEARNING_BY_ID(id)
       .then(() => {
-        API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
+        API_GET_LEARNING(
+          search,
+          page,
+          "",
+          sharingRandomTag || undefined,
+          type || undefined
+        ).then((result) => {
           setLearning(result?.data);
         });
       })
       .catch(() => {
-        API_GET_LEARNING(search, page, "", "", type || undefined).then((result) => {
+        API_GET_LEARNING(
+          search,
+          page,
+          "",
+          sharingRandomTag || undefined,
+          type || undefined
+        ).then((result) => {
           setLearning(result?.data);
         });
       });
@@ -103,11 +141,35 @@ const LeaningDetail = () => {
           </Col>
         </Row>
       </Container>
+
+      <Container className="detail pb-5">
+        {sharingRandom?.tags?.map(({id, title}) => (
+          <Button
+            variant="outline-primary"
+            className="text-custom-tag outline-primary"
+            onClick={() => setSharingRandomTag(id)}
+          >
+            {title}
+          </Button>
+        ))}
+        <Button
+          variant="outline-primary"
+          className="text-custom-tag outline-primary"
+          onClick={() => setSharingRandomTag("")}
+        >
+          CLEAR
+        </Button>
+      </Container>
+
       <Container className="detail learning">
         <Row>
           <Col xs="12" lg="12">
             <Card.Subtitle className="scroll">
-              {learning?.totalRecord} E-learning
+              {learning?.totalRecord} E-learning{" "}
+              {sharingRandomTag
+                ? " by tag " +
+                  sharingRandom?.tags.find(({id}) => id === sharingRandomTag)?.title
+                : ""}
             </Card.Subtitle>
           </Col>
         </Row>{" "}

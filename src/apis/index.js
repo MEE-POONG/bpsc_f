@@ -998,6 +998,7 @@ export const API_DELETE_HOSPITAL = async (id) => {
 
   return API_CONFIG(config);
 };
+
 export const API_GET_ISFIRSTLOGIN = async () => {
   var config = {
     method: "get",
@@ -1017,4 +1018,22 @@ export const API_GET_MANUAL = async () => {
   return API_CONFIG(config).then((response) => {
     FileDownload(response.data, "manual.pdf");
   });
+};
+
+export const API_GET_RANDOMSHARINGTAG = async () => {
+  var config = {
+    method: "get",
+    url: `/randomSharingTag`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_RANDOMELEARNINGTAG = async () => {
+  var config = {
+    method: "get",
+    url: `/randomElearningTag`,
+  };
+
+  return API_CONFIG(config);
 };

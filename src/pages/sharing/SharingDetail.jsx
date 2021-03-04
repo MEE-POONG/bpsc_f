@@ -8,6 +8,7 @@ import {
   Col,
   Image,
   Pagination,
+  Button,
 } from "react-bootstrap";
 import {faEye, faHeart, faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -17,6 +18,7 @@ import {
   API_UN_fAVORITE_SHARING,
   API_DELETE_SHARING,
   IMAGE_URL,
+  API_GET_RANDOMSHARINGTAG,
 } from "../../apis";
 import {useNavigate} from "react-router-dom";
 import {useParams} from "react-router-dom";
@@ -24,21 +26,38 @@ import {useParams} from "react-router-dom";
 const SharingDetail = () => {
   const {type} = useParams();
 
+  const [sharingRandomTag, setSharingRandomTag] = useState("");
+  const [sharingRandom, setSharingRandom] = useState(null);
   const [sharing, setSharing] = useState(null);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
 
   useEffect(() => {
-    API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
+    API_GET_SHARING(
+      search,
+      page,
+      "",
+      sharingRandomTag || undefined,
+      type || undefined
+    ).then((result) => {
       setSharing(result?.data);
     });
-  }, [search, page, type]);
+    API_GET_RANDOMSHARINGTAG().then((result) => {
+      setSharingRandom(result?.data);
+    });
+  }, [search, page, type, sharingRandomTag]);
 
   const handleFav = (id) => {
     API_fAVORITE_SHARING(id)
       .then(() => {
-        API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
+        API_GET_SHARING(
+          search,
+          page,
+          "",
+          sharingRandomTag || undefined,
+          type || undefined
+        ).then((result) => {
           setSharing(result?.data);
         });
       })
@@ -48,7 +67,13 @@ const SharingDetail = () => {
   const handleUnFav = (id) => {
     API_UN_fAVORITE_SHARING(id)
       .then(() => {
-        API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
+        API_GET_SHARING(
+          search,
+          page,
+          "",
+          sharingRandomTag || undefined,
+          type || undefined
+        ).then((result) => {
           setSharing(result?.data);
         });
       })
@@ -58,12 +83,24 @@ const SharingDetail = () => {
   const handleDel = (id) => {
     API_DELETE_SHARING(id)
       .then(() => {
-        API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
+        API_GET_SHARING(
+          search,
+          page,
+          "",
+          sharingRandomTag || undefined,
+          type || undefined
+        ).then((result) => {
           setSharing(result?.data);
         });
       })
       .catch(() => {
-        API_GET_SHARING(search, page, "", "", type || undefined).then((result) => {
+        API_GET_SHARING(
+          search,
+          page,
+          "",
+          sharingRandomTag || undefined,
+          type || undefined
+        ).then((result) => {
           setSharing(result?.data);
         });
       });
@@ -77,10 +114,10 @@ const SharingDetail = () => {
             <Card.Title>Hope Sharing</Card.Title>
             <Card.Subtitle>
               แบ่งปันประสบการณ์
-              {type === '1' ? ' คำแนะนำแบบสั้น' : ''}
-              {type === '2' ? ' ประเมินแบบสั้น' : ''}
-              {type === '3' ? ' ฝึกสติแบบสั้น' : ''}
-              {type === '4' ? ' สติบําบัด': ''}
+              {type === "1" ? " คำแนะนำแบบสั้น" : ""}
+              {type === "2" ? " ประเมินแบบสั้น" : ""}
+              {type === "3" ? " ฝึกสติแบบสั้น" : ""}
+              {type === "4" ? " สติบําบัด" : ""}
             </Card.Subtitle>
           </Col>
           <Col lg="4" className="align-self-center">
@@ -101,11 +138,35 @@ const SharingDetail = () => {
           </Col>
         </Row>
       </Container>
+
+      <Container className="detail pb-5">
+        {sharingRandom?.tags?.map(({id, title}) => (
+          <Button
+            variant="outline-primary"
+            className="text-custom-tag outline-primary"
+            onClick={() => setSharingRandomTag(id)}
+          >
+            {title}
+          </Button>
+        ))}
+        <Button
+          variant="outline-primary"
+          className="text-custom-tag outline-primary"
+          onClick={() => setSharingRandomTag("")}
+        >
+          CLEAR
+        </Button>
+      </Container>
+
       <Container className="detail">
         <Row>
           <Col xs="12" lg="12">
             <Card.Subtitle className="scroll">
               {sharing?.totalRecord} Sharing
+              {sharingRandomTag
+                ? " by tag " +
+                  sharingRandom?.tags.find(({id}) => id === sharingRandomTag)?.title
+                : ""}
             </Card.Subtitle>
           </Col>
         </Row>
