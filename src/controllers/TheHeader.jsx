@@ -12,8 +12,15 @@ import {
 // import routes from '../routes'
 import {NavLink, useNavigate} from "react-router-dom";
 import Notification from "./TheNotification";
+import Donate from "./TheDonate";
 import TheLogin from "./TheLogin";
-import {faUser, faBell, faPen, faSignOutAlt, faFileDownload} from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faBell,
+  faPen,
+  faSignOutAlt,
+  faFileDownload,
+} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
   API_GET_USER_INFO,
@@ -168,7 +175,7 @@ const TheHeader = () => {
                 <a className="dropdown-h-item" onClick={() => nextPage("/doctor")}>
                   เครือข่ายพันธมิตร
                 </a>
-                <a className="dropdown-h-item">การสนับสนุน</a>
+                <Donate />
               </div>
             </NavLink>
 
