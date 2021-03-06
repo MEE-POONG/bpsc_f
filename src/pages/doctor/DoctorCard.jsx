@@ -11,7 +11,12 @@ import {
   Card,
   Button,
 } from "react-bootstrap";
-import {API_GET_DOCTOR, API_DEL_DOCTOR_BY_ID, IMAGE_URL} from "../../apis";
+import {
+  API_GET_DOCTOR,
+  API_DEL_DOCTOR_BY_ID,
+  IMAGE_URL,
+  API_GET_RANDOMPROTOTYPEHOSPITALTAG,
+} from "../../apis";
 import {useNavigate} from "react-router-dom";
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -19,6 +24,9 @@ import {NavLink} from "react-router-dom";
 import Swal from "sweetalert2";
 
 const DoctorCard = () => {
+  const [sharingRandomTag, setSharingRandomTag] = useState("");
+  const [sharingRandom, setSharingRandom] = useState(null);
+
   const [show, setShow] = useState(false);
   const [showData, setShowData] = useState(0);
   const handleClose = () => setShow(false);
@@ -31,11 +39,17 @@ const DoctorCard = () => {
   const [doctor, setDoctor] = useState(null);
 
   useEffect(() => {
-    API_GET_DOCTOR(search, page).then((result) => {
+    API_GET_RANDOMPROTOTYPEHOSPITALTAG().then((result) => {
+      setSharingRandom(result?.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    API_GET_DOCTOR(search, page, "12", sharingRandomTag || undefined).then((result) => {
       setDoctor(result?.data);
     });
-    console.log(search, page);
-  }, [search, page]);
+    console.log(search, page, sharingRandomTag);
+  }, [search, page, sharingRandomTag]);
 
   const handleDel = (id) => {
     Swal.fire("Are you sure!", "ต้องการลบใช่ไหม!", "info").then((result) => {
@@ -69,7 +83,34 @@ const DoctorCard = () => {
           </Col> */}
         </Row>
       </Container>
+
+      <Container className="detail pb-5">
+        {sharingRandom?.tags?.map(({tag}) => (
+          <Button
+            variant="outline-primary"
+            className="text-custom-tag outline-primary"
+            onClick={() => setSharingRandomTag(tag)}
+          >
+            {tag}
+          </Button>
+        ))}
+        <Button
+          variant="outline-primary"
+          className="text-custom-tag outline-primary"
+          onClick={() => setSharingRandomTag("")}
+        >
+          CLEAR
+        </Button>
+      </Container>
+
       <Container className="detail">
+        <Row>
+          <Col xs="12" lg="12">
+            <Card.Subtitle className="scroll">
+              {sharingRandomTag ? " Search by tag " + sharingRandomTag : ""}
+            </Card.Subtitle>
+          </Col>
+        </Row>{" "}
         <Row className="py-5">
           {doctor?.data?.map(
             ({id, firstName, lastName, email, phone, picture, content}, idx) => (

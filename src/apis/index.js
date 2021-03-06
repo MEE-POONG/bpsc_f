@@ -275,10 +275,10 @@ export const API_GET_GALLERY_PHOTO_BY_ID = (id, page = "", size = "") => {
   return API_CONFIG(config);
 };
 
-export const API_GET_DOCTOR = (title = "", page = "", size = "", tag = "") => {
+export const API_GET_DOCTOR = (title = "", page = "", size = "", hospital = "") => {
   var config = {
     method: "get",
-    url: `/doctor?title=${title}&size=${size}&tag=${tag}&page=${page}`,
+    url: `/doctor?title=${title}&size=${size}&hospital=${hospital}&page=${page}`,
   };
 
   return API_CONFIG(config);
@@ -326,7 +326,9 @@ export const API_GET_USER_INFO = async (id) => {
     url: `/user/${id}`,
   };
 
-  return API_CONFIG(config);
+  if (localStorage.getItem("token")) {
+    return API_CONFIG(config);
+  }
 };
 
 export const API_GET_USER_UPDATE = async (id, userData) => {
@@ -528,8 +530,9 @@ export const API_CHECK_NOTIFICATION = async () => {
     method: "get",
     url: `/checkNotification`,
   };
-
-  return API_CONFIG(config);
+  if (localStorage.getItem("token")) {
+    return API_CONFIG(config);
+  }
 };
 
 export const API_GET_NOTIFICATION = async (page = "", size = "") => {
@@ -1033,6 +1036,15 @@ export const API_GET_RANDOMELEARNINGTAG = async () => {
   var config = {
     method: "get",
     url: `/randomElearningTag`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_RANDOMPROTOTYPEHOSPITALTAG = async () => {
+  var config = {
+    method: "get",
+    url: `/randomPrototypeHospitalTag`,
   };
 
   return API_CONFIG(config);

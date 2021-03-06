@@ -16,7 +16,7 @@ class About extends Component {
         <AboutSubTitle />
         <AboutProvide />
         <AboutInnovation />
-        <AboutTeam />
+        {/* <AboutTeam /> */}
         <Row className="mx-0">
           <Col md="6" className="p-0 about-contact-us-bg">
             <AboutContactUS />

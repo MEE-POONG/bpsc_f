@@ -43,10 +43,13 @@ const SharingDetail = () => {
     ).then((result) => {
       setSharing(result?.data);
     });
+  }, [search, page, type, sharingRandomTag]);
+
+  useEffect(() => {
     API_GET_RANDOMSHARINGTAG().then((result) => {
       setSharingRandom(result?.data);
     });
-  }, [search, page, type, sharingRandomTag]);
+  }, []);
 
   const handleFav = (id) => {
     API_fAVORITE_SHARING(id)

@@ -45,11 +45,13 @@ const LeaningDetail = () => {
     ).then((result) => {
       setLearning(result?.data);
     });
+  }, [search, page, type, sharingRandomTag]);
 
+  useEffect(() => {
     API_GET_RANDOMELEARNINGTAG().then((result) => {
       setSharingRandom(result?.data);
     });
-  }, [search, page, type, sharingRandomTag]);
+  }, []);
 
   const handleFav = (id) => {
     API_fAVORITE_E_lEARNING(id)

@@ -145,7 +145,7 @@ body {
   border-radius: 20px;
 }
 
-.btn-outline-primary {
+/* .btn-outline-primary {
   border: 3px solid !important;
   border-color: radial-gradient(
     100% 252.46% at 0% 0%,
@@ -153,14 +153,12 @@ body {
     #26bdb4 100%
   ) !important;
   border-radius: 35% !important;
-  /* border-color: #2196f3 !important; */
-
   color: radial-gradient(100% 252.46% at 0% 0%, #5694cd 0%, #26bdb4 100%) !important;
 }
 
 .btn-outline-primary:hover {
   color: #ffffff !important;
-}
+} */
 
 .Button.Blue {
   border-bottom: 3px solid #284466;
