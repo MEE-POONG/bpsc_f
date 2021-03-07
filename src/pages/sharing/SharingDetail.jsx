@@ -146,8 +146,13 @@ const SharingDetail = () => {
         {sharingRandom?.tags?.map(({id, title}) => (
           <Button
             variant="outline-primary"
-            className="text-custom-tag outline-primary"
-            onClick={() => setSharingRandomTag(id)}
+            className={`text-custom-tag outline-primary ${
+              id === sharingRandomTag ? "active" : ""
+            }`}
+            onClick={() => {
+              setSharingRandomTag(id);
+              setPage(1);
+            }}
           >
             {title}
           </Button>
@@ -155,7 +160,10 @@ const SharingDetail = () => {
         <Button
           variant="outline-primary"
           className="text-custom-tag outline-primary"
-          onClick={() => setSharingRandomTag("")}
+          onClick={() => {
+            setSharingRandomTag("");
+            setPage(1);
+          }}
         >
           CLEAR
         </Button>

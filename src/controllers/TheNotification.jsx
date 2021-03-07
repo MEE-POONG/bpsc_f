@@ -19,7 +19,7 @@ const TheNotification = () => {
     API_GET_NOTIFICATION().then((result) => {
       setNotification(result?.data);
     });
-  }, []);
+  }, [show]);
 
   return (
     <>

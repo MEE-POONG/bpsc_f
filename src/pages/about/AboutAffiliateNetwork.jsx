@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from "react";
 import {Card, Col, Container, Row} from "react-bootstrap";
 import {API_GET_HOSPITAL} from "../../apis";
+import {useNavigate} from "react-router-dom";
 
 const AboutTitle = () => {
+    const navigate = useNavigate();
+
   const [data, setData] = useState({
     hospital: 0,
     prototype: 0,
@@ -23,7 +26,7 @@ const AboutTitle = () => {
           <p className="h1 font-weight-bold f-gradient">เครือข่ายพันธมิตร</p>
           <Card.Body className="text-center" style={{background: "unset"}}>
             <Row xs={12}>
-              <Col xs={6} className="p-5">
+              <Col xs={6} className="p-5" style={{cursor: "pointer"}} onClick={() => navigate('/doctor')}>
                 <div className="p-5 about-background-radial-gradient">
                   <h1
                     style={{
@@ -35,7 +38,7 @@ const AboutTitle = () => {
                   <h1>{data.hospital}+</h1>
                 </div>
               </Col>
-              <Col xs={6} className="p-5">
+              <Col xs={6} className="p-5" style={{cursor: "pointer"}} onClick={() => navigate('/doctor')}>
                 <div className="p-5 about-background-radial-gradient">
                   <h1
                     style={{

@@ -20,6 +20,7 @@ import {
   faPen,
   faSignOutAlt,
   faFileDownload,
+  faSeedling,
 } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
@@ -215,7 +216,7 @@ const TheHeader = () => {
                 <NavDropdown.Item onClick={() => navigate("profile")}>
                   <FontAwesomeIcon icon={faUser} /> &nbsp; โปรไฟล์ของฉัน
                 </NavDropdown.Item>
-                <NavDropdown.Item>
+                <NavDropdown.Item onClick={() => setReadHover((e) => (e += 1))}>
                   {/* <FontAwesomeIcon icon={faBell} /> &nbsp;  */}
                   <Notification />
                 </NavDropdown.Item>
@@ -260,6 +261,11 @@ const TheHeader = () => {
                 {+localStorage.getItem("isAdmin") === 1 && (
                   <NavDropdown.Item onClick={() => navigate("create-doctor")}>
                     <FontAwesomeIcon icon={faPen} /> &nbsp;เพิ่ม Doctor
+                  </NavDropdown.Item>
+                )}
+                {+localStorage.getItem("isAdmin") === 1 && (
+                  <NavDropdown.Item onClick={() => navigate("broadcast")}>
+                    <FontAwesomeIcon icon={faSeedling} /> &nbsp;ส่ง message
                   </NavDropdown.Item>
                 )}
                 {/* <NavDropdown.Item>

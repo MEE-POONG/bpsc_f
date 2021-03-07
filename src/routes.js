@@ -30,6 +30,7 @@ const Login = React.lazy(() => import("./pages/login"));
 const Profile = React.lazy(() => import("./pages/profile"));
 const Verify = React.lazy(() => import("./pages/verify"));
 const RePassword = React.lazy(() => import("./pages/repassword"));
+const Broadcast = React.lazy(() => import("./pages/Broadcast"));
 
 const FourZeroFour = React.lazy(() => import("./pages/404"));
 
@@ -92,6 +93,7 @@ const routes = [
   {path: "/gallery-photo/:id", name: "EDIT GALLERY PHOTO", component: EditPHOTO},
   {path: "/verify", name: "VERIFY", component: Verify},
   {path: "/changeForgetPassword", name: "RE PASSWORD", component: RePassword},
+  {path: "/broadcast", name: "Broadcast", component: Broadcast},
 
   {path: "*", name: "404", component: FourZeroFour},
 ];

@@ -10,6 +10,7 @@ import ScrollNum from "./ScrollNum";
 import ContactTitle from "./ContactTitle";
 import Ksstext from "./Ksstext";
 import Experience from "./Experience";
+import Supporter from "./Supporter";
 
 class Home extends Component {
   render() {
@@ -25,6 +26,7 @@ class Home extends Component {
         <Ksstext/>
         <EventBox />
         <Experience />
+        <Supporter />
         <Frequently />
       </div>
     );

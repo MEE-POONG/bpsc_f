@@ -88,8 +88,13 @@ const DoctorCard = () => {
         {sharingRandom?.tags?.map(({tag}) => (
           <Button
             variant="outline-primary"
-            className="text-custom-tag outline-primary"
-            onClick={() => setSharingRandomTag(tag)}
+            className={`text-custom-tag outline-primary ${
+              tag === sharingRandomTag ? "active" : ""
+            }`}
+            onClick={() => {
+              setSharingRandomTag(tag);
+              setPage(1);
+            }}
           >
             {tag}
           </Button>
@@ -97,7 +102,10 @@ const DoctorCard = () => {
         <Button
           variant="outline-primary"
           className="text-custom-tag outline-primary"
-          onClick={() => setSharingRandomTag("")}
+          onClick={() => {
+            setSharingRandomTag("");
+            setPage(1);
+          }}
         >
           CLEAR
         </Button>
@@ -183,8 +191,8 @@ const DoctorCard = () => {
                 <img
                   className="view-img"
                   src={
-                    doctor?.data[showData].picture
-                      ? IMAGE_URL + doctor?.data[showData].picture
+                    doctor?.data[showData]?.picture
+                      ? IMAGE_URL + doctor?.data[showData]?.picture
                       : "https://chiccarrent.com/files/images/default-placeholder.png"
                   }
                   alt={showData + 1}
@@ -195,24 +203,28 @@ const DoctorCard = () => {
                 <Card.Body>
                   <Card.Title>
                     <h1>
-                      {doctor?.data[showData].firstName} {doctor?.data[showData].lastName}
+                      {doctor?.data[showData]?.firstName}{" "}
+                      {doctor?.data[showData]?.lastName}
                     </h1>
                   </Card.Title>
-                  {/* <Card.Subtitle>{doctor?.data[showData].lastName}</Card.Subtitle> */}
+                  {/* <Card.Subtitle>{doctor?.data[showData]?.lastName}</Card.Subtitle> */}
                   <Card.Text>
-                    <h4>{doctor?.data[showData].content}</h4>
+                    <h4>{doctor?.data[showData]?.content}</h4>
                   </Card.Text>
                   <Card.Text>
                     <h4>
-                      {doctor?.data[showData].phone && "TEL"}{" "}
-                      {doctor?.data[showData].phone}
+                      {doctor?.data[showData]?.phone && "TEL"}{" "}
+                      {doctor?.data[showData]?.phone}
                     </h4>
                   </Card.Text>
                   <Card.Text>
-                    <h4>{doctor?.data[showData].email}</h4>
+                    <h4>{doctor?.data[showData]?.email}</h4>
                   </Card.Text>
                   <Card.Text>
-                    <h4>{doctor?.data[showData].hospital}</h4>
+                    <h4>{doctor?.data[showData]?.hospital}</h4>
+                  </Card.Text>
+                  <Card.Text>
+                    <h4>{doctor?.data[showData]?.bio}</h4>
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer
@@ -226,7 +238,7 @@ const DoctorCard = () => {
                     type="button"
                     className="btn btn-success about-talk-with-us-btn-success"
                     onClick={() =>
-                      navigate("/ContactDoctor/" + doctor?.data[showData].id)
+                      navigate("/ContactDoctor/" + doctor?.data[showData]?.id)
                     }
                   >
                     CONTACT DOCTOR
@@ -234,7 +246,7 @@ const DoctorCard = () => {
                   <Row style={{justifyContent: "center"}}>
                     {+localStorage.getItem("isAdmin") === 1 ? (
                       <NavLink
-                        to={`/edit-doctor/${doctor?.data[showData].id}`}
+                        to={`/edit-doctor/${doctor?.data[showData]?.id}`}
                         className="pl-2 nav-link"
                       >
                         <Button bsPrefix="btn-save" className="mb-5">
@@ -246,7 +258,7 @@ const DoctorCard = () => {
                       <NavLink
                         to={() => {}}
                         className="pl-2 nav-link"
-                        onClick={() => handleDel(doctor?.data[showData].id)}
+                        onClick={() => handleDel(doctor?.data[showData]?.id)}
                       >
                         <Button bsPrefix="btn-save btn-danger" className="mb-5">
                           DELETE

@@ -10,7 +10,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import routes from "./routes.js";
 import {API_GET_ISFIRSTLOGIN} from "./apis";
-import {Card, Modal, Button} from "react-bootstrap";
+import {Card, Modal, Button, Image} from "react-bootstrap";
 // import {useNavigate} from "react-router-dom";
 
 export default function App() {
@@ -21,11 +21,11 @@ export default function App() {
 
   useEffect(() => {
     if (localStorage.getItem("BPSC_USER_LOGIN") === "true") {
-      API_GET_ISFIRSTLOGIN().then(e => {
+      API_GET_ISFIRSTLOGIN().then((e) => {
         if (e?.data?.isFirstLogin) {
           handleShow();
         }
-      })
+      });
     }
   }, []);
 
@@ -66,20 +66,29 @@ export default function App() {
           keyboard={false}
           className="d-flex justify-content-center gallery-page"
         >
-          <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Card className="text-center p-5">
               {/* <Card.Header>Featured</Card.Header> */}
               <Card.Body className="p-5">
                 {/* <Card.Title>ถ้าคุณเป็นหมอ</Card.Title> */}
-                <Button
+                {/* <Button
                   variant="primary"
                   onClick={() =>
                     (window.location.href = "https://forms.gle/g9Ls5mMGdVPv87uK9")
                   }
                 >
                   คลิกที่นี่ ถ้าคุณเป็นหมอ
-                </Button>
+                </Button> */}
+                <Image
+                  alt="BPSC LOGO"
+                  src="/image/about/Capture10.png"
+                  // width="100"
+                  // className="d-inline-block align-tops"
+                  style={{maxWidth: "500px", cursor: "pointer"}}
+                  onClick={() =>
+                    (window.location.href = "https://forms.gle/g9Ls5mMGdVPv87uK9")
+                  }
+                />
               </Card.Body>
               {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}
             </Card>
@@ -87,9 +96,18 @@ export default function App() {
               {/* <Card.Header>Featured</Card.Header> */}
               <Card.Body className="p-5">
                 {/* <Card.Title>ถ้าคุณเป็นบุคคลทั่วไป</Card.Title> */}
-                <Button variant="primary" onClick={handleClose}>
+                {/* <Button variant="primary" onClick={handleClose}>
                   คลิกที่นี่ ถ้าคุณเป็นบุคคลทั่วไป
-                </Button>
+                </Button> */}
+
+                <Image
+                  alt="BPSC LOGO"
+                  src="/image/about/Capture11.png"
+                  style={{maxWidth: "500px", cursor: "pointer"}}
+                  onClick={handleClose}
+                  // width="100"
+                  // className="d-inline-block align-tops"
+                />
               </Card.Body>
               {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}
             </Card>

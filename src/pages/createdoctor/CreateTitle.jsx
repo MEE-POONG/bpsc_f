@@ -23,6 +23,7 @@ const CreateTitle = () => {
     phone: "",
     content: "",
     hospital: "",
+    bio: "",
   });
   const [imgData, setImgData] = useState(null);
   const navigate = useNavigate();
@@ -226,6 +227,19 @@ const CreateTitle = () => {
                     type="text"
                     onChange={(e) => {
                       setSharingData({...sharingData, hospital: e.target.value});
+                    }}
+                  />
+                </Form.Group>
+              </div>
+            </Col>
+            <Col md="12">
+              <div className="header">
+                <Form.Group controlId="formBasicBio">
+                  <Form.Label>bio</Form.Label>
+                  <Form.Control
+                    type="text"
+                    onChange={(e) => {
+                      setSharingData({...sharingData, bio: e.target.value});
                     }}
                   />
                 </Form.Group>

@@ -159,7 +159,25 @@ body {
 .btn-outline-primary:hover {
   color: #ffffff !important;
 } */
-
+.btn-outline-primary {
+  color: #8be0b7 !important;
+  border-color: #8be0b7 !important;
+}
+.btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #8be0b7 !important;
+  border-color: #8be0b7 !important;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff !important;
+  background-color: #8be0b7 !important;
+  border-color: #8be0b7 !important;
+}
+.btn-outline-primary.focus, .btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.2rem #8be0b7 !important;
+}
 .Button.Blue {
   border-bottom: 3px solid #284466;
   background-color: #284466;
@@ -182,7 +200,8 @@ body {
 ._610a0 {
   margin: 3em 0;
 }
-a:active, a:hover {
+a:active,
+a:hover {
   text-decoration: none;
   outline: 0;
 }

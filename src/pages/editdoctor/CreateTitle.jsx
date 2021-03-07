@@ -27,6 +27,7 @@ const CreateTitle = () => {
     phone: "",
     content: "",
     hospital: "",
+    bio: "",
   });
   const [imgData, setImgData] = useState(null);
   const navigate = useNavigate();
@@ -40,6 +41,7 @@ const CreateTitle = () => {
         phone: result?.data?.phone|| "",
         content: result?.data?.content|| "",
         hospital: result?.data?.hospital|| "",
+        bio: result?.data?.bio|| "",
         picture: result?.data?.picture|| "",
       });
       setImgDataURL(IMAGE_URL + result?.data?.picture);
@@ -300,16 +302,20 @@ const CreateTitle = () => {
                     }}
                   />
                 </Form.Group>
-                {/* <Form.Group controlId="formBasicEmail">
-                    <Form.Label>รายละเอียดย่อของหมอ (0/300)</Form.Label>
-                    <Form.Control
-                      type="text"
-                      as="textarea"
-                      onChange={(e) => {
-                        setSharingData({...sharingData, content: e.target.value});
-                      }}
-                    />
-                  </Form.Group> */}
+              </div>
+            </Col>
+            <Col md="12">
+              <div className="header">
+                <Form.Group controlId="formBasicBio">
+                  <Form.Label>bio</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={sharingData.bio}
+                    onChange={(e) => {
+                      setSharingData({...sharingData, bio: e.target.value});
+                    }}
+                  />
+                </Form.Group>
               </div>
             </Col>
           </Row>

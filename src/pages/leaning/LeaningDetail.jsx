@@ -148,7 +148,9 @@ const LeaningDetail = () => {
         {sharingRandom?.tags?.map(({id, title}) => (
           <Button
             variant="outline-primary"
-            className="text-custom-tag outline-primary"
+            className={`text-custom-tag outline-primary ${
+              id === sharingRandomTag ? "active" : ""
+            }`}
             onClick={() => setSharingRandomTag(id)}
           >
             {title}
