@@ -112,13 +112,6 @@ const DoctorCard = () => {
       </Container>
 
       <Container className="detail">
-        <Row>
-          <Col xs="12" lg="12">
-            <Card.Subtitle className="scroll">
-              {sharingRandomTag ? " Search by tag " + sharingRandomTag : ""}
-            </Card.Subtitle>
-          </Col>
-        </Row>{" "}
         <Row className="py-5">
           {doctor?.data?.map(
             ({id, firstName, lastName, email, phone, picture, content}, idx) => (
