@@ -48,7 +48,7 @@ const LeaningDetail = () => {
   }, [search, page, type, sharingRandomTag]);
 
   useEffect(() => {
-    API_GET_RANDOMELEARNINGTAG().then((result) => {
+    API_GET_RANDOMELEARNINGTAG(type || undefined).then((result) => {
       setSharingRandom(result?.data);
     });
   }, []);

@@ -252,7 +252,7 @@ const TheLogin = () => {
       >
         <Row>
           {" "}
-          <Image src="/image/header/WhiteLogo.png" className="pr-3" width="55px" />{" "}
+          <Image src="/image/header/WhiteLogo.png" className="pr-3" width="40px" />{" "}
           <h1
             style={{
               placeSelf: "center",

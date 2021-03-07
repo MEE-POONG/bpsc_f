@@ -67,10 +67,13 @@ export default function App() {
           className="d-flex justify-content-center gallery-page"
         >
           <Modal.Body>
-            <Card className="text-center p-5">
-              {/* <Card.Header>Featured</Card.Header> */}
-              <Card.Body className="p-5">
-                {/* <Card.Title>ถ้าคุณเป็นหมอ</Card.Title> */}
+            <div className="text-center p-5">
+              <h1 className="custom-text">คุณเป็น...</h1>
+            </div>
+            <div className="text-center px-5 pb-5">
+              {/* <div.Header>Featured</div.Header> */}
+              <div className="px-5 pb-5">
+                {/* <div.Title>ถ้าคุณเป็นหมอ</div.Title> */}
                 {/* <Button
                   variant="primary"
                   onClick={() =>
@@ -89,13 +92,13 @@ export default function App() {
                     (window.location.href = "https://forms.gle/g9Ls5mMGdVPv87uK9")
                   }
                 />
-              </Card.Body>
-              {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}
-            </Card>
-            <Card className="text-center p-5">
-              {/* <Card.Header>Featured</Card.Header> */}
-              <Card.Body className="p-5">
-                {/* <Card.Title>ถ้าคุณเป็นบุคคลทั่วไป</Card.Title> */}
+              </div>
+              {/* <div.Footer className="text-muted">2 days ago</div.Footer> */}
+            </div>
+            <div className="text-center px-5 pb-5">
+              {/* <div.Header>Featured</div.Header> */}
+              <div className="px-5 pb-5">
+                {/* <div.Title>ถ้าคุณเป็นบุคคลทั่วไป</div.Title> */}
                 {/* <Button variant="primary" onClick={handleClose}>
                   คลิกที่นี่ ถ้าคุณเป็นบุคคลทั่วไป
                 </Button> */}
@@ -108,9 +111,9 @@ export default function App() {
                   // width="100"
                   // className="d-inline-block align-tops"
                 />
-              </Card.Body>
-              {/* <Card.Footer className="text-muted">2 days ago</Card.Footer> */}
-            </Card>
+              </div>
+              {/* <div.Footer className="text-muted">2 days ago</div.Footer> */}
+            </div>
           </Modal.Body>
         </Modal>
       </div>

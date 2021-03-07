@@ -216,10 +216,7 @@ const TheHeader = () => {
                 <NavDropdown.Item onClick={() => navigate("profile")}>
                   <FontAwesomeIcon icon={faUser} /> &nbsp; โปรไฟล์ของฉัน
                 </NavDropdown.Item>
-                <NavDropdown.Item onClick={() => setReadHover((e) => (e += 1))}>
-                  {/* <FontAwesomeIcon icon={faBell} /> &nbsp;  */}
-                  <Notification />
-                </NavDropdown.Item>
+                <Notification onClick={() => setReadHover((e) => (e += 1))} />
                 <NavDropdown.Item onClick={() => navigate("create-share")}>
                   <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างแชร์
                 </NavDropdown.Item>

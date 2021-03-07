@@ -118,7 +118,7 @@ const Abstain = () => {
                             </Media.Body>
                           </Media>
                         </Card.Title>
-                        <Card.Subtitle className="text-overflow-4">
+                        <Card.Subtitle className="subtitle-text card-text text-overflow-4">
                           {content}
                         </Card.Subtitle>
                       </Card.Body>

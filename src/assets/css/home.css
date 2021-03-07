@@ -866,6 +866,11 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  /* height: 40px */
+}
+
+.home .subtitle-text-40 {
+  height: 40px
 }
 
 .box-login .form-control {

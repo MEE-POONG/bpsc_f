@@ -178,20 +178,21 @@ const CreateTitle = () => {
 
       <Container className="px-0">
         <div className="box-sheare detail">
-          <Row>
-            <Col md="12">
-              <div className="header">
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label>ชื่อแชร์</Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="ชื่อแชร์"
-                    onChange={(e) => {
-                      setSharingData({...sharingData, title: e.target.value});
-                    }}
-                  />
-                </Form.Group>
-                {/* <Form.Group controlId="formBasicEmail">
+          <Col xs="12">
+            <Row>
+              <Col md="12">
+                <div className="header">
+                  <Form.Group controlId="formBasicEmail">
+                    <Form.Label>ชื่อแชร์</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="ชื่อแชร์"
+                      onChange={(e) => {
+                        setSharingData({...sharingData, title: e.target.value});
+                      }}
+                    />
+                  </Form.Group>
+                  {/* <Form.Group controlId="formBasicEmail">
                   <Form.Label>รายละเอียดย่อของแชร์ (0/300)</Form.Label>
                   <Form.Control
                     type="text"
@@ -201,22 +202,23 @@ const CreateTitle = () => {
                     }}
                   />
                 </Form.Group> */}
-              </div>
-            </Col>
-            <Col xs="12">
-              <CKEditor
-                onChange={(evt) => {
-                  setSharingData({...sharingData, content: evt.editor.getData()});
-                }}
-                // onChange={(evt) => console.log(evt.editor.getData())}
-                // data={this.state.events_detail_th}
-                // onChange={this.onEditorTHChange}
-                // config={{
-                //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
-                // }}
-              />
-            </Col>
-          </Row>
+                </div>
+              </Col>
+              <Col xs="12">
+                <CKEditor
+                  onChange={(evt) => {
+                    setSharingData({...sharingData, content: evt.editor.getData()});
+                  }}
+                  // onChange={(evt) => console.log(evt.editor.getData())}
+                  // data={this.state.events_detail_th}
+                  // onChange={this.onEditorTHChange}
+                  // config={{
+                  //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
+                  // }}
+                />
+              </Col>
+            </Row>
+          </Col>
         </div>
       </Container>
 

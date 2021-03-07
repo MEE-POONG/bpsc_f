@@ -1023,19 +1023,19 @@ export const API_GET_MANUAL = async () => {
   });
 };
 
-export const API_GET_RANDOMSHARINGTAG = async () => {
+export const API_GET_RANDOMSHARINGTAG = async (type) => {
   var config = {
     method: "get",
-    url: `/randomSharingTag`,
+    url: `/randomSharingTag?type=${type}`,
   };
 
   return API_CONFIG(config);
 };
 
-export const API_GET_RANDOMELEARNINGTAG = async () => {
+export const API_GET_RANDOMELEARNINGTAG = async (type) => {
   var config = {
     method: "get",
-    url: `/randomElearningTag`,
+    url: `/randomElearningTag?type=${type}`,
   };
 
   return API_CONFIG(config);

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {Modal, Image, Row} from "react-bootstrap";
+import {Modal, Image, Row, NavDropdown} from "react-bootstrap";
 import {
   faBell,
   faCommentAlt,
@@ -23,9 +23,9 @@ const TheNotification = () => {
 
   return (
     <>
-      <span onClick={handleShow}>
+      <NavDropdown.Item onClick={handleShow}>
         <FontAwesomeIcon icon={faBell} /> &nbsp; การแจ้งเตือน{" "}
-      </span>
+      </NavDropdown.Item>
       <Modal
         show={show}
         onHide={handleClose}
