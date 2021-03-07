@@ -19,6 +19,7 @@ import {useParams} from "react-router-dom";
 
 const CreateTitle = () => {
   const {id} = useParams();
+  const [selectType, setSelectType] = useState("");
   const [sharingData, setSharingData] = useState({
     title: "",
     content: "",
@@ -93,6 +94,9 @@ const CreateTitle = () => {
         });
       });
   };
+  useEffect(() => {
+    setSelectType(typeData.data.filter(({id}) => id === sharingData.type));
+  }, [typeData, sharingData]);
   return (
     <div>
       <div className="tab-btn mb-5">
@@ -286,17 +290,35 @@ const CreateTitle = () => {
           {/* </Form.Group> */}
           {/* </Form> */}
           <Form.Group style={{marginTop: "20px"}}>
-            {/* <Form.Label>รายละเอียดย่อของแชร์</Form.Label> */}
-            <Typeahead
-              id="basic-typeahead"
-              labelKey="name"
-              onChange={(e) => setSharingData({...sharingData, type: e[0]?.id})}
-              options={typeData?.data}
-              labelKey="title"
-              placeholder="เลือก TYPE"
-              selected={sharingData?.type?.id}
-              defaultSelected={typeData?.data?.filter(({id}) => id === 1)}
-            />
+            {/* <Form.Label>{JSON.stringify(selectType)}</Form.Label> */}
+            {selectType.length > 0 ? (
+              <Typeahead
+                id="basic-typeahead"
+                labelKey="name"
+                onChange={(e) => setSharingData({...sharingData, type: e[0]?.id})}
+                options={typeData?.data}
+                labelKey="title"
+                placeholder="เลือก TYPE"
+                selected={sharingData?.type?.id}
+                defaultSelected={selectType}
+              />
+            ) : (
+              ""
+            )}
+            {!selectType ? (
+              <Typeahead
+                id="basic-typeahead"
+                labelKey="name"
+                onChange={(e) => setSharingData({...sharingData, type: e[0]?.id})}
+                options={typeData?.data}
+                labelKey="title"
+                placeholder="เลือก TYPE"
+                selected={sharingData?.type?.id}
+                defaultSelected={selectType}
+              />
+            ) : (
+              ""
+            )}
           </Form.Group>
         </Container>
       </div>

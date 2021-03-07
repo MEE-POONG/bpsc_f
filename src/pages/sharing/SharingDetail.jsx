@@ -46,7 +46,7 @@ const SharingDetail = () => {
   }, [search, page, type, sharingRandomTag]);
 
   useEffect(() => {
-    API_GET_RANDOMSHARINGTAG(type || undefined).then((result) => {
+    API_GET_RANDOMSHARINGTAG(type || "").then((result) => {
       setSharingRandom(result?.data);
     });
   }, []);

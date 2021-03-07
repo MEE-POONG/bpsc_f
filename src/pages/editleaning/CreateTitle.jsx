@@ -294,7 +294,7 @@ const CreateTitle = () => {
           {/* </Form> */}
           <Form.Group style={{marginTop: "20px"}}>
             {/* <Form.Label>รายละเอียดย่อของบทเรียน</Form.Label> */}
-            <Typeahead
+            {+learningData?.type ? <Typeahead
               id="basic-typeahead"
               labelKey="name"
               onChange={(e) => {
@@ -304,8 +304,8 @@ const CreateTitle = () => {
               labelKey="title"
               placeholder="เลือก TYPE"
               selected={learningData?.type?.id}
-              defaultSelected={typeData?.data?.filter(({id}) => id === 1)}
-            />
+              defaultSelected={typeData?.data?.filter(({id}) => id === +learningData?.type)}
+            /> : ''}
           </Form.Group>
         </Container>
       </div>
