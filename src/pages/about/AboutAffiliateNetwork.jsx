@@ -26,7 +26,7 @@ const AboutTitle = () => {
           <p className="h1 font-weight-bold f-gradient">เครือข่ายพันธมิตร</p>
           <Card.Body className="text-center" style={{background: "unset"}}>
             <Row xs={12}>
-              <Col xs={6} className="p-5" style={{cursor: "pointer"}} onClick={() => navigate('/doctor')}>
+              <Col xs={12} md={6} className="p-2" style={{cursor: "pointer"}} onClick={() => navigate('/doctor')}>
                 <div className="p-5 about-background-radial-gradient">
                   <h1
                     style={{
@@ -38,7 +38,7 @@ const AboutTitle = () => {
                   <h1>{data.hospital}+</h1>
                 </div>
               </Col>
-              <Col xs={6} className="p-5" style={{cursor: "pointer"}} onClick={() => navigate('/doctor')}>
+              <Col xs={12} md={6} className="p-2" style={{cursor: "pointer"}} onClick={() => navigate('/doctor')}>
                 <div className="p-5 about-background-radial-gradient">
                   <h1
                     style={{
