@@ -85,7 +85,7 @@ const TeamMember = () => {
           </Swiper>
         ) : null}
         <div className="text-center my-5" onClick={() => navigate("/doctor/")}>
-          <Button>MORE DOCTORS</Button>
+          <Button>MORE INFLUENCERS</Button>
         </div>
       </Container>
       <Modal

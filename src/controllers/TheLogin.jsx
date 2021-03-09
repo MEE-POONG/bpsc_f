@@ -296,7 +296,7 @@ const TheLogin = () => {
               {contentCardLogin}
               <Card.Footer>
                 <button className="btn btn-lg btn-google" onClick={handleSignUp}>
-                  สมัคสมาชิก
+                  สมัครสมาชิก
                 </button>
                 <button
                   className="btn btn-lg btn-facebook"

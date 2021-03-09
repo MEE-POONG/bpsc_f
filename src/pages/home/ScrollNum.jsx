@@ -65,7 +65,7 @@ const ScrollNum = () => {
               <Card className="sharing">
                 <Card.Body>
                   <Card.Title>{runningTree}+</Card.Title>
-                  <Card.Subtitle>บุคคลกรมีความสุข</Card.Subtitle>
+                  <Card.Subtitle>บุคคลากรมีความสุข</Card.Subtitle>
                 </Card.Body>
               </Card>
             </Col>
