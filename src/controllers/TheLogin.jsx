@@ -263,7 +263,6 @@ const TheLogin = () => {
                 alt="LOGO BPSC"
                 src="/image/header/Logo.png"
                 className="d-inline-block align-tops ml-3"
-                style={{objectFit: "contain", maxWidth: "140px"}}
               />
               <h1
                 style={{

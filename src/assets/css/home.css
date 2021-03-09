@@ -629,7 +629,7 @@
   color: #ffffff;
   background: linear-gradient(351deg, rgba(75, 131, 195, 1) 0%, rgba(46, 163, 173, 1) 50%, rgba(78, 232, 158, 1) 100%);
   height: max-content !important;
-  width: max-content;
+  width: 50px;
 }
 .learning .card .absolute {
   position: absolute;

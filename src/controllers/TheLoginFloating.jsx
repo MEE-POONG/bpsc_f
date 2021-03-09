@@ -252,7 +252,7 @@ const TheLogin = () => {
       >
         <Row>
           {" "}
-          <Image src="/image/header/WhiteLogo.png" className="pr-3" width="40px" />{" "}
+          <Image src="/image/header/WhiteLogo.png" className="pr-3" width="40px" height="40px" />{" "}
           <h1
             style={{
               placeSelf: "center",
@@ -278,7 +278,7 @@ const TheLogin = () => {
                 alt="LOGO BPSC"
                 src="/image/header/Logo.png"
                 className="d-inline-block align-tops ml-3"
-                style={{objectFit: "contain", maxWidth: "140px"}}
+                style={{objectFit: "contain", maxWidth: "140px", maxHeight: "140px"}}
               />
               <h1
                 style={{
