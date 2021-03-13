@@ -263,12 +263,13 @@ const TheLogin = () => {
                 alt="LOGO BPSC"
                 src="/image/header/Logo.png"
                 className="d-inline-block align-tops ml-3"
+                style={{objectFit: "contain", maxWidth: "140px", maxHeight: "140px"}}
               />
               <h1
                 style={{
                   alignSelf: "right",
                   marginTop: "14px",
-                  paddingRight: "12.5px"
+                  paddingRight: "12.5px",
                 }}
               >
                 {titleCardLogin}
@@ -295,6 +296,13 @@ const TheLogin = () => {
             <>
               {contentCardLogin}
               <Card.Footer>
+                <div className="px-3 pb-3">
+                  By Clicking Sign Up, you agree to our Terms and that you have read our{" "}
+                  <a href="#" onClick={() => navigate("/policy")}>
+                    Data Use Policy
+                  </a>
+                  , including our Cookie Use
+                </div>
                 <button className="btn btn-lg btn-google" onClick={handleSignUp}>
                   สมัครสมาชิก
                 </button>

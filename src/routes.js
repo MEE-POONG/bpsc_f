@@ -31,12 +31,14 @@ const Profile = React.lazy(() => import("./pages/profile"));
 const Verify = React.lazy(() => import("./pages/verify"));
 const RePassword = React.lazy(() => import("./pages/repassword"));
 const Broadcast = React.lazy(() => import("./pages/Broadcast"));
+const Policy = React.lazy(() => import("./pages/Policy"));
 
 const FourZeroFour = React.lazy(() => import("./pages/404"));
 
 const routes = [
   {path: "/", exact: true, name: "HOME", component: Home},
   {path: "/home", exact: true, name: "HOME", component: Home},
+  {path: "/policy", name: "Policy", component: Policy},
   {path: "/about", name: "ABOUT US", component: About},
   {path: "/sharing", name: "SHARING", component: Sharing},
   {

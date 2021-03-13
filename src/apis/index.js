@@ -1049,3 +1049,15 @@ export const API_GET_RANDOMPROTOTYPEHOSPITALTAG = async () => {
 
   return API_CONFIG(config);
 };
+
+export const API_GET_POLICY = async () => {
+  var config = {
+    method: "get",
+    url: `/policy`,
+    responseType: "blob",
+  };
+
+  return API_CONFIG(config).then((response) => {
+    FileDownload(response.data, "policy.pdf");
+  });
+};
