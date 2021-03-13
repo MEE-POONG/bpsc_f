@@ -311,10 +311,6 @@ const TheLogin = () => {
             <>
               {contentCardLogin}
               <Card.Footer>
-                <div className="px-3 pb-3">
-                  By Clicking Sign Up, you agree to our Terms and that you have read our{" "}
-                  <a href="#" onClick={() => navigate('/policy')}>Data Use Policy</a>, including our Cookie Use
-                </div>
 
                 <button className="btn btn-lg btn-google" onClick={handleSignUp}>
                   สมัครสมาชิก

@@ -98,6 +98,11 @@ const TheRegister = () => {
             onChange={(e) => setSingUpForm({...singUpForm, password2: e.target.value})}
           />
         </Form.Group>
+
+        <div className="px-3 pb-3">
+          By Clicking Sign Up, you agree to our Terms and that you have read our{" "}
+          <a href="#" onClick={() => navigate('/policy')}>Data Use Policy</a>, including our Cookie Use
+        </div>
         <button
           className="btn btn-lg btn-primary btn-block text-uppercase mb-3"
           onClick={(e) => handleRegister(e)}
