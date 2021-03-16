@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import {Form} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
-import {API_REGISTER} from "../apis";
+import {API_REGISTER, API_GET_POLICY} from "../apis";
 import Swal from "sweetalert2";
 
 const TheRegister = () => {
   const navigate = useNavigate();
+  const setClick = () => API_GET_POLICY();
 
   const [singUpForm, setSingUpForm] = useState({
     firstName: "",
@@ -101,7 +102,10 @@ const TheRegister = () => {
 
         <div className="px-3 pb-3">
           By Clicking Sign Up, you agree to our Terms and that you have read our{" "}
-          <a href="#" onClick={() => navigate('/policy')}>Data Use Policy</a>, including our Cookie Use
+          <a href={API_GET_POLICY} onClick={setClick} target="_blank" download>
+            Data Use Policy
+          </a>
+          , including our Cookie Use
         </div>
         <button
           className="btn btn-lg btn-primary btn-block text-uppercase mb-3"
