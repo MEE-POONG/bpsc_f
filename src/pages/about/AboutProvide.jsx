@@ -1,5 +1,5 @@
 import React from "react";
-import {Col, Container, Image, Row, Media} from "react-bootstrap";
+import {Col, Container, Image, Row, Media, Card} from "react-bootstrap";
 import AboutAffiliateNetwork from "./AboutAffiliateNetwork";
 
 const AboutProvide = () => {
@@ -15,14 +15,14 @@ const AboutProvide = () => {
         <Container className="text-center">
           <Row>
             <Col lg="3" md="3" sm="3" xs="12">
-              <img
+              <Card.Img
                 className="provide-icon"
                 src="image/about/medical-mask-2.png"
                 alt="Generic placeholder"
               />
             </Col>
             <Col lg="6" md="6" sm="6" xs="12">
-              <img
+              <Card.Img
                 className="img-provide"
                 src="image/about/co-join.png"
                 alt="Generic placeholder"
@@ -38,7 +38,7 @@ const AboutProvide = () => {
               sm={{span: 6, order: "first", offset: 3}}
               xs={{span: 12, order: "last"}}
             >
-              <img
+              <Card.Img
                 className="img-provide"
                 src="image/about/co-create.png"
                 alt="Generic placeholder"
@@ -50,7 +50,7 @@ const AboutProvide = () => {
               sm={{span: 3, order: "last"}}
               xs={{span: 12, order: "first"}}
             >
-              <img
+              <Card.Img
                 className="provide-icon"
                 src="image/about/hospital-1.png"
                 alt="Generic placeholder"
@@ -73,8 +73,14 @@ const AboutProvide = () => {
             />
           </div>
           <div className="Innovation">
-            <img className="Innovation-img-left" src="image/about/provide-1.png" />
-            <img className="Innovation-img-right" src="image/about/provide-2.png" />
+            <Row style={{display:"table", width:"100%"}}>
+              <div style={{display:"table-cell"}}>
+                <Card.Img src="image/about/provide-1.png" />
+              </div>
+              <div style={{display:"table-cell"}}>
+                <Card.Img src="image/about/provide-2.png" />
+              </div>
+            </Row>
           </div>
         </Container>
       </div>

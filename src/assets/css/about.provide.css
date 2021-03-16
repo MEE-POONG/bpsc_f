@@ -74,6 +74,16 @@
 .about-provide .Innovation .Innovation-img-right {
   right: 0;
 }
+.about-provide .card-img:hover {
+  transform: scale(1.05);
+  -webkit-filter: drop-shadow(10px 10px 15px rgb(0, 0, 0, 0.3));
+  filter: drop-shadow(10px 10px 15px rgb(0, 0, 0, 0.3));
+}
+.about-provide .card-img {
+  /* border-radius: 20px; */
+  margin-bottom: 2rem;
+  display: table-cell;
+}
 @media only screen and (max-width: 1199px) {
   .about-provide .Innovation {
     height: 350px;
