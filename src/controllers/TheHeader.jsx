@@ -81,7 +81,7 @@ const TheHeader = () => {
             src="/image/header/Logo.png"
             // width="100"
             // className="d-inline-block align-tops"
-            style={{objectFit: "contain", height: "30px"}}
+            style={{objectFit: "contain", height: "35px"}}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -257,7 +257,7 @@ const TheHeader = () => {
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
                   <NavDropdown.Item onClick={() => navigate("create-doctor")}>
-                    <FontAwesomeIcon icon={faPen} /> &nbsp;เพิ่ม Doctor
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;เพิ่ม Influencer
                   </NavDropdown.Item>
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (

@@ -8,7 +8,7 @@ const SlideTitle = () => {
       <div className="title-video">
         <iframe
           title="This is a unique title"
-          src="https://www.youtube-nocookie.com/embed/gJBQWXcTg2U"
+          src="https://www.youtube-nocookie.com/embed/EmOGnZTm3Ig"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

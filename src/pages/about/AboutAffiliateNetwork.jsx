@@ -31,11 +31,12 @@ const AboutTitle = () => {
                   <h1
                     style={{
                       whiteSpace: "nowrap",
+                      fontSize: "20px"
                     }}
                   >
                     โรงพยาบาลต้นแบบ
                   </h1>
-                  <h1>{data.hospital}+</h1>
+                  <h1 style={{fontSize: "40px"}}>{data.prototype}</h1>
                 </div>
               </Col>
               <Col xs={12} md={6} className="p-2" style={{cursor: "pointer"}} onClick={() => navigate('/doctor')}>
@@ -43,11 +44,12 @@ const AboutTitle = () => {
                   <h1
                     style={{
                       whiteSpace: "nowrap",
+                      fontSize: "20px"
                     }}
                   >
                     โรงพยาบาล BPSC
                   </h1>
-                  <h1>{data.prototype}+</h1>
+                  <h1 style={{fontSize: "40px"}}>{data.hospital}</h1>
                 </div>
               </Col>
             </Row>

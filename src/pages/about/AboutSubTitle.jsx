@@ -7,7 +7,7 @@ const AboutSubTitle = () => {
       <Container className="p-5">
         <Row className="text-center">
           <Col sm="4">
-            <Image className="about-subtitle-image" src="/image/about/about-1.png" />
+            <Card.Img className="about-subtitle-image" src="/image/about/about-1.png" />
             <Card.Body>
               <Card.Title>What?</Card.Title>
               <Card.Subtitle>
@@ -17,7 +17,7 @@ const AboutSubTitle = () => {
             </Card.Body>
           </Col>
           <Col sm="4">
-            <Image className="about-subtitle-image" src="/image/about/about-2.png" />
+            <Card.Img className="about-subtitle-image" src="/image/about/about-2.png" />
             <Card.Body>
               <Card.Title>Why?</Card.Title>
               <Card.Subtitle>
@@ -28,7 +28,7 @@ const AboutSubTitle = () => {
             </Card.Body>
           </Col>
           <Col sm="4">
-            <Image className="about-subtitle-image" src="/image/about/about-3.png" />
+            <Card.Img className="about-subtitle-image" src="/image/about/about-3.png" />
             <Card.Body>
               <Card.Title>How?</Card.Title>
               <Card.Subtitle>

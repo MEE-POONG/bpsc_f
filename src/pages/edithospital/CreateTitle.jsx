@@ -72,21 +72,21 @@ const CreateTitle = () => {
               <Col md="12">
                 <div className="header">
                   <Form.Group controlId="formBasicEmail">
-                    <Form.Label>โรงพยาบาลสร้างระบบ BPSC สำเร็จ</Form.Label>
+                    <Form.Label>เกิดเป็นโรงพยาบาลต้นแบบ</Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="โรงพยาบาลสร้างระบบ BPSC สำเร็จ"
-                      value={sharingData.normal}
+                      value={sharingData.prototype}
                       onChange={(e) => {
                         setSharingData({...sharingData, normal: e.target.value});
                       }}
                     />
                   </Form.Group>
                   <Form.Group controlId="formBasicEmail">
-                    <Form.Label>เกิดเป็นโรงพยาบาลต้นแบบ</Form.Label>
+                    <Form.Label>โรงพยาบาลสร้างระบบ BPSC สำเร็จ</Form.Label>
                     <Form.Control
                       type="text"
-                      value={sharingData.prototype}
+                      value={sharingData.normal}
                       onChange={(e) => {
                         setSharingData({...sharingData, prototype: e.target.value});
                       }}

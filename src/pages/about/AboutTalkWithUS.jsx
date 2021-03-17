@@ -112,7 +112,7 @@ const AboutTalkWithUS = () => {
               <textarea
                 className="form-control about-talk-with-us-input"
                 placeholder="MASSAGE"
-                rows="10"
+                rows="5"
                 onChange={(e) => setTalkWithUs({...talkWithUS, content: e.target.value})}
                 value={talkWithUS.content}
               ></textarea>
