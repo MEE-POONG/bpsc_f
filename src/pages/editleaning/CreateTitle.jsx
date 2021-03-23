@@ -237,6 +237,20 @@ const CreateTitle = () => {
                   // }}
                 />
               ) : null}
+              {!learningData.content ? (
+                <CKEditor
+                  value={learningData.content}
+                  onChange={(evt) => {
+                    setLearningData({...learningData, content: evt.editor.getData()});
+                  }}
+                  // onChange={(evt) => console.log(evt.editor.getData())}
+                  data={learningData.content}
+                  // onChange={this.onEditorTHChange}
+                  // config={{
+                  //   filebrowserBrowseUrl: 'http://localhost:3000/#/gallery/',
+                  // }}
+                />
+              ) : null}
             </Col>
           </Row>
         </div>
