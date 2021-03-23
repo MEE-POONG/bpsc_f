@@ -30,13 +30,11 @@ function MyVerticallyCenteredModal(props) {
 
             <div class="_610a0">
               <a
-                href="https://taejai.com/th/d/inskru_backer"
                 class="Button Blue"
-                target="_blank"
-                rel="noopener noreferrer"
                 onClick={() =>
                   (window.location.href = "https://taejai.com/th/d/inskru_backer")
                 }
+                style={{color: "white"}}
               >
                 บริจาคให้ THAIBPSC
               </a>

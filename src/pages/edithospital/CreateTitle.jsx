@@ -32,7 +32,7 @@ const CreateTitle = () => {
   const createSharing = () => {
     API_UPDATE_HOSPITAL(sharingData)
       .then((e) => {
-        Swal.fire("สำเร็จ!", "แก้ไข HOSPITAL สำเร็จ!", "success").then(() => {
+        Swal.fire("สำเร็จ!", "แก้ไขจำนวนโรงพยาบาลสำเร็จ!", "success").then(() => {
           navigate(-1);
         });
       })
@@ -75,10 +75,9 @@ const CreateTitle = () => {
                     <Form.Label>เกิดเป็นโรงพยาบาลต้นแบบ</Form.Label>
                     <Form.Control
                       type="text"
-                      placeholder="โรงพยาบาลสร้างระบบ BPSC สำเร็จ"
                       value={sharingData.prototype}
                       onChange={(e) => {
-                        setSharingData({...sharingData, normal: e.target.value});
+                        setSharingData({...sharingData, prototype: e.target.value});
                       }}
                     />
                   </Form.Group>
@@ -88,7 +87,7 @@ const CreateTitle = () => {
                       type="text"
                       value={sharingData.normal}
                       onChange={(e) => {
-                        setSharingData({...sharingData, prototype: e.target.value});
+                        setSharingData({...sharingData, normal: e.target.value});
                       }}
                     />
                   </Form.Group>

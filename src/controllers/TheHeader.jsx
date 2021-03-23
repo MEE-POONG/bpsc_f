@@ -252,7 +252,7 @@ const TheHeader = () => {
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
                   <NavDropdown.Item onClick={() => navigate("edit-hospital")}>
-                    <FontAwesomeIcon icon={faPen} /> &nbsp;แก้ไข HOSPITAL
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;แก้ไขจำนวนโรงพยาบาล
                   </NavDropdown.Item>
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (

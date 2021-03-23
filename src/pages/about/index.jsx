@@ -7,6 +7,7 @@ import AboutTalkWithUS from "./AboutTalkWithUS";
 import {Col, Row} from "react-bootstrap";
 import AboutProvide from "./AboutProvide";
 import AboutInnovation from "./AboutInnovation";
+import Donation from "./Donation";
 
 class About extends Component {
   render() {
@@ -17,6 +18,7 @@ class About extends Component {
         <AboutProvide />
         <AboutInnovation />
         {/* <AboutTeam /> */}
+        <Donation />
         <Row className="mx-0">
           <Col md="6" className="p-0 about-contact-us-bg">
             <AboutContactUS />

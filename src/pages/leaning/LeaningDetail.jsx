@@ -115,7 +115,7 @@ const LeaningDetail = () => {
       <Container className="title mb-5">
         <Row>
           <Col lg="8">
-            <Card.Title>SELF - Leaning</Card.Title>
+            <Card.Title>SELF - Learning</Card.Title>
             <Card.Subtitle>
               เรียนรู้ผ่านระบบออนไลน์
               {type === "1" ? " BPSC TALK" : ""}

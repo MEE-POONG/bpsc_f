@@ -73,7 +73,7 @@ const ScrollNum = () => {
               <Card className="sharing">
                 <Card.Body>
                   <Card.Title>{runningFour}+</Card.Title>
-                  <Card.Subtitle>ผู้ได้รับการรักษามีคุณภาพชีวิตที่ดีขึ้น</Card.Subtitle>
+                  <Card.Subtitle>ประชาชนมีคุณภาพชีวิตที่ดีขึ้น</Card.Subtitle>
                 </Card.Body>
               </Card>
             </Col>

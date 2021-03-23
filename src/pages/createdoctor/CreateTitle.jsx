@@ -81,7 +81,7 @@ const CreateTitle = () => {
       </div>
       <Container>
         <div className="title">
-          <h1>ข้อมูล Doctor </h1>
+          <h1>ข้อมูล Influencer </h1>
         </div>
       </Container>
       <Container className="box-sheare">

@@ -7,7 +7,7 @@ const DoctorTitle = () => {
     <Container className="title mb-5">
       <Row>
         <Col lg="8">
-          <Card.Title>Doctor</Card.Title>
+          <Card.Title>Influencer</Card.Title>
         </Col>
         <Col lg="4" className="align-self-center">
           <InputGroup>
