@@ -12,7 +12,7 @@ const Ksstext = () => {
           <Col md="4" className="img">
             <Image
               src="/image/home/kss.png"
-              style={{maxHeight: "20rem"}}
+              style={{width: "100%" ,maxHeight: "20rem"}}
             />
           </Col>
           <Col md="8">

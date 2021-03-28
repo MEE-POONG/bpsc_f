@@ -44,6 +44,19 @@
     transition: 1s;
     cursor: pointer;
   }
+  .sheet-two .card-title {
+    font-size: 1.4rem !important;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .sheet-one .card-title {
+    font-size: 1.4rem !important;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .learning .media-body{
+    font-size: 1.4rem;
+}
   .sharing .card .card-text {
     font-size: 0.5rem !important;
     color: #747373 !important;
@@ -116,6 +129,9 @@
   .home-image .img-animation:before {
     top: -10px;
     left: 50px;
+  }
+  .sheet-one .trapezoid {
+    width: 10em;
   }
 }
 @media only screen and (max-width: 325px) {

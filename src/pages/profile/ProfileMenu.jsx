@@ -17,7 +17,7 @@ const ProfileMenu = () => {
           <Row>
             <Col
               xs="3"
-              className={`py-5 ${navActive === 1 ? "profile-menu-active" : ""}`}
+              className={`py-2 ${navActive === 1 ? "profile-menu-active" : ""}`}
               onClick={() => handleNavActive(1)}
             >
               <Row className="align-items-center justify-content-center">
@@ -25,13 +25,13 @@ const ProfileMenu = () => {
                   <FontAwesomeIcon icon={faMailBulk} />
                 </Col>
                 <Col md="12">
-                  <p>แชร์ของฉัน</p>
+                  <p className="m-0">แชร์ของฉัน</p>
                 </Col>
               </Row>
             </Col>
             <Col
               xs="3"
-              className={`py-5 ${navActive === 2 ? "profile-menu-active" : ""}`}
+              className={`py-2 ${navActive === 2 ? "profile-menu-active" : ""}`}
               onClick={() => handleNavActive(2)}
             >
               <Row className="align-items-center justify-content-center">
@@ -39,13 +39,13 @@ const ProfileMenu = () => {
                   <FontAwesomeIcon icon={faFolder} />
                 </Col>
                 <Col md="12">
-                  <p className="pl-3">แบบร่าง</p>
+                  <p className="m-0">แบบร่าง</p>
                 </Col>
               </Row>
             </Col>
             <Col
               xs="3"
-              className={`py-5 ${navActive === 3 ? "profile-menu-active" : ""}`}
+              className={`py-2 ${navActive === 3 ? "profile-menu-active" : ""}`}
               onClick={() => handleNavActive(3)}
             >
               <Row className="align-items-center justify-content-center">
@@ -53,13 +53,13 @@ const ProfileMenu = () => {
                   <FontAwesomeIcon icon={faShare} />
                 </Col>
                 <Col md="12">
-                  <p className="pl-3">Sharing ที่ถูกใจ</p>
+                  <p className="m-0">Sharing ที่ถูกใจ</p>
                 </Col>
               </Row>
             </Col>
             <Col
               xs="3"
-              className={`py-5 ${navActive === 4 ? "profile-menu-active" : ""}`}
+              className={`py-2 ${navActive === 4 ? "profile-menu-active" : ""}`}
               onClick={() => handleNavActive(4)}
             >
               <Row className="align-items-center justify-content-center">
@@ -67,7 +67,7 @@ const ProfileMenu = () => {
                   <FontAwesomeIcon icon={faBook} />
                 </Col>
                 <Col md="12">
-                  <p className="pl-3">E Learning ที่ถูกใจ</p>
+                  <p className="m-0">E Learning ที่ถูกใจ</p>
                 </Col>
               </Row>
             </Col>
