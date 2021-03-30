@@ -33,7 +33,7 @@ const SheetTwo = () => {
               <Col lg="6" className="text-center py-5" style={{alignSelf: "center"}}>
                 <Card.Title>Hope Sharing</Card.Title>
                 <div>
-                  <Card.Text>
+                  <Card.Text style={{textTransform: "none"}}>
                     นอกจากการแลกเปลี่ยนความรู้ในกลุ่มบุคลากร (CoPs) <br></br>
                     เพื่อพัฒนาทักษะการสื่อสารแล้ว
                     ความคิดเห็นจากคุณจะเป็นกุญแจสำคัญที่นำเราไปสู่การพัฒนา

@@ -29,7 +29,7 @@ const TeamMember = () => {
         <Card className="text-center ">
           <Card.Body className="">
             <Card.Title className="text-uppercase fw-bold">INFLUENCER</Card.Title>
-            <Card.Text className="team-subtitle fw-bold">Teamwork makes dream work</Card.Text>
+            <Card.Text className="team-subtitle fw-bold">Together we achieve more</Card.Text>
           </Card.Body>
         </Card>
       </Container>
