@@ -16,7 +16,7 @@ import {
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
 
-const Abstain = () => {
+const Leaning = () => {
   const navigate = useNavigate();
 
   const [learning, setLearning] = useState(null);
@@ -85,7 +85,7 @@ const Abstain = () => {
                 },
                 idx
               ) => (
-                <SwiperSlide>
+                <SwiperSlide key={id}>
                   <div className="mobile-padding py-5">
                     <Card onClick={() => navigate(`/e-leaning/${id}`)}>
                       <Card.Img
@@ -157,4 +157,4 @@ const Abstain = () => {
   );
 };
 
-export default Abstain;
+export default Leaning;

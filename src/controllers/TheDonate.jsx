@@ -17,7 +17,7 @@ function MyVerticallyCenteredModal(props) {
       <Modal.Body>
         <Container className="p-5">
           <center>
-            <div class="_610a0">
+            <div className="_610a0">
               <b>
                 <h1>ขอบคุณที่อยู่ด้วยกันตลอดปีนี้</h1>
               </b>
@@ -28,9 +28,9 @@ function MyVerticallyCenteredModal(props) {
               </h1>
             </div>
 
-            <div class="_610a0">
+            <div className="_610a0">
               <a
-                class="Button Blue"
+                className="Button Blue"
                 onClick={() =>
                   (window.location.href = "https://taejai.com/th/d/inskru_backer")
                 }

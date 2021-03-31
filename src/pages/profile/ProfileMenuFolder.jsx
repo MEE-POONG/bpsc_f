@@ -84,6 +84,7 @@ const ProfileMenuFolder = () => {
                 idx
               ) => (
                 <Col
+                  key={idx}
                   lg="3"
                   md="4"
                   sm="6"
@@ -94,7 +95,7 @@ const ProfileMenuFolder = () => {
                     {/* {+localStorage.getItem("id") === userId ||
                     +localStorage.getItem("isAdmin") === 1 ? (
                       <div className="btn-cancel-card" onClick={() => handleDel(id)}>
-                        <i class="fa fa-times-circle"></i>
+                        <i className="fa fa-times-circle"></i>
                       </div>
                     ) : null} */}
                     <Card.Body

@@ -86,7 +86,7 @@ const ProfileMenuLeaning = () => {
                     {/* {+localStorage.getItem("id") === userId ||
                     +localStorage.getItem("isAdmin") === 1 ? (
                       <div className="btn-cancel-card" onClick={() => handleDel(id)}>
-                        <i class="fa fa-times-circle"></i>
+                        <i className="fa fa-times-circle"></i>
                       </div>
                     ) : null} */}
                     <div onClick={() => navigate(`/e-leaning/${id}`)}>

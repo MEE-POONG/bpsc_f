@@ -76,7 +76,7 @@ const TeamMember = () => {
                       {firstName}
                       {/* {lastName} */}
                     </div>
-                    <div className="profile-username">{email}</div>
+                    <div className="profile-username">{content}</div>
                     <div className="profile-tel">TEL {phone || "-"}</div>
                   </div>
                 </SwiperSlide>

@@ -134,8 +134,8 @@ const ProfileTitle = () => {
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Container className="text-center">
-              <div class="avatar-upload">
-                <div class="avatar-edit">
+              <div className="avatar-upload">
+                <div className="avatar-edit">
                   <input
                     type="file"
                     id="imageUpload"
@@ -144,7 +144,7 @@ const ProfileTitle = () => {
                   />
                   <label for="imageUpload"></label>
                 </div>
-                <div class="avatar-preview">
+                <div className="avatar-preview">
                   <div
                     id="imagePreview"
                     style={{

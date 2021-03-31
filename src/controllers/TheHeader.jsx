@@ -99,7 +99,7 @@ const TheHeader = () => {
               className="nav-link dropdown-hover"
             >
               SHARING
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 <a
                   className="dropdown-h-item"
                   onClick={() => nextPage("/sharing-type/1")}
@@ -132,7 +132,7 @@ const TheHeader = () => {
               className="nav-link dropdown-hover"
             >
               SELF-LEARNING
-              <div class="dropdown-content">
+              <div className="dropdown-content">
                 <a
                   className="dropdown-h-item"
                   onClick={() => nextPage("/leaning-type/1")}
@@ -171,7 +171,7 @@ const TheHeader = () => {
             </NavLink>
             <NavLink to="/about" className="nav-link dropdown-hover">
               ABOUT US
-              <div class="dropdown-content" title="COURSE">
+              <div className="dropdown-content" title="COURSE">
                 <a className="dropdown-h-item">ประวัติโครงการ</a>
                 <a className="dropdown-h-item" onClick={() => nextPage("/doctor")}>
                   เครือข่ายพันธมิตร

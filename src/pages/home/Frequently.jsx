@@ -70,8 +70,9 @@ const Frequently = () => {
           >
             {photoData?.length > 0 ? (
               <Zoom scale={0.4} autoplay={true}>
-                {photoData?.map(({path}) => (
+                {photoData?.map(({path}, id) => (
                   <Image
+                    key={id}
                     src={IMAGE_URL + path}
                     style={{objectFit: "cover", width: "100%", maxHeight: "700px"}}
                     alt={path}
@@ -87,7 +88,7 @@ const Frequently = () => {
             <Card.Title className="f-gradient">FAQ</Card.Title>
             <Accordion defaultActiveKey="0">
               {faqData?.data.map((e, idx) => (
-                <Card>
+                <Card key={idx}>
                   <Card.Header className="d-flex">
                     <Card.Title bsPrefix="title">{e?.question}</Card.Title>
                     <Accordion.Toggle

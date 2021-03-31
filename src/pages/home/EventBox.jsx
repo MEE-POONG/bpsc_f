@@ -279,6 +279,7 @@ const EventBox = () => {
           <Row className="mx-2">
             {data?.data?.map((e) => (
               <Col
+                key={e?.id}
                 xs="12"
                 lg="6"
                 onClick={() =>

@@ -81,7 +81,7 @@ const SheetThree = () => {
               },
               idx
             ) => (
-              <SwiperSlide>
+              <SwiperSlide key={id}>
                 <div className="mobile-padding pl-lg-5 px-md-5 py-5">
                   <Card className="box-card-shadow">
                     <Card.Body
@@ -100,7 +100,9 @@ const SheetThree = () => {
                     </Card.Body>
                     <Card.Body>
                       <Card.Title className="text-overflow-1">{title}</Card.Title>
-                      <Card.Text className="subtitle-text subtitle-text-40 text-overflow-2">{content}</Card.Text>
+                      <Card.Text className="subtitle-text subtitle-text-40 text-overflow-2">
+                        {content}
+                      </Card.Text>
                       <div className="user">
                         <span className="mr-1">
                           <Image
@@ -125,7 +127,6 @@ const SheetThree = () => {
                               <FontAwesomeIcon className="pr-2" icon={faEye} /> {view}
                             </span>
                             <span style={{color: "#26BEB4"}}>
-                              
                               {isFavorite ? (
                                 <i
                                   className="fa fa fa-heart pr-2"
