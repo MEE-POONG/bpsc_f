@@ -18,8 +18,12 @@
         }
 
         .card-body.image {
-            max-height: 15rem;
+            // max-height: 15rem;
+            height: 150px;
             padding: 0;
+        }
+        .card-body{
+            height: 150px;
         }
 
         .row {
@@ -41,7 +45,7 @@
         }
 
         img {
-            height: 100%;
+            height: 150px;
             width: 100%;
             object-fit: cover;
         }
