@@ -7,7 +7,7 @@ const Donation = () => {
       <Container className="py-5">
         <Row>
           <Col md="9" lg="9">
-            <Card.Title>ร่วมบริจาคเพื่อโครงการ BPSC</Card.Title>
+            <Card.Title style={{fontWeight: "bold", fontSize: "26px"}}>ร่วมบริจาคเพื่อโครงการ BPSC</Card.Title>
             <Card.Subtitle><br/>
               ร่วมเป็นส่วนหนึ่งในการพัฒนาเว็บไซต์ และฟีเจอร์ใหม่ ๆ เพื่อแบ่งปันสิ่งดี ๆ ต่อไป สามารถสนับสนุนพวกเราได้ผ่านการบริจาคที่ช่องทาง “เทใจ”
             </Card.Subtitle>

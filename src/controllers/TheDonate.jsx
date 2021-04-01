@@ -17,7 +17,8 @@ function MyVerticallyCenteredModal(props) {
       <Modal.Body>
         <Container className="p-5">
           <center>
-            <div className="_610a0">
+            <Image src="/image/about/piggy-bank.png" style={{maxWidth: "-webkit-fill-available"}}/>
+            <div class="_610a0">
               <b>
                 <h1>ขอบคุณที่อยู่ด้วยกันตลอดปีนี้</h1>
               </b>
