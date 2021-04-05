@@ -165,6 +165,15 @@ body {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.btn-green-set {
+  color: #8be0b7 !important;
+  border-color: #8be0b7 !important; 
+}
+.btn-green-set:hover {
+  color: #fff !important;
+  background-color: #8be0b7 !important;
+  border-color: #8be0b7 !important;
+}
 .btn-outline-primary {
   color: #8be0b7 !important;
   border-color: #8be0b7 !important;
