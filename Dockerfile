@@ -1,15 +1,8 @@
-# Dockerfile
-# 1st Stage
-FROM node:10.15.1 AS builder
-RUN mkdir -p /usr/src/app
+FROM node:12-buster-slim
+
 WORKDIR /usr/src/app
-COPY package.json .
-COPY yarn.lock .
-RUN yarn install --ignore-platform
+COPY package.json ./
+RUN yarn
 COPY . .
-RUN yarn build
-# 2nd Stage
-FROM nginx:1.14.2-alpine
-COPY --from=0 /usr/src/app/build /usr/share/nginx/html
-WORKDIR /usr/share/nginx/html
-CMD ["nginx", "-g", "daemon off;"]
+
+CMD ["yarn", "start"]
