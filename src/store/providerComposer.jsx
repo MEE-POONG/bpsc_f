@@ -6,6 +6,7 @@ import {UsersProvider} from "./UsersProvider";
 import {ResultsProvider} from "./ResultsProvider";
 import {ResultsErrorProvider} from "./ResultsErrorProvider";
 import {RolesProvider} from "./RolesProvider";
+import {NavigatorProvider} from "./NavigatorProvider";
 
 function ProviderComposer({contexts, children}) {
   return contexts.reduce(
@@ -26,6 +27,7 @@ export default function ContextProvider({children}) {
         <ResultsProvider />,
         <ResultsErrorProvider />,
         <RolesProvider />,
+        <NavigatorProvider />,
       ]}
     >
       {children}

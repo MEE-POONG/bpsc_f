@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import {
   Navbar,
   Nav,
@@ -31,6 +31,7 @@ import {
   API_GET_MANUAL,
 } from "../apis";
 import moment from "moment";
+import {NavigatorContext} from "../store/NavigatorProvider";
 
 const TheHeader = () => {
   // const [ dropShow, setDropShow] = useState(false);
@@ -51,14 +52,15 @@ const TheHeader = () => {
     });
   }, [localStorage.getItem("id"), readHover]);
 
+  const {navigator, newNavigator} = useContext(NavigatorContext);
   const checkNotification = () => {
     API_CHECK_NOTIFICATION().then((result) => {
-      setGetNotification(result?.data?.notification);
+      newNavigator(result?.data?.notification);
     });
   };
   useEffect(() => {
     checkNotification();
-  }, [moment().format("YYYY MM DD HH mm"), userInfo, readHover]);
+  }, []);
 
   const nextPage = (e) => {
     setTimeout(() => {
@@ -187,8 +189,8 @@ const TheHeader = () => {
                     <div className="col-sm-2">
                       <div className="nav-item">
                         <a>
-                          {getNotification ? (
-                            <span className="notify-badge">{getNotification}</span>
+                          {navigator ? (
+                            <span className="notify-badge">{navigator}</span>
                           ) : null}
                           <img
                             src={

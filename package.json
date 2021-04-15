@@ -41,6 +41,7 @@
     "scss-loader": "^0.0.1",
     "sweetalert2": "^10.13.0",
     "swiper": "^6.4.5",
+    "use-immer": "^0.5.1",
     "use-query-params": "^1.1.9",
     "web-vitals": "^0.2.4"
   },

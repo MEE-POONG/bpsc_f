@@ -168,6 +168,7 @@ const CreateTitle = () => {
                   <Form.Control
                     type="text"
                     id="video"
+                    defaultValue="https://www.youtube.com/embed/"
                     // as="textarea"Î
                     onChange={(e) => {
                       setSharingData({...sharingData, videoLink: e.target.value});

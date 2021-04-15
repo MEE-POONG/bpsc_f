@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import {Modal, Image, Row, NavDropdown} from "react-bootstrap";
 import {
   faBell,
@@ -8,26 +8,33 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {API_GET_NOTIFICATION, IMAGE_URL} from "../apis";
+import {NavigatorContext} from "../store/NavigatorProvider";
 
 const TheNotification = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [showNoti, setShowNoti] = useState(false);
+  const handleClose = () => setShowNoti(false);
+  const handleShowNoti = () => setShowNoti(true);
+
+  const {navigator, newNavigator} = useContext(NavigatorContext);
 
   const [notification, setNotification] = useState(null);
   useEffect(() => {
     API_GET_NOTIFICATION().then((result) => {
+      newNavigator(0);
       setNotification(result?.data);
     });
-  }, [show]);
+  }, [showNoti]);
 
   return (
     <>
-      <NavDropdown.Item onClick={handleShow}>
+      <NavDropdown.Item onClick={handleShowNoti}>
         <FontAwesomeIcon icon={faBell} /> &nbsp; การแจ้งเตือน{" "}
+        {navigator ? (
+          <span className="float-right bg-danger text-light px-2">{navigator}</span>
+        ) : null}
       </NavDropdown.Item>
       <Modal
-        show={show}
+        show={showNoti}
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
