@@ -5,6 +5,7 @@ import CKEditor from "ckeditor4-react";
 
 import {
   API_UPDATE_DOCTOR,
+  API_GET_TAGS,
   API_GET_DOCTOR_BY_ID,
   API_UPDATE_DOCTOR_COVER,
   IMAGE_URL,
@@ -19,6 +20,7 @@ import {useParams} from "react-router-dom";
 const CreateTitle = () => {
   const {id} = useParams();
 
+  const [tagData, setTagData] = useState(null);
   const [imgDataURL, setImgDataURL] = useState(null);
   const [sharingData, setSharingData] = useState({
     firstName: "",
@@ -28,23 +30,33 @@ const CreateTitle = () => {
     content: "",
     hospital: "",
     bio: "",
+    tags: [],
   });
   const [imgData, setImgData] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
+    API_GET_TAGS()
+      .then((e) => {
+        setTagData(e?.data);
+        // setSharingData({...sharingData, tags: e?.data.filter()})
+      })
+      .catch();
+  }, []);
+  useEffect(() => {
     API_GET_DOCTOR_BY_ID(id).then((result) => {
       setSharingData({
-        firstName: result?.data?.firstName|| "",
-        lastName: result?.data?.lastName|| "",
-        email: result?.data?.email || "",
-        phone: result?.data?.phone|| "",
-        content: result?.data?.content|| "",
-        hospital: result?.data?.hospital|| "",
-        bio: result?.data?.bio|| "",
-        picture: result?.data?.picture|| "",
+        firstName: result?.data?.doctor?.firstName|| "",
+        lastName: result?.data?.doctor?.lastName|| "",
+        email: result?.data?.doctor?.email || "",
+        phone: result?.data?.doctor?.phone|| "",
+        content: result?.data?.doctor?.content|| "",
+        hospital: result?.data?.doctor?.hospital|| "",
+        bio: result?.data?.doctor?.bio|| "",
+        picture: result?.data?.doctor?.picture|| "",
+        tags: result?.data?.tags,
       });
-      setImgDataURL(IMAGE_URL + result?.data?.picture);
+      setImgDataURL(IMAGE_URL + result?.data?.doctor?.picture);
     });
   }, []);
 
@@ -321,6 +333,42 @@ const CreateTitle = () => {
           </Row>
         </div>
       </Container>
+    
+      <div className="tag">
+        <Container>
+          <div>
+            <h1>ติด Tag ให้บทเรียน</h1>
+          </div>
+        </Container>
+        <Container className="input-tag">
+          {/* <Badge pill variant="primary">
+            Primary
+          </Badge> */}
+          {/* <Form> */}
+          {/* <Form.Group controlId="formBasicEmail"> */}
+          {/* <Form.Label>รายละเอียดย่อของบทเรียน (0/300)</Form.Label> */}
+          {/* <Form.Control type="text" as="textarea" /> */}
+          {/* </Form.Group> */}
+          {/* </Form> */}
+          <Form.Group style={{marginTop: "20px"}}>
+            {/* <Form.Label>รายละเอียดย่อของบทเรียน</Form.Label> */}
+            <Typeahead
+              id="basic-typeahead-multiple"
+              labelKey="name"
+              multiple
+              onChange={(e) => setSharingData({...sharingData, tags: e})}
+              options={tagData?.data}
+              labelKey="title"
+              placeholder="เลือก TAG"
+              selected={sharingData.tags}
+              defaultSelected={sharingData.tags}
+              // defaultSelected={tagData?.data?.slice(0, 4)}
+            />
+          </Form.Group>
+        </Container>
+      </div>
+      <div className="p-5"></div>
+      <div className="p-5"></div>
     </div>
   );
 };

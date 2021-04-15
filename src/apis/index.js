@@ -1,9 +1,9 @@
 import axios from "axios";
-axios.defaults.baseURL = "https://api.thaibpsc.com";
+axios.defaults.baseURL = "https://api-test.thaibpsc.com";
 
-export const BASE_URL = "https://api.thaibpsc.com/";
-export const IMAGE_URL = "https://api.thaibpsc.com/image/";
-export const DOWNLOAD_URL = "https://api.thaibpsc.com/documentDownload/";
+export const BASE_URL = "https://api-test.thaibpsc.com/";
+export const IMAGE_URL = "https://api-test.thaibpsc.com/image/";
+export const DOWNLOAD_URL = "https://api-test.thaibpsc.com/documentDownload/";
 import Swal from "sweetalert2";
 const FileDownload = require("js-file-download");
 
@@ -278,7 +278,7 @@ export const API_GET_GALLERY_PHOTO_BY_ID = (id, page = "", size = "") => {
 export const API_GET_DOCTOR = (title = "", page = "", size = "", hospital = "") => {
   var config = {
     method: "get",
-    url: `/doctor?title=${title}&size=${size}&hospital=${hospital}&page=${page}`,
+    url: `/doctor?title=${title}&size=${size}&tag=${hospital}&page=${page}`,
   };
 
   return API_CONFIG(config);
@@ -1027,6 +1027,15 @@ export const API_GET_RANDOMSHARINGTAG = async (type) => {
   var config = {
     method: "get",
     url: `/randomSharingTag?type=${type}`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_GET_RANDOMDOCTOR = async (type) => {
+  var config = {
+    method: "get",
+    url: `/randomDoctorTag?type=${type}`,
   };
 
   return API_CONFIG(config);

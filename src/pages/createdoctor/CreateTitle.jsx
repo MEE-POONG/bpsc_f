@@ -24,9 +24,19 @@ const CreateTitle = () => {
     content: "",
     hospital: "",
     bio: "",
+    tags: [],
   });
+  const [tagData, setTagData] = useState(null);
   const [imgData, setImgData] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    API_GET_TAGS()
+      .then((e) => {
+        setTagData(e?.data);
+      })
+      .catch();
+  }, []);
 
   const createSharing = () => {
     API_CREATE_DOCTOR(sharingData)
@@ -248,6 +258,39 @@ const CreateTitle = () => {
           </Row>
         </div>
       </Container>
+
+      <div className="tag">
+        <Container>
+          <div>
+            <h1>ติด Tag</h1>
+          </div>
+        </Container>
+        <Container className="input-tag">
+          {/* <Badge pill variant="primary">
+            Primary
+          </Badge> */}
+          {/* <Form> */}
+          {/* <Form.Group controlId="formBasicEmail"> */}
+          {/* <Form.Label>รายละเอียดย่อของบทเรียน (0/300)</Form.Label> */}
+          {/* <Form.Control type="text" as="textarea" /> */}
+          {/* </Form.Group> */}
+          {/* </Form> */}
+          <Form.Group style={{marginTop: "20px"}}>
+            {/* <Form.Label>รายละเอียดย่อของบทเรียน</Form.Label> */}
+            <Typeahead
+              id="basic-typeahead-multiple"
+              labelKey="name"
+              multiple
+              onChange={(e) => setSharingData({...sharingData, tags: e})}
+              options={tagData?.data}
+              labelKey="title"
+              placeholder="เลือก TAG"
+              selected={sharingData.tag}
+            />
+          </Form.Group>
+        </Container>
+      </div>
+
     </div>
   );
 };

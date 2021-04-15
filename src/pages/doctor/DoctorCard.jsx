@@ -15,7 +15,8 @@ import {
   API_GET_DOCTOR,
   API_DEL_DOCTOR_BY_ID,
   IMAGE_URL,
-  API_GET_RANDOMPROTOTYPEHOSPITALTAG,
+  API_GET_RANDOMDOCTOR,
+  API_GET_DOCTOR_BY_ID,
 } from "../../apis";
 import {useNavigate} from "react-router-dom";
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
@@ -29,7 +30,10 @@ const DoctorCard = () => {
 
   const [show, setShow] = useState(false);
   const [showData, setShowData] = useState(0);
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    setDoctorDetail(null);
+  };
   const handleShow = () => setShow(true);
   const handleShowData = (id) => setShowData(id);
   const [page, setPage] = useState(1);
@@ -37,9 +41,16 @@ const DoctorCard = () => {
   const navigate = useNavigate();
 
   const [doctor, setDoctor] = useState(null);
+  const [doctorDetail, setDoctorDetail] = useState(null);
 
   useEffect(() => {
-    API_GET_RANDOMPROTOTYPEHOSPITALTAG().then((result) => {
+    API_GET_DOCTOR_BY_ID(showData).then((result) => {
+      setDoctorDetail(result?.data);
+    });
+  }, [showData]);
+
+  useEffect(() => {
+    API_GET_RANDOMDOCTOR().then((result) => {
       setSharingRandom(result?.data);
     });
   }, []);
@@ -85,18 +96,18 @@ const DoctorCard = () => {
       </Container>
 
       <Container className="detail pb-5">
-        {sharingRandom?.tags?.map(({tag}) => (
+        {sharingRandom?.tags?.map(({id, title}) => (
           <Button
             variant="outline-primary"
             className={`text-custom-tag outline-primary ${
-              tag === sharingRandomTag ? "active" : ""
+              title === sharingRandomTag ? "active" : ""
             }`}
             onClick={() => {
-              setSharingRandomTag(tag);
+              setSharingRandomTag(id);
               setPage(1);
             }}
           >
-            {tag}
+            {title}
           </Button>
         ))}
         <Button
@@ -120,7 +131,7 @@ const DoctorCard = () => {
                   className="profile-card-2"
                   onClick={() => {
                     handleShow();
-                    handleShowData(idx);
+                    handleShowData(id);
                   }}
                 >
                   <img
@@ -184,8 +195,8 @@ const DoctorCard = () => {
                 <img
                   className="view-img"
                   src={
-                    doctor?.data[showData]?.picture
-                      ? IMAGE_URL + doctor?.data[showData]?.picture
+                    doctorDetail?.doctor?.picture
+                      ? IMAGE_URL + doctorDetail?.doctor?.picture
                       : "https://chiccarrent.com/files/images/default-placeholder.png"
                   }
                   alt={showData + 1}
@@ -196,50 +207,61 @@ const DoctorCard = () => {
                 <Card.Body>
                   <Card.Title>
                     <h1>
-                      {doctor?.data[showData]?.firstName}{" "}
-                      {doctor?.data[showData]?.lastName}
+                      {doctorDetail?.doctor?.firstName} {doctorDetail?.doctor?.lastName}
                     </h1>
                   </Card.Title>
-                  {/* <Card.Subtitle>{doctor?.data[showData]?.lastName}</Card.Subtitle> */}
+                  {/* <Card.Subtitle>{doctorDetail?.doctor?.lastName}</Card.Subtitle> */}
                   <Card.Text>
-                    <h4>{doctor?.data[showData]?.content}</h4>
+                    <h4>{doctorDetail?.doctor?.content}</h4>
                   </Card.Text>
                   <Card.Text>
                     <h4>
-                      {doctor?.data[showData]?.phone && "TEL"}{" "}
-                      {doctor?.data[showData]?.phone}
+                      {doctorDetail?.doctor?.phone && "TEL"} {doctorDetail?.doctor?.phone}
                     </h4>
                   </Card.Text>
                   <Card.Text>
-                    <h4>{doctor?.data[showData]?.email}</h4>
+                    <h4>{doctorDetail?.doctor?.email}</h4>
                   </Card.Text>
                   <Card.Text>
-                    <h4>{doctor?.data[showData]?.hospital}</h4>
+                    <h4>{doctorDetail?.doctor?.hospital}</h4>
                   </Card.Text>
                   <Card.Text>
-                    <h4>{doctor?.data[showData]?.bio}</h4>
+                    <h4>{doctorDetail?.doctor?.bio}</h4>
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer
                   style={{
                     textAlign: "center",
-                    cursor: "pointer",
+                    // cursor: "pointer",
                     backgroundColor: "white",
                   }}
                 >
+                
                   <button
                     type="button"
                     className="btn btn-success about-talk-with-us-btn-success"
-                    onClick={() =>
-                      navigate("/ContactDoctor/" + doctor?.data[showData]?.id)
-                    }
+                    onClick={() => navigate("/ContactDoctor/" + doctorDetail?.doctor?.id)}
                   >
                     CONTACT DOCTOR
                   </button>
-                  <Row style={{justifyContent: "center"}}>
+
+                  <div className="leaning-list">
+                    <Col xs="12" lg="12" className="mt-5">
+                      <span className="tag">แท็คที่เกี่ยวข้อง</span>
+                    </Col>
+                    <Col xs="12" lg="12" className="mt-5 tag-list">
+                      <div className="tag mr-5">
+                        {doctorDetail?.tags?.map(({title}) => (
+                          <p>{title}</p>
+                        ))}
+                      </div>
+                    </Col>
+                  </div>
+
+                  <Row style={{justifyContent: "center"}} className="pt-5">
                     {+localStorage.getItem("isAdmin") === 1 ? (
                       <NavLink
-                        to={`/edit-doctor/${doctor?.data[showData]?.id}`}
+                        to={`/edit-doctor/${doctorDetail?.doctor?.id}`}
                         className="pl-2 nav-link"
                       >
                         <Button bsPrefix="btn-save" className="mb-5">
@@ -251,7 +273,7 @@ const DoctorCard = () => {
                       <NavLink
                         to={() => {}}
                         className="pl-2 nav-link"
-                        onClick={() => handleDel(doctor?.data[showData]?.id)}
+                        onClick={() => handleDel(doctorDetail?.doctor?.id)}
                       >
                         <Button bsPrefix="btn-save btn-danger" className="mb-5">
                           DELETE
