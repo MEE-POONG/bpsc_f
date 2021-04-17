@@ -12,7 +12,7 @@ const Experience = () => {
             </Card.Subtitle>
           </Col>
           <Col md="4" className="img">
-            <a href="http://www.thaimio.com/" target="_blank">
+            <a href="/sharing" >
               <Button bsPrefix="btn-kss">มาแบ่งปันไอเดียกัน</Button>
             </a>
           </Col>

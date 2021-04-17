@@ -228,6 +228,14 @@
                     width: 100px;
                 }
             }
+            @media only screen and (max-width: 777px) {
+                .start,
+                .end {
+                    .card-title {
+                        font-size: 4rem !important;
+                    }
+                }
+            }
         }
 
         .fas {
