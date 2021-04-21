@@ -27,7 +27,7 @@ const CreateTitle = () => {
   const [typeData] = useState({
     data: [
       {id: 1, title: "คําแนะนําแบบสั้น ( BA )"},
-      {id: 2, title: "ประเมินแบบสั้น ( BI )"},
+      {id: 2, title: "คำปรึกษาแบบสั้น ( BI )"},
       {id: 3, title: "ฝึกสติแบบสั้น ( MBBI )"},
       {id: 4, title: "สติบําบัด ( MBTC )"},
     ],
