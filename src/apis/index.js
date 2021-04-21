@@ -1,9 +1,9 @@
 import axios from "axios";
-axios.defaults.baseURL = "https://api-test.thaibpsc.com";
+axios.defaults.baseURL = "";
 
-export const BASE_URL = "https://api-test.thaibpsc.com/";
-export const IMAGE_URL = "https://api-test.thaibpsc.com/image/";
-export const DOWNLOAD_URL = "https://api-test.thaibpsc.com/documentDownload/";
+export const BASE_URL = "/";
+export const IMAGE_URL = "/image/";
+export const DOWNLOAD_URL = "/documentDownload/";
 import Swal from "sweetalert2";
 const FileDownload = require("js-file-download");
 
