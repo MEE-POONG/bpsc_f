@@ -112,7 +112,7 @@ const TheHeader = () => {
                   className="dropdown-h-item"
                   onClick={() => nextPage("/sharing-type/2")}
                 >
-                  ประเมินแบบสั้น ( BI )
+                  คำปรึกษาแบบสั้น ( BI )
                 </a>
                 <a
                   className="dropdown-h-item"
