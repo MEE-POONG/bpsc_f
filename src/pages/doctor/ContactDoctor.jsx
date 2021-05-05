@@ -91,7 +91,7 @@ const ContactDoctor = () => {
       <div className="scroll-num p-5 about-talk-with-us-bg">
         <Container className="text-left">
           <div className="pt-5">
-            <p className="display-4 font-weight-bold">Contact Doctor</p>
+            <p className="display-4 font-weight-bold">Contact Influencer</p>
           </div>
           <div className="pt-5 input-group-lg">
             <input

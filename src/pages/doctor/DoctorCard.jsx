@@ -242,7 +242,7 @@ const DoctorCard = () => {
                     className="btn btn-success about-talk-with-us-btn-success"
                     onClick={() => navigate("/ContactDoctor/" + doctorDetail?.doctor?.id)}
                   >
-                    CONTACT DOCTOR
+                    CONTACT INFLUENCER
                   </button>
 
                   <div className="leaning-list">

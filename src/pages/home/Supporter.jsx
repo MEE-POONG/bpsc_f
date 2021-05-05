@@ -9,8 +9,8 @@ const Supporter = () => {
             <Card.Title className="text-center">เครือข่ายของพวกเรา</Card.Title>
           </Col>
           <Col xs="12" style={{textAlign: "center"}}>
-            <Image src="/image/home/public health.png" className="p-5" height="200" />
-            <Image src="/image/home/thai health.png" className="p-5" height="200" />
+            <Image src="/image/home/publichealth.png" className="p-5" height="200" />
+            <Image src="/image/home/thaihealth.png" className="p-5" height="200" />
             <Image src="/image/home/mio2.png" className="p-5" height="220" />
           </Col>
         </Row>
