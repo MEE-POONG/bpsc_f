@@ -134,7 +134,7 @@ const CreateTitle = () => {
             </Col>
             <Col xs="12">
               <div className="header">
-                <Form.Group controlId="formBasicDetail">
+                {/* <Form.Group controlId="formBasicDetail">
                   <Form.Label>รายละเอียด</Form.Label>
                   <Form.Control
                     type="text"
@@ -145,12 +145,12 @@ const CreateTitle = () => {
                       setContentData({...contentData, content: e.target.value});
                     }}
                   />
-                </Form.Group>
-                {/* <CKEditor
-                onChange={(evt) => {
-                  setContentData({...contentData, content: evt.editor.getData()});
-                }}
-              /> */}
+                </Form.Group> */}
+                <CKEditor
+                  onChange={(evt) => {
+                    setContentData({...contentData, content: evt.editor.getData()});
+                  }}
+                />
               </div>
             </Col>
           </Row>

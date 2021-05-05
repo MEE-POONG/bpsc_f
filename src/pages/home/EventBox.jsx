@@ -102,7 +102,9 @@ const EventBox = () => {
                   </Col>
                   <Col lg="12" xs="12" className="f-detail">
                     <Card.Title>{data?.data[0]?.title}</Card.Title>
-                    <Card.Subtitle>{data?.data[0]?.content}</Card.Subtitle>
+                    <Card.Subtitle>
+                      <div dangerouslySetInnerHTML={{__html: data?.data[0]?.content}} />
+                    </Card.Subtitle>
                   </Col>
                 </Row>
               </Card>
@@ -187,7 +189,11 @@ const EventBox = () => {
                       </Col>
                       <Col lg="12" xs="12" className="detail">
                         <Card.Title>{data?.data[1]?.title}</Card.Title>
-                        <Card.Subtitle>{data?.data[1]?.content}</Card.Subtitle>
+                        <Card.Subtitle>
+                          <div
+                            dangerouslySetInnerHTML={{__html: data?.data[1]?.content}}
+                          />
+                        </Card.Subtitle>
                       </Col>
                     </Row>
                   </Col>
@@ -253,7 +259,11 @@ const EventBox = () => {
                       </Col>
                       <Col lg="12" xs="12" className="detail">
                         <Card.Title>{data?.data[2]?.title}</Card.Title>
-                        <Card.Subtitle>{data?.data[2]?.content}</Card.Subtitle>
+                        <Card.Subtitle>
+                          <div
+                            dangerouslySetInnerHTML={{__html: data?.data[2]?.content}}
+                          />
+                        </Card.Subtitle>
                       </Col>
                     </Row>
                   </Col>
@@ -337,7 +347,9 @@ const EventBox = () => {
                   </Row>
                   <Col lg="12" xs="12" className="detail set-margin pl-0">
                     <Card.Title>{e?.title}</Card.Title>
-                    <Card.Subtitle>{e?.content}</Card.Subtitle>
+                    <Card.Subtitle>
+                      <div dangerouslySetInnerHTML={{__html: e?.content}} />
+                    </Card.Subtitle>
                   </Col>
                 </Card>
               </Col>
