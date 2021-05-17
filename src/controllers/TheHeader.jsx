@@ -239,7 +239,7 @@ const TheHeader = () => {
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
                   <NavDropdown.Item onClick={() => navigate("create-event")}>
-                    <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างกิจกกรรม
+                    <FontAwesomeIcon icon={faPen} /> &nbsp;สร้างกิจกรรม
                   </NavDropdown.Item>
                 )}
                 {+localStorage.getItem("isAdmin") === 1 && (
