@@ -7,6 +7,13 @@ import {Swiper, SwiperSlide} from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.scss";
 
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
+
+import "./styles.css"
+
 import {
   API_GET_ELEARNING_FAV_ORDER,
   API_fAVORITE_E_lEARNING,
@@ -51,10 +58,8 @@ const Leaning = () => {
       <div>
         {learning ? (
           <Swiper
-            autoplay={1000}
-            slidesPerView={"auto"}
+            navigation={true}
             spaceBetween={50}
-            loop={true}
             breakpoints={{
               // when window width is >= 640px
               640: {

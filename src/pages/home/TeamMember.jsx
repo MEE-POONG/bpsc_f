@@ -8,6 +8,12 @@ import "swiper/swiper.scss";
 import {API_GET_DOCTOR, IMAGE_URL} from "../../apis";
 import {useNavigate} from "react-router-dom";
 
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
+
+import "./styles.css";
 const TeamMember = () => {
   const [show, setShow] = useState(false);
   const [showData, setShowData] = useState(0);
@@ -29,7 +35,9 @@ const TeamMember = () => {
         <Card className="text-center ">
           <Card.Body className="">
             <Card.Title className="text-uppercase fw-bold">INFLUENCER</Card.Title>
-            <Card.Text className="team-subtitle fw-bold">Together we achieve more</Card.Text>
+            <Card.Text className="team-subtitle fw-bold">
+              Together we achieve more
+            </Card.Text>
           </Card.Body>
         </Card>
       </Container>
@@ -39,6 +47,8 @@ const TeamMember = () => {
             // autoplay={1000}
             // slidesPerView={"auto"}
             // loop={true}
+
+            navigation={true}
             spaceBetween={50}
             breakpoints={{
               // when window width is >= 640px
