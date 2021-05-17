@@ -47,7 +47,6 @@ const TeamMember = () => {
             // autoplay={1000}
             // slidesPerView={"auto"}
             // loop={true}
-
             navigation={true}
             spaceBetween={50}
             breakpoints={{
