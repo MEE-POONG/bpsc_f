@@ -6,3 +6,9 @@
     rgba(75, 131, 195, 1) 100%
   );
 }
+.about-contact-us a {
+    color: white !important;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
