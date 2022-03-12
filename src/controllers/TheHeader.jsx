@@ -90,7 +90,7 @@ const TheHeader = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto text-center align-items-center text-nowrap">
             <NavLink to="/" className="nav-link dropdown-hover">
-              HOME
+              WHAT NEWS
             </NavLink>
             {/* <NavLink to="/sharing" className="nav-link dropdown-hover">
               SHARING
@@ -217,6 +217,9 @@ const TheHeader = () => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item onClick={() => navigate("profile")}>
                   <FontAwesomeIcon icon={faUser} /> &nbsp; โปรไฟล์ของฉัน
+                </NavDropdown.Item>
+                <NavDropdown.Item onClick={() => navigate("editpage")}>
+                  <FontAwesomeIcon icon={faUser} /> &nbsp; จัดการหน้าเว็บ
                 </NavDropdown.Item>
                 <Notification onClick={() => setReadHover((e) => (e += 1))} />
                 <NavDropdown.Item onClick={() => navigate("create-share")}>
