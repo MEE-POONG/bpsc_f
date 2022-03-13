@@ -1070,3 +1070,24 @@ export const API_GET_POLICY = async () => {
     FileDownload(response.data, "policy.pdf");
   });
 };
+
+export const API_GET_HOMEVIDEOLINK = async () => {
+  var config = {
+    method: "get",
+    url: `/homeVideoLink`,
+  };
+
+  return API_CONFIG(config);
+};
+
+export const API_PUT_HOMEVIDEOLINK = async (value) => {
+  var config = {
+    method: "put",
+    url: `/homeVideoLink`,
+    data: {
+      value,
+    },
+  };
+
+  return API_CONFIG(config);
+};
