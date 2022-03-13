@@ -869,7 +869,8 @@ export const API_GET_SHARING_FAV = async () => {
 export const API_GET_SHARING_FAV_ORDER = async () => {
   var config = {
     method: "get",
-    url: `/sharing?order=favorite`,
+    url: `/sharing`,
+    // url: `/sharing?order=favorite`,
   };
 
   return API_CONFIG(config);
